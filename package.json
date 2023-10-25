@@ -2,7 +2,15 @@
   "name": "sport-school",
   "private": true,
   "version": "0.1.0",
+  "description": "Sport School",
+  "homepage": "https://tanetti.github.io/sport-school",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanetti/sport-school.git"
+  },
+  "author": "Volodymyr Dudka <tanetti22@gmail.com>",
+  "license": "ISC",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -22,5 +30,6 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "vite": "^4.4.5"
-  }
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
 }
