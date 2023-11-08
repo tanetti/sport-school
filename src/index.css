@@ -1,3 +1,8 @@
+body {
+  min-width: 320px;
+  min-height: 100vh;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -10,9 +15,17 @@
   -webkit-text-size-adjust: 100%;
 }
 
-body {
-  min-width: 320px;
+#root {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
   min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
 }
 
 a {
