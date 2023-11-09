@@ -18,6 +18,10 @@ export const ButtonContainer = styled.div`
 
   -webkit-tap-highlight-color: transparent;
 
+  &:hover > div {
+    background-color: #fa5502;
+  }
+
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -32,7 +36,8 @@ export const Line = styled.div`
   border-radius: 2px;
 
   transition: transform ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION},
-    opacity ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION};
+    opacity ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION},
+    background-color ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION};
 `;
 
 export const TopLine = styled(Line)`

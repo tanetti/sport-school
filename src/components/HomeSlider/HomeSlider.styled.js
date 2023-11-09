@@ -10,6 +10,8 @@ export const StyledSwiper = styled(Swiper)`
 `;
 
 export const StyledSwiperSlide = styled(SwiperSlide)`
+  position: relative;
+
   width: 100%;
   aspect-ratio: 16/10;
 
@@ -17,5 +19,26 @@ export const StyledSwiperSlide = styled(SwiperSlide)`
   background-repeat: no-repeat;
   background-size: cover;
   background-image: ${({ image }) =>
-    `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${image})`};
+    `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),url(${image})`};
+`;
+
+export const Motivation = styled.p`
+  position: absolute;
+  top: 45%;
+  left: 3%;
+
+  max-width: 40%;
+
+  font-size: clamp(12px, 4vw, 43px);
+  font-weight: 600;
+  line-height: 1.2;
+
+  color: #fff;
+
+  & > span {
+    display: block;
+
+    font-size: clamp(10px, 3vw, 32px);
+    font-weight: 400;
+  }
 `;

@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { NavLink } from 'react-router-dom';
 import {
   MAX_PAGE_WIDTH,
   TRANSITION_ANIMATION,
@@ -14,7 +15,7 @@ export const HeaderContainer = styled.header`
   width: 100vw;
 
   background-color: ${({ isScrolled }) =>
-    isScrolled ? '#000000a0' : 'transparent'};
+    isScrolled ? '#000000e0' : 'transparent'};
 
   box-shadow: ${({ isScrolled }) =>
     isScrolled ? '4px 4px 14px 1px rgba(0, 0, 0, 0.2)' : 'none'};
@@ -46,8 +47,14 @@ export const HeaderSizer = styled.div`
   }
 `;
 
-export const LogoImg = styled.img`
+export const LogoLink = styled(NavLink)`
   width: 60px;
+
+  color: #fff;
+
+  &:hover {
+    color: #fa5502;
+  }
 
   @media screen and (min-width: 768px) {
     width: 90px;
@@ -56,4 +63,12 @@ export const LogoImg = styled.img`
   @media screen and (min-width: 1280px) {
     width: 120px;
   }
+
+  & > svg {
+    width: 100%;
+
+    fill: currentColor;
+  }
+
+  transition: color ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION};
 `;
