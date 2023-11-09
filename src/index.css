@@ -1,6 +1,8 @@
 body {
   min-width: 320px;
   min-height: 100vh;
+  margin-right: calc((100vw - 100%) * -1);
+  overflow-x: hidden;
 
   font-family: 'Comfortaa', sans-serif;
 }
@@ -34,6 +36,12 @@ a {
   text-decoration: none;
 }
 
-p {
+p,
+ul {
   margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
 }

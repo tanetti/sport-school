@@ -31,7 +31,7 @@ export const NavigationContainer = styled.nav`
     align-items: center;
     gap: 50px;
 
-    padding-right: 10px;
+    padding-right: 20px;
   }
 `;
 
@@ -52,7 +52,7 @@ export const NavigationLink = styled(NavLink)`
 
     padding: 16px 0;
 
-    font-size: 20px;
+    font-size: 18px;
 
     & > span {
       padding-top: 6px;
@@ -83,7 +83,7 @@ export const NavigationLink = styled(NavLink)`
     fill: currentColor;
 
     @media screen and (max-width: 767.98px) {
-      width: 28px;
+      width: 24px;
     }
 
     @media screen and (min-width: 768px) {
@@ -114,10 +114,10 @@ export const NavigationButton = styled.button`
 
     padding: 16px 0;
 
-    font-size: 20px;
+    font-size: 18px;
 
     & > span {
-      padding-top: 6px;
+      padding-top: 5px;
     }
   }
 
@@ -141,7 +141,7 @@ export const NavigationButton = styled.button`
     fill: currentColor;
 
     @media screen and (max-width: 767.98px) {
-      width: 28px;
+      width: 24px;
     }
 
     @media screen and (min-width: 768px) {

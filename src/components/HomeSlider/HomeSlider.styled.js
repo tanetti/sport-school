@@ -21,7 +21,7 @@ export const StyledSwiperSlide = styled(SwiperSlide)`
     `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),url(${image})`};
 `;
 
-export const Motivation = styled.p`
+export const Motivation = styled.article`
   position: absolute;
   top: 45%;
   left: 3%;

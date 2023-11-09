@@ -8,7 +8,9 @@ export const HeaderContainer = styled.header`
   left: 0;
   z-index: 1000;
 
-  width: 100%;
+  width: 100vw;
+  margin-right: calc((100vw - 100%) * -1);
+  overflow-x: hidden;
 
   background-color: ${({ isScrolled }) =>
     isScrolled ? '#000000e0' : 'transparent'};

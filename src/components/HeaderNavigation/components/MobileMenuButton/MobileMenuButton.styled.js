@@ -10,7 +10,7 @@ export const ButtonContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  width: 60px;
+  width: 56px;
   height: 50px;
   padding: 10px 8px;
 
@@ -42,9 +42,7 @@ export const Line = styled.div`
 
 export const TopLine = styled(Line)`
   transform: ${({ isMenuOpened }) =>
-    isMenuOpened
-      ? 'rotate(45deg) translate(-1px, -2px)'
-      : 'rotate(0) translate(0)'};
+    isMenuOpened ? 'rotate(45deg) scaleX(0.98)' : 'rotate(0) scaleX(1)'};
 
   transform-origin: left top;
 `;
@@ -60,9 +58,7 @@ export const MidLine = styled(Line)`
 
 export const BotLine = styled(Line)`
   transform: ${({ isMenuOpened }) =>
-    isMenuOpened
-      ? 'rotate(-45deg) translate(0, 1px)'
-      : 'rotate(0) translate(0)'};
+    isMenuOpened ? 'rotate(-45deg) scaleX(0.98)' : 'rotate(0) scaleX(1)'};
 
   transform-origin: left bottom;
 `;
