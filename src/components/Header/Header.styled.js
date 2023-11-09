@@ -1,10 +1,6 @@
 import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
-import {
-  MAX_PAGE_WIDTH,
-  TRANSITION_ANIMATION,
-  TRANSITION_600_DURATION,
-} from '@/constants';
+import { TRANSITION_ANIMATION, TRANSITION_600_DURATION } from '@/constants';
 
 export const HeaderContainer = styled.header`
   position: fixed;
@@ -12,7 +8,7 @@ export const HeaderContainer = styled.header`
   left: 0;
   z-index: 1000;
 
-  width: 100vw;
+  width: 100%;
 
   background-color: ${({ isScrolled }) =>
     isScrolled ? '#000000e0' : 'transparent'};
@@ -35,7 +31,6 @@ export const HeaderSizer = styled.div`
   display: flex;
   justify-content: space-between;
 
-  max-width: ${MAX_PAGE_WIDTH}px;
   margin: 0 auto;
   padding: 10px 8px;
 

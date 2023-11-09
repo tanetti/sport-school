@@ -68,7 +68,7 @@ export const NavigationLink = styled(NavLink)`
 
     padding: 20px 0;
 
-    font-size: 18px;
+    font-size: 17px;
 
     & > span {
       padding-top: 5px;
@@ -80,7 +80,7 @@ export const NavigationLink = styled(NavLink)`
 
     padding: 25px 0;
 
-    font-size: 22px;
+    font-size: 19px;
 
     & > span {
       padding-top: 6px;
@@ -103,11 +103,11 @@ export const NavigationLink = styled(NavLink)`
     }
 
     @media screen and (min-width: 768px) {
-      width: 22px;
+      width: 20px;
     }
 
     @media screen and (min-width: 1280px) {
-      width: 26px;
+      width: 24px;
     }
   }
 `;
@@ -146,7 +146,7 @@ export const NavigationButton = styled.button`
 
     padding: 20px 0;
 
-    font-size: 18px;
+    font-size: 17px;
 
     & > span {
       padding-top: 5px;
@@ -158,7 +158,7 @@ export const NavigationButton = styled.button`
 
     padding: 25px 0;
 
-    font-size: 22px;
+    font-size: 19px;
 
     & > span {
       padding-top: 6px;
@@ -177,11 +177,11 @@ export const NavigationButton = styled.button`
     }
 
     @media screen and (min-width: 768px) {
-      width: 22px;
+      width: 20px;
     }
 
     @media screen and (min-width: 1280px) {
-      width: 26px;
+      width: 24px;
     }
   }
 `;

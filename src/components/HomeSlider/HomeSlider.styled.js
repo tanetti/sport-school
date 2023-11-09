@@ -1,10 +1,9 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import styled from '@emotion/styled';
-import { MAX_PAGE_WIDTH } from '@/constants';
 
 export const StyledSwiper = styled(Swiper)`
   width: 100%;
-  max-width: ${MAX_PAGE_WIDTH}px;
+  max-height: 100dvh;
   margin: 0 auto;
   aspect-ratio: 16/10;
 `;
@@ -29,17 +28,21 @@ export const Motivation = styled.p`
 
   max-width: 40%;
 
-  font-size: clamp(12px, 4vw, 43px);
+  font-size: clamp(10px, 3.6vw, 40px);
   font-weight: 700;
-  line-height: 1.6;
+  line-height: 1.5;
 
   color: #fff;
 
   & > span {
     display: block;
 
-    font-size: clamp(10px, 3vw, 32px);
+    font-size: clamp(8px, 2.4vw, 30px);
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.15;
+  }
+
+  @media screen and (min-width: 1440px) {
+    max-width: 30%;
   }
 `;
