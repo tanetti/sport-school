@@ -27,6 +27,7 @@ export const Footer = () => {
                 href="https://www.facebook.com/Slobozhanskedyussh"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Посилання до акаунту Facebook"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                   <path
@@ -43,6 +44,7 @@ export const Footer = () => {
                 href="https://www.instagram.com/dyusshslob/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Посилання до акаунту Instagram"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                   <path
@@ -66,6 +68,7 @@ export const Footer = () => {
                 href="https://www.instagram.com/dyusshslob/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Посилання до каналу YouTube"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                   <path
@@ -85,7 +88,10 @@ export const Footer = () => {
 
           <ContactList>
             <li>
-              <ContactLink href="tel:+380689079646">
+              <ContactLink
+                href="tel:+380689079646"
+                aria-label="Подзвонити на номер +380689079646"
+              >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                   <path
                     fillRule="evenodd"
@@ -99,7 +105,10 @@ export const Footer = () => {
             </li>
 
             <li>
-              <ContactLink href="mailto:dyussh.ssr@gmail.com">
+              <ContactLink
+                href="mailto:dyussh.ssr@gmail.com"
+                aria-label="Почати листування з dyussh.ssr@gmail.com"
+              >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                   <path
                     fillRule="evenodd"
@@ -117,6 +126,7 @@ export const Footer = () => {
                 href="https://maps.app.goo.gl/nejgGh2bNBQMHvvBA"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Відкрити навігацію на Google Maps"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                   <path

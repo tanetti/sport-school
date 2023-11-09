@@ -43,8 +43,6 @@ export const NavigationLink = styled(NavLink)`
 
   color: #fff;
 
-  -webkit-tap-highlight-color: transparent;
-
   transition: color ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION};
 
   @media screen and (max-width: 767.98px) {
@@ -104,8 +102,6 @@ export const NavigationButton = styled.button`
   border: none;
 
   cursor: pointer;
-
-  -webkit-tap-highlight-color: transparent;
 
   transition: color ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION};
 
