@@ -33,10 +33,6 @@ export const NavigationContainer = styled.nav`
 
     padding-right: 10px;
   }
-
-  @media screen and (min-width: 1280px) {
-    gap: 60px;
-  }
 `;
 
 export const NavigationLink = styled(NavLink)`
@@ -75,18 +71,6 @@ export const NavigationLink = styled(NavLink)`
     }
   }
 
-  @media screen and (min-width: 1280px) {
-    gap: 13px;
-
-    padding: 25px 0;
-
-    font-size: 19px;
-
-    & > span {
-      padding-top: 6px;
-    }
-  }
-
   &.active {
     color: #fa7734;
   }
@@ -104,10 +88,6 @@ export const NavigationLink = styled(NavLink)`
 
     @media screen and (min-width: 768px) {
       width: 20px;
-    }
-
-    @media screen and (min-width: 1280px) {
-      width: 24px;
     }
   }
 `;
@@ -153,18 +133,6 @@ export const NavigationButton = styled.button`
     }
   }
 
-  @media screen and (min-width: 1280px) {
-    gap: 13px;
-
-    padding: 25px 0;
-
-    font-size: 19px;
-
-    & > span {
-      padding-top: 6px;
-    }
-  }
-
   &:hover {
     color: #fa5502;
   }
@@ -178,10 +146,6 @@ export const NavigationButton = styled.button`
 
     @media screen and (min-width: 768px) {
       width: 20px;
-    }
-
-    @media screen and (min-width: 1280px) {
-      width: 24px;
     }
   }
 `;

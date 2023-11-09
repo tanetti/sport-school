@@ -28,7 +28,7 @@ export const Motivation = styled.p`
 
   max-width: 40%;
 
-  font-size: clamp(10px, 3.6vw, 40px);
+  font-size: clamp(10px, 3.6vw, 36px);
   font-weight: 700;
   line-height: 1.5;
 
@@ -37,7 +37,7 @@ export const Motivation = styled.p`
   & > span {
     display: block;
 
-    font-size: clamp(8px, 2.4vw, 30px);
+    font-size: clamp(8px, 2.4vw, 26px);
     font-weight: 400;
     line-height: 1.15;
   }

@@ -56,7 +56,7 @@ export const LogoLink = styled(NavLink)`
   }
 
   @media screen and (min-width: 1280px) {
-    width: 120px;
+    width: 100px;
   }
 
   & > svg {
