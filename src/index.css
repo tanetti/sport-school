@@ -1,6 +1,7 @@
 body {
   min-width: 320px;
   min-height: 100vh;
+  padding-left: calc(100vw - 100%);
 }
 
 :root {

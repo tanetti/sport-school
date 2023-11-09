@@ -11,7 +11,7 @@ export const NavigationContainer = styled.nav`
     right: 0;
 
     min-width: 200px;
-    height: 100vh;
+    height: 100dvh;
 
     padding: 70px 16px 20px 16px;
 
