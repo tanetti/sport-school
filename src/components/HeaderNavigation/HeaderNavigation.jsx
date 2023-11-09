@@ -37,7 +37,8 @@ export const HeaderNavigation = () => {
             <path d="m487 226-75-76V64a28 28 0 0 0-57 0v30l-56-56a75 75 0 0 0-103 0L8 226a28 28 0 0 0 40 40L236 78c6-6 17-6 23 0l188 188a28 28 0 1 0 40-40z" />
             <path d="M258 132c-6-6-15-6-20 0L73 297c-3 3-4 6-4 10v120c0 28 23 51 51 51h82V352h92v126h82c28 0 51-23 51-51V307c0-4-2-7-4-10L258 132z" />
           </svg>
-          ГОЛОВНА
+
+          <span>ГОЛОВНА</span>
         </NavigationLink>
 
         <NavigationLink to="/about">
@@ -48,7 +49,8 @@ export const HeaderNavigation = () => {
               clipRule="evenodd"
             />
           </svg>
-          ПРО НАС
+
+          <span>ПРО НАС</span>
         </NavigationLink>
 
         <NavigationButton type="button">
@@ -58,7 +60,8 @@ export const HeaderNavigation = () => {
               fillRule="evenodd"
             />
           </svg>
-          КОНТАКТИ
+
+          <span>КОНТАКТИ</span>
         </NavigationButton>
       </NavigationContainer>
 

@@ -30,8 +30,8 @@ export const Motivation = styled.p`
   max-width: 40%;
 
   font-size: clamp(12px, 4vw, 43px);
-  font-weight: 600;
-  line-height: 1.2;
+  font-weight: 700;
+  line-height: 1.6;
 
   color: #fff;
 
@@ -40,5 +40,6 @@ export const Motivation = styled.p`
 
     font-size: clamp(10px, 3vw, 32px);
     font-weight: 400;
+    line-height: 1.2;
   }
 `;

@@ -33,14 +33,17 @@ export const NavigationContainer = styled.nav`
 
     padding-right: 10px;
   }
+
+  @media screen and (min-width: 1280px) {
+    gap: 60px;
+  }
 `;
 
 export const NavigationLink = styled(NavLink)`
   display: flex;
   align-items: center;
 
-  font-weight: 600;
-  line-height: 1.6;
+  font-weight: 700;
 
   color: #fff;
 
@@ -54,6 +57,10 @@ export const NavigationLink = styled(NavLink)`
     padding: 16px 0;
 
     font-size: 20px;
+
+    & > span {
+      padding-top: 6px;
+    }
   }
 
   @media screen and (min-width: 768px) {
@@ -62,6 +69,10 @@ export const NavigationLink = styled(NavLink)`
     padding: 20px 0;
 
     font-size: 18px;
+
+    & > span {
+      padding-top: 5px;
+    }
   }
 
   @media screen and (min-width: 1280px) {
@@ -70,6 +81,10 @@ export const NavigationLink = styled(NavLink)`
     padding: 25px 0;
 
     font-size: 22px;
+
+    & > span {
+      padding-top: 6px;
+    }
   }
 
   &.active {
@@ -101,8 +116,7 @@ export const NavigationButton = styled.button`
   display: flex;
   align-items: center;
 
-  font-weight: 600;
-  line-height: 1.6;
+  font-weight: 700;
 
   color: #fff;
   background-color: transparent;
@@ -121,6 +135,10 @@ export const NavigationButton = styled.button`
     padding: 16px 0;
 
     font-size: 20px;
+
+    & > span {
+      padding-top: 6px;
+    }
   }
 
   @media screen and (min-width: 768px) {
@@ -129,6 +147,10 @@ export const NavigationButton = styled.button`
     padding: 20px 0;
 
     font-size: 18px;
+
+    & > span {
+      padding-top: 5px;
+    }
   }
 
   @media screen and (min-width: 1280px) {
@@ -137,6 +159,10 @@ export const NavigationButton = styled.button`
     padding: 25px 0;
 
     font-size: 22px;
+
+    & > span {
+      padding-top: 6px;
+    }
   }
 
   &:hover {
