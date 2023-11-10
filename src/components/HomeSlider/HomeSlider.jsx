@@ -19,7 +19,7 @@ export const HomeSlider = () => {
     <section style={{ boxShadow: '0px -9px 8px 13px rgba(36,36,36,0.82)' }}>
       <StyledSwiper
         autoplay={{
-          delay: 4000,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         effect={'fade'}
@@ -27,42 +27,48 @@ export const HomeSlider = () => {
       >
         <StyledSwiperSlide image={Slide01}>
           <Motivation>
-            Перший слоган
+            Тріумф
             <span>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Voluptate repellat soluta et nobis! Iusto, mollitia aspernatur.
+              не дарує справжньої сили,
+              <br />
+              її формує боротьба.
             </span>
+            <em>Арнольд Шварценеггер</em>
           </Motivation>
         </StyledSwiperSlide>
 
         <StyledSwiperSlide image={Slide02}>
           <Motivation>
-            Другий слоган
+            Почніть
             <span>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-              mollitia asperiores reiciendis quas error laudantium?
+              звідти, де ви зараз перебуваєте.
+              <br />
+              Використовуйте те, що у вас є, і робіть усе, що можете.
             </span>
+            <em>Артур Еш</em>
           </Motivation>
         </StyledSwiperSlide>
 
         <StyledSwiperSlide image={Slide03}>
           <Motivation>
-            Третій слоган
+            Ви можете
             <span>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est
-              corrupti doloremque beatae reprehenderit non saepe deserunt ipsum
-              suscipit.
+              бути ким завгодно, якщо ви
+              <br />
+              приділите цьому час.
             </span>
+            <em>Конор Макгрегор</em>
           </Motivation>
         </StyledSwiperSlide>
 
         <StyledSwiperSlide image={Slide04}>
           <Motivation>
-            Четвертий слоган
+            Тренуйся
             <span>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Exercitationem sapiente accusamus rem consequuntur.
+              з тими, хто сильніший. Не здавайся там, де здаються інші. І
+              переможеш там, де перемогти не можна.
             </span>
+            <em>Брюс Лі</em>
           </Motivation>
         </StyledSwiperSlide>
 

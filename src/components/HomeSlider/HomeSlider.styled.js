@@ -42,6 +42,18 @@ export const Motivation = styled.article`
     line-height: 1.15;
   }
 
+  & > em {
+    display: block;
+
+    padding-top: 20px;
+
+    font-size: clamp(8px, 2.4vw, 26px);
+    font-weight: 700;
+    line-height: 1.8;
+
+    color: #ccc;
+  }
+
   @media screen and (min-width: 1440px) {
     max-width: 30%;
   }
