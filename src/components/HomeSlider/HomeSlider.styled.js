@@ -31,7 +31,13 @@ export const StyledSwiper = styled(Swiper)`
 
       opacity: 1;
 
-      transform: scale(1.2);
+      transform: scale(1.3);
+    }
+
+    &:hover {
+      background-color: #fa5502;
+
+      opacity: 1;
     }
   }
 `;
