@@ -1,7 +1,6 @@
-import { Autoplay, EffectFade } from 'swiper/modules';
+import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Slide01 from '@/assets/sliders/home/slide01.jpg';
 import Slide02 from '@/assets/sliders/home/slide02.jpg';
@@ -23,7 +22,13 @@ export const HomeSlider = () => {
           disableOnInteraction: false,
         }}
         effect={'fade'}
-        modules={[EffectFade, Autoplay]}
+        pagination={{
+          clickable: true,
+          renderBullet: (_, className) => {
+            return '<span class="' + className + '"></span>';
+          },
+        }}
+        modules={[EffectFade, Autoplay, Pagination]}
       >
         <StyledSwiperSlide image={Slide01}>
           <Motivation>
