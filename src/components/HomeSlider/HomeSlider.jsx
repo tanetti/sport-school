@@ -19,7 +19,7 @@ export const HomeSlider = () => {
     <section style={{ boxShadow: '0px -9px 8px 13px rgba(36,36,36,0.82)' }}>
       <StyledSwiper
         autoplay={{
-          delay: 5000,
+          delay: 6000,
           disableOnInteraction: false,
         }}
         effect={'fade'}
@@ -33,7 +33,7 @@ export const HomeSlider = () => {
               <br />
               її формує боротьба.
             </span>
-            <em>Арнольд Шварценеггер</em>
+            <em>&quot;Арнольд Шварценеггер&quot;</em>
           </Motivation>
         </StyledSwiperSlide>
 
@@ -45,7 +45,7 @@ export const HomeSlider = () => {
               <br />
               Використовуйте те, що у вас є, і робіть усе, що можете.
             </span>
-            <em>Артур Еш</em>
+            <em>&quot;Артур Еш&quot;</em>
           </Motivation>
         </StyledSwiperSlide>
 
@@ -57,7 +57,7 @@ export const HomeSlider = () => {
               <br />
               приділите цьому час.
             </span>
-            <em>Конор Макгрегор</em>
+            <em>&quot;Конор Макгрегор&quot;</em>
           </Motivation>
         </StyledSwiperSlide>
 
@@ -68,18 +68,19 @@ export const HomeSlider = () => {
               з тими, хто сильніший. Не здавайся там, де здаються інші. І
               переможеш там, де перемогти не можна.
             </span>
-            <em>Брюс Лі</em>
+            <em>&quot;Брюс Лі&quot;</em>
           </Motivation>
         </StyledSwiperSlide>
 
         <StyledSwiperSlide image={Slide05}>
           <Motivation>
-            П&apos;ятий слоган
+            Успіх не випадковість.
             <span>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-              mollitia repellat id nulla repellendus error dignissimos provident
-              accusamus cupiditate explicabo.
+              Це важка праця, наполегливість, навчання, вивчення,
+              жертвопринесення і, перш за все, любов до того, що ви робите або
+              вчитеся робити.
             </span>
+            <em>&quot;Пеле&quot;</em>
           </Motivation>
         </StyledSwiperSlide>
       </StyledSwiper>
