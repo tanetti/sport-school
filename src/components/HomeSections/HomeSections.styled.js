@@ -26,6 +26,12 @@ export const SectionsTitle = styled.h2`
   color: #fa5505;
 
   text-align: center;
+
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 25px;
+
+    font-size: 26px;
+  }
 `;
 
 export const SectionsList = styled.ul`
@@ -35,6 +41,8 @@ export const SectionsList = styled.ul`
   gap: 15px;
 
   min-height: calc(6 * 110px + 5 * 15px);
+
+  container-type: size;
 
   @media screen and (min-width: 420px) {
     min-height: calc(6 * 130px + 5 * 15px);
@@ -84,6 +92,7 @@ export const SectionsItem = styled.li`
   overflow: hidden;
 
   transition: flex-grow ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION},
+    flex-basis ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION},
     font-size ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION},
     filter ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION};
 
@@ -113,13 +122,14 @@ export const SectionsItem = styled.li`
   @media screen and (min-width: 768px) {
     flex-basis: 0;
 
-    max-width: clamp(400px, 60dvh, 600px);
     max-height: auto;
 
     font-size: 10px;
 
     &:hover {
-      flex-grow: 10;
+      flex-grow: 0;
+
+      flex-basis: 60cqh;
 
       font-size: 20px;
     }
@@ -128,6 +138,8 @@ export const SectionsItem = styled.li`
   @media screen and (min-width: 960px) {
     &:hover {
       font-size: 24px;
+
+      flex-basis: 70cqh;
     }
   }
 
@@ -135,21 +147,21 @@ export const SectionsItem = styled.li`
     font-size: 12px;
 
     &:hover {
-      flex-grow: 6;
+      flex-basis: 100cqh;
     }
   }
 
   @media screen and (min-width: 1280px) {
     font-size: 16px;
 
-    &:hover {
+    /* &:hover {
       flex-grow: 4;
-    }
+    } */
   }
 
   @media screen and (min-width: 1440px) {
     &:hover {
-      flex-grow: 3;
+      /* flex-grow: 3; */
 
       font-size: 26px;
     }
@@ -158,18 +170,18 @@ export const SectionsItem = styled.li`
   @media screen and (min-width: 1680px) {
     font-size: 18px;
 
-    &:hover {
+    /* &:hover {
       flex-grow: 2.5;
-    }
+    } */
   }
 
-  @media screen and (min-width: 1920px) {
+  /* @media screen and (min-width: 1920px) {
     &:hover {
       flex-grow: 2.4;
     }
-  }
+  } */
 
-  @media screen and (min-width: 2200px) {
+  /* @media screen and (min-width: 2200px) {
     &:hover {
       flex-grow: 2;
     }
@@ -179,5 +191,5 @@ export const SectionsItem = styled.li`
     &:hover {
       flex-grow: 1.8;
     }
-  }
+  } */
 `;
