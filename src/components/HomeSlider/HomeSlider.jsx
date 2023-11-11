@@ -8,14 +8,18 @@ import Slide03 from '@/assets/sliders/home/slide03.jpg';
 import Slide04 from '@/assets/sliders/home/slide04.jpg';
 import Slide05 from '@/assets/sliders/home/slide05.jpg';
 import {
+  ActionButton,
   Motivation,
+  SliderSection,
   StyledSwiper,
   StyledSwiperSlide,
 } from './HomeSlider.styled';
 
 export const HomeSlider = () => {
   return (
-    <section style={{ boxShadow: '0px -9px 8px 13px rgba(36,36,36,0.82)' }}>
+    <SliderSection>
+      <ActionButton type="button">ЗАПИСАТИСЯ</ActionButton>
+
       <StyledSwiper
         autoplay={{
           delay: 6000,
@@ -88,6 +92,6 @@ export const HomeSlider = () => {
           </Motivation>
         </StyledSwiperSlide>
       </StyledSwiper>
-    </section>
+    </SliderSection>
   );
 };

@@ -2,6 +2,70 @@ import styled from '@emotion/styled';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { TRANSITION_600_DURATION, TRANSITION_ANIMATION } from '@/constants';
 
+export const SliderSection = styled.section`
+  position: relative;
+
+  box-shadow: 0px -9px 8px 13px rgba(36, 36, 36, 0.82);
+`;
+
+export const ActionButton = styled.button`
+  position: absolute;
+  bottom: 6%;
+  left: 50%;
+  z-index: 5;
+
+  padding: 8px 16px 5px 16px;
+
+  font-size: 18px;
+  font-weight: 400;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: #fa7734;
+  border-radius: 8px;
+
+  color: #fff;
+  background-color: #00000090;
+
+  backdrop-filter: blur(6px);
+
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.8);
+
+  transform: translateX(-50%);
+
+  cursor: pointer;
+
+  transition: transform ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION},
+    color ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION},
+    border-color ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION};
+
+  &:hover {
+    color: #fa5502;
+
+    border-color: #fa5502;
+
+    transform: translateX(-50%) scale(1.1);
+  }
+
+  @media screen and (min-width: 768px) {
+    bottom: 12%;
+
+    padding: 10px 26px 7px 26px;
+
+    font-size: 20px;
+
+    border-radius: 10px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: 14px 32px 10px 32px;
+
+    font-size: 22px;
+
+    border-radius: 14px;
+  }
+`;
+
 export const StyledSwiper = styled(Swiper)`
   width: 100%;
   max-height: 100dvh;
@@ -52,7 +116,7 @@ export const StyledSwiperSlide = styled(SwiperSlide)`
   background-repeat: no-repeat;
   background-size: cover;
   background-image: ${({ image }) =>
-    `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),url(${image})`};
+    `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(${image})`};
 `;
 
 export const Motivation = styled.article`
