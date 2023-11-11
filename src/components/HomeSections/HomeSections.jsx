@@ -12,17 +12,29 @@ export const HomeSections = () => {
       <SectionsTitle>ВІДДІЛЕННЯ</SectionsTitle>
 
       <SectionsList>
-        <SectionsItem image={Football}>Футбол</SectionsItem>
+        <SectionsItem image={Football}>
+          <div>Футбол</div>
+        </SectionsItem>
 
-        <SectionsItem image={Football}>Волейбол</SectionsItem>
+        <SectionsItem image={Football}>
+          <div>Волейбол</div>
+        </SectionsItem>
 
-        <SectionsItem image={Football}>Скелелазіння</SectionsItem>
+        <SectionsItem image={Football}>
+          <div>Скелелазіння</div>
+        </SectionsItem>
 
-        <SectionsItem image={Football}>Теніс настільний</SectionsItem>
+        <SectionsItem image={Football}>
+          <div>Теніс настільний</div>
+        </SectionsItem>
 
-        <SectionsItem image={Football}>Бокс</SectionsItem>
+        <SectionsItem image={Football}>
+          <div>Бокс</div>
+        </SectionsItem>
 
-        <SectionsItem image={Football}>Плавання</SectionsItem>
+        <SectionsItem image={Football}>
+          <div>Плавання</div>
+        </SectionsItem>
       </SectionsList>
     </StyledSection>
   );

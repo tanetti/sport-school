@@ -112,7 +112,7 @@ export const LinkContainer = styled.div`
     flex-direction: row-reverse;
     gap: 40px;
 
-    padding: 0 18px 0 8px;
+    padding: 0 8px 0 8px;
   }
 `;
 
