@@ -3,14 +3,10 @@ body {
   min-height: 100vh;
   margin-right: calc((100vw - 100%) * -1);
   overflow-x: hidden;
-
-  font-family: 'Comfortaa', sans-serif;
 }
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: 'Comfortaa', sans-serif;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -30,6 +26,15 @@ body {
 
 main {
   flex-grow: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 
 a {

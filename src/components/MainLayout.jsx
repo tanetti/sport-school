@@ -6,7 +6,7 @@ export const MainLayout = () => {
     <>
       <Header />
 
-      <main>
+      <main style={{ display: 'flex', flexDirection: 'column' }}>
         <Outlet />
       </main>
 
