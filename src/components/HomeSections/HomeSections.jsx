@@ -14,15 +14,15 @@ export const HomeSections = () => {
       <SectionsList>
         <SectionsItem image={Football}>Футбол</SectionsItem>
 
-        <SectionsItem>Волейбол</SectionsItem>
+        <SectionsItem image={Football}>Волейбол</SectionsItem>
 
-        <SectionsItem>Скелелазіння</SectionsItem>
+        <SectionsItem image={Football}>Скелелазіння</SectionsItem>
 
-        <SectionsItem>Теніс настільний</SectionsItem>
+        <SectionsItem image={Football}>Теніс настільний</SectionsItem>
 
-        <SectionsItem>Бокс</SectionsItem>
+        <SectionsItem image={Football}>Бокс</SectionsItem>
 
-        <SectionsItem>Плавання</SectionsItem>
+        <SectionsItem image={Football}>Плавання</SectionsItem>
       </SectionsList>
     </StyledSection>
   );
