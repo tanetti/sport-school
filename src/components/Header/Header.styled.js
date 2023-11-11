@@ -10,7 +10,6 @@ export const HeaderContainer = styled.header`
 
   width: 100vw;
   margin-right: calc((100vw - 100%) * -1);
-  overflow-x: hidden;
 
   background-color: ${({ isScrolled }) =>
     isScrolled ? '#000000e0' : 'transparent'};

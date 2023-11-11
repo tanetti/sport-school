@@ -10,13 +10,13 @@ export const SliderSection = styled.section`
 
 export const ActionButton = styled.button`
   position: absolute;
-  bottom: 6%;
+  bottom: 8%;
   left: 50%;
   z-index: 5;
 
   padding: 8px 16px 5px 16px;
 
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
 
   border-width: 1px;

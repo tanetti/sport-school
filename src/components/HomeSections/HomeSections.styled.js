@@ -6,7 +6,7 @@ export const StyledSection = styled.section`
   flex-direction: column;
   flex-grow: 1;
 
-  padding: 40px 15px 50px 15px;
+  padding: 40px 10px 50px 10px;
 `;
 
 export const SectionsTitle = styled.h2`
@@ -24,27 +24,27 @@ export const SectionsList = styled.ul`
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  gap: 17px;
+  gap: 15px;
 
-  min-height: calc(6 * 110px + 5 * 17px);
+  min-height: calc(6 * 110px + 5 * 15px);
 
   @media screen and (min-width: 420px) {
-    min-height: calc(6 * 130px + 5 * 17px);
+    min-height: calc(6 * 130px + 5 * 15px);
   }
 
   @media screen and (min-width: 540px) {
-    min-height: calc(6 * 140px + 5 * 17px);
+    min-height: calc(6 * 140px + 5 * 15px);
   }
 
   @media screen and (min-width: 620px) {
-    min-height: calc(6 * 160px + 5 * 17px);
+    min-height: calc(6 * 160px + 5 * 15px);
   }
 `;
 
 export const SectionsItem = styled.li`
   flex-grow: 1;
 
-  max-height: calc(100vw - 30px);
+  max-height: calc(100vw - 20px);
   padding: 10px 10px;
 
   font-size: 18px;
@@ -52,6 +52,9 @@ export const SectionsItem = styled.li`
 
   color: #fff;
 
+  border-width: 1px;
+  border-style: solid;
+  border-color: #212121;
   border-radius: 8px;
 
   background-position: center;
