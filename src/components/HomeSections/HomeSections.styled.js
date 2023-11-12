@@ -85,7 +85,8 @@ export const SectionsItem = styled.li`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: ${({ image }) => `url(${image})`};
+  background-image: ${({ imageJPG }) => `url(${imageJPG})`};
+  background-image: ${({ imageWEBP }) => `url(${imageWEBP})`};
 
   box-shadow: 0px 6px 10px -3px rgba(0, 0, 0, 0.4);
 

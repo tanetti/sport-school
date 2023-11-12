@@ -1,10 +1,19 @@
+import FootballJPG from '@/assets/sections/football.jpg';
+import FootballWEBP from '@/assets/sections/football.webp';
+import VolleyballJPG from '@/assets/sections/volleyball.jpg';
+import VolleyballWEBP from '@/assets/sections/volleyball.webp';
+import TennisJPG from '@/assets/sections/tennis.jpg';
+import TennisWEBP from '@/assets/sections/tennis.webp';
+import BoxerJPG from '@/assets/sections/boxer.jpg';
+import BoxerWEBP from '@/assets/sections/boxer.jpg';
+import SwimmerJPG from '@/assets/sections/swimmer.jpg';
+import SwimmerWEBP from '@/assets/sections/swimmer.webp';
 import {
   SectionsItem,
   SectionsList,
   SectionsTitle,
   StyledSection,
 } from './HomeSections.styled';
-import Football from '@/assets/sections/football.jpg';
 
 export const HomeSections = () => {
   return (
@@ -12,27 +21,27 @@ export const HomeSections = () => {
       <SectionsTitle>ВІДДІЛЕННЯ</SectionsTitle>
 
       <SectionsList>
-        <SectionsItem image={Football}>
+        <SectionsItem imageJPG={FootballJPG} imageWEBP={FootballWEBP}>
           <div>Футбол</div>
         </SectionsItem>
 
-        <SectionsItem image={Football}>
+        <SectionsItem imageJPG={VolleyballJPG} imageWEBP={VolleyballWEBP}>
           <div>Волейбол</div>
         </SectionsItem>
 
-        <SectionsItem image={Football}>
+        <SectionsItem>
           <div>Скелелазіння</div>
         </SectionsItem>
 
-        <SectionsItem image={Football}>
+        <SectionsItem imageJPG={TennisJPG} imageWEBP={TennisWEBP}>
           <div>Теніс настільний</div>
         </SectionsItem>
 
-        <SectionsItem image={Football}>
+        <SectionsItem imageJPG={BoxerJPG} imageWEBP={BoxerWEBP}>
           <div>Бокс</div>
         </SectionsItem>
 
-        <SectionsItem image={Football}>
+        <SectionsItem imageJPG={SwimmerJPG} imageWEBP={SwimmerWEBP}>
           <div>Плавання</div>
         </SectionsItem>
       </SectionsList>
