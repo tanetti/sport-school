@@ -2,6 +2,8 @@ import FootballJPG from '@/assets/sections/football.jpg';
 import FootballWEBP from '@/assets/sections/football.webp';
 import VolleyballJPG from '@/assets/sections/volleyball.jpg';
 import VolleyballWEBP from '@/assets/sections/volleyball.webp';
+import ClimbingJPG from '@/assets/sections/climbing.jpg';
+import ClimbingWEBP from '@/assets/sections/climbing.webp';
 import TennisJPG from '@/assets/sections/tennis.jpg';
 import TennisWEBP from '@/assets/sections/tennis.webp';
 import BoxerJPG from '@/assets/sections/boxer.jpg';
@@ -29,7 +31,7 @@ export const HomeSections = () => {
           <div>Волейбол</div>
         </SectionsItem>
 
-        <SectionsItem>
+        <SectionsItem imageJPG={ClimbingJPG} imageWEBP={ClimbingWEBP}>
           <div>Скелелазіння</div>
         </SectionsItem>
 
