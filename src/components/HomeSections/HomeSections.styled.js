@@ -40,21 +40,9 @@ export const SectionsList = styled.ul`
   flex-grow: 1;
   gap: 15px;
 
-  height: calc(6 * 110px + 5 * 15px);
+  height: calc((100vw - 20px) * 2);
 
   container-type: size;
-
-  @media screen and (min-width: 420px) {
-    height: calc(6 * 130px + 5 * 15px);
-  }
-
-  @media screen and (min-width: 540px) {
-    height: calc(6 * 140px + 5 * 15px);
-  }
-
-  @media screen and (min-width: 620px) {
-    height: calc(6 * 160px + 5 * 15px);
-  }
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
@@ -126,6 +114,12 @@ export const SectionsItem = styled.li`
       flex-basis: 50cqh;
 
       font-size: 20px;
+    }
+  }
+
+  @media screen and (min-width: 820px) {
+    &:hover {
+      flex-basis: 55cqh;
     }
   }
 
