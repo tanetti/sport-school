@@ -1,5 +1,9 @@
 import styled from '@emotion/styled';
-import { TRANSITION_600_DURATION, TRANSITION_ANIMATION } from '@/constants';
+import {
+  TRANSITION_300_DURATION,
+  TRANSITION_600_DURATION,
+  TRANSITION_ANIMATION,
+} from '@/constants';
 
 export const StyledSection = styled.section`
   display: flex;
@@ -74,7 +78,7 @@ export const SectionsItem = styled.li`
   background-image: ${({ imageJPG }) => `url(${imageJPG})`};
   background-image: ${({ imageWEBP }) => `url(${imageWEBP})`};
 
-  box-shadow: 0px 6px 10px -3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 8px 10px -3px rgba(0, 0, 0, 0.5);
 
   overflow: hidden;
 
@@ -104,6 +108,17 @@ export const SectionsItem = styled.li`
 
     & > div {
       background-color: transparent;
+    }
+
+    & p {
+      opacity: 1;
+      visibility: visible;
+
+      transition: ${`opacity ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION}
+          ${TRANSITION_300_DURATION}`}, ${`transform ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION}
+          ${TRANSITION_300_DURATION}`},
+        ${`visibility ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION}
+          ${TRANSITION_300_DURATION}`};
     }
   }
 
@@ -149,5 +164,41 @@ export const SectionsItem = styled.li`
 
   @media screen and (min-width: 1680px) {
     font-size: 18px;
+  }
+`;
+
+export const CardTitle = styled.h3`
+  font-size: inherit;
+  font-weight: inherit;
+`;
+
+export const CardAge = styled.p`
+  position: absolute;
+  bottom: 12px;
+  left: 14px;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  color: #fff;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION},
+    transform ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION},
+    visibility ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION};
+
+  & > span {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 28px;
+
+    & > span {
+      font-size: 20px;
+    }
   }
 `;
