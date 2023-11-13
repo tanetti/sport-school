@@ -10,16 +10,15 @@ export const HeaderContainer = styled.header`
 
   width: 100%;
 
-  background-color: ${({ isScrolled }) =>
-    isScrolled ? '#000000e0' : 'transparent'};
+  background-color: ${({ scrolled }) =>
+    scrolled ? '#000000e0' : 'transparent'};
 
-  box-shadow: ${({ isScrolled }) =>
-    isScrolled ? '4px 4px 14px 1px rgba(0, 0, 0, 0.2)' : 'none'};
+  box-shadow: ${({ scrolled }) =>
+    scrolled ? '0px -9px 8px 13px rgba(36, 36, 36, 0.82)' : 'none'};
 
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-color: ${({ isScrolled }) =>
-    isScrolled ? '#000000da' : 'transparent'};
+  border-color: ${({ scrolled }) => (scrolled ? '#000000da' : 'transparent')};
 
   transition: background-color ${TRANSITION_600_DURATION}
       ${TRANSITION_ANIMATION},
@@ -34,16 +33,15 @@ export const HeaderSizer = styled.div`
   margin: 0 auto;
   padding: 10px 8px;
 
-  backdrop-filter: ${({ isScrolled }) =>
-    isScrolled ? 'blur(6px)' : 'initial'};
+  backdrop-filter: ${({ scrolled }) => (scrolled ? 'blur(6px)' : 'initial')};
 
   @media screen and (min-width: 768px) {
-    padding: 20px 16px;
+    padding: 10px 16px;
   }
 `;
 
 export const LogoLink = styled(NavLink)`
-  width: 60px;
+  width: ${({ scrolled }) => (scrolled === 'true' ? '44px' : '60px')};
 
   color: #fff;
 
@@ -52,18 +50,21 @@ export const LogoLink = styled(NavLink)`
   }
 
   @media screen and (min-width: 768px) {
-    width: 90px;
+    width: ${({ scrolled }) => (scrolled === 'true' ? '60px' : '80px')};
   }
 
   @media screen and (min-width: 1280px) {
-    width: 100px;
+    width: ${({ scrolled }) => (scrolled === 'true' ? '70px' : '120px')};
   }
 
   & > svg {
+    display: block;
+
     width: 100%;
 
     fill: currentColor;
   }
 
-  transition: color ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION};
+  transition: color ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION},
+    width ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION};
 `;

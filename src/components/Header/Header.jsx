@@ -18,13 +18,16 @@ export const Header = () => {
   }, []);
 
   return (
-    <HeaderContainer isScrolled={isScrolled}>
-      <HeaderSizer isScrolled={isScrolled}>
-        <LogoLink to="/" aria-label="Логотип ДЮСШ">
+    <HeaderContainer scrolled={isScrolled}>
+      <HeaderSizer scrolled={isScrolled}>
+        <LogoLink
+          to="/"
+          aria-label="Логотип ДЮСШ"
+          scrolled={isScrolled.toString()}
+        >
           <svg
-            width={80}
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 854 911.6"
+            viewBox="0 0 854 894"
             xmlSpace="preserve"
           >
             <path d="M372 667c20 10 38 17 52 21v-22l-52 1zM215 285v-6l-1 10-3 27h6l-2-31zm253 381a10155 10155 0 0 0-10 0c-11 9-22 16-33 22a293 293 0 0 0 52-22h-9zm56-423c-134-47-257-5-307 15l29 27a421 421 0 0 1 360-1c-23-15-50-30-82-41zM20 93l-1 9a879 879 0 0 0-5 234l34-7c-17-72-27-148-28-226V93zm751 33c-44-29-96-57-158-78-259-92-499-8-591 30l20 18 36 33a804 804 0 0 1 693-3zm-52 569a531 531 0 0 1-295 210 725 725 0 0 0 238-221l57 11zM424 842a476 476 0 0 1-231-158l-58 11a553 553 0 0 0 288 210h1v-63zM119 181l-3 15c-5 44-7 85-5 125l21-2a809 809 0 0 1-13-138z" />

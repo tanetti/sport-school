@@ -2,16 +2,13 @@ import styled from '@emotion/styled';
 import { TRANSITION_600_DURATION, TRANSITION_ANIMATION } from '@/constants';
 
 export const ButtonContainer = styled.div`
-  position: absolute;
-  top: 16px;
-  right: 0;
-
   display: flex;
+  align-self: center;
   flex-direction: column;
   justify-content: space-between;
 
-  width: 56px;
-  height: 50px;
+  width: 50px;
+  height: 46px;
   padding: 10px 8px;
 
   cursor: pointer;

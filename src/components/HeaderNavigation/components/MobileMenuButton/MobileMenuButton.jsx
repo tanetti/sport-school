@@ -14,7 +14,11 @@ export const MobileMenuButton = ({ isMenuOpened, setIsMenuOpened }) => {
   };
 
   return (
-    <ButtonContainer role="button" onClick={onMobileMenuButtonClick}>
+    <ButtonContainer
+      role="button"
+      aria-label="Перемикач головного меню"
+      onClick={onMobileMenuButtonClick}
+    >
       <TopLine isMenuOpened={isMenuOpened} />
 
       <MidLine isMenuOpened={isMenuOpened} />

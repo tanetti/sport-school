@@ -1,7 +1,6 @@
 body {
   min-width: 320px;
   min-height: 100vh;
-  /* margin-right: calc((100vw - 100%) * -1); */
   overflow-y: scroll;
   overflow-x: hidden;
 }
