@@ -76,18 +76,6 @@ export const SectionsItem = styled.li`
 
   transition: ${createTransition(['flex', 'font-size', 'filter'], 'standart')};
 
-  & > div {
-    position: relative;
-
-    flex-grow: 1;
-
-    padding: 10px;
-
-    background-color: #00000070;
-
-    transition: ${createTransition('background-color', 'standart')};
-  }
-
   &:hover {
     flex-grow: 0;
 
@@ -185,6 +173,18 @@ export const CardBackground = styled.span`
 
     transition: ${createTransition('transform', 'standart')};
   }
+`;
+
+export const CardInfoBox = styled.div`
+  position: relative;
+
+  flex-grow: 1;
+
+  padding: 10px;
+
+  background-color: #00000070;
+
+  transition: ${createTransition('background-color', 'standart')};
 `;
 
 export const CardTitle = styled.h3`

@@ -13,6 +13,7 @@ import SwimmerWEBP from '@/assets/sections/swimmer.webp';
 import {
   CardAge,
   CardBackground,
+  CardInfoBox,
   CardTitle,
   SectionsItem,
   SectionsList,
@@ -29,74 +30,74 @@ export const HomeSections = () => {
         <SectionsItem>
           <CardBackground imageJPG={FootballJPG} imageWEBP={FootballWEBP} />
 
-          <div>
+          <CardInfoBox>
             <CardTitle>Футбол</CardTitle>
 
             <CardAge>
               6 - 18
               <span> років</span>
             </CardAge>
-          </div>
+          </CardInfoBox>
         </SectionsItem>
 
         <SectionsItem>
           <CardBackground imageJPG={VolleyballJPG} imageWEBP={VolleyballWEBP} />
 
-          <div>
+          <CardInfoBox>
             <CardTitle>Волейбол</CardTitle>
 
             <CardAge>
               8 - 18<span> років</span>
             </CardAge>
-          </div>
+          </CardInfoBox>
         </SectionsItem>
 
         <SectionsItem>
           <CardBackground imageJPG={ClimbingJPG} imageWEBP={ClimbingWEBP} />
 
-          <div>
+          <CardInfoBox>
             <CardTitle>Скелелазіння</CardTitle>
 
             <CardAge>
               8 - 18<span> років</span>
             </CardAge>
-          </div>
+          </CardInfoBox>
         </SectionsItem>
 
         <SectionsItem>
           <CardBackground imageJPG={TennisJPG} imageWEBP={TennisWEBP} />
 
-          <div>
+          <CardInfoBox>
             <CardTitle>Теніс настільний</CardTitle>
 
             <CardAge>
               7 - 18<span> років</span>
             </CardAge>
-          </div>
+          </CardInfoBox>
         </SectionsItem>
 
         <SectionsItem>
           <CardBackground imageJPG={BoxerJPG} imageWEBP={BoxerWEBP} />
 
-          <div>
+          <CardInfoBox>
             <CardTitle>Бокс</CardTitle>
 
             <CardAge>
               10 - 18<span> років</span>
             </CardAge>
-          </div>
+          </CardInfoBox>
         </SectionsItem>
 
         <SectionsItem>
           <CardBackground imageJPG={SwimmerJPG} imageWEBP={SwimmerWEBP} />
 
-          <div>
+          <CardInfoBox>
             <CardTitle>Плавання</CardTitle>
 
             <CardAge>
               8 - 18<span> років</span>
             </CardAge>
-          </div>
+          </CardInfoBox>
         </SectionsItem>
       </SectionsList>
     </StyledSection>
