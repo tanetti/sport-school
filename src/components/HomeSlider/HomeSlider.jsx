@@ -22,7 +22,7 @@ export const HomeSlider = () => {
 
       <StyledSwiper
         autoplay={{
-          delay: 6000,
+          delay: 7000,
           disableOnInteraction: false,
         }}
         effect={'fade'}

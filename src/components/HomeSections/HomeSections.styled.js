@@ -1,9 +1,5 @@
 import styled from '@emotion/styled';
-import {
-  TRANSITION_300_DURATION,
-  TRANSITION_600_DURATION,
-  TRANSITION_ANIMATION,
-} from '@/constants';
+import { createTransition } from '@/utilities';
 
 export const StyledSection = styled.section`
   display: flex;
@@ -57,6 +53,8 @@ export const SectionsList = styled.ul`
 `;
 
 export const SectionsItem = styled.li`
+  position: relative;
+
   display: flex;
   flex-grow: 1;
 
@@ -72,29 +70,22 @@ export const SectionsItem = styled.li`
   border-color: #212121;
   border-radius: 8px;
 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: ${({ imageJPG }) => `url(${imageJPG})`};
-  background-image: ${({ imageWEBP }) => `url(${imageWEBP})`};
-
   box-shadow: 0px 8px 10px -3px rgba(0, 0, 0, 0.5);
 
   overflow: hidden;
 
-  transition: flex ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION},
-    font-size ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION},
-    filter ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION};
+  transition: ${createTransition(['flex', 'font-size', 'filter'], 'standart')};
 
   & > div {
+    position: relative;
+
     flex-grow: 1;
 
     padding: 10px;
 
     background-color: #00000070;
 
-    transition: ${`background-color ${TRANSITION_600_DURATION}
-      ${TRANSITION_ANIMATION}`};
+    transition: ${createTransition('background-color', 'standart')};
   }
 
   &:hover {
@@ -106,6 +97,10 @@ export const SectionsItem = styled.li`
 
     color: #fa5505;
 
+    & > span {
+      transform: translateY(0);
+    }
+
     & > div {
       background-color: transparent;
     }
@@ -114,11 +109,11 @@ export const SectionsItem = styled.li`
       opacity: 1;
       visibility: visible;
 
-      transition: ${`opacity ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION}
-          ${TRANSITION_300_DURATION}`}, ${`transform ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION}
-          ${TRANSITION_300_DURATION}`},
-        ${`visibility ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION}
-          ${TRANSITION_300_DURATION}`};
+      transition: ${createTransition(
+        ['opacity', 'visibility', 'transform'],
+        'standart',
+        'short'
+      )};
     }
   }
 
@@ -167,6 +162,31 @@ export const SectionsItem = styled.li`
   }
 `;
 
+export const CardBackground = styled.span`
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: ${({ imageJPG }) => `url(${imageJPG})`};
+  background-image: ${({ imageWEBP }) => `url(${imageWEBP})`};
+
+  @media screen and (max-width: 767.98px) {
+    height: 100cqw;
+
+    transform: translateY(-10%);
+
+    transition: ${createTransition('transform', 'standart')};
+  }
+`;
+
 export const CardTitle = styled.h3`
   font-size: inherit;
   font-weight: inherit;
@@ -185,9 +205,10 @@ export const CardAge = styled.p`
   opacity: 0;
   visibility: hidden;
 
-  transition: opacity ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION},
-    transform ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION},
-    visibility ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION};
+  transition: ${createTransition(
+    ['opacity', 'visibility', 'transform'],
+    'standart'
+  )};
 
   & > span {
     font-size: 18px;

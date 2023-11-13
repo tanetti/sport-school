@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { TRANSITION_600_DURATION, TRANSITION_ANIMATION } from '@/constants';
+import { createTransition } from '@/utilities';
 
 export const SliderSection = styled.section`
   position: relative;
@@ -35,9 +35,10 @@ export const ActionButton = styled.button`
 
   cursor: pointer;
 
-  transition: transform ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION},
-    color ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION},
-    border-color ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION};
+  transition: ${createTransition(
+    ['color', 'border-color', 'transform'],
+    'standart'
+  )};
 
   &:hover {
     color: #fa5502;
@@ -82,9 +83,10 @@ export const StyledSwiper = styled(Swiper)`
 
     opacity: 0.3;
 
-    transition: transform ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION},
-      opacity ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION},
-      background-color ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION};
+    transition: ${createTransition(
+      ['background-color', 'opacity', 'transform'],
+      'standart'
+    )};
 
     @media screen and (min-width: 768px) {
       display: inline-block;
@@ -117,6 +119,26 @@ export const StyledSwiperSlide = styled(SwiperSlide)`
   background-size: cover;
   background-image: ${({ image }) =>
     `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(${image})`};
+
+  & > article {
+    opacity: 0;
+    visibility: hidden;
+
+    transform-origin: left;
+
+    transition: ${createTransition(['visibility', 'opacity'], 'standart')};
+  }
+
+  &.swiper-slide-active > article {
+    opacity: 1;
+    visibility: visible;
+
+    transition: ${createTransition(
+      ['visibility', 'opacity'],
+      'long',
+      'standart'
+    )};
+  }
 `;
 
 export const Motivation = styled.article`
@@ -130,7 +152,7 @@ export const Motivation = styled.article`
   font-weight: 700;
   line-height: 1.5;
 
-  color: #fff;
+  color: #fa7734;
 
   & > span {
     display: block;
@@ -138,6 +160,8 @@ export const Motivation = styled.article`
     font-size: clamp(8px, 2.4vw, 26px);
     font-weight: 400;
     line-height: 1.15;
+
+    color: #fff;
   }
 
   & > em {
@@ -149,7 +173,7 @@ export const Motivation = styled.article`
     font-weight: 700;
     line-height: 1.8;
 
-    color: #ccc;
+    color: #bababa;
   }
 
   @media screen and (min-width: 1180px) {

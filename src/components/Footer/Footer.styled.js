@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { TRANSITION_600_DURATION, TRANSITION_ANIMATION } from '@/constants';
+import { createTransition } from '@/utilities';
 
 export const FooterContainer = styled.footer`
   justify-self: flex-end;
@@ -133,7 +133,7 @@ export const SocialLink = styled.a`
 
   color: #fff;
 
-  transition: color ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION};
+  transition: ${createTransition('color', 'standart')};
 
   & > svg {
     width: 26px;
@@ -170,7 +170,7 @@ export const ContactLink = styled.a`
 
   color: #fff;
 
-  transition: color ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION};
+  transition: ${createTransition('color', 'standart')};
 
   & > svg {
     width: 26px;
@@ -182,7 +182,7 @@ export const ContactLink = styled.a`
 
     color: #aeaeae;
 
-    transition: color ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION};
+    transition: ${createTransition('color', 'standart')};
   }
 
   &:hover {

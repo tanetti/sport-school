@@ -12,6 +12,7 @@ import SwimmerJPG from '@/assets/sections/swimmer.jpg';
 import SwimmerWEBP from '@/assets/sections/swimmer.webp';
 import {
   CardAge,
+  CardBackground,
   CardTitle,
   SectionsItem,
   SectionsList,
@@ -25,63 +26,75 @@ export const HomeSections = () => {
       <SectionsTitle>ВІДДІЛЕННЯ</SectionsTitle>
 
       <SectionsList>
-        <SectionsItem imageJPG={FootballJPG} imageWEBP={FootballWEBP}>
-          <div style={{ position: 'relative' }}>
+        <SectionsItem>
+          <CardBackground imageJPG={FootballJPG} imageWEBP={FootballWEBP} />
+
+          <div>
             <CardTitle>Футбол</CardTitle>
 
             <CardAge>
-              14 - 18
+              6 - 18
               <span> років</span>
             </CardAge>
           </div>
         </SectionsItem>
 
-        <SectionsItem imageJPG={VolleyballJPG} imageWEBP={VolleyballWEBP}>
-          <div style={{ position: 'relative' }}>
+        <SectionsItem>
+          <CardBackground imageJPG={VolleyballJPG} imageWEBP={VolleyballWEBP} />
+
+          <div>
             <CardTitle>Волейбол</CardTitle>
 
             <CardAge>
-              15 - 19<span> років</span>
+              8 - 18<span> років</span>
             </CardAge>
           </div>
         </SectionsItem>
 
-        <SectionsItem imageJPG={ClimbingJPG} imageWEBP={ClimbingWEBP}>
-          <div style={{ position: 'relative' }}>
+        <SectionsItem>
+          <CardBackground imageJPG={ClimbingJPG} imageWEBP={ClimbingWEBP} />
+
+          <div>
             <CardTitle>Скелелазіння</CardTitle>
 
             <CardAge>
-              16 - 20<span> років</span>
+              8 - 18<span> років</span>
             </CardAge>
           </div>
         </SectionsItem>
 
-        <SectionsItem imageJPG={TennisJPG} imageWEBP={TennisWEBP}>
-          <div style={{ position: 'relative' }}>
+        <SectionsItem>
+          <CardBackground imageJPG={TennisJPG} imageWEBP={TennisWEBP} />
+
+          <div>
             <CardTitle>Теніс настільний</CardTitle>
 
             <CardAge>
-              12 - 18<span> років</span>
+              7 - 18<span> років</span>
             </CardAge>
           </div>
         </SectionsItem>
 
-        <SectionsItem imageJPG={BoxerJPG} imageWEBP={BoxerWEBP}>
-          <div style={{ position: 'relative' }}>
+        <SectionsItem>
+          <CardBackground imageJPG={BoxerJPG} imageWEBP={BoxerWEBP} />
+
+          <div>
             <CardTitle>Бокс</CardTitle>
 
             <CardAge>
-              16 - 20<span> років</span>
+              10 - 18<span> років</span>
             </CardAge>
           </div>
         </SectionsItem>
 
-        <SectionsItem imageJPG={SwimmerJPG} imageWEBP={SwimmerWEBP}>
-          <div style={{ position: 'relative' }}>
+        <SectionsItem>
+          <CardBackground imageJPG={SwimmerJPG} imageWEBP={SwimmerWEBP} />
+
+          <div>
             <CardTitle>Плавання</CardTitle>
 
             <CardAge>
-              12 - 18<span> років</span>
+              8 - 18<span> років</span>
             </CardAge>
           </div>
         </SectionsItem>

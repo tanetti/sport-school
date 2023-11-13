@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { TRANSITION_600_DURATION, TRANSITION_ANIMATION } from '@/constants';
+import { createTransition } from '@/utilities';
 
 export const ButtonContainer = styled.div`
   display: flex;
@@ -32,9 +32,10 @@ export const Line = styled.div`
 
   border-radius: 2px;
 
-  transition: transform ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION},
-    opacity ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION},
-    background-color ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION};
+  transition: ${createTransition(
+    ['background-color', 'opacity', 'transform'],
+    'standart'
+  )};
 `;
 
 export const TopLine = styled(Line)`

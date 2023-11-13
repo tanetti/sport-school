@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
-import { TRANSITION_ANIMATION, TRANSITION_600_DURATION } from '@/constants';
+import { createTransition } from '@/utilities';
 
 export const HeaderContainer = styled.header`
   position: fixed;
@@ -20,10 +20,10 @@ export const HeaderContainer = styled.header`
   border-bottom-style: solid;
   border-color: ${({ scrolled }) => (scrolled ? '#000000da' : 'transparent')};
 
-  transition: background-color ${TRANSITION_600_DURATION}
-      ${TRANSITION_ANIMATION},
-    box-shadow ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION},
-    border-color ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION};
+  transition: ${createTransition(
+    ['background-color', 'border-color', 'box-shadow'],
+    'standart'
+  )};
 `;
 
 export const HeaderSizer = styled.div`
@@ -65,6 +65,5 @@ export const LogoLink = styled(NavLink)`
     fill: currentColor;
   }
 
-  transition: color ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION},
-    width ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION};
+  transition: ${createTransition(['color', 'width'], 'standart')};
 `;

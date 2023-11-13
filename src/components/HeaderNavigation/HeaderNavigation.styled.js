@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { TRANSITION_600_DURATION, TRANSITION_ANIMATION } from '@/constants';
+import { createTransition } from '@/utilities';
 import { NavLink } from 'react-router-dom';
 
 export const NavigationContainer = styled.nav`
@@ -22,7 +22,7 @@ export const NavigationContainer = styled.nav`
     transform: ${({ isMenuOpened }) =>
       isMenuOpened ? 'translateX(0)' : 'translateX(102%)'};
 
-    transition: transform ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION};
+    transition: ${createTransition('transform', 'standart')};
   }
 
   @media screen and (min-width: 768px) {
@@ -43,7 +43,7 @@ export const NavigationLink = styled(NavLink)`
 
   color: #fff;
 
-  transition: color ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION};
+  transition: ${createTransition('color', 'standart')};
 
   @media screen and (max-width: 767.98px) {
     gap: 15px;
@@ -103,7 +103,7 @@ export const NavigationButton = styled.button`
 
   cursor: pointer;
 
-  transition: color ${TRANSITION_600_DURATION} ${TRANSITION_ANIMATION};
+  transition: ${createTransition('color', 'standart')};
 
   @media screen and (max-width: 767.98px) {
     gap: 15px;
