@@ -300,7 +300,7 @@ export const CardLink = styled(Link)`
   border-width: 1px;
   border-style: solid;
   border-color: #fa7734;
-  border-radius: 8px;
+  border-radius: 6px;
 
   color: #fff;
   background-color: #00000090;
