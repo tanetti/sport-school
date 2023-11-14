@@ -128,7 +128,9 @@ import {
   CardAge,
   CardBackground,
   CardInfoBox,
+  CardLink,
   CardTitle,
+  CartBottomBox,
   SectionsItem,
   SectionsList,
   SectionsTitle,
@@ -166,10 +168,14 @@ export const HomeSections = () => {
           <CardInfoBox>
             <CardTitle>Футбол</CardTitle>
 
-            <CardAge>
-              6 - 18
-              <span> років</span>
-            </CardAge>
+            <CartBottomBox>
+              <CardAge>
+                6 - 18
+                <span> років</span>
+              </CardAge>
+
+              <CardLink to="/football">Перейти</CardLink>
+            </CartBottomBox>
           </CardInfoBox>
         </SectionsItem>
 
@@ -198,9 +204,13 @@ export const HomeSections = () => {
           <CardInfoBox>
             <CardTitle>Волейбол</CardTitle>
 
-            <CardAge>
-              8 - 18<span> років</span>
-            </CardAge>
+            <CartBottomBox>
+              <CardAge>
+                8 - 18<span> років</span>
+              </CardAge>
+
+              <CardLink to="/volleyball">Перейти</CardLink>
+            </CartBottomBox>
           </CardInfoBox>
         </SectionsItem>
 
@@ -229,9 +239,13 @@ export const HomeSections = () => {
           <CardInfoBox>
             <CardTitle>Скелелазіння</CardTitle>
 
-            <CardAge>
-              8 - 18<span> років</span>
-            </CardAge>
+            <CartBottomBox>
+              <CardAge>
+                8 - 18<span> років</span>
+              </CardAge>
+
+              <CardLink to="/climbing">Перейти</CardLink>
+            </CartBottomBox>
           </CardInfoBox>
         </SectionsItem>
 
@@ -260,9 +274,13 @@ export const HomeSections = () => {
           <CardInfoBox>
             <CardTitle>Теніс настільний</CardTitle>
 
-            <CardAge>
-              7 - 18<span> років</span>
-            </CardAge>
+            <CartBottomBox>
+              <CardAge>
+                7 - 18<span> років</span>
+              </CardAge>
+
+              <CardLink to="/tennis">Перейти</CardLink>
+            </CartBottomBox>
           </CardInfoBox>
         </SectionsItem>
 
@@ -291,9 +309,13 @@ export const HomeSections = () => {
           <CardInfoBox>
             <CardTitle>Бокс</CardTitle>
 
-            <CardAge>
-              10 - 18<span> років</span>
-            </CardAge>
+            <CartBottomBox>
+              <CardAge>
+                10 - 18<span> років</span>
+              </CardAge>
+
+              <CardLink to="/box">Перейти</CardLink>
+            </CartBottomBox>
           </CardInfoBox>
         </SectionsItem>
 
@@ -322,9 +344,13 @@ export const HomeSections = () => {
           <CardInfoBox>
             <CardTitle>Плавання</CardTitle>
 
-            <CardAge>
-              8 - 18<span> років</span>
-            </CardAge>
+            <CartBottomBox>
+              <CardAge>
+                8 - 18<span> років</span>
+              </CardAge>
+
+              <CardLink to="/swimming">Перейти</CardLink>
+            </CartBottomBox>
           </CardInfoBox>
         </SectionsItem>
       </SectionsList>

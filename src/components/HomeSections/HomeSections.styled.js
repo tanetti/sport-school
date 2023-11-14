@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Link } from 'react-router-dom';
 import { createTransition } from '@/utilities';
 
 export const StyledSection = styled.section`
@@ -64,6 +65,7 @@ export const SectionsItem = styled.li`
   font-weight: 700;
 
   color: #fff;
+  background-color: #000;
 
   border-width: 1px;
   border-style: solid;
@@ -97,8 +99,10 @@ export const SectionsItem = styled.li`
       opacity: 1;
       visibility: visible;
 
+      flex-wrap: wrap;
+
       transition: ${createTransition(
-        ['opacity', 'visibility', 'transform'],
+        ['opacity', 'visibility'],
         'standart',
         'short'
       )};
@@ -230,6 +234,9 @@ export const CardBackground = styled.span`
 export const CardInfoBox = styled.div`
   position: relative;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   flex-grow: 1;
 
   padding: 10px;
@@ -244,23 +251,29 @@ export const CardTitle = styled.h3`
   font-weight: inherit;
 `;
 
-export const CardAge = styled.p`
-  position: absolute;
-  bottom: 12px;
-  left: 14px;
+export const CartBottomBox = styled.p`
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
 
+  padding: 3px;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: ${createTransition(['opacity', 'visibility'], 'standart')};
+`;
+
+export const CardAge = styled.span`
   font-size: 22px;
   font-weight: 700;
 
   color: #fff;
 
-  opacity: 0;
-  visibility: hidden;
+  transform: translateY(5px);
 
-  transition: ${createTransition(
-    ['opacity', 'visibility', 'transform'],
-    'standart'
-  )};
+  white-space: nowrap;
 
   & > span {
     font-size: 18px;
@@ -273,5 +286,60 @@ export const CardAge = styled.p`
     & > span {
       font-size: 20px;
     }
+  }
+`;
+
+export const CardLink = styled(Link)`
+  display: block;
+
+  padding: 8px 16px 5px 16px;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: #fa7734;
+  border-radius: 8px;
+
+  color: #fff;
+  background-color: #00000090;
+
+  backdrop-filter: blur(6px);
+
+  box-shadow: 0px 8px 12px -3px rgba(0, 0, 0, 0.8);
+
+  transform-origin: right;
+
+  cursor: pointer;
+
+  transition: ${createTransition(['border-color', 'transform'], 'standart')};
+
+  &:hover {
+    border-color: #fa5502;
+
+    transform: scale(1.1);
+  }
+
+  @media screen and (min-width: 360px) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 480px) {
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 960px) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 18px;
+
+    padding: 9px 16px 7px 16px;
   }
 `;
