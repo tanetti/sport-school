@@ -307,15 +307,21 @@ export const CardLink = styled(Link)`
 
   backdrop-filter: blur(6px);
 
-  box-shadow: 0px 8px 12px -3px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 8px 10px -3px rgba(0, 0, 0, 0.6);
 
   transform-origin: right;
 
   cursor: pointer;
 
-  transition: ${createTransition(['border-color', 'transform'], 'standart')};
+  transition: ${createTransition(
+    ['color', 'border-color', 'background-color', 'transform'],
+    'standart'
+  )};
 
   &:hover {
+    color: #fa7734;
+    background-color: #000000c0;
+
     border-color: #fa5502;
 
     transform: scale(1.1);
