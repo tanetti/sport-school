@@ -100,7 +100,7 @@ export const SectionsItem = styled.li`
 
       opacity: 1;
 
-      transform: translateY(0);
+      transform: scale(1);
 
       transition: ${createTransition(
         ['opacity', 'transform'],
@@ -264,7 +264,7 @@ export const CartBottomBox = styled.p`
 
   opacity: 0;
 
-  transform: translateY(150%);
+  transform: scale(0);
 
   transition: ${createTransition(['opacity', 'transform'], 'standart')};
 `;
