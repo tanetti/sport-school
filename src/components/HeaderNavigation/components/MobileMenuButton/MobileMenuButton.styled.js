@@ -15,7 +15,7 @@ export const ButtonContainer = styled.div`
 
   -webkit-tap-highlight-color: transparent;
 
-  &:hover > div {
+  &:is(:hover, :focus) > div {
     background-color: #fa5502;
   }
 

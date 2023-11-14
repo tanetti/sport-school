@@ -1,13 +1,15 @@
 import { useEffect, useState } from 'react';
+import { ContactModal } from '@/components';
+import { MobileMenuButton } from './components';
 import {
   NavigationButton,
   NavigationContainer,
   NavigationLink,
 } from './HeaderNavigation.styled';
-import { MobileMenuButton } from './components';
 
 export const HeaderNavigation = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
+  const [isContactModalOpened, setIsContactModalOpened] = useState(false);
 
   useEffect(() => {
     const onClick = ({ target }) => {
@@ -53,7 +55,10 @@ export const HeaderNavigation = () => {
           <span>ПРО НАС</span>
         </NavigationLink>
 
-        <NavigationButton type="button">
+        <NavigationButton
+          type="button"
+          onClick={() => setIsContactModalOpened(true)}
+        >
           <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M24 16a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm-8 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm-8 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm8-16C7 0 0 6 0 14c0 4 2 8 6 11v7l7-4h3c9 0 16-6 16-14S25 0 16 0Z"
@@ -68,6 +73,11 @@ export const HeaderNavigation = () => {
       <MobileMenuButton
         isMenuOpened={isMenuOpened}
         setIsMenuOpened={setIsMenuOpened}
+      />
+
+      <ContactModal
+        isOpened={isContactModalOpened}
+        closeModal={() => setIsContactModalOpened(false)}
       />
     </>
   );

@@ -45,7 +45,7 @@ export const LogoLink = styled(NavLink)`
 
   color: #fff;
 
-  &:hover {
+  &:is(:hover, :focus) {
     color: #fa5502;
   }
 

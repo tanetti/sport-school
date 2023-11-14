@@ -1,8 +1,12 @@
 body {
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 100dvh;
   overflow-y: scroll;
   overflow-x: hidden;
+}
+
+body.modal {
+  overflow-y: hidden;
 }
 
 :root {
@@ -44,6 +48,7 @@ a {
 }
 
 button {
+  padding: 0;
   -webkit-tap-highlight-color: transparent;
 }
 

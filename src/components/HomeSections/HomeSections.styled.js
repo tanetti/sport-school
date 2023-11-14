@@ -78,7 +78,7 @@ export const SectionsItem = styled.li`
 
   transition: ${createTransition(['flex', 'font-size', 'filter'], 'standart')};
 
-  &:hover {
+  &:is(:hover, :focus-within) {
     flex-grow: 0;
 
     flex-basis: 100cqw;
@@ -96,13 +96,14 @@ export const SectionsItem = styled.li`
     }
 
     & p {
-      opacity: 1;
-      visibility: visible;
-
       flex-wrap: wrap;
 
+      opacity: 1;
+
+      transform: translateY(0);
+
       transition: ${createTransition(
-        ['opacity', 'visibility'],
+        ['opacity', 'transform'],
         'standart',
         'short'
       )};
@@ -112,7 +113,7 @@ export const SectionsItem = styled.li`
   @media screen and (min-width: 768px) {
     font-size: 10px;
 
-    &:hover {
+    &:is(:hover, :focus-within) {
       flex-basis: 50cqh;
 
       font-size: 20px;
@@ -120,13 +121,13 @@ export const SectionsItem = styled.li`
   }
 
   @media screen and (min-width: 820px) {
-    &:hover {
+    &:is(:hover, :focus-within) {
       flex-basis: 55cqh;
     }
   }
 
   @media screen and (min-width: 960px) {
-    &:hover {
+    &:is(:hover, :focus-within) {
       font-size: 24px;
 
       flex-basis: 85cqh;
@@ -142,7 +143,7 @@ export const SectionsItem = styled.li`
   }
 
   @media screen and (min-width: 1440px) {
-    &:hover {
+    &:is(:hover, :focus-within) {
       flex-basis: 100cqh;
 
       font-size: 26px;
@@ -243,6 +244,8 @@ export const CardInfoBox = styled.div`
 
   background-color: #00000070;
 
+  overflow: hidden;
+
   transition: ${createTransition('background-color', 'standart')};
 `;
 
@@ -260,9 +263,10 @@ export const CartBottomBox = styled.p`
   padding: 3px;
 
   opacity: 0;
-  visibility: hidden;
 
-  transition: ${createTransition(['opacity', 'visibility'], 'standart')};
+  transform: translateY(150%);
+
+  transition: ${createTransition(['opacity', 'transform'], 'standart')};
 `;
 
 export const CardAge = styled.span`
@@ -313,12 +317,14 @@ export const CardLink = styled(Link)`
 
   cursor: pointer;
 
+  outline-offset: 4px;
+
   transition: ${createTransition(
     ['color', 'border-color', 'background-color', 'transform'],
     'standart'
   )};
 
-  &:hover {
+  &:is(:hover, :focus) {
     color: #fa7734;
     background-color: #000000c0;
 

@@ -73,7 +73,7 @@ export const NavigationLink = styled(NavLink)`
     color: #fa7734;
   }
 
-  &:hover {
+  &:is(:hover, :focus) {
     color: #fa5502;
   }
 
@@ -129,7 +129,7 @@ export const NavigationButton = styled.button`
     }
   }
 
-  &:hover {
+  &:is(:hover, :focus) {
     color: #fa5502;
   }
 

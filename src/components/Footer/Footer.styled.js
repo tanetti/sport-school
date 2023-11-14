@@ -140,7 +140,7 @@ export const SocialLink = styled.a`
     fill: currentColor;
   }
 
-  &:hover {
+  &:is(:hover, :focus) {
     color: #fa5502;
   }
 `;
@@ -185,7 +185,7 @@ export const ContactLink = styled.a`
     transition: ${createTransition('color', 'standart')};
   }
 
-  &:hover {
+  &:is(:hover, :focus) {
     color: #fa5502;
 
     & > span {

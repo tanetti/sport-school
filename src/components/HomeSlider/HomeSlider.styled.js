@@ -35,12 +35,14 @@ export const ActionButton = styled.button`
 
   cursor: pointer;
 
+  outline-offset: 6px;
+
   transition: ${createTransition(
     ['color', 'border-color', 'transform'],
     'standart'
   )};
 
-  &:hover {
+  &:is(:hover, :focus) {
     color: #fa5502;
 
     border-color: #fa5502;
