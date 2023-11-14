@@ -163,8 +163,22 @@ export const CardBackground = styled.span`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: ${({ imageJPG }) => `url(${imageJPG})`};
-  background-image: ${({ imageWEBP }) => `url(${imageWEBP})`};
+  background-image: ${({ imageJPG_360x1 }) => `url(${imageJPG_360x1})`};
+  background-image: ${({ imageWEBP_360x1 }) => `url(${imageWEBP_360x1})`};
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: ${({ imageJPG_360x2 }) => `url(${imageJPG_360x2})`};
+    background-image: ${({ imageWEBP_360x2 }) => `url(${imageWEBP_360x2})`};
+  }
+
+  @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    background-image: ${({ imageJPG_360x3 }) => `url(${imageJPG_360x3})`};
+    background-image: ${({ imageWEBP_360x3 }) => `url(${imageWEBP_360x3})`};
+  }
 
   @media screen and (max-width: 767.98px) {
     height: 100cqw;
@@ -172,6 +186,44 @@ export const CardBackground = styled.span`
     transform: translateY(-10%);
 
     transition: ${createTransition('transform', 'standart')};
+  }
+
+  @media screen and (min-width: 360px) {
+    background-image: ${({ imageJPG_420x1 }) => `url(${imageJPG_420x1})`};
+    background-image: ${({ imageWEBP_420x1 }) => `url(${imageWEBP_420x1})`};
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: ${({ imageJPG_420x2 }) => `url(${imageJPG_420x2})`};
+      background-image: ${({ imageWEBP_420x2 }) => `url(${imageWEBP_420x2})`};
+    }
+
+    @media (min-device-pixel-ratio: 3),
+      (min-resolution: 288dpi),
+      (min-resolution: 3dppx) {
+      background-image: ${({ imageJPG_420x3 }) => `url(${imageJPG_420x3})`};
+      background-image: ${({ imageWEBP_420x3 }) => `url(${imageWEBP_420x3})`};
+    }
+  }
+
+  @media screen and (min-width: 420px) {
+    background-image: ${({ imageJPG_768x1 }) => `url(${imageJPG_768x1})`};
+    background-image: ${({ imageWEBP_768x1 }) => `url(${imageWEBP_768x1})`};
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: ${({ imageJPG_768x2 }) => `url(${imageJPG_768x2})`};
+      background-image: ${({ imageWEBP_768x2 }) => `url(${imageWEBP_768x2})`};
+    }
+
+    @media (min-device-pixel-ratio: 3),
+      (min-resolution: 288dpi),
+      (min-resolution: 3dppx) {
+      background-image: ${({ imageJPG_768x3 }) => `url(${imageJPG_768x3})`};
+      background-image: ${({ imageWEBP_768x3 }) => `url(${imageWEBP_768x3})`};
+    }
   }
 `;
 

@@ -65,7 +65,7 @@ export const Footer = () => {
 
             <li>
               <SocialLinkYouTube
-                href="https://www.instagram.com/dyusshslob/"
+                href="https://www.youtube.com/@dyussh_slobozganske"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Посилання до каналу YouTube"
