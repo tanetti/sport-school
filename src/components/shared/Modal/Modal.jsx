@@ -30,7 +30,7 @@ export const Modal = ({ isOpened, closeModal, title, children }) => {
     if (!isOpened) return;
 
     const focusableElements = portalElement.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      'button, [href], iframe, input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
     const firstElement = focusableElements[0];
     const lastElement = focusableElements[focusableElements.length - 1];
