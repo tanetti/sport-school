@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import { ContactModal } from '@/components';
+import { SpriteIcon } from '@/components/shared';
 import { MobileMenuButton } from './components';
 import {
   NavigationButton,
   NavigationContainer,
   NavigationLink,
 } from './HeaderNavigation.styled';
-import { SpriteIcon } from '../shared';
 
 export const HeaderNavigation = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);

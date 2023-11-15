@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import { RequestModal } from '@/components';
 import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
@@ -16,9 +18,13 @@ import {
 } from './HomeSlider.styled';
 
 export const HomeSlider = () => {
+  const [isRequestModalOpened, setIsRequestModalOpened] = useState(false);
+
   return (
     <SliderSection>
-      <ActionButton type="button">ЗАПИСАТИСЯ</ActionButton>
+      <ActionButton type="button" onClick={() => setIsRequestModalOpened(true)}>
+        ЗАПИСАТИСЯ
+      </ActionButton>
 
       <StyledSwiper
         autoplay={{
@@ -92,6 +98,11 @@ export const HomeSlider = () => {
           </Motivation>
         </StyledSwiperSlide>
       </StyledSwiper>
+
+      <RequestModal
+        isOpened={isRequestModalOpened}
+        closeModal={() => setIsRequestModalOpened(false)}
+      />
     </SliderSection>
   );
 };
