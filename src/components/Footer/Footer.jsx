@@ -52,7 +52,7 @@ export const Footer = () => {
                     clipRule="evenodd"
                     d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"
                   />
-                  <path d="M18 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z" fill="#0F0F0F" />
+                  <path d="M18 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z" />
 
                   <path
                     fillRule="evenodd"

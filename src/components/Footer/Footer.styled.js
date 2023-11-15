@@ -129,7 +129,6 @@ export const SocialsList = styled.ul`
 export const SocialLink = styled.a`
   display: flex;
   align-items: center;
-  gap: 5px;
 
   padding: 10px 7px;
 
@@ -139,6 +138,7 @@ export const SocialLink = styled.a`
 
   & > svg {
     width: 26px;
+
     fill: currentColor;
   }
 
@@ -176,6 +176,7 @@ export const ContactLink = styled.a`
 
   & > svg {
     width: 26px;
+
     fill: currentColor;
   }
 

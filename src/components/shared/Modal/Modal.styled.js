@@ -1,4 +1,11 @@
 import styled from '@emotion/styled';
+import BackgroundPNGx1 from '@/assets/modal/x1.png';
+import BackgroundPNGx2 from '@/assets/modal/x2.png';
+import BackgroundPNGx3 from '@/assets/modal/x3.png';
+
+import BackgroundWEBPx1 from '@/assets/modal/x1.webp';
+import BackgroundWEBPx2 from '@/assets/modal/x2.webp';
+import BackgroundWEBPx3 from '@/assets/modal/x3.webp';
 import { createTransition } from '@/utilities';
 
 export const Backdrop = styled.div`
@@ -41,13 +48,38 @@ export const Window = styled.div`
 
   transform: ${({ isVisible }) => (isVisible ? 'scale(1)' : 'scale(1.5)')};
 
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-image: ${`url(${BackgroundPNGx1})`};
+  background-image: ${`url(${BackgroundWEBPx1})`};
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: ${`url(${BackgroundPNGx2})`};
+    background-image: ${`url(${BackgroundWEBPx2})`};
+  }
+
+  @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    background-image: ${`url(${BackgroundPNGx3})`};
+    background-image: ${`url(${BackgroundWEBPx3})`};
+  }
+
   box-shadow: 0px 10px 14px -3px rgba(0, 0, 0, 0.8);
 
   transition: ${createTransition(['transform', 'opacity'], 'standart')};
 
+  @media screen and (min-width: 360px) {
+    background-size: 90px;
+  }
+
   @media screen and (min-width: 480px) {
     width: 460px;
     max-height: calc(100dvh - 60px);
+
+    background-size: 100px;
   }
 
   @media screen and (min-width: 768px) {
