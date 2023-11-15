@@ -45,8 +45,20 @@ export const HeaderSizer = styled.div`
 
 export const LogoLink = styled(NavLink)`
   width: ${({ scrolled }) => (scrolled === 'true' ? '44px' : '60px')};
+  height: ${({ scrolled }) => (scrolled === 'true' ? '48px' : '65px')};
 
   color: #fff;
+
+  transition: ${createTransition(['color', 'width', 'height'], 'standart')};
+
+  & > svg {
+    display: block;
+
+    width: 100%;
+    max-height: 100%;
+
+    fill: currentColor;
+  }
 
   &:is(:hover, :focus) {
     color: #fa5502;
@@ -54,19 +66,11 @@ export const LogoLink = styled(NavLink)`
 
   @media screen and (min-width: 768px) {
     width: ${({ scrolled }) => (scrolled === 'true' ? '60px' : '80px')};
+    height: ${({ scrolled }) => (scrolled === 'true' ? '65px' : '86px')};
   }
 
   @media screen and (min-width: 1280px) {
     width: ${({ scrolled }) => (scrolled === 'true' ? '70px' : '120px')};
+    height: ${({ scrolled }) => (scrolled === 'true' ? '76px' : '130px')};
   }
-
-  & > svg {
-    display: block;
-
-    width: 100%;
-
-    fill: currentColor;
-  }
-
-  transition: ${createTransition(['color', 'width'], 'standart')};
 `;

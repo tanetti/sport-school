@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useCallback, useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
+import { SpriteIcon } from '@/components/shared';
 import {
   Backdrop,
   BackgroundContainer,
@@ -105,9 +106,7 @@ export const Modal = ({ isOpened, closeModal, title, children }) => {
             aria-label="Закрити вікно"
             onClick={handleClose}
           >
-            <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
-              <path d="M195.2 195.2a64 64 0 0 1 90.5 0L512 421.5l226.3-226.3a64 64 0 0 1 90.5 90.5L602.5 512l226.3 226.3a64 64 0 0 1-90.5 90.5L512 602.5 285.7 828.8a64 64 0 0 1-90.5-90.5L421.5 512 195.2 285.7a64 64 0 0 1 0-90.5z" />
-            </svg>
+            <SpriteIcon symbol="close" />
           </CloseButton>
         </Window>
       </Backdrop>,

@@ -36,35 +36,26 @@ export const NavigationContainer = styled.nav`
 export const NavigationLink = styled(NavLink)`
   display: flex;
   align-items: center;
+  gap: 15px;
 
+  padding: 16px 0;
+
+  font-size: 18px;
   font-weight: 700;
 
   color: #fff;
 
   transition: ${createTransition('color', 'standart')};
 
-  @media screen and (max-width: 767.98px) {
-    gap: 15px;
-
-    padding: 16px 0;
-
-    font-size: 18px;
-
-    & > span {
-      padding-top: 6px;
-    }
+  & > span {
+    padding-top: 4px;
   }
 
-  @media screen and (min-width: 768px) {
-    gap: 10px;
+  & > svg {
+    width: 24px;
+    height: 24px;
 
-    padding: 20px 0;
-
-    font-size: 17px;
-
-    & > span {
-      padding-top: 5px;
-    }
+    fill: currentColor;
   }
 
   &.active {
@@ -75,15 +66,20 @@ export const NavigationLink = styled(NavLink)`
     color: #fa5502;
   }
 
-  & > svg {
-    fill: currentColor;
+  @media screen and (min-width: 768px) {
+    gap: 10px;
 
-    @media screen and (max-width: 767.98px) {
-      width: 24px;
+    padding: 20px 0;
+
+    font-size: 17px;
+
+    & > span {
+      padding-top: 3px;
     }
 
-    @media screen and (min-width: 768px) {
+    & > svg {
       width: 20px;
+      height: 20px;
     }
   }
 `;
@@ -91,7 +87,11 @@ export const NavigationLink = styled(NavLink)`
 export const NavigationButton = styled.button`
   display: flex;
   align-items: center;
+  gap: 15px;
 
+  padding: 16px 0;
+
+  font-size: 18px;
   font-weight: 700;
 
   color: #fff;
@@ -103,16 +103,19 @@ export const NavigationButton = styled.button`
 
   transition: ${createTransition('color', 'standart')};
 
-  @media screen and (max-width: 767.98px) {
-    gap: 15px;
+  & > span {
+    padding-top: 4px;
+  }
 
-    padding: 16px 0;
+  &:is(:hover, :focus) {
+    color: #fa5502;
+  }
 
-    font-size: 18px;
+  & > svg {
+    width: 24px;
+    height: 24px;
 
-    & > span {
-      padding-top: 5px;
-    }
+    fill: currentColor;
   }
 
   @media screen and (min-width: 768px) {
@@ -123,23 +126,12 @@ export const NavigationButton = styled.button`
     font-size: 17px;
 
     & > span {
-      padding-top: 5px;
-    }
-  }
-
-  &:is(:hover, :focus) {
-    color: #fa5502;
-  }
-
-  & > svg {
-    fill: currentColor;
-
-    @media screen and (max-width: 767.98px) {
-      width: 24px;
+      padding-top: 3px;
     }
 
-    @media screen and (min-width: 768px) {
+    & > svg {
       width: 20px;
+      height: 20px;
     }
   }
 `;

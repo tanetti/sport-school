@@ -28,6 +28,7 @@ export const ContactLink = styled.a`
 
   & > svg {
     width: 30px;
+    height: 30px;
 
     fill: currentColor;
   }
@@ -47,6 +48,7 @@ export const ContactLink = styled.a`
 
     & > svg {
       width: 32px;
+      height: 32px;
     }
   }
 
@@ -55,6 +57,7 @@ export const ContactLink = styled.a`
 
     & > svg {
       width: 34px;
+      height: 34px;
     }
   }
 `;
@@ -77,6 +80,7 @@ export const SocialLink = styled.a`
 
   & > svg {
     width: 28px;
+    height: 28px;
 
     fill: currentColor;
   }
@@ -88,6 +92,7 @@ export const SocialLink = styled.a`
   @media screen and (min-width: 360px) {
     & > svg {
       width: 30px;
+      height: 30px;
     }
   }
 
@@ -96,6 +101,7 @@ export const SocialLink = styled.a`
 
     & > svg {
       width: 34px;
+      height: 34px;
     }
   }
 `;
@@ -116,6 +122,7 @@ export const LocationLink = styled.a`
 
   & > svg {
     width: 18px;
+    height: 18px;
 
     fill: currentColor;
   }
@@ -137,6 +144,7 @@ export const LocationLink = styled.a`
 
     & > svg {
       width: 22px;
+      height: 22px;
     }
   }
 
@@ -145,6 +153,7 @@ export const LocationLink = styled.a`
 
     & > svg {
       width: 24px;
+      height: 24px;
     }
   }
 `;

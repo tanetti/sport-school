@@ -138,6 +138,7 @@ export const SocialLink = styled.a`
 
   & > svg {
     width: 26px;
+    height: 26px;
 
     fill: currentColor;
   }
@@ -152,6 +153,7 @@ export const SocialLinkYouTube = styled(SocialLink)`
 
   & > svg {
     width: 32px;
+    height: 32px;
   }
 `;
 
@@ -176,6 +178,7 @@ export const ContactLink = styled.a`
 
   & > svg {
     width: 26px;
+    height: 26px;
 
     fill: currentColor;
   }
@@ -207,6 +210,7 @@ export const ContactLink = styled.a`
 
     & > svg {
       width: 20px;
+      height: 20px;
     }
   }
 `;
