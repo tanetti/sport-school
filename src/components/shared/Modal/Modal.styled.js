@@ -1,4 +1,6 @@
 import styled from '@emotion/styled';
+import { createTransition } from '@/utilities';
+
 import BackgroundPNGx1 from '@/assets/modal/x1.png';
 import BackgroundPNGx2 from '@/assets/modal/x2.png';
 import BackgroundPNGx3 from '@/assets/modal/x3.png';
@@ -6,7 +8,6 @@ import BackgroundPNGx3 from '@/assets/modal/x3.png';
 import BackgroundWEBPx1 from '@/assets/modal/x1.webp';
 import BackgroundWEBPx2 from '@/assets/modal/x2.webp';
 import BackgroundWEBPx3 from '@/assets/modal/x3.webp';
-import { createTransition } from '@/utilities';
 
 export const Backdrop = styled.div`
   position: fixed;
@@ -61,15 +62,14 @@ export const Window = styled.div`
   }
 
   @media screen and (min-width: 480px) {
-    width: 460px;
-    max-height: calc(100dvh - 60px);
+    width: 450px;
 
     background-size: 100px;
   }
 
   @media screen and (min-width: 768px) {
     width: 520px;
-    max-height: calc(100dvh - 80px);
+    max-height: calc(100dvh - 40px);
 
     padding: 16px 6px 0 16px;
   }
