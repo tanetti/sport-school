@@ -36,9 +36,11 @@ export const Backdrop = styled.div`
 export const Window = styled.div`
   position: relative;
 
+  display: flex;
+
   width: calc(100% - 30px);
   max-height: calc(100dvh - 30px);
-  padding: 10px;
+  padding: 12px 4px 0 12px;
 
   background-color: #fff;
 
@@ -49,25 +51,6 @@ export const Window = styled.div`
   opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
 
   transform: ${({ isVisible }) => (isVisible ? 'scale(1)' : 'scale(1.5)')};
-
-  background-size: 80px;
-  background-repeat: no-repeat;
-  background-image: ${`url(${BackgroundPNGx1})`};
-  background-image: ${`url(${BackgroundWEBPx1})`};
-
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: ${`url(${BackgroundPNGx2})`};
-    background-image: ${`url(${BackgroundWEBPx2})`};
-  }
-
-  @media (min-device-pixel-ratio: 3),
-    (min-resolution: 288dpi),
-    (min-resolution: 3dppx) {
-    background-image: ${`url(${BackgroundPNGx3})`};
-    background-image: ${`url(${BackgroundWEBPx3})`};
-  }
 
   box-shadow: 0px 10px 14px -3px rgba(0, 0, 0, 0.8);
 
@@ -88,26 +71,128 @@ export const Window = styled.div`
     width: 520px;
     max-height: calc(100dvh - 80px);
 
-    padding: 15px;
+    padding: 16px 6px 0 16px;
+  }
+`;
+
+export const ContentContainer = styled.div`
+  position: relative;
+
+  flex-grow: 1;
+
+  padding: 0 8px 14px 0;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #fa5502;
+
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    margin-top: 34px;
+    margin-bottom: 14px;
+
+    background-color: #aeaeae;
+
+    border-radius: 4px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 0 10px 18px 0;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      margin-top: 38px;
+      margin-bottom: 18px;
+    }
+  }
+`;
+
+export const BottomGradient = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 14px;
+
+  background: linear-gradient(to bottom, #ffffff00, #ffffffff 8px, #ffffffff);
+
+  @media screen and (min-width: 768px) {
+    height: 18px;
+
+    background: linear-gradient(
+      to bottom,
+      #ffffff00,
+      #ffffffff 10px,
+      #ffffffff
+    );
   }
 `;
 
 export const Title = styled.h3`
-  margin-bottom: 15px;
-  padding: 0 40px;
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  padding: 0 40px 15px 40px;
 
   font-size: 20px;
   font-weight: 700;
 
   color: #fa5502;
 
+  background: linear-gradient(to top, #ffffff00, #ffffffff 10px, #ffffffff);
+
   text-align: center;
   text-transform: uppercase;
 
   @media screen and (min-width: 480px) {
-    margin-bottom: 20px;
+    padding: 0 40px 20px 40px;
 
     font-size: 22px;
+  }
+`;
+
+export const BackgroundContainer = styled.div`
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-image: ${`url(${BackgroundPNGx1})`};
+  background-image: ${`url(${BackgroundWEBPx1})`};
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: ${`url(${BackgroundPNGx2})`};
+    background-image: ${`url(${BackgroundWEBPx2})`};
+  }
+
+  @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    background-image: ${`url(${BackgroundPNGx3})`};
+    background-image: ${`url(${BackgroundWEBPx3})`};
   }
 `;
 

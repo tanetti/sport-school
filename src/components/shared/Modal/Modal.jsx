@@ -1,7 +1,15 @@
 import PropTypes from 'prop-types';
 import { useCallback, useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { Backdrop, CloseButton, Title, Window } from './Modal.styled';
+import {
+  Backdrop,
+  BackgroundContainer,
+  BottomGradient,
+  CloseButton,
+  ContentContainer,
+  Title,
+  Window,
+} from './Modal.styled';
 
 const portalElement = document.getElementById('portal');
 const bodyElement = document.getElementsByTagName('body')[0];
@@ -82,6 +90,16 @@ export const Modal = ({ isOpened, closeModal, title, children }) => {
           isVisible={isVisible}
           onClick={event => event.stopPropagation()}
         >
+          <ContentContainer>
+            <Title>{title}</Title>
+
+            {children}
+          </ContentContainer>
+
+          <BackgroundContainer />
+
+          <BottomGradient />
+
           <CloseButton
             type="button"
             aria-label="Закрити вікно"
@@ -91,10 +109,6 @@ export const Modal = ({ isOpened, closeModal, title, children }) => {
               <path d="M195.2 195.2a64 64 0 0 1 90.5 0L512 421.5l226.3-226.3a64 64 0 0 1 90.5 90.5L602.5 512l226.3 226.3a64 64 0 0 1-90.5 90.5L512 602.5 285.7 828.8a64 64 0 0 1-90.5-90.5L421.5 512 195.2 285.7a64 64 0 0 1 0-90.5z" />
             </svg>
           </CloseButton>
-
-          <Title>{title}</Title>
-
-          {children}
         </Window>
       </Backdrop>,
       portalElement
