@@ -26,9 +26,11 @@ export const Backdrop = styled.div`
 
   background-color: #000000b0;
 
-  backdrop-filter: blur(6px);
-
   transition: ${createTransition(['opacity', 'visibility'], 'standart')};
+
+  @media screen and (min-width: 960px) {
+    backdrop-filter: blur(6px);
+  }
 `;
 
 export const Window = styled.div`

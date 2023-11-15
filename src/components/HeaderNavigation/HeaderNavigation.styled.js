@@ -17,8 +17,6 @@ export const NavigationContainer = styled.nav`
 
     background-color: #000000e0;
 
-    backdrop-filter: blur(6px);
-
     transform: ${({ isMenuOpened }) =>
       isMenuOpened ? 'translateX(0)' : 'translateX(102%)'};
 

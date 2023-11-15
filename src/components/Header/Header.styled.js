@@ -34,10 +34,12 @@ export const HeaderSizer = styled.div`
   margin: 0 auto;
   padding: 10px 8px;
 
-  backdrop-filter: ${({ scrolled }) => (scrolled ? 'blur(6px)' : 'initial')};
-
   @media screen and (min-width: 768px) {
     padding: 10px 16px;
+  }
+
+  @media screen and (min-width: 960px) {
+    backdrop-filter: ${({ scrolled }) => (scrolled ? 'blur(6px)' : 'initial')};
   }
 `;
 
