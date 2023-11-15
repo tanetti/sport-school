@@ -1,4 +1,12 @@
 import {
+  FACEBOOK,
+  INSTAGRAM,
+  YOUTUBE,
+  PHONE,
+  MAIL,
+  LOCATION,
+} from '@/constants';
+import {
   ContactTitle,
   FooterContainer,
   CopyrightContainer,
@@ -24,10 +32,10 @@ export const Footer = () => {
           <SocialsList>
             <li>
               <SocialLink
-                href="https://www.facebook.com/Slobozhanskedyussh"
+                href={FACEBOOK.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Посилання до акаунту Facebook"
+                aria-label={FACEBOOK.aria}
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                   <path
@@ -41,10 +49,10 @@ export const Footer = () => {
 
             <li>
               <SocialLink
-                href="https://www.instagram.com/dyusshslob/"
+                href={INSTAGRAM.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Посилання до акаунту Instagram"
+                aria-label={INSTAGRAM.aria}
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                   <path
@@ -65,10 +73,10 @@ export const Footer = () => {
 
             <li>
               <SocialLinkYouTube
-                href="https://www.youtube.com/@dyussh_slobozganske"
+                href={YOUTUBE.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Посилання до каналу YouTube"
+                aria-label={YOUTUBE.aria}
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                   <path
@@ -88,10 +96,7 @@ export const Footer = () => {
 
           <ContactList>
             <li>
-              <ContactLink
-                href="tel:+380689079646"
-                aria-label="Подзвонити на номер +380689079646"
-              >
+              <ContactLink href={PHONE.link} aria-label={PHONE.aria}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                   <path
                     fillRule="evenodd"
@@ -100,15 +105,12 @@ export const Footer = () => {
                   />
                 </svg>
 
-                <span>+38 (068) 907-96-46</span>
+                <span>{PHONE.label}</span>
               </ContactLink>
             </li>
 
             <li>
-              <ContactLink
-                href="mailto:dyussh.ssr@gmail.com"
-                aria-label="Почати листування з dyussh.ssr@gmail.com"
-              >
+              <ContactLink href={MAIL.link} aria-label={MAIL.aria}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                   <path
                     fillRule="evenodd"
@@ -117,17 +119,17 @@ export const Footer = () => {
                   />
                 </svg>
 
-                <span>dyussh.ssr@gmail.com</span>
+                <span>{MAIL.label}</span>
               </ContactLink>
             </li>
 
             <li>
               <address>
                 <ContactLink
-                  href="https://maps.app.goo.gl/nejgGh2bNBQMHvvBA"
+                  href={LOCATION.link}
+                  aria-label={LOCATION.aria}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Відкрити навігацію на Google Maps"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path
@@ -143,7 +145,7 @@ export const Footer = () => {
                     />
                   </svg>
 
-                  <span>Слобожанське, вулиця Спортивна 4</span>
+                  <span>{LOCATION.label}</span>
                 </ContactLink>
               </address>
             </li>

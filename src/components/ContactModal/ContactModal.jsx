@@ -1,9 +1,17 @@
 import PropTypes from 'prop-types';
 import { Modal } from '@/components/shared';
 import {
+  FACEBOOK,
+  INSTAGRAM,
+  YOUTUBE,
+  PHONE,
+  MAIL,
+  LOCATION,
+} from '@/constants';
+import {
   ContactLink,
   ContactsList,
-  GeoLink,
+  LocationLink,
   MainContactsContainer,
   MapFrame,
   SocialLink,
@@ -16,10 +24,7 @@ export const ContactModal = ({ isOpened, closeModal }) => {
       <MainContactsContainer>
         <ContactsList>
           <li>
-            <ContactLink
-              href="tel:+380689079646"
-              aria-label="Подзвонити на номер +380689079646"
-            >
+            <ContactLink href={PHONE.link} aria-label={PHONE.aria}>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path
                   fillRule="evenodd"
@@ -28,15 +33,12 @@ export const ContactModal = ({ isOpened, closeModal }) => {
                 />
               </svg>
 
-              <span>+38 (068) 907-96-46</span>
+              <span>{PHONE.label}</span>
             </ContactLink>
           </li>
 
           <li>
-            <ContactLink
-              href="mailto:dyussh.ssr@gmail.com"
-              aria-label="Почати листування з dyussh.ssr@gmail.com"
-            >
+            <ContactLink href={MAIL.link} aria-label={MAIL.aria}>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path
                   fillRule="evenodd"
@@ -45,7 +47,7 @@ export const ContactModal = ({ isOpened, closeModal }) => {
                 />
               </svg>
 
-              <span>dyussh.ssr@gmail.com</span>
+              <span>{MAIL.label}</span>
             </ContactLink>
           </li>
         </ContactsList>
@@ -53,10 +55,10 @@ export const ContactModal = ({ isOpened, closeModal }) => {
         <SocialsList>
           <li>
             <SocialLink
-              href="https://www.facebook.com/Slobozhanskedyussh"
+              href={FACEBOOK.link}
+              aria-label={FACEBOOK.aria}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Посилання до акаунту Facebook"
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path
@@ -70,10 +72,10 @@ export const ContactModal = ({ isOpened, closeModal }) => {
 
           <li>
             <SocialLink
-              href="https://www.instagram.com/dyusshslob/"
+              href={INSTAGRAM.link}
+              aria-label={INSTAGRAM.aria}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Посилання до акаунту Instagram"
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path
@@ -94,10 +96,10 @@ export const ContactModal = ({ isOpened, closeModal }) => {
 
           <li>
             <SocialLink
-              href="https://www.youtube.com/@dyussh_slobozganske"
+              href={YOUTUBE.link}
+              aria-label={YOUTUBE.aria}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Посилання до каналу YouTube"
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path
@@ -116,11 +118,11 @@ export const ContactModal = ({ isOpened, closeModal }) => {
         </SocialsList>
       </MainContactsContainer>
 
-      <GeoLink
-        href="https://maps.app.goo.gl/nejgGh2bNBQMHvvBA"
+      <LocationLink
+        href={LOCATION.link}
+        aria-label={LOCATION.aria}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Відкрити навігацію на Google Maps"
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <path
@@ -136,8 +138,8 @@ export const ContactModal = ({ isOpened, closeModal }) => {
           />
         </svg>
 
-        <span>Слобожанське, вулиця Спортивна 4</span>
-      </GeoLink>
+        <span>{LOCATION.label}</span>
+      </LocationLink>
 
       <MapFrame
         aria-label="Мапа Google"

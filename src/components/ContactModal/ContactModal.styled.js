@@ -100,7 +100,7 @@ export const SocialLink = styled.a`
   }
 `;
 
-export const GeoLink = styled.a`
+export const LocationLink = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
