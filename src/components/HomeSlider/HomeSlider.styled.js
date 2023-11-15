@@ -51,13 +51,15 @@ export const ActionButton = styled.button`
   }
 
   @media screen and (min-width: 768px) {
-    bottom: 12%;
-
     padding: 10px 26px 7px 26px;
 
     font-size: 20px;
 
     border-radius: 10px;
+  }
+
+  @media screen and (min-width: 960px) {
+    bottom: 12%;
   }
 
   @media screen and (min-width: 1440px) {
@@ -71,7 +73,6 @@ export const ActionButton = styled.button`
 
 export const StyledSwiper = styled(Swiper)`
   width: 100%;
-  max-height: 100dvh;
   margin: 0 auto;
   aspect-ratio: 16/10;
 
@@ -90,10 +91,6 @@ export const StyledSwiper = styled(Swiper)`
       'standart'
     )};
 
-    @media screen and (min-width: 768px) {
-      display: inline-block;
-    }
-
     &.swiper-pagination-bullet-active {
       background-color: #fa7734;
 
@@ -108,13 +105,22 @@ export const StyledSwiper = styled(Swiper)`
       opacity: 1;
     }
   }
+
+  @media screen and (min-width: 768px) {
+    max-height: 100dvh;
+  }
+
+  @media screen and (min-width: 960px) {
+    & span.swiper-pagination-bullet {
+      display: inline-block;
+    }
+  }
 `;
 
 export const StyledSwiperSlide = styled(SwiperSlide)`
   position: relative;
 
   width: 100%;
-  aspect-ratio: 16/10;
 
   background-position: center;
   background-repeat: no-repeat;

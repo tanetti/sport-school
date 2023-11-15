@@ -76,12 +76,12 @@ export const SectionsItem = styled.li`
 
   overflow: hidden;
 
-  transition: ${createTransition(['flex', 'font-size', 'filter'], 'standart')};
+  transition: ${createTransition(['flex', 'font-size'], 'standart')};
 
   &:is(:hover, :focus-within) {
     flex-grow: 0;
 
-    flex-basis: 100cqw;
+    flex-basis: calc(100vw - 20px);
 
     font-size: 26px;
 
@@ -163,7 +163,7 @@ export const CardBackground = styled.span`
   display: block;
 
   width: 100%;
-  height: 100%;
+  min-height: 100%;
 
   background-position: center;
   background-repeat: no-repeat;
@@ -186,7 +186,7 @@ export const CardBackground = styled.span`
   }
 
   @media screen and (max-width: 767.98px) {
-    height: 100cqw;
+    height: calc(100vw - 20px);
 
     transform: translateY(-10%);
 
