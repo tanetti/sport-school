@@ -10,11 +10,11 @@ export const StyledSection = styled.section`
   padding: 40px 10px 50px 10px;
 
   @media screen and (min-width: 768px) {
-    padding: 70px 16px 80px 16px;
+    padding: 70px 26px 80px 26px;
   }
 
   @media screen and (min-width: 1440px) {
-    padding: 90px 16px 100px 16px;
+    padding: 90px 26px 100px 26px;
   }
 `;
 

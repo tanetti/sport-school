@@ -4,6 +4,8 @@ import { createTransition } from '@/utilities';
 export const FooterContainer = styled.footer`
   justify-self: flex-end;
 
+  padding: 0 10px;
+
   background-color: #111;
 
   box-shadow: 0px 12px 8px 13px rgba(36, 36, 36, 0.82);

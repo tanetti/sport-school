@@ -1,28 +1,69 @@
 import styled from '@emotion/styled';
+import { createTransition } from '@/utilities';
+
+export const GeoLink = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  margin-bottom: 5px;
+  padding: 10px 0;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  color: #fa5502;
+
+  transition: ${createTransition('color', 'standart')};
+
+  & > svg {
+    width: 18px;
+
+    fill: currentColor;
+  }
+
+  & > span {
+    padding-top: 4px;
+
+    color: #111111;
+
+    transition: ${createTransition('color', 'standart')};
+  }
+
+  &:is(:hover, :focus) {
+    color: #fa5502;
+
+    & > span {
+      color: #fa7734;
+    }
+  }
+
+  @media screen and (min-width: 360px) {
+    font-size: 14px;
+
+    & > svg {
+      width: 22px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+
+    & > svg {
+      width: 24px;
+    }
+  }
+`;
 
 export const MapFrame = styled.iframe`
+  display: block;
+
   width: 100%;
-  height: 180px;
+  aspect-ratio: 5/3;
 
   border-width: 1px;
   border-style: solid;
   border-radius: 6px;
   border-color: #fa5502;
-
-  box-shadow: 0px 8px 10px -3px rgba(0, 0, 0, 0.5);
-
-  @media screen and (min-width: 410px) {
-    width: 340px;
-    height: 200px;
-  }
-
-  @media screen and (min-width: 620px) {
-    width: 400px;
-    height: 240px;
-  }
-
-  @media screen and (min-width: 768px) {
-    width: 500px;
-    height: 300px;
-  }
 `;

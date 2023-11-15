@@ -27,8 +27,7 @@ export const Backdrop = styled.div`
 export const Window = styled.div`
   position: relative;
 
-  min-width: 300px;
-  max-width: calc(100% - 20px);
+  width: calc(100% - 30px);
   max-height: calc(100dvh - 30px);
   padding: 10px;
 
@@ -47,12 +46,12 @@ export const Window = styled.div`
   transition: ${createTransition(['transform', 'opacity'], 'standart')};
 
   @media screen and (min-width: 480px) {
-    max-width: calc(100% - 40px);
+    width: 460px;
     max-height: calc(100dvh - 60px);
   }
 
   @media screen and (min-width: 768px) {
-    max-width: calc(100% - 60px);
+    width: 520px;
     max-height: calc(100dvh - 80px);
 
     padding: 15px;
