@@ -57,14 +57,8 @@ export const Window = styled.div`
 
   transition: ${createTransition(['transform', 'opacity'], 'standart')};
 
-  @media screen and (min-width: 360px) {
-    background-size: 90px;
-  }
-
   @media screen and (min-width: 480px) {
     width: 450px;
-
-    background-size: 100px;
   }
 
   @media screen and (min-width: 768px) {
@@ -193,6 +187,14 @@ export const BackgroundContainer = styled.div`
     (min-resolution: 3dppx) {
     background-image: ${`url(${BackgroundPNGx3})`};
     background-image: ${`url(${BackgroundWEBPx3})`};
+  }
+
+  @media screen and (min-width: 360px) {
+    background-size: 90px;
+  }
+
+  @media screen and (min-width: 480px) {
+    background-size: 100px;
   }
 `;
 
