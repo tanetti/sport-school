@@ -14,6 +14,8 @@ export const SectionStep = ({ onStepChange, closeModal, setValue, watch }) => {
   return (
     <>
       <SectionsContainer>
+        <legend className="visually_hidden">Крок 1: Оберіть секцію.</legend>
+
         {SECTIONS.map(({ name, label, startAge, endAge, requestImages }) => (
           <SectionItem key={name}>
             <SectionInput
