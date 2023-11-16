@@ -6,13 +6,21 @@ export const SectionsContainer = styled.fieldset`
   flex-wrap: wrap;
   gap: 20px;
 
-  margin: 0 0 15px 0;
+  margin: 0 0 5px 0;
   padding: 20px;
 
   border: none;
 
   @media screen and (min-width: 380px) {
     gap: 30px;
+
+    margin: 0 0 15px 0;
+  }
+
+  @media screen and (min-width: 480px) {
+    gap: 30px;
+
+    margin: 0 0 20px 0;
   }
 `;
 
