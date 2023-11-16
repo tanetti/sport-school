@@ -118,6 +118,7 @@ export const BottomGradient = styled.div`
   position: absolute;
   bottom: 0;
   left: 0;
+  z-index: 10;
 
   width: 100%;
   height: 14px;
@@ -140,6 +141,7 @@ export const Title = styled.h3`
   position: sticky;
   top: 0;
   left: 0;
+  z-index: 10;
 
   padding: 0 40px 15px 40px;
 
@@ -164,6 +166,7 @@ export const BackgroundContainer = styled.div`
   position: absolute;
   left: 0;
   top: 0;
+  z-index: 20;
 
   width: 100%;
   height: 100%;
@@ -202,6 +205,7 @@ export const CloseButton = styled.button`
   position: absolute;
   top: 5px;
   right: 5px;
+  z-index: 30;
 
   display: flex;
   justify-content: center;
