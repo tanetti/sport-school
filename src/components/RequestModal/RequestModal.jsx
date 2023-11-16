@@ -5,10 +5,12 @@ import { SectionStep } from './components';
 import { TRANSITION_STANDART_DURATION_MS } from '@/constants';
 import { StepContainer } from './RequestModal.styled';
 
-const selectStep = (stepNumber, onStepChange) => {
+const selectStep = (stepNumber, onStepChange, closeModal) => {
   switch (stepNumber) {
     case 1:
-      return <SectionStep onStepChange={onStepChange} />;
+      return (
+        <SectionStep onStepChange={onStepChange} closeModal={closeModal} />
+      );
 
     case 2:
       return (
@@ -45,7 +47,7 @@ export const RequestModal = ({ isOpened, closeModal }) => {
   return (
     <Modal isOpened={isOpened} closeModal={onModalClose} title="Реєстрація">
       <StepContainer noValidate isStepVisible={isStepVisible}>
-        {selectStep(step, onStepChange)}
+        {selectStep(step, onStepChange, closeModal)}
       </StepContainer>
     </Modal>
   );

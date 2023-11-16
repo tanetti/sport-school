@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { SECTIONS } from '@/constants';
+import { ButtonsContainer, FilledButton, OutlinedButton } from '../shared';
 import {
   SectionInput,
   SectionItem,
@@ -8,7 +9,7 @@ import {
   SectionsContainer,
 } from './SectionStep.styled';
 
-export const SectionStep = ({ onStepChange }) => {
+export const SectionStep = ({ onStepChange, closeModal }) => {
   const [checkedRadio, setCheckedRadio] = useState(null);
 
   return (
@@ -39,13 +40,20 @@ export const SectionStep = ({ onStepChange }) => {
         ))}
       </SectionsContainer>
 
-      <button type="button" onClick={() => onStepChange(2)}>
-        next
-      </button>
+      <ButtonsContainer>
+        <OutlinedButton type="button" onClick={closeModal}>
+          Відмінити
+        </OutlinedButton>
+
+        <FilledButton type="button" onClick={() => onStepChange(2)}>
+          Продовжити
+        </FilledButton>
+      </ButtonsContainer>
     </>
   );
 };
 
 SectionStep.propTypes = {
   onStepChange: PropTypes.func.isRequired,
+  closeModal: PropTypes.func.isRequired,
 };

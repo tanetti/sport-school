@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { SpriteIcon } from '@/components/shared';
 import {
@@ -17,26 +17,32 @@ const bodyElement = document.getElementsByTagName('body')[0];
 
 export const Modal = ({ isOpened, closeModal, title, children }) => {
   const [isVisible, setIsVisible] = useState(false);
-
-  const handleClose = useCallback(() => {
-    setIsVisible(false);
-
-    bodyElement.classList.remove('modal');
-
-    setTimeout(() => {
-      closeModal();
-    }, 600);
-  }, [closeModal]);
+  const [isRendered, setIsRendered] = useState(false);
 
   useEffect(() => {
-    if (!isOpened) return;
+    if (!isOpened) {
+      setIsVisible(false);
+
+      bodyElement.classList.remove('modal');
+
+      setTimeout(() => {
+        setIsRendered(false);
+        closeModal();
+      }, 600);
+
+      return;
+    }
 
     bodyElement.classList.add('modal');
-    setIsVisible(true);
-  }, [isOpened]);
+    setIsRendered(true);
+
+    setTimeout(() => {
+      setIsVisible(true);
+    }, 100);
+  }, [closeModal, isOpened]);
 
   useEffect(() => {
-    if (!isOpened) return;
+    if (!isRendered) return;
 
     const focusableElements = portalElement.querySelectorAll(
       'button, [href], iframe, input, select, textarea, [tabindex]:not([tabindex="-1"])'
@@ -72,7 +78,7 @@ export const Modal = ({ isOpened, closeModal, title, children }) => {
     const handleEscapeKeyPress = event => {
       if (event.key !== 'Escape') return;
 
-      handleClose();
+      closeModal();
     };
 
     window.addEventListener('keydown', handleTabKeyPress);
@@ -82,11 +88,11 @@ export const Modal = ({ isOpened, closeModal, title, children }) => {
       window.removeEventListener('keydown', handleTabKeyPress);
       window.removeEventListener('keydown', handleEscapeKeyPress);
     };
-  }, [handleClose, isOpened]);
+  }, [closeModal, isRendered]);
 
-  if (isOpened)
+  if (isRendered)
     return createPortal(
-      <Backdrop isVisible={isVisible} onClick={handleClose}>
+      <Backdrop isVisible={isVisible} onClick={closeModal}>
         <Window
           isVisible={isVisible}
           onClick={event => event.stopPropagation()}
@@ -104,7 +110,7 @@ export const Modal = ({ isOpened, closeModal, title, children }) => {
           <CloseButton
             type="button"
             aria-label="Закрити вікно"
-            onClick={handleClose}
+            onClick={closeModal}
           >
             <SpriteIcon symbol="close" />
           </CloseButton>
