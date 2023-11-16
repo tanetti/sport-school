@@ -6,7 +6,7 @@ export const SectionsContainer = styled.fieldset`
   flex-wrap: wrap;
   gap: 30px;
 
-  margin: 0 0 10px 0;
+  margin: 0 0 15px 0;
   padding: 20px;
 
   border: none;

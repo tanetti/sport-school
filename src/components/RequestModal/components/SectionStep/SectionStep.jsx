@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react';
 import { SECTIONS } from '@/constants';
 import { ButtonsContainer, FilledButton, OutlinedButton } from '../shared';
 import {
@@ -9,8 +8,8 @@ import {
   SectionsContainer,
 } from './SectionStep.styled';
 
-export const SectionStep = ({ onStepChange, closeModal }) => {
-  const [checkedRadio, setCheckedRadio] = useState(null);
+export const SectionStep = ({ onStepChange, closeModal, setValue, watch }) => {
+  const currentSection = watch('section');
 
   return (
     <>
@@ -22,14 +21,14 @@ export const SectionStep = ({ onStepChange, closeModal }) => {
               type="radio"
               name="section"
               id={name}
-              active={checkedRadio === name}
+              active={currentSection === name}
               value={name}
-              onChange={event => setCheckedRadio(event.target.value)}
+              onChange={() => setValue('section', name)}
             />
 
             <SectionLabel
               htmlFor={name}
-              active={checkedRadio === name}
+              active={currentSection === name}
               images={requestImages}
             >
               {label}
@@ -47,7 +46,7 @@ export const SectionStep = ({ onStepChange, closeModal }) => {
 
         <FilledButton
           type="button"
-          disabled={!checkedRadio}
+          disabled={!currentSection}
           onClick={() => onStepChange(2)}
         >
           Продовжити
@@ -60,4 +59,6 @@ export const SectionStep = ({ onStepChange, closeModal }) => {
 SectionStep.propTypes = {
   onStepChange: PropTypes.func.isRequired,
   closeModal: PropTypes.func.isRequired,
+  setValue: PropTypes.func.isRequired,
+  watch: PropTypes.func.isRequired,
 };
