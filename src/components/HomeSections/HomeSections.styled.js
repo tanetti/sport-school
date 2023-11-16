@@ -165,6 +165,8 @@ export const CardBackground = styled.span`
   width: 100%;
   min-height: 100%;
 
+  overflow: hidden;
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

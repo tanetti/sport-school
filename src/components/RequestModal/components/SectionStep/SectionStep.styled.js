@@ -26,6 +26,16 @@ export const SectionItem = styled.div`
   }
 `;
 
+export const SectionInput = styled.input`
+  &:is(:hover, :focus) + label {
+    color: ${({ active }) => (active ? '#fa5502' : '#fff')};
+
+    opacity: 1;
+
+    filter: grayscale(0);
+  }
+`;
+
 export const SectionLabel = styled.label`
   display: flex;
   flex-direction: column;
@@ -34,15 +44,15 @@ export const SectionLabel = styled.label`
   height: 100%;
   padding: 5px;
 
-  font-size: ${({ active }) => (active ? '12px' : '10px')};
+  font-size: 12px;
   font-weight: 700;
 
   border-width: 1px;
   border-style: solid;
-  border-radius: 6px;
+  border-radius: 8px;
   border-color: #000;
 
-  color: ${({ active }) => (active ? '#fa5502' : '#fff')};
+  color: ${({ active }) => (active ? '#fa5502' : '#aeaeae')};
   background-color: #000;
 
   background-position: center;
@@ -78,7 +88,7 @@ export const SectionLabel = styled.label`
   filter: ${({ active }) => (active ? 'grayscale(0)' : 'grayscale(0.6)')};
 
   transition: ${createTransition(
-    ['color', 'opacity', 'transform', 'filter', 'font-size'],
+    ['color', 'opacity', 'transform', 'filter'],
     'standart'
   )};
 
@@ -100,7 +110,7 @@ export const SectionLabel = styled.label`
   @media screen and (min-width: 380px) {
     padding: 6px;
 
-    font-size: ${({ active }) => (active ? '13px' : '12px')};
+    font-size: 14px;
 
     & > span {
       font-size: 11px;
@@ -110,7 +120,7 @@ export const SectionLabel = styled.label`
   @media screen and (min-width: 420px) {
     padding: 8px;
 
-    font-size: ${({ active }) => (active ? '14px' : '12px')};
+    font-size: 15px;
 
     transform: ${({ active }) => (active ? 'scale(1.15)' : 'scale(1)')};
 
@@ -122,7 +132,7 @@ export const SectionLabel = styled.label`
   @media screen and (min-width: 480px) {
     padding: 10px;
 
-    font-size: ${({ active }) => (active ? '16px' : '14px')};
+    font-size: 16px;
 
     & > span {
       font-size: 13px;
@@ -132,7 +142,7 @@ export const SectionLabel = styled.label`
   @media screen and (min-width: 768px) {
     padding: 8px;
 
-    font-size: ${({ active }) => (active ? '14px' : '12px')};
+    font-size: 13px;
 
     transform: ${({ active }) => (active ? 'scale(1.2)' : 'scale(1)')};
 

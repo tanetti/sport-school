@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { SECTIONS } from '@/constants';
 import {
+  SectionInput,
   SectionItem,
   SectionLabel,
   SectionsContainer,
@@ -15,11 +16,12 @@ export const SectionStep = ({ onStepChange }) => {
       <SectionsContainer>
         {SECTIONS.map(({ name, label, startAge, endAge, requestImages }) => (
           <SectionItem key={name}>
-            <input
+            <SectionInput
               className="visually_hidden"
               type="radio"
               name="section"
               id={name}
+              active={checkedRadio === name}
               value={name}
               onChange={event => setCheckedRadio(event.target.value)}
             />
