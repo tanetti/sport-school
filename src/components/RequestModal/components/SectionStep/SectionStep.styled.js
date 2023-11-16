@@ -4,23 +4,30 @@ import { createTransition } from '@/utilities';
 export const SectionsContainer = styled.fieldset`
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
 
   margin: 0 0 15px 0;
   padding: 20px;
 
   border: none;
+
+  @media screen and (min-width: 380px) {
+    gap: 30px;
+  }
 `;
 
 export const SectionItem = styled.div`
-  flex-basis: calc(50% - 15px);
-  max-width: calc(50% - 15px);
+  flex-basis: calc(50% - 10px);
+  max-width: calc(50% - 10px);
 
   aspect-ratio: 1/1;
 
-  @media screen and (min-width: 768px) {
-    flex-grow: 0;
+  @media screen and (min-width: 380px) {
+    flex-basis: calc(50% - 15px);
+    max-width: calc(50% - 15px);
+  }
 
+  @media screen and (min-width: 768px) {
     flex-basis: calc((100% - 60px) / 3);
     max-width: calc((100% - 60px) / 3);
   }
@@ -83,7 +90,7 @@ export const SectionLabel = styled.label`
 
   opacity: ${({ active }) => (active ? 1 : 0.85)};
 
-  transform: ${({ active }) => (active ? 'scale(1.2)' : 'scale(1)')};
+  transform: ${({ active }) => (active ? 'scale(1.15)' : 'scale(1)')};
 
   filter: ${({ active }) => (active ? 'grayscale(0)' : 'grayscale(0.6)')};
 
@@ -111,6 +118,8 @@ export const SectionLabel = styled.label`
     padding: 6px;
 
     font-size: 14px;
+
+    transform: ${({ active }) => (active ? 'scale(1.2)' : 'scale(1)')};
 
     & > span {
       font-size: 11px;
