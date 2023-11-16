@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { Modal } from '@/components/shared';
-import { SectionStep } from './components';
+import { SectionStep, InformationStep } from './components';
 import { TRANSITION_STANDART_DURATION_MS } from '@/constants';
 import { StepContainer } from './RequestModal.styled';
 
@@ -13,11 +13,7 @@ const selectStep = (stepNumber, onStepChange, closeModal) => {
       );
 
     case 2:
-      return (
-        <button type="button" onClick={() => onStepChange(1)}>
-          previous
-        </button>
-      );
+      return <InformationStep onStepChange={onStepChange} />;
 
     default:
       return null;

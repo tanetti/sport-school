@@ -45,7 +45,11 @@ export const SectionStep = ({ onStepChange, closeModal }) => {
           Відмінити
         </OutlinedButton>
 
-        <FilledButton type="button" onClick={() => onStepChange(2)}>
+        <FilledButton
+          type="button"
+          disabled={!checkedRadio}
+          onClick={() => onStepChange(2)}
+        >
           Продовжити
         </FilledButton>
       </ButtonsContainer>
