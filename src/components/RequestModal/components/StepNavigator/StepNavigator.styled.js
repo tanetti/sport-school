@@ -21,7 +21,7 @@ export const StepItem = styled.div`
   flex-grow: 0;
   flex-basis: 100%;
 
-  padding: 4px 4px 3px 14px;
+  padding: 5px 4px 4px 14px;
 
   font-size: 9px;
   line-height: 1;
@@ -90,7 +90,7 @@ export const PassedLabel = styled.div`
 
   width: 100%;
   height: 100%;
-  padding: 4px 4px 3px 14px;
+  padding: 5px 4px 4px 14px;
 
   font-weight: 700;
 
@@ -111,10 +111,7 @@ export const Arrow = styled.div`
   left: 2px;
 
   height: 100%;
-
   aspect-ratio: 1/1;
-
-  font-weight: 700;
 
   background-color: ${({ active, passed, next }) => {
     if (next) return '#fff';
@@ -124,6 +121,7 @@ export const Arrow = styled.div`
 
   border-width: 1px;
   border-style: solid;
+  border-radius: 2px;
   border-color: ${({ active, passed }) =>
     active || passed ? '#fa7734' : '#aeaeae'};
 
