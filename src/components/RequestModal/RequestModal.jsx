@@ -37,7 +37,7 @@ export const RequestModal = ({ isOpened, closeModal }) => {
     }, TRANSITION_STANDART_DURATION_MS);
   };
 
-  const renderStep = currentStep => {
+  const renderStep = () => {
     switch (currentStep) {
       case 1:
         return (
@@ -59,11 +59,13 @@ export const RequestModal = ({ isOpened, closeModal }) => {
 
   return (
     <Modal isOpened={isOpened} closeModal={closeModal} title="Реєстрація">
-      <StepNavigator currentStep={currentStep} watch={watch} />
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <StepNavigator currentStep={currentStep} watch={watch} />
 
-      <StepContainer noValidate isStepVisible={isStepVisible}>
-        {renderStep(currentStep)}
-      </StepContainer>
+        <StepContainer noValidate isStepVisible={isStepVisible}>
+          {renderStep()}
+        </StepContainer>
+      </div>
     </Modal>
   );
 };

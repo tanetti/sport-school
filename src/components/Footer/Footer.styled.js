@@ -67,6 +67,8 @@ export const CopyrightContainer = styled.div`
 `;
 
 export const CopyrightText = styled.p`
+  padding-bottom: 15px;
+
   font-size: 10px;
 
   text-align: center;

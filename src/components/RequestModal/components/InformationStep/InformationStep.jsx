@@ -1,9 +1,12 @@
 import PropTypes from 'prop-types';
 import { ButtonsContainer, FilledButton, OutlinedButton } from '../shared';
+import { SectionsContainer } from './InformationStep.styled';
 
 export const InformationStep = ({ onStepChange }) => {
   return (
     <>
+      <SectionsContainer>123</SectionsContainer>
+
       <ButtonsContainer>
         <OutlinedButton type="button" onClick={() => onStepChange(1)}>
           Назад

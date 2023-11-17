@@ -3,6 +3,7 @@ import { createTransition } from '@/utilities';
 
 export const SectionsContainer = styled.fieldset`
   display: flex;
+  flex-grow: 1;
   flex-wrap: wrap;
   gap: 20px;
 
