@@ -14,7 +14,7 @@ export const SectionStep = ({ onStepChange, closeModal, setValue, watch }) => {
   return (
     <>
       <SectionsContainer>
-        <legend className="visually_hidden">Крок 1: Оберіть секцію.</legend>
+        <legend className="visually_hidden">Оберіть секцію</legend>
 
         {SECTIONS.map(({ name, label, startAge, endAge, requestImages }) => (
           <SectionItem key={name}>
@@ -42,10 +42,6 @@ export const SectionStep = ({ onStepChange, closeModal, setValue, watch }) => {
       </SectionsContainer>
 
       <ButtonsContainer>
-        <OutlinedButton type="button" onClick={closeModal}>
-          Відмінити
-        </OutlinedButton>
-
         <FilledButton
           type="button"
           disabled={!currentSection}
@@ -53,6 +49,10 @@ export const SectionStep = ({ onStepChange, closeModal, setValue, watch }) => {
         >
           Продовжити
         </FilledButton>
+
+        <OutlinedButton type="button" onClick={closeModal}>
+          Відмінити
+        </OutlinedButton>
       </ButtonsContainer>
     </>
   );

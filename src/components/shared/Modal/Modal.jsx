@@ -15,7 +15,13 @@ import {
 const portalElement = document.getElementById('portal');
 const bodyElement = document.getElementsByTagName('body')[0];
 
-export const Modal = ({ isOpened, closeModal, title, children }) => {
+export const Modal = ({
+  isOpened,
+  closeModal,
+  focusTrigger,
+  title,
+  children,
+}) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isRendered, setIsRendered] = useState(false);
 
@@ -88,7 +94,7 @@ export const Modal = ({ isOpened, closeModal, title, children }) => {
       window.removeEventListener('keydown', handleTabKeyPress);
       window.removeEventListener('keydown', handleEscapeKeyPress);
     };
-  }, [closeModal, isRendered]);
+  }, [closeModal, isRendered, focusTrigger]);
 
   if (isRendered)
     return createPortal(

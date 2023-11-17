@@ -3,6 +3,7 @@ import { createTransition } from '@/utilities';
 
 export const ButtonsContainer = styled.div`
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
   gap: 12px;
 

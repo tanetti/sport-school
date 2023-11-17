@@ -10,12 +10,12 @@ export const RequestModal = ({ isOpened, closeModal }) => {
   const [currentStep, setCurrentStep] = useState(1);
   const [isStepVisible, setIsStepVisible] = useState(true);
 
-  const { setValue, watch, reset } = useForm({
+  const { control, setValue, watch, reset, handleSubmit } = useForm({
     defaultValues: {
       section: null,
+      name: '',
     },
   });
-
   useEffect(() => {
     if (isOpened) return;
 
@@ -50,7 +50,13 @@ export const RequestModal = ({ isOpened, closeModal }) => {
         );
 
       case 2:
-        return <InformationStep onStepChange={onStepChange} />;
+        return (
+          <InformationStep
+            onStepChange={onStepChange}
+            control={control}
+            handleSubmit={handleSubmit}
+          />
+        );
 
       default:
         return null;
@@ -58,7 +64,12 @@ export const RequestModal = ({ isOpened, closeModal }) => {
   };
 
   return (
-    <Modal isOpened={isOpened} closeModal={closeModal} title="Реєстрація">
+    <Modal
+      isOpened={isOpened}
+      closeModal={closeModal}
+      focusTrigger={currentStep}
+      title="Реєстрація"
+    >
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         <StepNavigator currentStep={currentStep} watch={watch} />
 
