@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
+import { useForm } from 'react-hook-form';
 import { Modal } from '@/components/shared';
-import { SectionStep, InformationStep } from './components';
+import { SectionStep, InformationStep, StepNavigator } from './components';
 import { TRANSITION_STANDART_DURATION_MS } from '@/constants';
 import { StepContainer } from './RequestModal.styled';
-import { useForm } from 'react-hook-form';
 
 export const RequestModal = ({ isOpened, closeModal }) => {
-  const [step, setStep] = useState(1);
+  const [currentStep, setCurrentStep] = useState(1);
   const [isStepVisible, setIsStepVisible] = useState(true);
 
   const { setValue, watch, reset } = useForm({
@@ -20,7 +20,7 @@ export const RequestModal = ({ isOpened, closeModal }) => {
     if (isOpened) return;
 
     const clearForm = setTimeout(() => {
-      setStep(1);
+      setCurrentStep(1);
       reset();
     }, TRANSITION_STANDART_DURATION_MS);
 
@@ -31,14 +31,14 @@ export const RequestModal = ({ isOpened, closeModal }) => {
     setIsStepVisible(false);
 
     setTimeout(() => {
-      setStep(stepNumber);
+      setCurrentStep(stepNumber);
 
       setIsStepVisible(true);
     }, TRANSITION_STANDART_DURATION_MS);
   };
 
-  const selectStep = stepNumber => {
-    switch (stepNumber) {
+  const renderStep = currentStep => {
+    switch (currentStep) {
       case 1:
         return (
           <SectionStep
@@ -59,8 +59,10 @@ export const RequestModal = ({ isOpened, closeModal }) => {
 
   return (
     <Modal isOpened={isOpened} closeModal={closeModal} title="Реєстрація">
+      <StepNavigator currentStep={currentStep} watch={watch} />
+
       <StepContainer noValidate isStepVisible={isStepVisible}>
-        {selectStep(step)}
+        {renderStep(currentStep)}
       </StepContainer>
     </Modal>
   );
