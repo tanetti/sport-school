@@ -53,8 +53,8 @@ export const StepItem = styled.div`
   )};
 
   &:first-of-type {
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
   }
 
   &:not(:first-of-type) {
@@ -66,8 +66,8 @@ export const StepItem = styled.div`
   }
 
   &:last-of-type {
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
   }
 
   @media screen and (min-width: 340px) {
@@ -108,7 +108,7 @@ export const PassedLabel = styled.div`
 export const Arrow = styled.div`
   position: absolute;
   top: 0;
-  left: 0;
+  left: 2px;
 
   height: 100%;
 
@@ -122,7 +122,15 @@ export const Arrow = styled.div`
     return 'transparent';
   }};
 
+  border-width: 1px;
+  border-style: solid;
+  border-color: ${({ active, passed }) =>
+    active || passed ? '#fa7734' : '#aeaeae'};
+
   transform: rotate(45deg) translate(-50%, 50%);
 
-  transition: ${createTransition('background-color', 'standart')};
+  transition: ${createTransition(
+    ['background-color', 'border-color'],
+    'standart'
+  )};
 `;
