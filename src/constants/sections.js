@@ -50,6 +50,7 @@ export const SECTIONS = [
   {
     name: 'football',
     label: 'Футбол',
+    disabled: false,
     startAge: 6,
     endAge: 18,
 
@@ -65,6 +66,7 @@ export const SECTIONS = [
   {
     name: 'volleyball',
     label: 'Волейбол',
+    disabled: false,
     startAge: 8,
     endAge: 18,
 
@@ -80,6 +82,7 @@ export const SECTIONS = [
   {
     name: 'climbing',
     label: 'Скелелазіння',
+    disabled: false,
     startAge: 8,
     endAge: 18,
 
@@ -95,6 +98,7 @@ export const SECTIONS = [
   {
     name: 'tennis',
     label: 'Теніс настільний',
+    disabled: false,
     startAge: 7,
     endAge: 18,
 
@@ -110,6 +114,7 @@ export const SECTIONS = [
   {
     name: 'box',
     label: 'Бокс',
+    disabled: false,
     startAge: 10,
     endAge: 18,
 
@@ -125,6 +130,7 @@ export const SECTIONS = [
   {
     name: 'swimming',
     label: 'Плавання',
+    disabled: true,
     startAge: 8,
     endAge: 18,
 

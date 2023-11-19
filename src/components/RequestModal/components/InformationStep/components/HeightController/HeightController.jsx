@@ -13,7 +13,6 @@ export const HeightController = ({ control }) => (
         fieldState={fieldState}
         label={'Зріст'}
         inputComponent={HeightFormatInput}
-        type="number"
         inputMode="decimal"
         hintBage="см"
       />

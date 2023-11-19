@@ -15,6 +15,7 @@ export const HeightFormatInput = forwardRef((props, ref) => {
       decimalScale={0}
       valueIsNumericString={true}
       onValueChange={({ floatValue }) => onChange(floatValue || null)}
+      isAllowed={({ value }) => value <= 250}
     />
   );
 });

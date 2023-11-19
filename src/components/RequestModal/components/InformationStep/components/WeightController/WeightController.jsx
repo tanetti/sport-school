@@ -13,7 +13,6 @@ export const WeightController = ({ control }) => (
         fieldState={fieldState}
         label={'Вага'}
         inputComponent={WeightFormatInput}
-        type="number"
         inputMode="decimal"
         hintBage="кг"
       />

@@ -24,6 +24,14 @@ export const Modal = ({
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isRendered, setIsRendered] = useState(false);
+  const [isBackdropBlocked, setIsBackdropBlocked] = useState(false);
+
+  const onBackdropClick = () => {
+    if (isBackdropBlocked) return setIsBackdropBlocked(false);
+
+    closeModal();
+    setIsBackdropBlocked(false);
+  };
 
   useEffect(() => {
     if (!isOpened) {
@@ -98,10 +106,12 @@ export const Modal = ({
 
   if (isRendered)
     return createPortal(
-      <Backdrop isVisible={isVisible} onClick={closeModal}>
+      <Backdrop isVisible={isVisible} onClick={onBackdropClick}>
         <Window
           isVisible={isVisible}
           onClick={event => event.stopPropagation()}
+          onMouseDownCapture={() => setIsBackdropBlocked(true)}
+          onMouseUpCapture={() => setIsBackdropBlocked(false)}
         >
           <ContentContainer>
             <Title>{title}</Title>

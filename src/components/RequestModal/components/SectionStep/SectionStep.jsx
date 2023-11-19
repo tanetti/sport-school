@@ -16,29 +16,34 @@ export const SectionStep = ({ onStepChange, closeModal, setValue, watch }) => {
       <SectionsContainer>
         <legend className="visually_hidden">Оберіть секцію</legend>
 
-        {SECTIONS.map(({ name, label, startAge, endAge, requestImages }) => (
-          <SectionItem key={name}>
-            <SectionInput
-              className="visually_hidden"
-              type="radio"
-              name="section"
-              id={name}
-              active={currentSection === name}
-              value={name}
-              onChange={() => setValue('section', name)}
-            />
+        {SECTIONS.map(
+          ({ name, label, startAge, endAge, disabled, requestImages }) => (
+            <SectionItem key={name}>
+              <SectionInput
+                className="visually_hidden"
+                type="radio"
+                name="section"
+                id={name}
+                disabled={disabled}
+                active={currentSection === name}
+                value={name}
+                onChange={() => setValue('section', name)}
+              />
 
-            <SectionLabel
-              htmlFor={name}
-              active={currentSection === name}
-              images={requestImages}
-            >
-              {label}
+              <SectionLabel
+                htmlFor={name}
+                active={currentSection === name}
+                images={requestImages}
+              >
+                {label}
 
-              <span>{`${startAge} - ${endAge} років`}</span>
-            </SectionLabel>
-          </SectionItem>
-        ))}
+                <span>{`${startAge} - ${endAge} років`}</span>
+
+                {disabled ? <strong>Тимчасово недоступно</strong> : null}
+              </SectionLabel>
+            </SectionItem>
+          )
+        )}
       </SectionsContainer>
 
       <ButtonsContainer>

@@ -17,7 +17,7 @@ export const WeightFormatInput = forwardRef((props, ref) => {
       onValueChange={({ floatValue }) => onChange(floatValue || null)}
       decimalSeparator="."
       allowedDecimalSeparators={['.', ',']}
-      isAllowed={values => values.value <= 150}
+      isAllowed={({ floatValue }) => floatValue <= 150}
     />
   );
 });

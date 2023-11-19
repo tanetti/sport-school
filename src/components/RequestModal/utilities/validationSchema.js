@@ -16,18 +16,28 @@ export const validationSchema = yup
   .object()
   .shape({
     section: yup.string().required(),
-    name: yup.string().trim().required("Вкажіть ім'я"),
-    surename: yup.string().trim().required('Вкажіть прізвище'),
+    name: yup
+      .string()
+      .trim()
+      .min(2, "Закоротке ім'я")
+      .max(30, "Задовге ім'я")
+      .required("Вкажіть ім'я"),
+    surename: yup
+      .string()
+      .trim()
+      .min(2, 'Закоротке прізвище')
+      .max(30, 'Задовге прізвище')
+      .required('Вкажіть прізвище'),
     phone: yup
       .string()
       .trim()
       .lengthIfNotEmpty(19, 'Невірний формат')
       .required('Вкажіть номер телефону'),
-    birthdate: yup.date().required('Вкажіть дату'),
+    birthdate: yup.date().required('Вкажіть дату народження'),
     height: yup
       .number()
       .nullable()
-      .min(80, 'Замалий зріст')
+      .min(60, 'Замалий зріст')
       .max(250, 'Завеликий зріст')
       .required('Вкажіть зріст'),
     weight: yup

@@ -103,6 +103,8 @@ export const SectionLabel = styled.label`
 
   filter: ${({ active }) => (active ? 'grayscale(0)' : 'grayscale(0.6)')};
 
+  overflow: hidden;
+
   transition: ${createTransition(
     ['color', 'opacity', 'transform', 'filter'],
     'standart'
@@ -123,6 +125,35 @@ export const SectionLabel = styled.label`
         : createTransition(['opacity', 'visibility'], 'standart')};
   }
 
+  & > strong {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    color: #ff3b3b;
+    background-color: #00000090;
+
+    text-align: center;
+
+    user-select: none;
+
+    transition: ${({ active }) =>
+      active
+        ? createTransition(['opacity', 'visibility'], 'standart', 'short')
+        : createTransition(['opacity', 'visibility'], 'standart')};
+  }
+
   @media screen and (min-width: 380px) {
     padding: 6px;
 
@@ -132,6 +163,10 @@ export const SectionLabel = styled.label`
 
     & > span {
       font-size: 11px;
+    }
+
+    & > strong {
+      font-size: 14px;
     }
   }
 
@@ -145,6 +180,10 @@ export const SectionLabel = styled.label`
     & > span {
       font-size: 12px;
     }
+
+    & > strong {
+      font-size: 16px;
+    }
   }
 
   @media screen and (min-width: 480px) {
@@ -154,6 +193,10 @@ export const SectionLabel = styled.label`
 
     & > span {
       font-size: 13px;
+    }
+
+    & > strong {
+      font-size: 18px;
     }
   }
 
@@ -166,6 +209,10 @@ export const SectionLabel = styled.label`
 
     & > span {
       font-size: 11px;
+    }
+
+    & > strong {
+      font-size: 14px;
     }
   }
 `;

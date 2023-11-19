@@ -14,6 +14,7 @@ export const RequestModal = ({ isOpened, closeModal }) => {
 
   const {
     control,
+    getValues,
     setValue,
     watch,
     reset,
@@ -73,6 +74,7 @@ export const RequestModal = ({ isOpened, closeModal }) => {
           <InformationStep
             onStepChange={onStepChange}
             control={control}
+            getValues={getValues}
             submitBlock={submitBlock}
             clearErrors={clearErrors}
             handleSubmit={handleSubmit}

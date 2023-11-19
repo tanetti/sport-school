@@ -13,6 +13,7 @@ import { FieldCouple, SectionsContainer } from './InformationStep.styled';
 export const InformationStep = ({
   onStepChange,
   control,
+  getValues,
   submitBlock,
   clearErrors,
   handleSubmit,
@@ -41,7 +42,7 @@ export const InformationStep = ({
         <FieldCouple>
           <PhoneController control={control} />
 
-          <BirthdateController control={control} />
+          <BirthdateController control={control} getValues={getValues} />
         </FieldCouple>
 
         <FieldCouple>
@@ -71,6 +72,7 @@ export const InformationStep = ({
 InformationStep.propTypes = {
   onStepChange: PropTypes.func.isRequired,
   control: PropTypes.object.isRequired,
+  getValues: PropTypes.func.isRequired,
   submitBlock: PropTypes.bool.isRequired,
   clearErrors: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
