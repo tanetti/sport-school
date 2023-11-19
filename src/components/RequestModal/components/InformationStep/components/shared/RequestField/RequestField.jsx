@@ -1,28 +1,43 @@
 import PropTypes from 'prop-types';
-import { Container, Input, Label } from './RequestField.styled';
+import {
+  Container,
+  ErrorLabel,
+  HintBage,
+  Input,
+  Label,
+} from './RequestField.styled';
 
 export const RequestField = ({
   field,
   fieldState,
   label,
+  inputComponent,
+  type = 'text',
   inputMode = 'text',
+  hintBage,
+  readOnly = false,
 }) => {
   const { name } = field;
   const { error } = fieldState;
 
-  console.log(error);
-
   return (
-    <Container>
+    <Container error={!!error}>
       <Input
+        as={inputComponent ? inputComponent : null}
         id={`input-field-${name}`}
-        type="text"
+        type={type}
         placeholder=""
         {...field}
         inputMode={inputMode}
+        autoComplete="off"
+        readOnly={readOnly ? 'true' : null}
       />
 
       {label ? <Label htmlFor={`input-field-${name}`}>{label}</Label> : null}
+
+      {hintBage ? <HintBage>{hintBage}</HintBage> : null}
+
+      <ErrorLabel>{error?.message}</ErrorLabel>
     </Container>
   );
 };
@@ -31,5 +46,9 @@ RequestField.propTypes = {
   field: PropTypes.object.isRequired,
   fieldState: PropTypes.object.isRequired,
   label: PropTypes.string,
+  inputComponent: PropTypes.object,
+  type: PropTypes.string,
   inputMode: PropTypes.string,
+  hintBage: PropTypes.string,
+  readOnly: PropTypes.bool,
 };

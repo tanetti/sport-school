@@ -1,8 +1,6 @@
 import styled from '@emotion/styled';
-// import { createTransition } from '@/utilities';
 
 export const SectionsContainer = styled.fieldset`
-  display: flex;
   flex-grow: 1;
 
   margin: 0 0 5px 0;
@@ -16,5 +14,26 @@ export const SectionsContainer = styled.fieldset`
 
   @media screen and (min-width: 480px) {
     margin: 0 0 20px 0;
+  }
+`;
+
+export const FieldCouple = styled.div`
+  &:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: 767.98px) {
+    & :not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    gap: 16px;
+
+    &:not(:last-of-type) {
+      margin-bottom: 30px;
+    }
   }
 `;

@@ -1,21 +1,38 @@
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
 import { Modal } from '@/components/shared';
 import { SectionStep, InformationStep, StepNavigator } from './components';
 import { TRANSITION_STANDART_DURATION_MS } from '@/constants';
+import { validationSchema } from './utilities';
 import { StepContainer } from './RequestModal.styled';
 
 export const RequestModal = ({ isOpened, closeModal }) => {
   const [currentStep, setCurrentStep] = useState(1);
   const [isStepVisible, setIsStepVisible] = useState(true);
 
-  const { control, setValue, watch, reset, handleSubmit } = useForm({
+  const {
+    control,
+    setValue,
+    watch,
+    reset,
+    handleSubmit,
+    clearErrors,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(validationSchema),
     defaultValues: {
       section: null,
       name: '',
+      surename: '',
+      phone: '',
+      weight: null,
+      height: null,
+      birthdate: null,
     },
   });
+
   useEffect(() => {
     if (isOpened) return;
 
@@ -49,14 +66,19 @@ export const RequestModal = ({ isOpened, closeModal }) => {
           />
         );
 
-      case 2:
+      case 2: {
+        const submitBlock = !!Object.keys(errors)?.length;
+
         return (
           <InformationStep
             onStepChange={onStepChange}
             control={control}
+            submitBlock={submitBlock}
+            clearErrors={clearErrors}
             handleSubmit={handleSubmit}
           />
         );
+      }
 
       default:
         return null;

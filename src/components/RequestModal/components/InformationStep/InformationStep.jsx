@@ -1,10 +1,28 @@
 import PropTypes from 'prop-types';
 import { ButtonsContainer, FilledButton, OutlinedButton } from '../shared';
-import { SectionsContainer } from './InformationStep.styled';
-import { RequestField } from './components/shared';
-import { Controller } from 'react-hook-form';
+import {
+  NameController,
+  SurenameController,
+  PhoneController,
+  HeightController,
+  WeightController,
+  BirthdateController,
+} from './components';
+import { FieldCouple, SectionsContainer } from './InformationStep.styled';
 
-export const InformationStep = ({ onStepChange, control, handleSubmit }) => {
+export const InformationStep = ({
+  onStepChange,
+  control,
+  submitBlock,
+  clearErrors,
+  handleSubmit,
+}) => {
+  const onStepBack = () => {
+    clearErrors();
+
+    onStepChange(1);
+  };
+
   const onSubmit = formData => {
     console.log(formData);
   };
@@ -14,25 +32,35 @@ export const InformationStep = ({ onStepChange, control, handleSubmit }) => {
       <SectionsContainer>
         <legend className="visually_hidden">Заповніть дані</legend>
 
-        <Controller
-          name="name"
-          control={control}
-          render={({ field, fieldState }) => (
-            <RequestField
-              field={field}
-              fieldState={fieldState}
-              label={"Ім'я"}
-            />
-          )}
-        />
+        <FieldCouple>
+          <NameController control={control} />
+
+          <SurenameController control={control} />
+        </FieldCouple>
+
+        <FieldCouple>
+          <PhoneController control={control} />
+
+          <BirthdateController control={control} />
+        </FieldCouple>
+
+        <FieldCouple>
+          <HeightController control={control} />
+
+          <WeightController control={control} />
+        </FieldCouple>
       </SectionsContainer>
 
       <ButtonsContainer>
-        <FilledButton type="submit" onClick={handleSubmit(onSubmit)}>
+        <FilledButton
+          type="submit"
+          disabled={submitBlock}
+          onClick={handleSubmit(onSubmit)}
+        >
           Записатися
         </FilledButton>
 
-        <OutlinedButton type="button" onClick={() => onStepChange(1)}>
+        <OutlinedButton type="button" onClick={onStepBack}>
           Назад
         </OutlinedButton>
       </ButtonsContainer>
@@ -43,5 +71,7 @@ export const InformationStep = ({ onStepChange, control, handleSubmit }) => {
 InformationStep.propTypes = {
   onStepChange: PropTypes.func.isRequired,
   control: PropTypes.object.isRequired,
+  submitBlock: PropTypes.bool.isRequired,
+  clearErrors: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
 };

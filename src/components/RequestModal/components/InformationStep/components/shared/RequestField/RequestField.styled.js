@@ -4,30 +4,38 @@ import { createTransition } from '@/utilities';
 export const Container = styled.div`
   position: relative;
 
+  display: flex;
+  align-items: center;
+
   width: 100%;
 
   border-width: 2px;
   border-style: solid;
   border-radius: 8px;
-  border-color: #aeaeae;
+  border-color: ${({ error }) => (error ? '#db1a04a1' : '#aeaeae')};
 
   transition: ${createTransition(['border-color'], 'long')};
 
   cursor: text;
 
+  & > div {
+    opacity: ${({ error }) => (error ? 1 : 0)};
+    visibility: ${({ error }) => (error ? 'visible' : 'hidden')};
+  }
+
   &:hover {
-    border-color: #fa7734aa;
+    border-color: ${({ error }) => (error ? '#db1a04' : '#fa7734aa')};
 
     & > label {
-      color: #fa7734ee;
+      color: ${({ error }) => (error ? '#db1a04' : '#fa7734ee')};
     }
   }
 
   &:focus-within {
-    border-color: #fa5502;
+    border-color: ${({ error }) => (error ? '#db1a04' : '#fa5502')};
 
     & > label {
-      color: #fa5502;
+      ${({ error }) => (error ? '#db1a04' : '#fa5502')};
     }
   }
 `;
@@ -50,7 +58,7 @@ export const Input = styled.input`
   text-overflow: ellipsis;
 
   &:is(:focus, :not(:placeholder-shown)) + label {
-    transform: translateY(-156%) translateX(-6px) scale(0.8);
+    transform: translateY(-156%) scale(0.8);
 
     background-color: #fff;
   }
@@ -72,8 +80,38 @@ export const Label = styled.label`
 
   transform: translateY(-47%);
 
+  transform-origin: left;
+
   transition: ${createTransition(
     ['color', 'background-color', 'transform'],
     'standart'
   )};
+`;
+
+export const ErrorLabel = styled.div`
+  position: absolute;
+  bottom: -8px;
+  left: 10px;
+
+  padding: 0 5px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  color: #db1a04;
+  background-color: #fff;
+
+  border-radius: 6px;
+
+  transition: ${createTransition(['opacity', 'visibility'], 'standart')};
+`;
+
+export const HintBage = styled.span`
+  padding: 0 8px;
+
+  font-weight: 700;
+
+  color: #aeaeae;
+
+  text-transform: lowercase;
 `;
