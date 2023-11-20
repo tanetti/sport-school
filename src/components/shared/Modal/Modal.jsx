@@ -21,6 +21,7 @@ export const Modal = ({
   focusTrigger,
   title,
   children,
+  scrollContainerRef,
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isRendered, setIsRendered] = useState(false);
@@ -113,7 +114,7 @@ export const Modal = ({
           onMouseDownCapture={() => setIsBackdropBlocked(true)}
           onMouseUpCapture={() => setIsBackdropBlocked(false)}
         >
-          <ContentContainer>
+          <ContentContainer ref={scrollContainerRef}>
             <Title>{title}</Title>
 
             {children}
@@ -141,4 +142,5 @@ Modal.propTypes = {
   closeModal: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
+  scrollContainerRef: PropTypes.object,
 };

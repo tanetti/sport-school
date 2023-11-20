@@ -25,6 +25,7 @@ export const SectionStep = ({ onStepChange, closeModal, setValue, watch }) => {
                 name="section"
                 id={name}
                 disabled={disabled}
+                aria-checked={currentSection === name}
                 active={currentSection === name}
                 value={name}
                 onChange={() => setValue('section', name)}

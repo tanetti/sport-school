@@ -7,6 +7,7 @@ import {
   HeightController,
   WeightController,
   BirthdateController,
+  MedicalController,
 } from './components';
 import { FieldCouple, SectionsContainer } from './InformationStep.styled';
 
@@ -50,6 +51,8 @@ export const InformationStep = ({
 
           <WeightController control={control} />
         </FieldCouple>
+
+        <MedicalController control={control} />
       </SectionsContainer>
 
       <ButtonsContainer>

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Modal } from '@/components/shared';
@@ -11,6 +11,7 @@ import { StepContainer } from './RequestModal.styled';
 export const RequestModal = ({ isOpened, closeModal }) => {
   const [currentStep, setCurrentStep] = useState(1);
   const [isStepVisible, setIsStepVisible] = useState(true);
+  const scrollContainerRef = useRef(null);
 
   const {
     control,
@@ -31,6 +32,7 @@ export const RequestModal = ({ isOpened, closeModal }) => {
       weight: null,
       height: null,
       birthdate: null,
+      medical: true,
     },
   });
 
@@ -52,6 +54,8 @@ export const RequestModal = ({ isOpened, closeModal }) => {
       setCurrentStep(stepNumber);
 
       setIsStepVisible(true);
+
+      scrollContainerRef.current?.scroll({ top: 0, behavior: 'smooth' });
     }, TRANSITION_STANDART_DURATION_MS);
   };
 
@@ -93,6 +97,7 @@ export const RequestModal = ({ isOpened, closeModal }) => {
       closeModal={closeModal}
       focusTrigger={currentStep}
       title="Реєстрація"
+      scrollContainerRef={scrollContainerRef}
     >
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         <StepNavigator currentStep={currentStep} watch={watch} />

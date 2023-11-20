@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 import { Controller } from 'react-hook-form';
 import { ukUA } from '@mui/x-date-pickers';
 import dayjs from 'dayjs';
@@ -15,7 +16,17 @@ import {
 } from '../shared/RequestField/RequestField.styled';
 
 export const BirthdateController = ({ control, getValues }) => {
+  const [isDatepickerOpened, setIsDatepickerOpened] = useState(false);
+
   const { minDate, maxDate } = getMinMaxDate(getValues('section'));
+
+  const onDateChange = (onChange, dateValue) => {
+    const newDate = new Date(dateValue);
+
+    if (newDate < minDate || newDate > maxDate) return;
+
+    onChange(newDate);
+  };
 
   return (
     <Controller
@@ -35,7 +46,7 @@ export const BirthdateController = ({ control, getValues }) => {
               ...ukUA.components.MuiLocalizationProvider.defaultProps
                 .localeText,
               ...{
-                datePickerToolbarTitle: 'Оберіть дату',
+                datePickerToolbarTitle: 'Вкажіть дату народження',
                 cancelButtonLabel: 'Закрити',
               },
             }}
@@ -47,11 +58,15 @@ export const BirthdateController = ({ control, getValues }) => {
                 closeOnSelect={true}
                 disableFuture={true}
                 openTo="year"
+                open={isDatepickerOpened}
+                onClose={() => setIsDatepickerOpened(false)}
+                onOpen={() => setIsDatepickerOpened(true)}
+                onYearChange={null}
                 minDate={dayjs(minDate)}
                 maxDate={dayjs(maxDate)}
                 value={value ? dayjs(value) : null}
                 views={['year', 'month', 'day']}
-                onChange={value => onChange(new Date(value))}
+                onChange={value => onDateChange(onChange, value)}
                 slots={{ textField: Input }}
                 slotProps={{
                   textField: {
@@ -60,6 +75,7 @@ export const BirthdateController = ({ control, getValues }) => {
                     placeholder: '',
                     label: 'Дата народження',
                     readOnly: true,
+                    onKeyDownCapture: () => setIsDatepickerOpened(true),
                   },
                   actionBar: () => ({
                     actions: ['cancel'],

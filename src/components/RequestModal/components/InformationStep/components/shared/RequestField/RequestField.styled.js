@@ -57,6 +57,8 @@ export const Input = styled.input`
   overflow: hidden;
   text-overflow: ellipsis;
 
+  text-transform: capitalize;
+
   &:is(:focus, :not(:placeholder-shown)) + label {
     transform: translateY(-156%) scale(0.8);
 
