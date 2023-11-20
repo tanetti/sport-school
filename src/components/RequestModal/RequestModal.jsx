@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import { useEffect, useRef, useState } from 'react';
+import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Modal } from '@/components/shared';
 import { SectionStep, InformationStep, StepNavigator } from './components';
-import { TRANSITION_STANDART_DURATION_MS } from '@/constants';
+import { TRANSITION_STANDART_DURATION_MS, API_URL } from '@/constants';
 import { validationSchema } from './utilities';
 import { StepContainer } from './RequestModal.styled';
 
@@ -12,6 +13,8 @@ export const RequestModal = ({ isOpened, closeModal }) => {
   const [currentStep, setCurrentStep] = useState(1);
   const [isStepVisible, setIsStepVisible] = useState(true);
   const scrollContainerRef = useRef(null);
+
+  console.log();
 
   const {
     control,
@@ -37,7 +40,11 @@ export const RequestModal = ({ isOpened, closeModal }) => {
   });
 
   useEffect(() => {
-    if (isOpened) return;
+    if (isOpened) {
+      axios.post(`${API_URL}/wakeup`);
+
+      return;
+    }
 
     const clearForm = setTimeout(() => {
       setCurrentStep(1);

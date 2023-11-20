@@ -16,6 +16,8 @@ jobs:
           npm install
           npm run lint
           npm run build
+        env:
+          VITE_API_URL: ${{ secrets.VITE_API_URL }}
 
       # - name: Get public IP 🪐
       #   id: ip

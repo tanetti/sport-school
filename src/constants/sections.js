@@ -114,7 +114,7 @@ export const SECTIONS = [
   {
     name: 'box',
     label: 'Бокс',
-    disabled: false,
+    disabled: true,
     startAge: 10,
     endAge: 18,
 
