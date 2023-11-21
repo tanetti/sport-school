@@ -34,7 +34,7 @@ export const RequestModal = ({ isOpened, closeModal }) => {
       weight: null,
       height: null,
       birthdate: null,
-      medical: true,
+      medical: false,
     },
   });
 
