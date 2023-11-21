@@ -3,6 +3,7 @@ import { createTransition } from '@/utilities';
 
 export const Container = styled.div`
   display: flex;
+  flex-grow: 1;
   justify-content: center;
   align-items: center;
 `;
@@ -19,6 +20,14 @@ export const Input = styled.input`
   &:checked + label > span::after {
     transform: ${({ value }) => (value ? 'translateX(100%)' : 'initial')};
   }
+
+  &:disabled + label {
+    color: #aeaeae;
+
+    & > span {
+      background-color: #aeaeae;
+    }
+  }
 `;
 
 export const Label = styled.label`
@@ -28,7 +37,10 @@ export const Label = styled.label`
 
   padding: 8px;
 
+  font-size: 14px;
   font-weight: 700;
+
+  color: #111;
 
   cursor: pointer;
 
@@ -40,6 +52,10 @@ export const Label = styled.label`
 
   &:is(:hover, :focus) {
     color: #fa5502;
+  }
+
+  @media screen and (min-width: 340px) {
+    font-size: 16px;
   }
 `;
 

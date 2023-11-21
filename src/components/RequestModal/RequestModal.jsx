@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { useRequest } from '@/hooks';
 import { Modal } from '@/components/shared';
 import { SectionStep, InformationStep, StepNavigator } from './components';
 import { TRANSITION_STANDART_DURATION_MS, API_URL } from '@/constants';
@@ -13,8 +14,6 @@ export const RequestModal = ({ isOpened, closeModal }) => {
   const [currentStep, setCurrentStep] = useState(1);
   const [isStepVisible, setIsStepVisible] = useState(true);
   const scrollContainerRef = useRef(null);
-
-  console.log();
 
   const {
     control,
@@ -38,6 +37,12 @@ export const RequestModal = ({ isOpened, closeModal }) => {
       medical: true,
     },
   });
+
+  const { sendRequest, isPending, isSuccess, isError } = useRequest(isOpened);
+
+  const onSubmit = formData => {
+    sendRequest(formData);
+  };
 
   useEffect(() => {
     if (isOpened) {
@@ -87,8 +92,8 @@ export const RequestModal = ({ isOpened, closeModal }) => {
             control={control}
             getValues={getValues}
             submitBlock={submitBlock}
+            isDisabled={isPending || isSuccess || isError}
             clearErrors={clearErrors}
-            handleSubmit={handleSubmit}
           />
         );
       }
@@ -102,6 +107,15 @@ export const RequestModal = ({ isOpened, closeModal }) => {
     <Modal
       isOpened={isOpened}
       closeModal={closeModal}
+      isControlsDisabled={isPending}
+      isLoading={isPending}
+      loadingCaption="Відправляємо..."
+      isSuccess={isSuccess}
+      successCaption="Готово!"
+      successDescription="Дякуємо, найближчим часом ми з вами зв'яжимось."
+      isError={isError}
+      errorCaption="Біда та й годі!"
+      errorDescription="Щось пішло не за планом, будь ласка, спробуйте ще раз пізніше."
       focusTrigger={currentStep}
       title="Реєстрація"
       scrollContainerRef={scrollContainerRef}
@@ -109,7 +123,11 @@ export const RequestModal = ({ isOpened, closeModal }) => {
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         <StepNavigator currentStep={currentStep} watch={watch} />
 
-        <StepContainer noValidate isStepVisible={isStepVisible}>
+        <StepContainer
+          noValidate
+          isStepVisible={isStepVisible}
+          onSubmit={handleSubmit(onSubmit)}
+        >
           {renderStep()}
         </StepContainer>
       </div>

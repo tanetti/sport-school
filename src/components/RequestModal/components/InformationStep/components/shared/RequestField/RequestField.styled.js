@@ -9,12 +9,14 @@ export const Container = styled.div`
 
   width: 100%;
 
+  color: #111;
+
   border-width: 2px;
   border-style: solid;
   border-radius: 8px;
   border-color: ${({ error }) => (error ? '#db1a04a1' : '#aeaeae')};
 
-  transition: ${createTransition(['border-color'], 'long')};
+  transition: ${createTransition(['color', 'border-color'], 'long')};
 
   cursor: text;
 
@@ -38,6 +40,16 @@ export const Container = styled.div`
       ${({ error }) => (error ? '#db1a04' : '#fa5502')};
     }
   }
+
+  &:has(input:disabled) {
+    border-color: #e1e1e1;
+
+    color: #aeaeae;
+
+    & > label {
+      color: #e1e1e1;
+    }
+  }
 `;
 
 export const Input = styled.input`
@@ -49,7 +61,7 @@ export const Input = styled.input`
   border-width: 0;
   border-radius: 8px;
 
-  color: #111;
+  color: inherit;
   caret-color: #aeaeae;
 
   outline: transparent;

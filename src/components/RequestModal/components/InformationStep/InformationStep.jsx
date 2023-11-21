@@ -16,8 +16,8 @@ export const InformationStep = ({
   control,
   getValues,
   submitBlock,
+  isDisabled,
   clearErrors,
-  handleSubmit,
 }) => {
   const onStepBack = () => {
     clearErrors();
@@ -25,46 +25,46 @@ export const InformationStep = ({
     onStepChange(1);
   };
 
-  const onSubmit = formData => {
-    console.log(formData);
-  };
-
   return (
     <>
-      <SectionsContainer>
+      <SectionsContainer disabled={isDisabled}>
         <legend className="visually_hidden">Заповніть дані</legend>
 
         <FieldCouple>
-          <NameController control={control} />
+          <NameController control={control} isDisabled={isDisabled} />
 
-          <SurenameController control={control} />
+          <SurenameController control={control} isDisabled={isDisabled} />
         </FieldCouple>
 
         <FieldCouple>
-          <PhoneController control={control} />
+          <PhoneController control={control} isDisabled={isDisabled} />
 
-          <BirthdateController control={control} getValues={getValues} />
+          <BirthdateController
+            control={control}
+            getValues={getValues}
+            isDisabled={isDisabled}
+          />
         </FieldCouple>
 
         <FieldCouple>
-          <HeightController control={control} />
+          <HeightController control={control} isDisabled={isDisabled} />
 
-          <WeightController control={control} />
+          <WeightController control={control} isDisabled={isDisabled} />
         </FieldCouple>
 
-        <MedicalController control={control} />
+        <MedicalController control={control} isDisabled={isDisabled} />
       </SectionsContainer>
 
       <ButtonsContainer>
-        <FilledButton
-          type="submit"
-          disabled={submitBlock}
-          onClick={handleSubmit(onSubmit)}
-        >
+        <FilledButton type="submit" disabled={submitBlock || isDisabled}>
           Записатися
         </FilledButton>
 
-        <OutlinedButton type="button" onClick={onStepBack}>
+        <OutlinedButton
+          type="button"
+          disabled={isDisabled}
+          onClick={onStepBack}
+        >
           Назад
         </OutlinedButton>
       </ButtonsContainer>
@@ -77,6 +77,6 @@ InformationStep.propTypes = {
   control: PropTypes.object.isRequired,
   getValues: PropTypes.func.isRequired,
   submitBlock: PropTypes.bool.isRequired,
+  isDisabled: PropTypes.bool.isRequired,
   clearErrors: PropTypes.func.isRequired,
-  handleSubmit: PropTypes.func.isRequired,
 };

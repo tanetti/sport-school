@@ -2,10 +2,11 @@ import PropTypes from 'prop-types';
 import { Controller } from 'react-hook-form';
 import { Container, Input, Label, Switch } from './MedicalController.styled';
 
-export const MedicalController = ({ control }) => (
+export const MedicalController = ({ control, isDisabled }) => (
   <Controller
     name="medical"
     control={control}
+    disabled={isDisabled}
     render={({ field }) => (
       <Container>
         <Input
@@ -28,4 +29,5 @@ export const MedicalController = ({ control }) => (
 
 MedicalController.propTypes = {
   control: PropTypes.object.isRequired,
+  isDisabled: PropTypes.bool.isRequired,
 };

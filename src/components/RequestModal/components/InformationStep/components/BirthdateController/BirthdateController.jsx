@@ -15,7 +15,7 @@ import {
   Label,
 } from '../shared/RequestField/RequestField.styled';
 
-export const BirthdateController = ({ control, getValues }) => {
+export const BirthdateController = ({ control, getValues, isDisabled }) => {
   const [isDatepickerOpened, setIsDatepickerOpened] = useState(false);
 
   const { minDate, maxDate } = getMinMaxDate(getValues('section'));
@@ -28,6 +28,12 @@ export const BirthdateController = ({ control, getValues }) => {
     onChange(newDate);
   };
 
+  const onInputKeyDown = event => {
+    if (event.key === 'Tab') return;
+
+    setIsDatepickerOpened(true);
+  };
+
   return (
     <Controller
       name="birthdate"
@@ -35,80 +41,76 @@ export const BirthdateController = ({ control, getValues }) => {
       render={({
         field: { onChange, value, ref: controllerRef, name, ...rest },
         fieldState,
-      }) => {
-        const { error } = fieldState;
-
-        return (
-          <LocalizationProvider
-            dateAdapter={AdapterDayjs}
-            adapterLocale="uk"
-            localeText={{
-              ...ukUA.components.MuiLocalizationProvider.defaultProps
-                .localeText,
-              ...{
-                datePickerToolbarTitle: 'Вкажіть дату народження',
-                cancelButtonLabel: 'Закрити',
-              },
-            }}
-          >
-            <Container error={!!error}>
-              <MobileDatePicker
-                {...rest}
-                inputRef={controllerRef}
-                closeOnSelect={true}
-                disableFuture={true}
-                openTo="year"
-                open={isDatepickerOpened}
-                onClose={() => setIsDatepickerOpened(false)}
-                onOpen={() => setIsDatepickerOpened(true)}
-                onYearChange={null}
-                minDate={dayjs(minDate)}
-                maxDate={dayjs(maxDate)}
-                value={value ? dayjs(value) : null}
-                views={['year', 'month', 'day']}
-                onChange={value => onDateChange(onChange, value)}
-                slots={{ textField: Input }}
-                slotProps={{
-                  textField: {
-                    id: 'input-field-birthdate',
-                    name,
-                    placeholder: '',
-                    label: 'Дата народження',
-                    readOnly: true,
-                    onKeyDownCapture: () => setIsDatepickerOpened(true),
-                  },
-                  actionBar: () => ({
-                    actions: ['cancel'],
-                  }),
-                  mobilePaper: {
-                    sx: {
-                      '& .MuiPickersYear-root button.Mui-selected': {
-                        backgroundColor: '#fa5502',
-                        color: '#fff',
-                      },
-                      '& .MuiPickersMonth-root button.Mui-selected': {
-                        backgroundColor: '#fa5502',
-                        color: '#fff',
-                      },
-                      '& .MuiDayCalendar-weekContainer button.Mui-selected': {
-                        backgroundColor: '#fa5502',
-                        color: '#fff',
-                      },
-                      '& .MuiDialogActions-root button': {
-                        color: '#fa5502',
-                      },
+      }) => (
+        <LocalizationProvider
+          dateAdapter={AdapterDayjs}
+          adapterLocale="uk"
+          localeText={{
+            ...ukUA.components.MuiLocalizationProvider.defaultProps.localeText,
+            ...{
+              datePickerToolbarTitle: 'Вкажіть дату народження',
+              cancelButtonLabel: 'Закрити',
+            },
+          }}
+        >
+          <Container error={!!fieldState?.error}>
+            <MobileDatePicker
+              {...rest}
+              inputRef={controllerRef}
+              closeOnSelect={true}
+              disableFuture={true}
+              openTo="year"
+              open={isDatepickerOpened}
+              disabled={isDisabled}
+              onClose={() => setIsDatepickerOpened(false)}
+              onOpen={() => setIsDatepickerOpened(true)}
+              onYearChange={null}
+              minDate={dayjs(minDate)}
+              maxDate={dayjs(maxDate)}
+              value={value ? dayjs(value) : null}
+              views={['year', 'month', 'day']}
+              onChange={value => onDateChange(onChange, value)}
+              slots={{ textField: Input }}
+              slotProps={{
+                textField: {
+                  id: 'input-field-birthdate',
+                  name,
+                  placeholder: '',
+                  label: 'Дата народження',
+                  readOnly: true,
+                  onKeyDownCapture: onInputKeyDown,
+                },
+                actionBar: () => ({
+                  actions: ['cancel'],
+                }),
+                mobilePaper: {
+                  sx: {
+                    '& .MuiPickersYear-root button.Mui-selected': {
+                      backgroundColor: '#fa5502',
+                      color: '#fff',
+                    },
+                    '& .MuiPickersMonth-root button.Mui-selected': {
+                      backgroundColor: '#fa5502',
+                      color: '#fff',
+                    },
+                    '& .MuiDayCalendar-weekContainer button.Mui-selected': {
+                      backgroundColor: '#fa5502',
+                      color: '#fff',
+                    },
+                    '& .MuiDialogActions-root button': {
+                      color: '#fa5502',
                     },
                   },
-                }}
-              />
+                },
+              }}
+            />
 
-              <Label htmlFor="input-field-birthdate">Дата народження</Label>
+            <Label htmlFor="input-field-birthdate">Дата народження</Label>
 
-              <ErrorLabel>{error?.message}</ErrorLabel>
-            </Container>
-          </LocalizationProvider>
-        );
-      }}
+            <ErrorLabel>{fieldState?.error?.message}</ErrorLabel>
+          </Container>
+        </LocalizationProvider>
+      )}
     />
   );
 };
@@ -116,4 +118,5 @@ export const BirthdateController = ({ control, getValues }) => {
 BirthdateController.propTypes = {
   control: PropTypes.object.isRequired,
   getValues: PropTypes.func.isRequired,
+  isDisabled: PropTypes.bool.isRequired,
 };

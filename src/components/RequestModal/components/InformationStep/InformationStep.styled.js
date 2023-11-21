@@ -1,7 +1,9 @@
 import styled from '@emotion/styled';
 
 export const SectionsContainer = styled.fieldset`
-  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
 
   margin: 0 0 5px 0;
   padding: 20px;

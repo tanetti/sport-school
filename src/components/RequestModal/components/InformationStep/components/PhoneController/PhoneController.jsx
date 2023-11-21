@@ -3,15 +3,16 @@ import { Controller } from 'react-hook-form';
 import { RequestField } from '../shared';
 import { PhoneFormatInput } from './PhoneFormatInput';
 
-export const PhoneController = ({ control }) => (
+export const PhoneController = ({ control, isDisabled }) => (
   <Controller
     name="phone"
     control={control}
+    disabled={isDisabled}
     render={({ field, fieldState }) => (
       <RequestField
         field={field}
         fieldState={fieldState}
-        label={'Номер телефону'}
+        label="Номер телефону"
         inputComponent={PhoneFormatInput}
         inputMode="tel"
       />
@@ -21,4 +22,5 @@ export const PhoneController = ({ control }) => (
 
 PhoneController.propTypes = {
   control: PropTypes.object.isRequired,
+  isDisabled: PropTypes.bool.isRequired,
 };

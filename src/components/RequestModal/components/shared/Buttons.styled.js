@@ -54,10 +54,10 @@ export const OutlinedButton = styled(SharedButton)`
   }
 
   &:disabled {
-    color: #6e6e6e;
-    background-color: #00000010;
+    color: #aeaeae;
+    background-color: #00000009;
 
-    border-color: #6e6e6e;
+    border-color: #e1e1e1;
   }
 `;
 
@@ -79,8 +79,8 @@ export const FilledButton = styled(SharedButton)`
   }
 
   &:disabled {
-    background-color: #000000a0;
+    background-color: #c1c1c1;
 
-    border-color: #6e6e6e;
+    border-color: #aeaeae;
   }
 `;

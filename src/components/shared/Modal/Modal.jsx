@@ -7,7 +7,12 @@ import {
   BackgroundContainer,
   BottomGradient,
   CloseButton,
+  CloseOutlineButton,
   ContentContainer,
+  ErrorContainer,
+  Loader,
+  LoadingContainer,
+  SuccessContainer,
   Title,
   Window,
 } from './Modal.styled';
@@ -18,6 +23,15 @@ const bodyElement = document.getElementsByTagName('body')[0];
 export const Modal = ({
   isOpened,
   closeModal,
+  isControlsDisabled,
+  isLoading,
+  loadingCaption,
+  isSuccess,
+  successCaption,
+  successDescription,
+  isError,
+  errorCaption,
+  errorDescription,
   focusTrigger,
   title,
   children,
@@ -28,10 +42,18 @@ export const Modal = ({
   const [isBackdropBlocked, setIsBackdropBlocked] = useState(false);
 
   const onBackdropClick = () => {
+    if (isControlsDisabled) return;
+
     if (isBackdropBlocked) return setIsBackdropBlocked(false);
 
     closeModal();
     setIsBackdropBlocked(false);
+  };
+
+  const onCloseClick = () => {
+    if (isControlsDisabled) return;
+
+    closeModal();
   };
 
   useEffect(() => {
@@ -60,12 +82,14 @@ export const Modal = ({
     if (!isRendered) return;
 
     const focusableElements = portalElement.querySelectorAll(
-      'button, [href], iframe, input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      'button:not(:disabled), [href], iframe, input:not(:disabled), select, textarea, [tabindex]:not([tabindex="-1"])'
     );
     const firstElement = focusableElements[0];
     const lastElement = focusableElements[focusableElements.length - 1];
 
     const handleTabKeyPress = event => {
+      if (isControlsDisabled) return;
+
       if (event.key !== 'Tab') return;
 
       const focusable = Array.from(focusableElements);
@@ -91,6 +115,8 @@ export const Modal = ({
     };
 
     const handleEscapeKeyPress = event => {
+      if (isControlsDisabled) return;
+
       if (event.key !== 'Escape') return;
 
       closeModal();
@@ -103,7 +129,15 @@ export const Modal = ({
       window.removeEventListener('keydown', handleTabKeyPress);
       window.removeEventListener('keydown', handleEscapeKeyPress);
     };
-  }, [closeModal, isRendered, focusTrigger]);
+  }, [
+    closeModal,
+    isRendered,
+    focusTrigger,
+    isControlsDisabled,
+    isLoading,
+    isSuccess,
+    isError,
+  ]);
 
   if (isRendered)
     return createPortal(
@@ -127,10 +161,50 @@ export const Modal = ({
           <CloseButton
             type="button"
             aria-label="Закрити вікно"
-            onClick={closeModal}
+            onClick={onCloseClick}
           >
             <SpriteIcon symbol="close" />
           </CloseButton>
+
+          {isLoading !== undefined ? (
+            <>
+              <LoadingContainer visible={isLoading} aria-hidden={!isLoading}>
+                <Loader />
+
+                {loadingCaption ? <span>Відправляємо...</span> : null}
+              </LoadingContainer>
+
+              {isSuccess !== undefined ? (
+                <SuccessContainer visible={isSuccess} aria-hidden={!isSuccess}>
+                  <SpriteIcon symbol="check" />
+
+                  <em>{successCaption ? successCaption : 'Успіх'}</em>
+
+                  {successDescription ? (
+                    <span>{successDescription}</span>
+                  ) : null}
+
+                  <CloseOutlineButton type="button" onClick={onCloseClick}>
+                    Закрити
+                  </CloseOutlineButton>
+                </SuccessContainer>
+              ) : null}
+
+              {isError !== undefined ? (
+                <ErrorContainer visible={isError} aria-hidden={!isError}>
+                  <SpriteIcon symbol="error" />
+
+                  <em>{errorCaption ? errorCaption : 'Помилка'}</em>
+
+                  {errorDescription ? <span>{errorDescription}</span> : null}
+
+                  <CloseOutlineButton type="button" onClick={onCloseClick}>
+                    Закрити
+                  </CloseOutlineButton>
+                </ErrorContainer>
+              ) : null}
+            </>
+          ) : null}
         </Window>
       </Backdrop>,
       portalElement
@@ -140,6 +214,15 @@ export const Modal = ({
 Modal.propTypes = {
   isOpened: PropTypes.bool.isRequired,
   closeModal: PropTypes.func.isRequired,
+  isControlsDisabled: PropTypes.bool,
+  isLoading: PropTypes.bool,
+  loadingCaption: PropTypes.string,
+  isSuccess: PropTypes.bool,
+  successCaption: PropTypes.string,
+  successDescription: PropTypes.string,
+  isError: PropTypes.bool,
+  errorCaption: PropTypes.string,
+  errorDescription: PropTypes.string,
   title: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
   scrollContainerRef: PropTypes.object,
