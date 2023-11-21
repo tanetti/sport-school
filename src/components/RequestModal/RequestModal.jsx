@@ -112,7 +112,7 @@ export const RequestModal = ({ isOpened, closeModal }) => {
       loadingCaption="Відправляємо..."
       isSuccess={isSuccess}
       successCaption="Готово!"
-      successDescription="Дякуємо, найближчим часом ми з вами зв'яжимось."
+      successDescription="Дякуємо, ми зв'яжемося з Вами найближчим часом."
       isError={isError}
       errorCaption="Біда та й годі!"
       errorDescription="Щось пішло не за планом, будь ласка, спробуйте ще раз пізніше."
