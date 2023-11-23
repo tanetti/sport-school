@@ -5,8 +5,8 @@ export const StyledSection = styled.section`
   flex-direction: column;
   flex-grow: 1;
 
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 50px;
+  padding-bottom: 60px;
   padding-left: 10px;
   padding-right: 10px;
 
@@ -30,7 +30,7 @@ export const StyledSection = styled.section`
 `;
 
 export const SectionsTitle = styled.h2`
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 
   font-size: 20px;
   font-weight: 700;
@@ -42,13 +42,13 @@ export const SectionsTitle = styled.h2`
   text-transform: uppercase;
 
   @media screen and (min-width: 410px) {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 
     font-size: 22px;
   }
 
   @media screen and (min-width: 1440px) {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 
     font-size: 26px;
   }
