@@ -2,39 +2,6 @@ import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 import { createTransition } from '@/utilities';
 
-export const StyledSection = styled.section`
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-
-  padding: 40px 10px 50px 10px;
-
-  @media screen and (min-width: 768px) {
-    padding: 70px 26px 80px 26px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    padding: 90px 26px 100px 26px;
-  }
-`;
-
-export const SectionsTitle = styled.h2`
-  margin-bottom: 15px;
-
-  font-size: 22px;
-  font-weight: 700;
-
-  color: #fa5505;
-
-  text-align: center;
-
-  @media screen and (min-width: 1440px) {
-    margin-bottom: 25px;
-
-    font-size: 26px;
-  }
-`;
-
 export const SectionsList = styled.ul`
   display: flex;
   flex-direction: column;

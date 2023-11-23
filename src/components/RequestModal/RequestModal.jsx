@@ -45,8 +45,16 @@ export const RequestModal = ({ isOpened, closeModal }) => {
   };
 
   useEffect(() => {
+    const wakeupRequest = async () => {
+      try {
+        await axios.post(`${API_URL}/wakeup`);
+      } catch {
+        return;
+      }
+    };
+
     if (isOpened) {
-      axios.post(`${API_URL}/wakeup`);
+      wakeupRequest();
 
       return;
     }

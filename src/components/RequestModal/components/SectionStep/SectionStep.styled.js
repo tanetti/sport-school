@@ -95,7 +95,6 @@ export const SectionLabel = styled.label`
 
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-  backface-visibility: hidden;
 
   opacity: ${({ active }) => (active ? 1 : 0.85)};
 

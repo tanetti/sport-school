@@ -1,6 +1,13 @@
+import { useEffect } from 'react';
 import { HomeSlider, HomeSections } from '@/components';
 
 export const Home = () => {
+  useEffect(() => {
+    document.title = 'ДЮСШ Слобожанське - Головна';
+
+    scroll({ top: 0, behavior: 'smooth' });
+  }, []);
+
   return (
     <>
       <h1 className="visually_hidden">

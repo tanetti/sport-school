@@ -25,9 +25,7 @@ export const useRequest = isActive => {
 
       setIsPending(false);
       setIsSuccess(true);
-    } catch (error) {
-      console.log(error);
-
+    } catch {
       setIsPending(false);
       setIsError(true);
     }

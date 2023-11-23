@@ -124,6 +124,7 @@ import Swimming_WEBP_768x2 from '@/assets/sections/swimming/768x2.webp';
 import Swimming_JPG_768x3 from '@/assets/sections/swimming/768x3.jpg';
 import Swimming_WEBP_768x3 from '@/assets/sections/swimming/768x3.webp';
 
+import { SectionsTitle, StyledSection } from '@/components/shared';
 import {
   CardAge,
   CardBackground,
@@ -133,227 +134,223 @@ import {
   CartBottomBox,
   SectionsItem,
   SectionsList,
-  SectionsTitle,
-  StyledSection,
 } from './HomeSections.styled';
 
-export const HomeSections = () => {
-  return (
-    <StyledSection>
-      <SectionsTitle>ВІДДІЛЕННЯ</SectionsTitle>
+export const HomeSections = () => (
+  <StyledSection>
+    <SectionsTitle>Відділення</SectionsTitle>
 
-      <SectionsList>
-        <SectionsItem>
-          <CardBackground
-            imageJPG_360x1={Football_JPG_360x1}
-            imageWEBP_360x1={Football_WEBP_360x1}
-            imageJPG_360x2={Football_JPG_360x2}
-            imageWEBP_360x2={Football_WEBP_360x2}
-            imageJPG_360x3={Football_JPG_360x3}
-            imageWEBP_360x3={Football_WEBP_360x3}
-            imageJPG_420x1={Football_JPG_420x1}
-            imageWEBP_420x1={Football_WEBP_420x1}
-            imageJPG_420x2={Football_JPG_420x2}
-            imageWEBP_420x2={Football_WEBP_420x2}
-            imageJPG_420x3={Football_JPG_420x3}
-            imageWEBP_420x3={Football_WEBP_420x3}
-            imageJPG_768x1={Football_JPG_768x1}
-            imageWEBP_768x1={Football_WEBP_768x1}
-            imageJPG_768x2={Football_JPG_768x2}
-            imageWEBP_768x2={Football_WEBP_768x2}
-            imageJPG_768x3={Football_JPG_768x3}
-            imageWEBP_768x3={Football_WEBP_768x3}
-          />
+    <SectionsList>
+      <SectionsItem>
+        <CardBackground
+          imageJPG_360x1={Football_JPG_360x1}
+          imageWEBP_360x1={Football_WEBP_360x1}
+          imageJPG_360x2={Football_JPG_360x2}
+          imageWEBP_360x2={Football_WEBP_360x2}
+          imageJPG_360x3={Football_JPG_360x3}
+          imageWEBP_360x3={Football_WEBP_360x3}
+          imageJPG_420x1={Football_JPG_420x1}
+          imageWEBP_420x1={Football_WEBP_420x1}
+          imageJPG_420x2={Football_JPG_420x2}
+          imageWEBP_420x2={Football_WEBP_420x2}
+          imageJPG_420x3={Football_JPG_420x3}
+          imageWEBP_420x3={Football_WEBP_420x3}
+          imageJPG_768x1={Football_JPG_768x1}
+          imageWEBP_768x1={Football_WEBP_768x1}
+          imageJPG_768x2={Football_JPG_768x2}
+          imageWEBP_768x2={Football_WEBP_768x2}
+          imageJPG_768x3={Football_JPG_768x3}
+          imageWEBP_768x3={Football_WEBP_768x3}
+        />
 
-          <CardInfoBox>
-            <CardTitle>Футбол</CardTitle>
+        <CardInfoBox>
+          <CardTitle>Футбол</CardTitle>
 
-            <CartBottomBox>
-              <CardAge>
-                6 - 18
-                <span> років</span>
-              </CardAge>
+          <CartBottomBox>
+            <CardAge>
+              6 - 18
+              <span> років</span>
+            </CardAge>
 
-              <CardLink to="/football">Перейти</CardLink>
-            </CartBottomBox>
-          </CardInfoBox>
-        </SectionsItem>
+            <CardLink to="/football">Перейти</CardLink>
+          </CartBottomBox>
+        </CardInfoBox>
+      </SectionsItem>
 
-        <SectionsItem>
-          <CardBackground
-            imageJPG_360x1={Volleyball_JPG_360x1}
-            imageWEBP_360x1={Volleyball_WEBP_360x1}
-            imageJPG_360x2={Volleyball_JPG_360x2}
-            imageWEBP_360x2={Volleyball_WEBP_360x2}
-            imageJPG_360x3={Volleyball_JPG_360x3}
-            imageWEBP_360x3={Volleyball_WEBP_360x3}
-            imageJPG_420x1={Volleyball_JPG_420x1}
-            imageWEBP_420x1={Volleyball_WEBP_420x1}
-            imageJPG_420x2={Volleyball_JPG_420x2}
-            imageWEBP_420x2={Volleyball_WEBP_420x2}
-            imageJPG_420x3={Volleyball_JPG_420x3}
-            imageWEBP_420x3={Volleyball_WEBP_420x3}
-            imageJPG_768x1={Volleyball_JPG_768x1}
-            imageWEBP_768x1={Volleyball_WEBP_768x1}
-            imageJPG_768x2={Volleyball_JPG_768x2}
-            imageWEBP_768x2={Volleyball_WEBP_768x2}
-            imageJPG_768x3={Volleyball_JPG_768x3}
-            imageWEBP_768x3={Volleyball_WEBP_768x3}
-          />
+      <SectionsItem>
+        <CardBackground
+          imageJPG_360x1={Volleyball_JPG_360x1}
+          imageWEBP_360x1={Volleyball_WEBP_360x1}
+          imageJPG_360x2={Volleyball_JPG_360x2}
+          imageWEBP_360x2={Volleyball_WEBP_360x2}
+          imageJPG_360x3={Volleyball_JPG_360x3}
+          imageWEBP_360x3={Volleyball_WEBP_360x3}
+          imageJPG_420x1={Volleyball_JPG_420x1}
+          imageWEBP_420x1={Volleyball_WEBP_420x1}
+          imageJPG_420x2={Volleyball_JPG_420x2}
+          imageWEBP_420x2={Volleyball_WEBP_420x2}
+          imageJPG_420x3={Volleyball_JPG_420x3}
+          imageWEBP_420x3={Volleyball_WEBP_420x3}
+          imageJPG_768x1={Volleyball_JPG_768x1}
+          imageWEBP_768x1={Volleyball_WEBP_768x1}
+          imageJPG_768x2={Volleyball_JPG_768x2}
+          imageWEBP_768x2={Volleyball_WEBP_768x2}
+          imageJPG_768x3={Volleyball_JPG_768x3}
+          imageWEBP_768x3={Volleyball_WEBP_768x3}
+        />
 
-          <CardInfoBox>
-            <CardTitle>Волейбол</CardTitle>
+        <CardInfoBox>
+          <CardTitle>Волейбол</CardTitle>
 
-            <CartBottomBox>
-              <CardAge>
-                8 - 18<span> років</span>
-              </CardAge>
+          <CartBottomBox>
+            <CardAge>
+              8 - 18<span> років</span>
+            </CardAge>
 
-              <CardLink to="/volleyball">Перейти</CardLink>
-            </CartBottomBox>
-          </CardInfoBox>
-        </SectionsItem>
+            <CardLink to="/volleyball">Перейти</CardLink>
+          </CartBottomBox>
+        </CardInfoBox>
+      </SectionsItem>
 
-        <SectionsItem>
-          <CardBackground
-            imageJPG_360x1={Climbing_JPG_360x1}
-            imageWEBP_360x1={Climbing_WEBP_360x1}
-            imageJPG_360x2={Climbing_JPG_360x2}
-            imageWEBP_360x2={Climbing_WEBP_360x2}
-            imageJPG_360x3={Climbing_JPG_360x3}
-            imageWEBP_360x3={Climbing_WEBP_360x3}
-            imageJPG_420x1={Climbing_JPG_420x1}
-            imageWEBP_420x1={Climbing_WEBP_420x1}
-            imageJPG_420x2={Climbing_JPG_420x2}
-            imageWEBP_420x2={Climbing_WEBP_420x2}
-            imageJPG_420x3={Climbing_JPG_420x3}
-            imageWEBP_420x3={Climbing_WEBP_420x3}
-            imageJPG_768x1={Climbing_JPG_768x1}
-            imageWEBP_768x1={Climbing_WEBP_768x1}
-            imageJPG_768x2={Climbing_JPG_768x2}
-            imageWEBP_768x2={Climbing_WEBP_768x2}
-            imageJPG_768x3={Climbing_JPG_768x3}
-            imageWEBP_768x3={Climbing_WEBP_768x3}
-          />
+      <SectionsItem>
+        <CardBackground
+          imageJPG_360x1={Climbing_JPG_360x1}
+          imageWEBP_360x1={Climbing_WEBP_360x1}
+          imageJPG_360x2={Climbing_JPG_360x2}
+          imageWEBP_360x2={Climbing_WEBP_360x2}
+          imageJPG_360x3={Climbing_JPG_360x3}
+          imageWEBP_360x3={Climbing_WEBP_360x3}
+          imageJPG_420x1={Climbing_JPG_420x1}
+          imageWEBP_420x1={Climbing_WEBP_420x1}
+          imageJPG_420x2={Climbing_JPG_420x2}
+          imageWEBP_420x2={Climbing_WEBP_420x2}
+          imageJPG_420x3={Climbing_JPG_420x3}
+          imageWEBP_420x3={Climbing_WEBP_420x3}
+          imageJPG_768x1={Climbing_JPG_768x1}
+          imageWEBP_768x1={Climbing_WEBP_768x1}
+          imageJPG_768x2={Climbing_JPG_768x2}
+          imageWEBP_768x2={Climbing_WEBP_768x2}
+          imageJPG_768x3={Climbing_JPG_768x3}
+          imageWEBP_768x3={Climbing_WEBP_768x3}
+        />
 
-          <CardInfoBox>
-            <CardTitle>Скелелазіння</CardTitle>
+        <CardInfoBox>
+          <CardTitle>Скелелазіння</CardTitle>
 
-            <CartBottomBox>
-              <CardAge>
-                8 - 18<span> років</span>
-              </CardAge>
+          <CartBottomBox>
+            <CardAge>
+              8 - 18<span> років</span>
+            </CardAge>
 
-              <CardLink to="/climbing">Перейти</CardLink>
-            </CartBottomBox>
-          </CardInfoBox>
-        </SectionsItem>
+            <CardLink to="/climbing">Перейти</CardLink>
+          </CartBottomBox>
+        </CardInfoBox>
+      </SectionsItem>
 
-        <SectionsItem>
-          <CardBackground
-            imageJPG_360x1={Tennis_JPG_360x1}
-            imageWEBP_360x1={Tennis_WEBP_360x1}
-            imageJPG_360x2={Tennis_JPG_360x2}
-            imageWEBP_360x2={Tennis_WEBP_360x2}
-            imageJPG_360x3={Tennis_JPG_360x3}
-            imageWEBP_360x3={Tennis_WEBP_360x3}
-            imageJPG_420x1={Tennis_JPG_420x1}
-            imageWEBP_420x1={Tennis_WEBP_420x1}
-            imageJPG_420x2={Tennis_JPG_420x2}
-            imageWEBP_420x2={Tennis_WEBP_420x2}
-            imageJPG_420x3={Tennis_JPG_420x3}
-            imageWEBP_420x3={Tennis_WEBP_420x3}
-            imageJPG_768x1={Tennis_JPG_768x1}
-            imageWEBP_768x1={Tennis_WEBP_768x1}
-            imageJPG_768x2={Tennis_JPG_768x2}
-            imageWEBP_768x2={Tennis_WEBP_768x2}
-            imageJPG_768x3={Tennis_JPG_768x3}
-            imageWEBP_768x3={Tennis_WEBP_768x3}
-          />
+      <SectionsItem>
+        <CardBackground
+          imageJPG_360x1={Tennis_JPG_360x1}
+          imageWEBP_360x1={Tennis_WEBP_360x1}
+          imageJPG_360x2={Tennis_JPG_360x2}
+          imageWEBP_360x2={Tennis_WEBP_360x2}
+          imageJPG_360x3={Tennis_JPG_360x3}
+          imageWEBP_360x3={Tennis_WEBP_360x3}
+          imageJPG_420x1={Tennis_JPG_420x1}
+          imageWEBP_420x1={Tennis_WEBP_420x1}
+          imageJPG_420x2={Tennis_JPG_420x2}
+          imageWEBP_420x2={Tennis_WEBP_420x2}
+          imageJPG_420x3={Tennis_JPG_420x3}
+          imageWEBP_420x3={Tennis_WEBP_420x3}
+          imageJPG_768x1={Tennis_JPG_768x1}
+          imageWEBP_768x1={Tennis_WEBP_768x1}
+          imageJPG_768x2={Tennis_JPG_768x2}
+          imageWEBP_768x2={Tennis_WEBP_768x2}
+          imageJPG_768x3={Tennis_JPG_768x3}
+          imageWEBP_768x3={Tennis_WEBP_768x3}
+        />
 
-          <CardInfoBox>
-            <CardTitle>Теніс настільний</CardTitle>
+        <CardInfoBox>
+          <CardTitle>Теніс настільний</CardTitle>
 
-            <CartBottomBox>
-              <CardAge>
-                7 - 18<span> років</span>
-              </CardAge>
+          <CartBottomBox>
+            <CardAge>
+              7 - 18<span> років</span>
+            </CardAge>
 
-              <CardLink to="/tennis">Перейти</CardLink>
-            </CartBottomBox>
-          </CardInfoBox>
-        </SectionsItem>
+            <CardLink to="/tennis">Перейти</CardLink>
+          </CartBottomBox>
+        </CardInfoBox>
+      </SectionsItem>
 
-        <SectionsItem>
-          <CardBackground
-            imageJPG_360x1={Box_JPG_360x1}
-            imageWEBP_360x1={Box_WEBP_360x1}
-            imageJPG_360x2={Box_JPG_360x2}
-            imageWEBP_360x2={Box_WEBP_360x2}
-            imageJPG_360x3={Box_JPG_360x3}
-            imageWEBP_360x3={Box_WEBP_360x3}
-            imageJPG_420x1={Box_JPG_420x1}
-            imageWEBP_420x1={Box_WEBP_420x1}
-            imageJPG_420x2={Box_JPG_420x2}
-            imageWEBP_420x2={Box_WEBP_420x2}
-            imageJPG_420x3={Box_JPG_420x3}
-            imageWEBP_420x3={Box_WEBP_420x3}
-            imageJPG_768x1={Box_JPG_768x1}
-            imageWEBP_768x1={Box_WEBP_768x1}
-            imageJPG_768x2={Box_JPG_768x2}
-            imageWEBP_768x2={Box_WEBP_768x2}
-            imageJPG_768x3={Box_JPG_768x3}
-            imageWEBP_768x3={Box_WEBP_768x3}
-          />
+      <SectionsItem>
+        <CardBackground
+          imageJPG_360x1={Box_JPG_360x1}
+          imageWEBP_360x1={Box_WEBP_360x1}
+          imageJPG_360x2={Box_JPG_360x2}
+          imageWEBP_360x2={Box_WEBP_360x2}
+          imageJPG_360x3={Box_JPG_360x3}
+          imageWEBP_360x3={Box_WEBP_360x3}
+          imageJPG_420x1={Box_JPG_420x1}
+          imageWEBP_420x1={Box_WEBP_420x1}
+          imageJPG_420x2={Box_JPG_420x2}
+          imageWEBP_420x2={Box_WEBP_420x2}
+          imageJPG_420x3={Box_JPG_420x3}
+          imageWEBP_420x3={Box_WEBP_420x3}
+          imageJPG_768x1={Box_JPG_768x1}
+          imageWEBP_768x1={Box_WEBP_768x1}
+          imageJPG_768x2={Box_JPG_768x2}
+          imageWEBP_768x2={Box_WEBP_768x2}
+          imageJPG_768x3={Box_JPG_768x3}
+          imageWEBP_768x3={Box_WEBP_768x3}
+        />
 
-          <CardInfoBox>
-            <CardTitle>Бокс</CardTitle>
+        <CardInfoBox>
+          <CardTitle>Бокс</CardTitle>
 
-            <CartBottomBox>
-              <CardAge>
-                10 - 18<span> років</span>
-              </CardAge>
+          <CartBottomBox>
+            <CardAge>
+              10 - 18<span> років</span>
+            </CardAge>
 
-              <CardLink to="/box">Перейти</CardLink>
-            </CartBottomBox>
-          </CardInfoBox>
-        </SectionsItem>
+            <CardLink to="/box">Перейти</CardLink>
+          </CartBottomBox>
+        </CardInfoBox>
+      </SectionsItem>
 
-        <SectionsItem>
-          <CardBackground
-            imageJPG_360x1={Swimming_JPG_360x1}
-            imageWEBP_360x1={Swimming_WEBP_360x1}
-            imageJPG_360x2={Swimming_JPG_360x2}
-            imageWEBP_360x2={Swimming_WEBP_360x2}
-            imageJPG_360x3={Swimming_JPG_360x3}
-            imageWEBP_360x3={Swimming_WEBP_360x3}
-            imageJPG_420x1={Swimming_JPG_420x1}
-            imageWEBP_420x1={Swimming_WEBP_420x1}
-            imageJPG_420x2={Swimming_JPG_420x2}
-            imageWEBP_420x2={Swimming_WEBP_420x2}
-            imageJPG_420x3={Swimming_JPG_420x3}
-            imageWEBP_420x3={Swimming_WEBP_420x3}
-            imageJPG_768x1={Swimming_JPG_768x1}
-            imageWEBP_768x1={Swimming_WEBP_768x1}
-            imageJPG_768x2={Swimming_JPG_768x2}
-            imageWEBP_768x2={Swimming_WEBP_768x2}
-            imageJPG_768x3={Swimming_JPG_768x3}
-            imageWEBP_768x3={Swimming_WEBP_768x3}
-          />
+      <SectionsItem>
+        <CardBackground
+          imageJPG_360x1={Swimming_JPG_360x1}
+          imageWEBP_360x1={Swimming_WEBP_360x1}
+          imageJPG_360x2={Swimming_JPG_360x2}
+          imageWEBP_360x2={Swimming_WEBP_360x2}
+          imageJPG_360x3={Swimming_JPG_360x3}
+          imageWEBP_360x3={Swimming_WEBP_360x3}
+          imageJPG_420x1={Swimming_JPG_420x1}
+          imageWEBP_420x1={Swimming_WEBP_420x1}
+          imageJPG_420x2={Swimming_JPG_420x2}
+          imageWEBP_420x2={Swimming_WEBP_420x2}
+          imageJPG_420x3={Swimming_JPG_420x3}
+          imageWEBP_420x3={Swimming_WEBP_420x3}
+          imageJPG_768x1={Swimming_JPG_768x1}
+          imageWEBP_768x1={Swimming_WEBP_768x1}
+          imageJPG_768x2={Swimming_JPG_768x2}
+          imageWEBP_768x2={Swimming_WEBP_768x2}
+          imageJPG_768x3={Swimming_JPG_768x3}
+          imageWEBP_768x3={Swimming_WEBP_768x3}
+        />
 
-          <CardInfoBox>
-            <CardTitle>Плавання</CardTitle>
+        <CardInfoBox>
+          <CardTitle>Плавання</CardTitle>
 
-            <CartBottomBox>
-              <CardAge>
-                8 - 18<span> років</span>
-              </CardAge>
+          <CartBottomBox>
+            <CardAge>
+              8 - 18<span> років</span>
+            </CardAge>
 
-              <CardLink to="/swimming">Перейти</CardLink>
-            </CartBottomBox>
-          </CardInfoBox>
-        </SectionsItem>
-      </SectionsList>
-    </StyledSection>
-  );
-};
+            <CardLink to="/swimming">Перейти</CardLink>
+          </CartBottomBox>
+        </CardInfoBox>
+      </SectionsItem>
+    </SectionsList>
+  </StyledSection>
+);
