@@ -25,14 +25,11 @@ export const AdminList = styled.ul`
 export const AdminItem = styled.li`
   position: relative;
 
-  max-width: 420px;
+  max-width: 400px;
 
-  border-width: 1px;
-  border-style: solid;
   border-radius: 8px;
-  border-color: #e1e1e1;
 
-  box-shadow: 0px 8px 10px -3px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 6px 10px 2px rgba(0, 0, 0, 0.5);
 
   overflow: hidden;
 
@@ -65,19 +62,19 @@ export const ItemInfo = styled.p`
 
   width: 100%;
 
-  padding: 8px 12px 12px 12px;
+  padding: 12px;
 
   font-size: 13px;
 
-  color: #616161;
-  background-color: #ffffffe1;
+  color: #aeaeae;
+  background-color: #000000d1;
 
   text-align: center;
 
   backdrop-filter: blur(4px);
 
   @media screen and (min-width: 768px) and (max-width: 959.98px) {
-    padding: 6px 10px 10px 10px;
+    padding: 10px;
 
     font-size: 12px;
   }

@@ -8,12 +8,9 @@ export const TeamImage = styled.img`
   height: auto;
   margin: 0 auto 30px auto;
 
-  border-width: 1px;
-  border-style: solid;
   border-radius: 8px;
-  border-color: #818181;
 
-  box-shadow: 0px 8px 10px -3px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 6px 10px 2px rgba(0, 0, 0, 0.5);
 `;
 
 export const TeamDescriptionList = styled.ul`

@@ -6,12 +6,12 @@ export const StyledSection = styled.section`
   flex-grow: 1;
 
   padding-top: 30px;
-  padding-bottom: 25px;
+  padding-bottom: 30px;
   padding-left: 10px;
   padding-right: 10px;
 
   &:nth-of-type(odd) {
-    background-color: #f8f8f8;
+    background-color: #00000010;
   }
 
   &:nth-of-type(2) {
@@ -24,7 +24,7 @@ export const StyledSection = styled.section`
 
   @media screen and (min-width: 768px) {
     padding-top: 45px;
-    padding-bottom: 40px;
+    padding-bottom: 50px;
     padding-left: 26px;
     padding-right: 26px;
 
@@ -39,7 +39,7 @@ export const StyledSection = styled.section`
 
   @media screen and (min-width: 1440px) {
     padding-top: 60px;
-    padding-bottom: 50px;
+    padding-bottom: 60px;
 
     &:nth-of-type(2) {
       padding-top: 90px;
