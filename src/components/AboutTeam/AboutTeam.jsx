@@ -29,6 +29,13 @@ export const AboutTeam = () => (
 
     <TeamDescriptionList>
       <DescriptionItem data-aos="fade-up">
+        <em>
+          Наші двері завжди відчинені для активних, цілеспрямованих, бажаючих
+          розвитку у спорті дітей!
+        </em>
+      </DescriptionItem>
+
+      <DescriptionItem data-aos="fade-up">
         <span>
           Наша команда це висококваліфіковані спеціалісти своєї справи, які
           йдуть у ногу з часом та націлені на високий результат, прагнуть
@@ -42,13 +49,6 @@ export const AboutTeam = () => (
           цінують та підтримують здоровий дух дітей. Школа має сучасну спортивну
           базу яка постійно удосконалюється та має сучасний інвентар.
         </span>
-      </DescriptionItem>
-
-      <DescriptionItem data-aos="fade-up">
-        <em>
-          Наші двері завжди відчинені для активних, цілеспрямованих, бажаючих
-          розвитку у спорті дітей!
-        </em>
       </DescriptionItem>
     </TeamDescriptionList>
 

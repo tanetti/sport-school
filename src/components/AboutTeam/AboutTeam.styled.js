@@ -14,7 +14,7 @@ export const DescriptionItem = styled.li`
 
   padding: 16px;
 
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.2;
 
   &::before {
@@ -36,7 +36,7 @@ export const DescriptionItem = styled.li`
   }
 
   @media screen and (min-width: 480px) {
-    font-size: 15px;
+    font-size: 16px;
 
     &::before {
       width: 10px;
