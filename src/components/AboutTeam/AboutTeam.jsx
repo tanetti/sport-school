@@ -40,7 +40,7 @@ export const AboutTeam = () => (
         sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, (max-width: 960px) 960px, 1440px"
       />
 
-      <TeamImage alt="Фото команди школи" src={Team1440jpg} />
+      <TeamImage alt="Колектив на галявині напроти школи" src={Team1440jpg} />
     </picture>
 
     <TeamDescriptionList>
