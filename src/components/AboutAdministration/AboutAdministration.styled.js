@@ -10,15 +10,15 @@ export const AdminList = styled.ul`
 
   @media screen and (min-width: 768px) {
     display: flex;
-    gap: 15px;
-  }
-
-  @media screen and (min-width: 960px) {
     gap: 20px;
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 960px) {
     gap: 30px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    gap: 40px;
   }
 `;
 
@@ -39,7 +39,7 @@ export const AdminItem = styled.li`
 
   @media screen and (max-width: 767.98px) {
     &:not(:last-of-type) {
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
   }
 `;
@@ -88,7 +88,7 @@ export const Name = styled.span`
   font-size: 16px;
   font-weight: 700;
 
-  color: #fe5502;
+  color: #fe7734;
 
   text-align: center;
   text-transform: uppercase;

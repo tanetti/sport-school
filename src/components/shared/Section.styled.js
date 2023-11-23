@@ -14,40 +14,16 @@ export const StyledSection = styled.section`
     background-color: #00000010;
   }
 
-  &:nth-of-type(2) {
-    padding-top: 40px;
-  }
-
-  &:last-of-type {
-    padding-bottom: 50px;
-  }
-
   @media screen and (min-width: 768px) {
-    padding-top: 45px;
-    padding-bottom: 50px;
+    padding-top: 70px;
+    padding-bottom: 80px;
     padding-left: 26px;
     padding-right: 26px;
-
-    &:nth-of-type(2) {
-      padding-top: 70px;
-    }
-
-    &:last-of-type {
-      padding-bottom: 80px;
-    }
   }
 
   @media screen and (min-width: 1440px) {
-    padding-top: 60px;
-    padding-bottom: 60px;
-
-    &:nth-of-type(2) {
-      padding-top: 90px;
-    }
-
-    &:last-of-type {
-      padding-bottom: 100px;
-    }
+    padding-top: 90px;
+    padding-bottom: 100px;
   }
 `;
 

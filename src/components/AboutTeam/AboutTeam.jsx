@@ -27,22 +27,6 @@ export const AboutTeam = () => (
   <StyledSection>
     <SectionsTitle>Чому саме наша школа?</SectionsTitle>
 
-    <picture>
-      <source
-        type="image/webp"
-        srcSet={`${Team480webp} 480w, ${Team768webp} 768w, ${Team960webp} 960w, ${Team1440webp} 1440w, ${Team1536webp} 1536w, ${Team2304webp} 2304w, ${Team2880webp} 2880w, ${Team4320webp} 4320w`}
-        sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, (max-width: 960px) 960px, 1440px"
-      />
-
-      <source
-        type="image/jpg"
-        srcSet={`${Team480jpg} 480w, ${Team768jpg} 768w, ${Team960jpg} 960w, ${Team1440jpg} 1440w, ${Team1536jpg} 1536w, ${Team2304jpg} 2304w, ${Team2880jpg} 2880w, ${Team4320jpg} 4320w`}
-        sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, (max-width: 960px) 960px, 1440px"
-      />
-
-      <TeamImage alt="Колектив на галявині напроти школи" src={Team1440jpg} />
-    </picture>
-
     <TeamDescriptionList>
       <DescriptionItem>
         <span>
@@ -67,5 +51,21 @@ export const AboutTeam = () => (
         </em>
       </DescriptionItem>
     </TeamDescriptionList>
+
+    <picture>
+      <source
+        type="image/webp"
+        srcSet={`${Team480webp} 480w, ${Team768webp} 768w, ${Team960webp} 960w, ${Team1440webp} 1440w, ${Team1536webp} 1536w, ${Team2304webp} 2304w, ${Team2880webp} 2880w, ${Team4320webp} 4320w`}
+        sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, (max-width: 960px) 960px, 1440px"
+      />
+
+      <source
+        type="image/jpg"
+        srcSet={`${Team480jpg} 480w, ${Team768jpg} 768w, ${Team960jpg} 960w, ${Team1440jpg} 1440w, ${Team1536jpg} 1536w, ${Team2304jpg} 2304w, ${Team2880jpg} 2880w, ${Team4320jpg} 4320w`}
+        sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, (max-width: 960px) 960px, 1440px"
+      />
+
+      <TeamImage alt="Колектив на галявині напроти школи" src={Team1440jpg} />
+    </picture>
   </StyledSection>
 );

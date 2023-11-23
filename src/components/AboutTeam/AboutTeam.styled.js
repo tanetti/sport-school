@@ -1,30 +1,21 @@
 import styled from '@emotion/styled';
 
-export const TeamImage = styled.img`
-  display: block;
-
-  width: 100%;
-  max-width: 1280px;
-  height: auto;
+export const TeamDescriptionList = styled.ul`
+  max-width: 1144px;
   margin: 0 auto 30px auto;
 
-  border-radius: 8px;
-
-  box-shadow: 3px 6px 10px 2px rgba(0, 0, 0, 0.5);
-`;
-
-export const TeamDescriptionList = styled.ul`
-  max-width: 1000px;
-  margin: 0 auto;
-
-  font-size: 14px;
-  line-height: 1.2;
+  @media screen and (min-width: 768px) {
+    margin: 0 auto 50px auto;
+  }
 `;
 
 export const DescriptionItem = styled.li`
   position: relative;
 
   padding: 16px;
+
+  font-size: 14px;
+  line-height: 1.2;
 
   &::before {
     content: '';
@@ -63,4 +54,26 @@ export const DescriptionItem = styled.li`
       height: 12px;
     }
   }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 19px;
+
+    &::before {
+      width: 14px;
+      height: 14px;
+    }
+  }
+`;
+
+export const TeamImage = styled.img`
+  display: block;
+
+  width: 100%;
+  max-width: 1280px;
+  height: auto;
+  margin: 0 auto;
+
+  border-radius: 8px;
+
+  box-shadow: 3px 6px 10px 2px rgba(0, 0, 0, 0.5);
 `;
