@@ -6,7 +6,7 @@ export const TeamImage = styled.img`
   width: 100%;
   max-width: 1280px;
   height: auto;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 30px auto;
 
   border-width: 1px;
   border-style: solid;
