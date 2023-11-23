@@ -5,7 +5,15 @@ export const About = () => {
   useEffect(() => {
     document.title = 'ДЮСШ Слобожанське - Про нас';
 
-    scroll({ top: 0, behavior: 'smooth' });
+    const heroRef = document.getElementById('hero');
+
+    setTimeout(() => {
+      if (heroRef?.clientHeight > 60) {
+        scrollTo({ top: heroRef.clientHeight - 60, behavior: 'smooth' });
+      } else {
+        scroll({ top: 0, behavior: 'smooth' });
+      }
+    }, 10);
   }, []);
 
   return (

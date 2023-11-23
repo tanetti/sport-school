@@ -21,7 +21,7 @@ export const HomeSlider = () => {
   const [isRequestModalOpened, setIsRequestModalOpened] = useState(false);
 
   return (
-    <SliderSection>
+    <SliderSection id="hero">
       <ActionButton type="button" onClick={() => setIsRequestModalOpened(true)}>
         ЗАПИСАТИСЯ
       </ActionButton>
