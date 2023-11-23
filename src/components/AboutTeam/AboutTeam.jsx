@@ -25,10 +25,10 @@ import {
 
 export const AboutTeam = () => (
   <StyledSection>
-    <SectionsTitle>Чому саме наша школа?</SectionsTitle>
+    <SectionsTitle data-aos="fade-up">Чому саме наша школа?</SectionsTitle>
 
     <TeamDescriptionList>
-      <DescriptionItem>
+      <DescriptionItem data-aos="fade-up">
         <span>
           Наша команда це висококваліфіковані спеціалісти своєї справи, які
           йдуть у ногу з часом та націлені на високий результат, прагнуть
@@ -36,7 +36,7 @@ export const AboutTeam = () => (
         </span>
       </DescriptionItem>
 
-      <DescriptionItem>
+      <DescriptionItem data-aos="fade-up">
         <span>
           Наша спортивна школа відкрита Слобожанською громадою, де насамперед
           цінують та підтримують здоровий дух дітей. Школа має сучасну спортивну
@@ -44,7 +44,7 @@ export const AboutTeam = () => (
         </span>
       </DescriptionItem>
 
-      <DescriptionItem>
+      <DescriptionItem data-aos="fade-up">
         <em>
           Наші двері завжди відчинені для активних, цілеспрямованих, бажаючих
           розвитку у спорті дітей!
@@ -52,7 +52,7 @@ export const AboutTeam = () => (
       </DescriptionItem>
     </TeamDescriptionList>
 
-    <picture>
+    <picture data-aos="fade-up">
       <source
         type="image/webp"
         srcSet={`${Team480webp} 480w, ${Team768webp} 768w, ${Team960webp} 960w, ${Team1440webp} 1440w, ${Team1536webp} 1536w, ${Team2304webp} 2304w, ${Team2880webp} 2880w, ${Team4320webp} 4320w`}

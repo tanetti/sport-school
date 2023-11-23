@@ -57,7 +57,7 @@ export const ItemImage = styled.img`
 
 export const ItemInfo = styled.p`
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
 
   width: 100%;

@@ -10,6 +10,8 @@ export const StyledSection = styled.section`
   padding-left: 10px;
   padding-right: 10px;
 
+  overflow: hidden;
+
   &:nth-of-type(odd) {
     background-color: #00000010;
   }

@@ -18,10 +18,10 @@ import {
 
 export const AboutAdministration = () => (
   <StyledSection>
-    <SectionsTitle>Адміністрація</SectionsTitle>
+    <SectionsTitle data-aos="fade-up">Адміністрація</SectionsTitle>
 
     <AdminList>
-      <AdminItem>
+      <AdminItem data-aos="fade-up-right">
         <div style={{ overflow: 'hidden' }}>
           <picture>
             <source
@@ -32,7 +32,7 @@ export const AboutAdministration = () => (
 
             <source type="image/jpg" srcSet={`${DirJpg} 622w`} sizes="622px" />
 
-            <ItemImage alt="Директор в кабінеті" src={DirJpg} />
+            <ItemImage alt="Директор в кабінеті" loading="lazy" src={DirJpg} />
           </picture>
         </div>
 
@@ -42,7 +42,7 @@ export const AboutAdministration = () => (
         </ItemInfo>
       </AdminItem>
 
-      <AdminItem>
+      <AdminItem data-aos="fade-up">
         <div style={{ overflow: 'hidden' }}>
           <picture>
             <source
@@ -53,7 +53,11 @@ export const AboutAdministration = () => (
 
             <source type="image/jpg" srcSet={`${BuhJpg} 622w`} sizes="622px" />
 
-            <ItemImage alt="Головний бухгалтер в кабінеті" src={BuhJpg} />
+            <ItemImage
+              alt="Головний бухгалтер в кабінеті"
+              loading="lazy"
+              src={BuhJpg}
+            />
           </picture>
         </div>
 
@@ -63,7 +67,7 @@ export const AboutAdministration = () => (
         </ItemInfo>
       </AdminItem>
 
-      <AdminItem>
+      <AdminItem data-aos="fade-up-left">
         <div style={{ overflow: 'hidden' }}>
           <picture>
             <source
@@ -74,7 +78,11 @@ export const AboutAdministration = () => (
 
             <source type="image/jpg" srcSet={`${ZamJpg} 622w`} sizes="622px" />
 
-            <ItemImage alt="Заступник директора в кабінеті" src={ZamJpg} />
+            <ItemImage
+              alt="Заступник директора в кабінеті"
+              loading="lazy"
+              src={ZamJpg}
+            />
           </picture>
         </div>
 

@@ -138,9 +138,9 @@ import {
 
 export const HomeSections = () => (
   <StyledSection>
-    <SectionsTitle>Відділення</SectionsTitle>
+    <SectionsTitle data-aos="fade-up">Відділення</SectionsTitle>
 
-    <SectionsList>
+    <SectionsList data-aos="fade-up">
       <SectionsItem>
         <CardBackground
           imageJPG_360x1={Football_JPG_360x1}
