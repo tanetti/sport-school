@@ -19,8 +19,6 @@ export const SectionsContainer = styled.fieldset`
   }
 
   @media screen and (min-width: 480px) {
-    gap: 30px;
-
     margin: 0 0 20px 0;
   }
 `;
