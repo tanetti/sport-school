@@ -59,7 +59,7 @@ export const SectionLink = styled(NavLink)`
   border-radius: 8px;
   border-color: #000;
 
-  color: #aeaeae;
+  color: #fff;
   background-color: #000;
 
   outline: transparent;
@@ -86,27 +86,16 @@ export const SectionLink = styled(NavLink)`
 
   box-shadow: 0px 8px 10px -3px rgba(0, 0, 0, 0.5);
 
-  opacity: 0.85;
-
   transform: scale(1);
-
-  filter: grayscale(0.6);
 
   overflow: hidden;
 
-  transition: ${createTransition(
-    ['color', 'opacity', 'transform', 'filter'],
-    'standart'
-  )};
+  transition: ${createTransition(['color', 'transform'], 'standart')};
 
   &.active {
-    color: #fff;
-
-    opacity: 1;
+    color: #fa7734;
 
     transform: scale(1.15);
-
-    filter: grayscale(0);
 
     & > span {
       opacity: 1;
@@ -122,10 +111,6 @@ export const SectionLink = styled(NavLink)`
 
   &:is(:hover, :focus) {
     color: #fa5502;
-
-    opacity: 1;
-
-    filter: grayscale(0);
 
     & > span {
       opacity: 1;
