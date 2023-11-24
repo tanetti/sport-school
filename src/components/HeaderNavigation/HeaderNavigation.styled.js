@@ -141,6 +141,10 @@ export const NavigationButton = styled.button`
     text-transform: uppercase;
   }
 
+  &.active {
+    color: #fa7734;
+  }
+
   &:is(:hover, :focus) {
     color: #fa5502;
   }

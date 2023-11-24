@@ -1,17 +1,34 @@
-import { useEffect, useState } from 'react';
-import { ContactModal } from '@/components';
+import { useEffect, useRef, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import { ContactModal, SectionModal } from '@/components';
 import { SpriteIcon } from '@/components/shared';
 import { MobileMenuButton } from './components';
+import { SECTIONS } from '@/constants';
 import {
   NavigationButton,
   NavigationContainer,
   NavigationLink,
 } from './HeaderNavigation.styled';
 
+const sectionLocations = SECTIONS.map(({ name }) => name);
+
 export const HeaderNavigation = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
   const [isSectionMenuOpened, setIsSectionMenuOpened] = useState(false);
   const [isContactModalOpened, setIsContactModalOpened] = useState(false);
+  const sectionButtonRef = useRef(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    const locationLabel = location?.pathname?.substring(1);
+    const buttonClassList = sectionButtonRef?.current?.classList;
+
+    if (sectionLocations.includes(locationLabel)) {
+      buttonClassList?.add('active');
+    } else {
+      buttonClassList?.remove('active');
+    }
+  }, [location]);
 
   useEffect(() => {
     const onClick = ({ target }) => {
@@ -45,6 +62,7 @@ export const HeaderNavigation = () => {
         </NavigationLink>
 
         <NavigationButton
+          ref={sectionButtonRef}
           role="menuitem"
           type="button"
           aria-expanded={isSectionMenuOpened}
@@ -74,6 +92,12 @@ export const HeaderNavigation = () => {
       <MobileMenuButton
         isMenuOpened={isMenuOpened}
         setIsMenuOpened={setIsMenuOpened}
+      />
+
+      <SectionModal
+        idControls="section_menu_modal"
+        isOpened={isSectionMenuOpened}
+        closeModal={() => setIsSectionMenuOpened(false)}
       />
 
       <ContactModal

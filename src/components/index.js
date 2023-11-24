@@ -5,6 +5,7 @@ export * from './Footer/Footer';
 export * from './HomeSlider/HomeSlider';
 export * from './HomeSections/HomeSections';
 export * from './ContactModal/ContactModal';
+export * from './SectionModal/SectionModal';
 export * from './RequestModal/RequestModal';
 export * from './AboutTeam/AboutTeam';
 export * from './AboutAdministration/AboutAdministration';
