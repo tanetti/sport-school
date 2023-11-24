@@ -50,59 +50,61 @@ export const FootballSlider = () => {
       >
         <StyledSwiperSlide images={SLIDE_01_IMAGES}>
           <Motivation>
-            Тріумф
+            Футбол
             <span>
-              не дарує справжньої сили,
+              це не питання життя і смерті.
               <br />
-              її формує боротьба.
+              Він набагато важливіший.
             </span>
-            <em>&quot;Арнольд Шварценеггер&quot;</em>
+            <em>&quot;Білл Шенклі&quot;</em>
           </Motivation>
         </StyledSwiperSlide>
 
         <StyledSwiperSlide images={SLIDE_02_IMAGES}>
           <Motivation>
-            Почніть
+            Футбол
             <span>
-              звідти, де ви зараз перебуваєте.
+              це командний вид спорту.
               <br />
-              Використовуйте те, що у вас є, і робіть усе, що можете.
+              Індивідуальні нагороди виграються завдяки командній роботі.
             </span>
-            <em>&quot;Артур Еш&quot;</em>
+            <em>&quot;Пеле&quot;</em>
           </Motivation>
         </StyledSwiperSlide>
 
         <StyledSwiperSlide images={SLIDE_03_IMAGES}>
           <Motivation>
-            Ви можете
+            Футбол
             <span>
-              бути ким завгодно, якщо ви
+              простий, але набагато складніше
               <br />
-              приділите цьому час.
+              грати в простий футбол.
             </span>
-            <em>&quot;Конор Макгрегор&quot;</em>
+            <em>&quot;Йоган Кройф&quot;</em>
           </Motivation>
         </StyledSwiperSlide>
 
         <StyledSwiperSlide images={SLIDE_04_IMAGES}>
           <Motivation>
-            Тренуйся
+            Футбол
             <span>
-              з тими, хто сильніший. Не здавайся там, де здаються інші. І
-              переможеш там, де перемогти не можна.
+              складається з перемог і поразок,
+              <br />
+              головне - не зупинятися через труднощі.
             </span>
-            <em>&quot;Брюс Лі&quot;</em>
+            <em>&quot;Неймар&quot;</em>
           </Motivation>
         </StyledSwiperSlide>
 
         <StyledSwiperSlide images={SLIDE_05_IMAGES}>
           <Motivation>
-            Успіх не випадковість.
+            Ви повинні
             <span>
-              Це важка праця, наполегливість, навчання, жертвопринесення і, перш
-              за все, любов до того, що ви робите.
+              боротися, щоб досягти своєї мрії.
+              <br />
+              Ви повинні жертвувати і працювати заради цього.
             </span>
-            <em>&quot;Пеле&quot;</em>
+            <em>&quot;Ліонель Мессі&quot;</em>
           </Motivation>
         </StyledSwiperSlide>
       </StyledSwiper>
