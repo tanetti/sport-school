@@ -125,8 +125,74 @@ export const StyledSwiperSlide = styled(SwiperSlide)`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: ${({ image }) =>
-    `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(${image})`};
+  background-image: ${({ images: { Img480x1jpg } }) =>
+    `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${Img480x1jpg})`};
+  background-image: ${({ images: { Img480x1webp } }) =>
+    `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${Img480x1webp})`};
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: ${({ images: { Img480x2jpg } }) =>
+      `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${Img480x2jpg})`};
+    background-image: ${({ images: { Img480x2webp } }) =>
+      `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${Img480x2webp})`};
+  }
+
+  @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    background-image: ${({ images: { Img480x3jpg } }) =>
+      `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${Img480x3jpg})`};
+    background-image: ${({ images: { Img480x3webp } }) =>
+      `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${Img480x3webp})`};
+  }
+
+  @media screen and (min-width: 480px) {
+    background-image: ${({ images: { Img768x1jpg } }) =>
+      `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${Img768x1jpg})`};
+    background-image: ${({ images: { Img768x1webp } }) =>
+      `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${Img768x1webp})`};
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: ${({ images: { Img768x2jpg } }) =>
+        `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${Img768x2jpg})`};
+      background-image: ${({ images: { Img768x2webp } }) =>
+        `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${Img768x2webp})`};
+    }
+
+    @media (min-device-pixel-ratio: 3),
+      (min-resolution: 288dpi),
+      (min-resolution: 3dppx) {
+      background-image: ${({ images: { Img768x3jpg } }) =>
+        `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${Img768x3jpg})`};
+      background-image: ${({ images: { Img768x3webp } }) =>
+        `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${Img768x3webp})`};
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: ${({ images: { Img1920x1jpg } }) =>
+      `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${Img1920x1jpg})`};
+    background-image: ${({ images: { Img1920x1webp } }) =>
+      `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${Img1920x1webp})`};
+  }
+
+  @media screen and (min-width: 1920px) {
+    background-image: ${({ images: { Img2560x1jpg } }) =>
+      `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${Img2560x1jpg})`};
+    background-image: ${({ images: { Img2560x1webp } }) =>
+      `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${Img2560x1webp})`};
+  }
+
+  @media screen and (min-width: 2560px) {
+    background-image: ${({ images: { Img3840x1jpg } }) =>
+      `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${Img3840x1jpg})`};
+    background-image: ${({ images: { Img3840x1webp } }) =>
+      `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${Img3840x1webp})`};
+  }
 
   & > article {
     opacity: 0;
