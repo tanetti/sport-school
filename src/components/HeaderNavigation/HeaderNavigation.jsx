@@ -20,10 +20,10 @@ export const HeaderNavigation = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const locationLabel = location?.pathname?.substring(1);
+    const pathname = location.pathname;
     const buttonClassList = sectionButtonRef?.current?.classList;
 
-    if (sectionLocations.includes(locationLabel)) {
+    if (sectionLocations.some(name => pathname.includes(`/${name}`))) {
       buttonClassList?.add('active');
     } else {
       buttonClassList?.remove('active');
