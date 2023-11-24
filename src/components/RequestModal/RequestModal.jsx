@@ -7,13 +7,20 @@ import { useRequest } from '@/hooks';
 import { Modal } from '@/components/shared';
 import { SectionStep, InformationStep, StepNavigator } from './components';
 import { TRANSITION_STANDART_DURATION_MS, API_URL } from '@/constants';
-import { validationSchema } from './utilities';
+import { getDefaultSectionValue, validationSchema } from './utilities';
 import { StepContainer } from './RequestModal.styled';
 
-export const RequestModal = ({ isOpened, closeModal, idControls }) => {
+export const RequestModal = ({
+  isOpened,
+  closeModal,
+  idControls,
+  defaultSection = null,
+}) => {
   const [currentStep, setCurrentStep] = useState(1);
   const [isStepVisible, setIsStepVisible] = useState(true);
   const scrollContainerRef = useRef(null);
+
+  const defaulSectionValue = getDefaultSectionValue(defaultSection);
 
   const {
     control,
@@ -27,7 +34,7 @@ export const RequestModal = ({ isOpened, closeModal, idControls }) => {
   } = useForm({
     resolver: yupResolver(validationSchema),
     defaultValues: {
-      section: null,
+      section: defaulSectionValue,
       name: '',
       surename: '',
       phone: '',
@@ -148,4 +155,5 @@ RequestModal.propTypes = {
   isOpened: PropTypes.bool.isRequired,
   closeModal: PropTypes.func.isRequired,
   idControls: PropTypes.string.isRequired,
+  defaultSection: PropTypes.string,
 };

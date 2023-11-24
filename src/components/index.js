@@ -9,3 +9,4 @@ export * from './SectionModal/SectionModal';
 export * from './RequestModal/RequestModal';
 export * from './AboutTeam/AboutTeam';
 export * from './AboutAdministration/AboutAdministration';
+export * from './FootballSlider/FootballSlider';

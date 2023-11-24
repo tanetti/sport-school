@@ -1,6 +1,6 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom';
 import { MainLayout } from '@/components';
-import { Home, About } from '@/pages';
+import { Home, About, Football } from '@/pages';
 
 export const router = createBrowserRouter([
   {
@@ -14,6 +14,11 @@ export const router = createBrowserRouter([
       {
         path: '/about',
         element: <About />,
+      },
+
+      {
+        path: '/football',
+        element: <Football />,
       },
 
       {
