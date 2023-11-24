@@ -10,7 +10,7 @@ import { TRANSITION_STANDART_DURATION_MS, API_URL } from '@/constants';
 import { validationSchema } from './utilities';
 import { StepContainer } from './RequestModal.styled';
 
-export const RequestModal = ({ isOpened, closeModal }) => {
+export const RequestModal = ({ isOpened, closeModal, idControls }) => {
   const [currentStep, setCurrentStep] = useState(1);
   const [isStepVisible, setIsStepVisible] = useState(true);
   const scrollContainerRef = useRef(null);
@@ -115,6 +115,7 @@ export const RequestModal = ({ isOpened, closeModal }) => {
     <Modal
       isOpened={isOpened}
       closeModal={closeModal}
+      idControls={idControls}
       isControlsDisabled={isPending}
       isLoading={isPending}
       loadingCaption="Відправляємо..."
@@ -146,4 +147,5 @@ export const RequestModal = ({ isOpened, closeModal }) => {
 RequestModal.propTypes = {
   isOpened: PropTypes.bool.isRequired,
   closeModal: PropTypes.func.isRequired,
+  idControls: PropTypes.string.isRequired,
 };

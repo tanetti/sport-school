@@ -23,6 +23,7 @@ const bodyElement = document.getElementsByTagName('body')[0];
 export const Modal = ({
   isOpened,
   closeModal,
+  idControls,
   isControlsDisabled,
   isLoading,
   loadingCaption,
@@ -143,6 +144,9 @@ export const Modal = ({
     return createPortal(
       <Backdrop isVisible={isVisible} onClick={onBackdropClick}>
         <Window
+          id={idControls}
+          role="dialog"
+          aria-modal="true"
           isVisible={isVisible}
           onClick={event => event.stopPropagation()}
           onMouseDownCapture={() => setIsBackdropBlocked(true)}
@@ -214,6 +218,7 @@ export const Modal = ({
 Modal.propTypes = {
   isOpened: PropTypes.bool.isRequired,
   closeModal: PropTypes.func.isRequired,
+  idControls: PropTypes.string,
   isControlsDisabled: PropTypes.bool,
   isLoading: PropTypes.bool,
   loadingCaption: PropTypes.string,

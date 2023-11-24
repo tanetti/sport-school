@@ -10,6 +10,7 @@ import {
 
 export const HeaderNavigation = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
+  const [isSectionMenuOpened, setIsSectionMenuOpened] = useState(false);
   const [isContactModalOpened, setIsContactModalOpened] = useState(false);
 
   useEffect(() => {
@@ -34,22 +35,39 @@ export const HeaderNavigation = () => {
         <NavigationLink to="/">
           <SpriteIcon symbol="home" />
 
-          <span>ГОЛОВНА</span>
+          <span>Головна</span>
         </NavigationLink>
 
         <NavigationLink to="/about">
           <SpriteIcon symbol="info" />
 
-          <span>ПРО НАС</span>
+          <span>Про нас</span>
         </NavigationLink>
 
         <NavigationButton
+          role="menuitem"
           type="button"
+          aria-expanded={isSectionMenuOpened}
+          aria-controls="section_menu_modal"
+          aria-haspopup="dialog"
+          onClick={() => setIsSectionMenuOpened(true)}
+        >
+          <SpriteIcon symbol="sections" />
+
+          <span>Відділення</span>
+        </NavigationButton>
+
+        <NavigationButton
+          role="menuitem"
+          type="button"
+          aria-expanded={isContactModalOpened}
+          aria-controls="contact_modal"
+          aria-haspopup="dialog"
           onClick={() => setIsContactModalOpened(true)}
         >
           <SpriteIcon symbol="contact" />
 
-          <span>КОНТАКТИ</span>
+          <span>Контакти</span>
         </NavigationButton>
       </NavigationContainer>
 
@@ -59,6 +77,7 @@ export const HeaderNavigation = () => {
       />
 
       <ContactModal
+        idControls="contact_modal"
         isOpened={isContactModalOpened}
         closeModal={() => setIsContactModalOpened(false)}
       />

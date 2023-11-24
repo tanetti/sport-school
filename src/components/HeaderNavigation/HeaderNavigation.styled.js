@@ -27,9 +27,17 @@ export const NavigationContainer = styled.nav`
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 50px;
+    gap: 24px;
 
     padding-right: 20px;
+  }
+
+  @media screen and (min-width: 960px) {
+    gap: 30px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    gap: 50px;
   }
 `;
 
@@ -49,6 +57,8 @@ export const NavigationLink = styled(NavLink)`
 
   & > span {
     padding-top: 4px;
+
+    text-transform: uppercase;
   }
 
   & > svg {
@@ -67,9 +77,31 @@ export const NavigationLink = styled(NavLink)`
   }
 
   @media screen and (min-width: 768px) {
-    gap: 10px;
+    gap: 7px;
 
     padding: 20px 0;
+
+    font-size: 14px;
+
+    & > svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  @media screen and (min-width: 960px) {
+    gap: 8px;
+
+    font-size: 16px;
+
+    & > svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    gap: 10px;
 
     font-size: 17px;
 
@@ -105,6 +137,8 @@ export const NavigationButton = styled.button`
 
   & > span {
     padding-top: 4px;
+
+    text-transform: uppercase;
   }
 
   &:is(:hover, :focus) {
@@ -119,9 +153,31 @@ export const NavigationButton = styled.button`
   }
 
   @media screen and (min-width: 768px) {
-    gap: 10px;
+    gap: 7px;
 
     padding: 20px 0;
+
+    font-size: 14px;
+
+    & > svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  @media screen and (min-width: 960px) {
+    gap: 8px;
+
+    font-size: 16px;
+
+    & > svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    gap: 10px;
 
     font-size: 17px;
 

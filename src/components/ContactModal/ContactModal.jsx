@@ -18,8 +18,13 @@ import {
   SocialsList,
 } from './ContactModal.styled';
 
-export const ContactModal = ({ isOpened, closeModal }) => (
-  <Modal isOpened={isOpened} closeModal={closeModal} title="Контакти">
+export const ContactModal = ({ isOpened, closeModal, idControls }) => (
+  <Modal
+    idControls={idControls}
+    isOpened={isOpened}
+    closeModal={closeModal}
+    title="Контакти"
+  >
     <MainContactsContainer>
       <ContactsList>
         <li>
@@ -99,4 +104,5 @@ export const ContactModal = ({ isOpened, closeModal }) => (
 ContactModal.propTypes = {
   isOpened: PropTypes.bool.isRequired,
   closeModal: PropTypes.func.isRequired,
+  idControls: PropTypes.string.isRequired,
 };

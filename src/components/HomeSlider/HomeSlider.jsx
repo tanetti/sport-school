@@ -22,7 +22,13 @@ export const HomeSlider = () => {
 
   return (
     <SliderSection id="hero">
-      <ActionButton type="button" onClick={() => setIsRequestModalOpened(true)}>
+      <ActionButton
+        type="button"
+        aria-expanded={isRequestModalOpened}
+        aria-controls="home_request_modal"
+        aria-haspopup="dialog"
+        onClick={() => setIsRequestModalOpened(true)}
+      >
         ЗАПИСАТИСЯ
       </ActionButton>
 
@@ -100,6 +106,7 @@ export const HomeSlider = () => {
       </StyledSwiper>
 
       <RequestModal
+        idControls="home_request_modal"
         isOpened={isRequestModalOpened}
         closeModal={() => setIsRequestModalOpened(false)}
       />
