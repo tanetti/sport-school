@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { createTransition } from '@/utilities';
 
-export const AdminList = styled.ul`
+export const TrainerList = styled.ul`
   margin: 0 auto;
 
   @media screen and (max-width: 767.98px) {
@@ -22,7 +22,7 @@ export const AdminList = styled.ul`
   }
 `;
 
-export const AdminItem = styled.li`
+export const TrainerItem = styled.li`
   position: relative;
 
   max-width: 400px;
@@ -33,8 +33,14 @@ export const AdminItem = styled.li`
 
   overflow: hidden;
 
-  &:hover img {
-    transform: scale(1.1);
+  &:hover {
+    & img {
+      transform: scale(1.1);
+    }
+
+    & > div {
+      transform: translateY(0);
+    }
   }
 
   @media screen and (max-width: 767.98px) {
@@ -59,6 +65,7 @@ export const ItemInfo = styled.p`
   position: absolute;
   bottom: -1px;
   left: 0;
+  z-index: 2;
 
   width: 100%;
 
@@ -100,5 +107,46 @@ export const Name = styled.span`
     padding-top: 10px;
 
     font-size: 15px;
+  }
+`;
+
+export const Drscription = styled.div`
+  position: absolute;
+  bottom: 68px;
+  left: 0;
+  z-index: 1;
+
+  width: 100%;
+  padding: 15px 20px;
+
+  font-size: 14px;
+  line-height: 1.2;
+
+  background-color: #ffffffee;
+
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+
+  transform: translateY(150%);
+
+  transition: ${createTransition('transform', 'standart')};
+`;
+
+export const DescriptionParagraph = styled.p`
+  &:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+  &::before {
+    content: '';
+
+    display: inline-block;
+
+    width: 8px;
+    height: 8px;
+    margin: 0 8px 1px 8px;
+
+    border-radius: 50%;
+
+    background-color: #fa5502;
   }
 `;

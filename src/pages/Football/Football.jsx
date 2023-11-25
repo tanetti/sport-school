@@ -3,6 +3,7 @@ import {
   FootballSlider,
   FootballAdvantages,
   FootballTraining,
+  FootballTreiners,
 } from '@/components';
 
 export const Football = () => {
@@ -19,6 +20,8 @@ export const Football = () => {
       <FootballAdvantages />
 
       <FootballTraining />
+
+      <FootballTreiners />
     </>
   );
 };

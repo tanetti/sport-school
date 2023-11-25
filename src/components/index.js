@@ -18,3 +18,4 @@ export * from './AboutAdministration/AboutAdministration';
 export * from './FootballSlider/FootballSlider';
 export * from './FootballAdvantages/FootballAdvantages';
 export * from './FootballTraining/FootballTraining';
+export * from './FootballTreiners/FootballTreiners';

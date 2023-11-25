@@ -75,5 +75,5 @@ export const TeamImage = styled.img`
 
   border-radius: 8px;
 
-  box-shadow: 3px 6px 10px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 6px 10px 2px rgba(0, 0, 0, 0.4);
 `;

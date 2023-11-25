@@ -47,7 +47,7 @@ export const PlayerFrame = styled(ReactPlayer)`
 
   overflow: hidden;
 
-  box-shadow: 3px 6px 10px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 6px 10px 2px rgba(0, 0, 0, 0.4);
 
   @media screen and (max-width: 959.98px) {
     width: 100%;
@@ -81,7 +81,7 @@ export const AdvancedInfoContaier = styled.div`
 export const AdvancedBlock = styled.div`
   border-radius: 8px;
 
-  box-shadow: 3px 6px 10px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 6px 10px 2px rgba(0, 0, 0, 0.4);
 
   background-color: #fff;
 
