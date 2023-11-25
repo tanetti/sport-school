@@ -4,14 +4,9 @@ export const AdvantagesContainer = styled.div`
   @media screen and (min-width: 960px) {
     display: flex;
     align-items: stretch;
-    gap: 20px;
 
     max-width: 1440px;
     margin: 0 auto;
-  }
-
-  @media screen and (min-width: 1440px) {
-    gap: 30px;
   }
 `;
 
@@ -46,11 +41,15 @@ export const GraphicContainer = styled.div`
   @media screen and (min-width: 960px) {
     align-self: center;
 
+    flex-basis: 45%;
+  }
+
+  @media screen and (min-width: 1280px) {
     flex-basis: 40%;
   }
 
   @media screen and (min-width: 1440px) {
-    flex-basis: 35%;
+    flex-basis: 30%;
   }
 `;
 
@@ -60,11 +59,15 @@ export const Advantageslist = styled.ul`
     flex-direction: column;
     justify-content: space-evenly;
     gap: 15px;
+    flex-basis: 55%;
+  }
+
+  @media screen and (min-width: 1280px) {
     flex-basis: 60%;
   }
 
   @media screen and (min-width: 1440px) {
-    flex-basis: 65%;
+    flex-basis: 70%;
   }
 `;
 
@@ -109,5 +112,3 @@ export const ListItem = styled.li`
     }
   }
 `;
-
-/* create image with teenage soccer player on white background and orange accents */

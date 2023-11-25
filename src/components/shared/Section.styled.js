@@ -13,7 +13,7 @@ export const StyledSection = styled.section`
   overflow: hidden;
 
   &:nth-of-type(odd) {
-    background-color: #00000010;
+    background-color: #00000008;
   }
 
   @media screen and (min-width: 768px) {
