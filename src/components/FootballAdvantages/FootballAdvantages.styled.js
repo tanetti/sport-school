@@ -54,7 +54,6 @@ export const Advantageslist = styled.ul`
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    /* gap: 15px; */
     flex-basis: 55%;
   }
 
@@ -68,8 +67,6 @@ export const ListItem = styled.li`
 
   font-size: 15px;
   line-height: 1.26;
-
-  border-radius: 8px;
 
   @media screen and (max-width: 959.98px) {
     &:not(:last-of-type) {

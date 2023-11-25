@@ -1,6 +1,11 @@
 import { SectionsTitle, StyledSection } from '@/components/shared';
 import {
+  AdvancedBlock,
+  AdvancedInfoContaier,
+  BlockList,
+  BlockTitle,
   InfoContainer,
+  ListItem,
   PlayerFrame,
   TrainingContainer,
   TrainingParagraph,
@@ -54,5 +59,96 @@ export const FootballTraining = () => (
         }}
       />
     </TrainingContainer>
+
+    <AdvancedInfoContaier>
+      <AdvancedBlock data-aos="fade-up-right">
+        <BlockTitle>Принципи тренувань</BlockTitle>
+
+        <BlockList>
+          <ListItem>Якісна демонстрація та роз’яснення вправ.</ListItem>
+
+          <ListItem>Принцип «від простого до складного».</ListItem>
+
+          <ListItem>
+            Правильність виконання, потім швидкість та інтенсивність.
+          </ListItem>
+
+          <ListItem>
+            Різноманітність вправ. Акцент на роботу двома ногами.
+          </ListItem>
+
+          <ListItem>Високий емоційний стан.</ListItem>
+
+          <ListItem>Постійний контроль та мотивація футболістів.</ListItem>
+
+          <ListItem>Дисципліна, як основний фактор прогресу.</ListItem>
+        </BlockList>
+      </AdvancedBlock>
+
+      <AdvancedBlock data-aos="fade-up">
+        <BlockTitle>Вимоги до футболіста</BlockTitle>
+
+        <BlockList>
+          <ListItem>Дисципліна! Фактор росту та досягнення цілей.</ListItem>
+
+          <ListItem>Бажання вирости в професійного футболіста.</ListItem>
+
+          <ListItem>
+            Пунктуальність, присутність на всіх тренуваннях та заходу клубу.
+          </ListItem>
+
+          <ListItem>
+            Надійність, взаємодопомога, дружелюбність, повага та підтримка
+            партнерів клубу.
+          </ListItem>
+
+          <ListItem>
+            Чистоплотність, бережне відношення до своїх та речей партнерів
+            клубу.
+          </ListItem>
+
+          <ListItem>
+            Відношення до критики - тренер не робить зауважень, тренер вчить,
+            діє в інтересах футболіста.
+          </ListItem>
+
+          <ListItem>Характер, сила волі.</ListItem>
+
+          <ListItem>Успішність в школі.</ListItem>
+
+          <ListItem>Приклад поведінки в соціумі.</ListItem>
+        </BlockList>
+      </AdvancedBlock>
+
+      <AdvancedBlock data-aos="fade-up-left">
+        <BlockTitle>Вимоги до батьків</BlockTitle>
+
+        <BlockList>
+          <ListItem>Ви повністю довіряєте тренеру та клубу.</ListItem>
+
+          <ListItem>
+            Ви спостерігаєте за процесом, але не приймаєте участь у ньому.
+          </ListItem>
+
+          <ListItem>
+            Ви не викрикуєте та не підказуєте нічого з трибун, це відволікає.
+            Футболіст має сам приймати рішення.
+          </ListItem>
+
+          <ListItem>
+            Ви не тренер, ви маєте давати лише одну установку - слухайся
+            тренера.
+          </ListItem>
+
+          <ListItem>
+            Ви на постійному контакті з тренером, приймаєте участь в усіх
+            батьківських зборах, індивідуальних бесідах та в усьому допомагаєте
+            тренеру, адже у нас з вами спільна мета - виховати здорову,
+            соціально адаптовану людину і дати йому шанс стати професійним
+            футболістом.
+          </ListItem>
+        </BlockList>
+      </AdvancedBlock>
+    </AdvancedInfoContaier>
   </StyledSection>
 );
