@@ -13,6 +13,10 @@ export const StepContainer = styled.form`
 
   transition: ${createTransition(['opacity', 'visibility'], 'standart')};
 
+  @media screen and (max-width: 767.98px) {
+    max-width: 440px;
+  }
+
   @media screen and (min-width: 768px) {
     aspect-ratio: 1.25/1;
   }

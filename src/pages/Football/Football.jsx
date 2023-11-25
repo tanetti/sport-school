@@ -1,5 +1,9 @@
 import { useEffect } from 'react';
-import { FootballSlider } from '@/components';
+import {
+  FootballSlider,
+  FootballAdvantages,
+  FootballTraining,
+} from '@/components';
 
 export const Football = () => {
   useEffect(() => {
@@ -11,6 +15,10 @@ export const Football = () => {
   return (
     <>
       <FootballSlider />
+
+      <FootballAdvantages />
+
+      <FootballTraining />
     </>
   );
 };

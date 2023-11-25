@@ -8,9 +8,9 @@ export const SectionsList = styled.ul`
   flex-grow: 1;
   gap: 15px;
 
-  height: calc((100vw - 20px) * 2);
-
   container-type: size;
+
+  height: calc((100vw - 20px) * 2);
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
