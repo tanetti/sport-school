@@ -49,7 +49,7 @@ export const PlayerFrame = styled(ReactPlayer)`
 
   @media screen and (max-width: 959.98px) {
     width: 100%;
-    max-width: 420px;
+    max-width: 560px;
     margin: 0 auto;
   }
 

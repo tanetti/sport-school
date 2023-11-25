@@ -5,7 +5,7 @@ export const AdvantagesContainer = styled.div`
     display: flex;
     align-items: stretch;
 
-    max-width: 1440px;
+    max-width: 1120px;
     margin: 0 auto;
   }
 `;
@@ -44,12 +44,8 @@ export const GraphicContainer = styled.div`
     flex-basis: 45%;
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1120px) {
     flex-basis: 40%;
-  }
-
-  @media screen and (min-width: 1440px) {
-    flex-basis: 30%;
   }
 `;
 
@@ -58,16 +54,12 @@ export const Advantageslist = styled.ul`
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    gap: 15px;
+    /* gap: 15px; */
     flex-basis: 55%;
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1120px) {
     flex-basis: 60%;
-  }
-
-  @media screen and (min-width: 1440px) {
-    flex-basis: 70%;
   }
 `;
 
@@ -81,7 +73,7 @@ export const ListItem = styled.li`
 
   @media screen and (max-width: 959.98px) {
     &:not(:last-of-type) {
-      margin-bottom: 16px;
+      margin-bottom: 8px;
     }
   }
 
@@ -104,7 +96,7 @@ export const ListItem = styled.li`
     font-weight: 700;
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 960px) {
     &::before {
       width: 10px;
       height: 10px;
