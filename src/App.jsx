@@ -1,6 +1,6 @@
 import { StrictMode } from 'react';
 import { RouterProvider } from 'react-router-dom';
-import { Router } from '@/router';
+import { Router } from './Router';
 
 export const App = () => (
   <StrictMode>
