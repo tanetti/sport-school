@@ -15,6 +15,7 @@ export const NavigationContainer = styled.nav`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 50px;
 
     min-width: 200px;
     height: 100dvh;
