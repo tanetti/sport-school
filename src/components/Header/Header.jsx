@@ -29,7 +29,7 @@ export const Header = () => {
           <SpriteIcon symbol="logo" />
         </LogoLink>
 
-        <HeaderNavigation />
+        <HeaderNavigation isScrolled={isScrolled} />
       </HeaderSizer>
     </HeaderContainer>
   );

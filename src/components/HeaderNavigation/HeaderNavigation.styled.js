@@ -5,10 +5,16 @@ import { NavLink } from 'react-router-dom';
 export const NavigationContainer = styled.nav`
   color: #fff;
 
+  transition: ${createTransition('transform', 'standart')};
+
   @media screen and (max-width: 767.98px) {
     position: fixed;
     top: 0;
     right: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     min-width: 200px;
     height: 100dvh;
@@ -19,17 +25,41 @@ export const NavigationContainer = styled.nav`
 
     transform: ${({ isMenuOpened }) =>
       isMenuOpened ? 'translateX(0)' : 'translateX(102%)'};
-
-    transition: ${createTransition('transform', 'standart')};
   }
 
   @media screen and (min-width: 768px) {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     gap: 24px;
 
+    padding-right: 10px;
+
+    transform: ${({ isScrolled }) =>
+      isScrolled ? 'translateX(0)' : 'translateX(140px)'};
+  }
+
+  @media screen and (min-width: 960px) {
+    gap: 50px;
+
     padding-right: 20px;
+
+    transform: ${({ isScrolled }) =>
+      isScrolled ? 'translateX(0)' : 'translateX(190px)'};
+  }
+
+  @media screen and (min-width: 1280px) {
+    gap: 90px;
+
+    transform: ${({ isScrolled }) =>
+      isScrolled ? 'translateX(0)' : 'translateX(230px)'};
+  }
+`;
+
+export const MainNavigationList = styled.ul`
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    gap: 24px;
   }
 
   @media screen and (min-width: 960px) {
@@ -51,7 +81,7 @@ export const NavigationLink = styled(NavLink)`
   font-size: 18px;
   font-weight: 700;
 
-  color: #fff;
+  color: inherit;
 
   transition: ${createTransition('color', 'standart')};
 
@@ -126,7 +156,7 @@ export const NavigationButton = styled.button`
   font-size: 18px;
   font-weight: 700;
 
-  color: #fff;
+  color: inherit;
   background-color: transparent;
 
   border: none;
@@ -193,5 +223,70 @@ export const NavigationButton = styled.button`
       width: 20px;
       height: 20px;
     }
+  }
+`;
+
+export const RequestButton = styled.button`
+  padding: 10px 12px 8px 12px;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  color: inherit;
+  background-color: transparent;
+
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 8px;
+  border-color: #fa7734;
+
+  cursor: pointer;
+
+  text-transform: uppercase;
+
+  transition: ${createTransition(
+    ['color', 'border-color', 'opacity', 'visibility', 'transform'],
+    'standart'
+  )};
+
+  &:is(:hover, :focus) {
+    color: #fa5502;
+
+    border-color: #fa5502;
+  }
+
+  @media screen and (max-width: 767.98px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 116px;
+    padding: 11px 12px 8px 12px;
+
+    font-size: 12px;
+
+    opacity: ${({ isScrolled }) => (isScrolled ? 1 : 0)};
+    visibility: ${({ isScrolled }) => (isScrolled ? 'visible' : 'hidden')};
+
+    transform: ${({ isScrolled }) =>
+      isScrolled ? 'translateX(0)' : 'translateX(126px)'};
+  }
+
+  @media screen and (min-width: 960px) {
+    width: 140px;
+
+    font-size: 15px;
+
+    transform: ${({ isScrolled }) =>
+      isScrolled ? 'translateX(0)' : 'translateX(160px)'};
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 146px;
+
+    font-size: 16px;
+
+    transform: ${({ isScrolled }) =>
+      isScrolled ? 'translateX(0)' : 'translateX(166px)'};
   }
 `;
