@@ -6,7 +6,7 @@ import {
   FootballTreiners,
 } from '@/components';
 
-export const Football = () => {
+const Football = () => {
   useEffect(() => {
     document.title = 'ДЮСШ Слобожанське - Футбол';
 
@@ -25,3 +25,5 @@ export const Football = () => {
     </>
   );
 };
+
+export default Football;

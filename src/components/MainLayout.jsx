@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { Suspense, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Header, Footer } from '@/components';
 import AOS from 'aos';
@@ -14,7 +14,9 @@ export const MainLayout = () => {
       <Header />
 
       <main style={{ display: 'flex', flexDirection: 'column' }}>
-        <Outlet />
+        <Suspense fallback={<div>Завантаження...</div>}>
+          <Outlet />
+        </Suspense>
       </main>
 
       <Footer />

@@ -1,8 +1,12 @@
+import { lazy } from 'react';
 import { createBrowserRouter, Navigate } from 'react-router-dom';
 import { MainLayout } from '@/components';
-import { Home, About, Football } from '@/pages';
+import { Home } from '@/pages/Home';
 
-export const router = createBrowserRouter([
+const About = lazy(() => import('@/pages/About'));
+const Football = lazy(() => import('@/pages/Football'));
+
+export const Router = createBrowserRouter([
   {
     element: <MainLayout />,
     children: [

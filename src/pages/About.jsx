@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { HomeSlider, AboutTeam, AboutAdministration } from '@/components';
 
-export const About = () => {
+const About = () => {
   useEffect(() => {
     document.title = 'ДЮСШ Слобожанське - Про нас';
 
@@ -26,3 +26,5 @@ export const About = () => {
     </>
   );
 };
+
+export default About;

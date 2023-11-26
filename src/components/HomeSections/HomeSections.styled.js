@@ -12,11 +12,22 @@ export const SectionsList = styled.ul`
 
   height: calc((100vw - 20px) * 2);
 
+  @media screen and (min-width: 480px) and (max-width: 767.98px) {
+    width: 460px;
+    height: 920px;
+    margin: 0 auto;
+  }
+
   @media screen and (min-width: 768px) {
     flex-direction: row;
     gap: 10px;
 
     height: clamp(400px, 60dvh, 600px);
+  }
+
+  @media screen and (min-width: 1680px) {
+    width: 1628px;
+    margin: 0 auto;
   }
 `;
 
@@ -74,6 +85,12 @@ export const SectionsItem = styled.li`
         'standart',
         'short'
       )};
+    }
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 767.98px) {
+    &:is(:hover, :focus-within) {
+      flex-basis: 460px;
     }
   }
 
@@ -152,9 +169,15 @@ export const CardBackground = styled.span`
     background-image: ${({ imageWEBP_360x3 }) => `url(${imageWEBP_360x3})`};
   }
 
-  @media screen and (max-width: 767.98px) {
+  @media screen and (max-width: 479.98px) {
     height: calc(100vw - 20px);
+  }
 
+  @media screen and (min-width: 480px) and (max-width: 767.98px) {
+    height: 460px;
+  }
+
+  @media screen and (max-width: 767.98px) {
     transform: translateY(-10%);
 
     transition: ${createTransition('transform', 'standart')};
