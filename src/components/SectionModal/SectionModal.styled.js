@@ -204,7 +204,7 @@ export const OutlinedButton = styled.button`
 
   border-width: 1px;
   border-style: solid;
-  border-radius: 6px;
+  border-radius: 8px;
   border-color: #fa7734;
 
   cursor: pointer;

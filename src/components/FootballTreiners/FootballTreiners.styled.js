@@ -27,7 +27,7 @@ export const TrainerItem = styled.li`
 
   max-width: 400px;
 
-  border-radius: 8px;
+  border-radius: 12px;
 
   box-shadow: 3px 6px 10px 2px rgba(0, 0, 0, 0.4);
 
@@ -76,8 +76,8 @@ export const ItemInfo = styled.p`
   color: #aeaeae;
   background-color: #000000d1;
 
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 
   text-align: center;
 
@@ -124,8 +124,8 @@ export const Drscription = styled.div`
 
   background-color: #ffffffee;
 
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 
   transform: translateY(150%);
 

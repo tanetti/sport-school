@@ -43,7 +43,7 @@ export const TrainingParagraph = styled.p`
 export const PlayerFrame = styled(ReactPlayer)`
   aspect-ratio: 16/9;
 
-  border-radius: 8px;
+  border-radius: 12px;
 
   overflow: hidden;
 
@@ -79,7 +79,7 @@ export const AdvancedInfoContaier = styled.div`
 `;
 
 export const AdvancedBlock = styled.div`
-  border-radius: 8px;
+  border-radius: 12px;
 
   box-shadow: 3px 6px 10px 2px rgba(0, 0, 0, 0.4);
 

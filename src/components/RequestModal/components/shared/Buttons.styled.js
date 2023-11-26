@@ -22,7 +22,7 @@ const SharedButton = styled.button`
 
   border-width: 1px;
   border-style: solid;
-  border-radius: 6px;
+  border-radius: 8px;
 
   cursor: pointer;
 
