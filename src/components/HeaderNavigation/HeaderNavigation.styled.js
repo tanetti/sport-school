@@ -230,19 +230,20 @@ export const RequestButton = styled.button`
   padding: 10px 12px 8px 12px;
 
   font-size: 16px;
-  font-weight: 700;
 
   color: inherit;
   background-color: transparent;
 
   border-width: 1px;
   border-style: solid;
-  border-radius: 8px;
+  border-radius: 10px;
   border-color: #fa7734;
 
   cursor: pointer;
 
   text-transform: uppercase;
+
+  animation: puls 10s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
 
   transition: ${createTransition(
     ['color', 'border-color', 'opacity', 'visibility', 'transform'],
@@ -288,5 +289,28 @@ export const RequestButton = styled.button`
 
     transform: ${({ isScrolled }) =>
       isScrolled ? 'translateX(0)' : 'translateX(166px)'};
+  }
+
+  @keyframes puls {
+    0% {
+      background-color: transparent;
+
+      transform: scale(1);
+    }
+    5% {
+      background-color: #fa773420;
+
+      transform: scale(1.1);
+    }
+    10% {
+      background-color: transparent;
+
+      transform: scale(1);
+    }
+    100% {
+      background-color: transparent;
+
+      transform: scale(1);
+    }
   }
 `;

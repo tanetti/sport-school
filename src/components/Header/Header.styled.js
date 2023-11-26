@@ -44,12 +44,14 @@ export const HeaderSizer = styled.div`
 `;
 
 export const LogoLink = styled(NavLink)`
-  width: ${({ scrolled }) => (scrolled === 'true' ? '44px' : '60px')};
-  height: ${({ scrolled }) => (scrolled === 'true' ? '48px' : '65px')};
+  display: flex;
+  flex-basis: ${({ scrolled }) => (scrolled === 'true' ? '44px' : '60px')};
+
+  aspect-ratio: 1/1.07;
 
   color: #fff;
 
-  transition: ${createTransition(['color', 'width', 'height'], 'standart')};
+  transition: ${createTransition(['color', 'flex'], 'standart')};
 
   & > svg {
     display: block;
@@ -65,12 +67,10 @@ export const LogoLink = styled(NavLink)`
   }
 
   @media screen and (min-width: 768px) {
-    width: ${({ scrolled }) => (scrolled === 'true' ? '60px' : '80px')};
-    height: ${({ scrolled }) => (scrolled === 'true' ? '65px' : '86px')};
+    flex-basis: ${({ scrolled }) => (scrolled === 'true' ? '60px' : '80px')};
   }
 
   @media screen and (min-width: 1280px) {
-    width: ${({ scrolled }) => (scrolled === 'true' ? '70px' : '120px')};
-    height: ${({ scrolled }) => (scrolled === 'true' ? '76px' : '130px')};
+    flex-basis: ${({ scrolled }) => (scrolled === 'true' ? '70px' : '120px')};
   }
 `;
