@@ -1,11 +1,15 @@
 import { SECTIONS } from '@/constants';
 
-export const getDefaultSectionValue = defaultSection => {
-  if (!defaultSection) return null;
+export const getDefaultSectionValue = pathname => {
+  if (!pathname) return null;
 
-  const currentSection = SECTIONS.find(({ name }) => name === defaultSection);
+  const pageRoot = pathname.split('/')[1];
 
-  if (!currentSection || currentSection?.disabled) return null;
+  const currentSection = SECTIONS.find(({ name }) => name === pageRoot);
+  const currentSectionName = currentSection?.name;
+  const isCurrentSectionDisabled = currentSection?.disabled;
 
-  return defaultSection;
+  if (!currentSectionName || isCurrentSectionDisabled) return null;
+
+  return currentSectionName;
 };

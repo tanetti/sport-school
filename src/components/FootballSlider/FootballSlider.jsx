@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { RequestModal } from '@/components';
+import { useContext } from 'react';
+import { RequestModalContext } from '@/components';
 import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
@@ -20,14 +20,15 @@ import {
 } from './FootballSlider.styled';
 
 export const FootballSlider = () => {
-  const [isRequestModalOpened, setIsRequestModalOpened] = useState(false);
+  const { isRequestModalOpened, setIsRequestModalOpened } =
+    useContext(RequestModalContext);
 
   return (
     <SliderSection>
       <ActionButton
         type="button"
         aria-expanded={isRequestModalOpened}
-        aria-controls="football_request_modal"
+        aria-controls="request_modal"
         aria-haspopup="dialog"
         onClick={() => setIsRequestModalOpened(true)}
       >
@@ -108,13 +109,6 @@ export const FootballSlider = () => {
           </Motivation>
         </StyledSwiperSlide>
       </StyledSwiper>
-
-      <RequestModal
-        idControls="football_request_modal"
-        defaultSection="football"
-        isOpened={isRequestModalOpened}
-        closeModal={() => setIsRequestModalOpened(false)}
-      />
     </SliderSection>
   );
 };

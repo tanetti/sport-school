@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { RequestModal } from '@/components';
+import { useContext } from 'react';
+import { RequestModalContext } from '@/components';
 import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
@@ -18,14 +18,15 @@ import {
 } from './HomeSlider.styled';
 
 export const HomeSlider = () => {
-  const [isRequestModalOpened, setIsRequestModalOpened] = useState(false);
+  const { isRequestModalOpened, setIsRequestModalOpened } =
+    useContext(RequestModalContext);
 
   return (
     <SliderSection id="hero">
       <ActionButton
         type="button"
         aria-expanded={isRequestModalOpened}
-        aria-controls="home_request_modal"
+        aria-controls="request_modal"
         aria-haspopup="dialog"
         onClick={() => setIsRequestModalOpened(true)}
       >
@@ -104,12 +105,6 @@ export const HomeSlider = () => {
           </Motivation>
         </StyledSwiperSlide>
       </StyledSwiper>
-
-      <RequestModal
-        idControls="home_request_modal"
-        isOpened={isRequestModalOpened}
-        closeModal={() => setIsRequestModalOpened(false)}
-      />
     </SliderSection>
   );
 };

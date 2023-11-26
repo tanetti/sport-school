@@ -10,17 +10,10 @@ import { TRANSITION_STANDART_DURATION_MS, API_URL } from '@/constants';
 import { getDefaultSectionValue, validationSchema } from './utilities';
 import { StepContainer } from './RequestModal.styled';
 
-export const RequestModal = ({
-  isOpened,
-  closeModal,
-  idControls,
-  defaultSection = null,
-}) => {
+export const RequestModal = ({ isOpened, closeModal }) => {
   const [currentStep, setCurrentStep] = useState(1);
   const [isStepVisible, setIsStepVisible] = useState(true);
   const scrollContainerRef = useRef(null);
-
-  const defaulSectionValue = getDefaultSectionValue(defaultSection);
 
   const {
     control,
@@ -34,7 +27,7 @@ export const RequestModal = ({
   } = useForm({
     resolver: yupResolver(validationSchema),
     defaultValues: {
-      section: defaulSectionValue,
+      section: null,
       name: '',
       surename: '',
       phone: '',
@@ -63,6 +56,9 @@ export const RequestModal = ({
     if (isOpened) {
       wakeupRequest();
 
+      const defaulSectionValue = getDefaultSectionValue(location?.pathname);
+      setValue('section', defaulSectionValue);
+
       return;
     }
 
@@ -72,7 +68,7 @@ export const RequestModal = ({
     }, TRANSITION_STANDART_DURATION_MS);
 
     return () => clearTimeout(clearForm);
-  }, [isOpened, reset]);
+  }, [isOpened, reset, setValue]);
 
   const onStepChange = stepNumber => {
     setIsStepVisible(false);
@@ -122,7 +118,7 @@ export const RequestModal = ({
     <Modal
       isOpened={isOpened}
       closeModal={closeModal}
-      idControls={idControls}
+      idControls="request_modal"
       isControlsDisabled={isPending}
       isLoading={isPending}
       loadingCaption="Відправляємо..."
@@ -154,6 +150,4 @@ export const RequestModal = ({
 RequestModal.propTypes = {
   isOpened: PropTypes.bool.isRequired,
   closeModal: PropTypes.func.isRequired,
-  idControls: PropTypes.string.isRequired,
-  defaultSection: PropTypes.string,
 };
