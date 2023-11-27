@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { createTransition } from '@/utilities';
 
-export const TrainerList = styled.ul`
+export const CoachList = styled.ul`
   margin: 0 auto;
 
   @media screen and (max-width: 767.98px) {
@@ -22,7 +22,7 @@ export const TrainerList = styled.ul`
   }
 `;
 
-export const TrainerItem = styled.li`
+export const CoachItem = styled.li`
   position: relative;
 
   max-width: 400px;

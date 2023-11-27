@@ -65,7 +65,7 @@ export const FootballTraining = () => (
         <BlockTitle>Принципи тренувань</BlockTitle>
 
         <BlockList>
-          <ListItem>Якісна демонстрація та роз’яснення вправ.</ListItem>
+          <ListItem>Якісна демонстрація та роз&apos;яснення вправ.</ListItem>
 
           <ListItem>Принцип «від простого до складного».</ListItem>
 

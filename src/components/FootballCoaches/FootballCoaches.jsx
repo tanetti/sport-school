@@ -1,41 +1,41 @@
-import Trainer01Webp480x1 from '@/assets/trainers/football/01/480x1.webp';
-import Trainer01Jpg480x1 from '@/assets/trainers/football/01/480x1.jpg';
+import Coach01Webp480x1 from '@/assets/coaches/football/01/480x1.webp';
+import Coach01Jpg480x1 from '@/assets/coaches/football/01/480x1.jpg';
 
-import Trainer02Webp480x1 from '@/assets/trainers/football/02/480x1.webp';
-import Trainer02Jpg480x1 from '@/assets/trainers/football/02/480x1.jpg';
+import Coach02Webp480x1 from '@/assets/coaches/football/02/480x1.webp';
+import Coach02Jpg480x1 from '@/assets/coaches/football/02/480x1.jpg';
 
 import { SectionsTitle, StyledSection } from '@/components/shared';
 import {
-  TrainerItem,
-  TrainerList,
+  CoachItem,
+  CoachList,
   ItemImage,
   ItemInfo,
   Name,
   Drscription,
   DescriptionParagraph,
-} from './FootballTreiners.styled';
+} from '@/components/shared';
 
-export const FootballTreiners = () => (
+export const FootballCoaches = () => (
   <StyledSection>
     <SectionsTitle data-aos="fade-up">Тренери</SectionsTitle>
 
-    <TrainerList>
-      <TrainerItem data-aos="fade-up-right">
+    <CoachList>
+      <CoachItem data-aos="fade-up-right">
         <div style={{ overflow: 'hidden' }}>
           <picture>
             <source
               type="image/webp"
-              srcSet={`${Trainer01Webp480x1} 480w`}
+              srcSet={`${Coach01Webp480x1} 480w`}
               sizes="480px"
             />
 
             <source
               type="image/jpg"
-              srcSet={`${Trainer01Jpg480x1} 480w`}
+              srcSet={`${Coach01Jpg480x1} 480w`}
               sizes="480px"
             />
 
-            <ItemImage alt="Тренер" loading="lazy" src={Trainer01Jpg480x1} />
+            <ItemImage alt="Тренер" loading="lazy" src={Coach01Jpg480x1} />
           </picture>
         </div>
 
@@ -62,24 +62,24 @@ export const FootballTreiners = () => (
             футболу.
           </DescriptionParagraph>
         </Drscription>
-      </TrainerItem>
+      </CoachItem>
 
-      <TrainerItem data-aos="fade-up-left">
+      <CoachItem data-aos="fade-up-left">
         <div style={{ overflow: 'hidden' }}>
           <picture>
             <source
               type="image/webp"
-              srcSet={`${Trainer02Webp480x1} 480w`}
+              srcSet={`${Coach02Webp480x1} 480w`}
               sizes="480px"
             />
 
             <source
               type="image/jpg"
-              srcSet={`${Trainer02Jpg480x1} 480w`}
+              srcSet={`${Coach02Jpg480x1} 480w`}
               sizes="480px"
             />
 
-            <ItemImage alt="Тренер" loading="lazy" src={Trainer02Jpg480x1} />
+            <ItemImage alt="Тренер" loading="lazy" src={Coach02Jpg480x1} />
           </picture>
         </div>
 
@@ -104,7 +104,7 @@ export const FootballTreiners = () => (
             Дитячим тренером став у віці 21 року.
           </DescriptionParagraph>
         </Drscription>
-      </TrainerItem>
-    </TrainerList>
+      </CoachItem>
+    </CoachList>
   </StyledSection>
 );

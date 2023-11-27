@@ -15,7 +15,10 @@ export * from './HomeSections/HomeSections';
 export * from './AboutTeam/AboutTeam';
 export * from './AboutAdministration/AboutAdministration';
 
-export * from './FootballSlider/FootballSlider';
 export * from './FootballAdvantages/FootballAdvantages';
 export * from './FootballTraining/FootballTraining';
-export * from './FootballTreiners/FootballTreiners';
+export * from './FootballCoaches/FootballCoaches';
+
+export * from './VolleyballAdvantages/VolleyballAdvantages';
+export * from './VolleyballTraining/VolleyballTraining';
+export * from './VolleyballCoaches/VolleyballCoaches';

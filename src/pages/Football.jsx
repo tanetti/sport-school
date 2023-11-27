@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
+import { Slider } from '@/components/shared';
+import { FOOTBALL_SLIDER_SETTINGS } from '@/constants';
 import {
-  FootballSlider,
   FootballAdvantages,
   FootballTraining,
-  FootballTreiners,
+  FootballCoaches,
 } from '@/components';
 
 const Football = () => {
@@ -15,13 +16,13 @@ const Football = () => {
 
   return (
     <>
-      <FootballSlider />
+      <Slider settings={FOOTBALL_SLIDER_SETTINGS} />
 
       <FootballAdvantages />
 
       <FootballTraining />
 
-      <FootballTreiners />
+      <FootballCoaches />
     </>
   );
 };
