@@ -133,9 +133,14 @@ export const Drscription = styled.div`
 `;
 
 export const DescriptionParagraph = styled.p`
+  & > em {
+    font-weight: 700;
+  }
+
   &:not(:last-of-type) {
     margin-bottom: 10px;
   }
+
   &::before {
     content: '';
 
