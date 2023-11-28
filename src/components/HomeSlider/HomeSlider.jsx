@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { RequestModalContext } from '@/components';
+import { RequestModalContext } from '@/utilities';
 import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';

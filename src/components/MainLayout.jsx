@@ -1,15 +1,11 @@
-import { Suspense, createContext, useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
+import { RequestModalContext } from '@/utilities';
 import { Header, Footer, RequestModal } from '@/components';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-export const RequestModalContext = createContext({
-  isRequestModalOpened: false,
-  setIsRequestModalOpened: () => null,
-});
-
-export const MainLayout = () => {
+const MainLayout = () => {
   const [isRequestModalOpened, setIsRequestModalOpened] = useState(false);
 
   useEffect(() => {
@@ -43,3 +39,5 @@ export const MainLayout = () => {
     </RequestModalContext.Provider>
   );
 };
+
+export default MainLayout;

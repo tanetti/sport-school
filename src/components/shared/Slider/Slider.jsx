@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useContext } from 'react';
 import parse from 'html-react-parser';
-import { RequestModalContext } from '@/components';
+import { RequestModalContext } from '@/utilities';
 import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';

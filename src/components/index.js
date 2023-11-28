@@ -1,5 +1,3 @@
-export * from './MainLayout';
-
 export * from './Header/Header';
 export * from './HeaderNavigation/HeaderNavigation';
 
@@ -22,3 +20,5 @@ export * from './FootballCoaches/FootballCoaches';
 export * from './VolleyballAdvantages/VolleyballAdvantages';
 export * from './VolleyballTraining/VolleyballTraining';
 export * from './VolleyballCoaches/VolleyballCoaches';
+
+export * from './ClimbingAdvantages/ClimbingAdvantages';

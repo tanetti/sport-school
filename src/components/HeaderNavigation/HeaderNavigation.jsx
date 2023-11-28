@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import { useContext, useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { ContactModal, SectionModal, RequestModalContext } from '@/components';
+import { RequestModalContext } from '@/utilities';
+import { ContactModal, SectionModal } from '@/components';
 import { SpriteIcon } from '@/components/shared';
 import { MobileMenuButton } from './components';
 import { SECTIONS } from '@/constants';

@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { HomeSlider, HomeSections } from '@/components';
 
-export const Home = () => {
+const Home = () => {
   useEffect(() => {
     document.title = 'ДЮСШ Слобожанське - Головна';
 
@@ -21,3 +21,5 @@ export const Home = () => {
     </>
   );
 };
+
+export default Home;

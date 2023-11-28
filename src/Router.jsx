@@ -1,14 +1,14 @@
 import { lazy } from 'react';
 import { createBrowserRouter, Navigate } from 'react-router-dom';
-import { MainLayout } from '@/components';
-import { Home } from '@/pages/Home';
+import MainLayout from '@/components/MainLayout';
+import Home from '@/pages/Home';
 
 const About = lazy(() => import('@/pages/About'));
 const Football = lazy(() => import('@/pages/Football'));
 const Volleyball = lazy(() => import('@/pages/Volleyball'));
 const Climbing = lazy(() => import('@/pages/Climbing'));
 
-export const Router = createBrowserRouter([
+const Router = createBrowserRouter([
   {
     element: <MainLayout />,
     children: [
@@ -44,3 +44,5 @@ export const Router = createBrowserRouter([
     ],
   },
 ]);
+
+export default Router;
