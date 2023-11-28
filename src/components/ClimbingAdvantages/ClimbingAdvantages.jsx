@@ -1,9 +1,9 @@
-import JPG_560x1 from '@/assets/advantages/football/560x1.jpg';
-import WEBP_560x1 from '@/assets/advantages/football/560x1.webp';
-import JPG_560x2 from '@/assets/advantages/football/560x2.jpg';
-import WEBP_560x2 from '@/assets/advantages/football/560x2.webp';
-import JPG_560x3 from '@/assets/advantages/football/560x3.jpg';
-import WEBP_560x3 from '@/assets/advantages/football/560x3.webp';
+import JPG_560x1 from '@/assets/advantages/climbing/560x1.jpg';
+import WEBP_560x1 from '@/assets/advantages/climbing/560x1.webp';
+import JPG_560x2 from '@/assets/advantages/climbing/560x2.jpg';
+import WEBP_560x2 from '@/assets/advantages/climbing/560x2.webp';
+import JPG_560x3 from '@/assets/advantages/climbing/560x3.jpg';
+import WEBP_560x3 from '@/assets/advantages/climbing/560x3.webp';
 
 import { SectionsTitle, StyledSection } from '@/components/shared';
 import {
@@ -15,7 +15,9 @@ import {
 
 export const ClimbingAdvantages = () => (
   <StyledSection>
-    <SectionsTitle data-aos="fade-up">Переваги заняття футболом</SectionsTitle>
+    <SectionsTitle data-aos="fade-up">
+      Переваги заняття cкелелазінням
+    </SectionsTitle>
 
     <AdvantagesContainer>
       <GraphicContainer
@@ -30,36 +32,28 @@ export const ClimbingAdvantages = () => (
 
       <Advantageslist>
         <ListItem data-aos="fade-up">
-          <em>Футбол - це гарне кардіотренування</em>, що покращує аеробні
-          здібності та здоров&apos;я серця і судин, допомагає тримати в нормі
-          вагу та покращує тонус м&apos;язів, позитивно впливає на силу і
-          витривалість.
+          <em>Скелелазіння</em> - це не просто тренування, але й похідне життя,
+          пісні біля вогнища, ночівлі в наметах і веселе спілкування.
         </ListItem>
 
         <ListItem data-aos="fade-up">
-          <em>Навчає координації</em>, сприяє спільній роботі та обміну, вчить
-          &quot;думати на ходу&quot;, допомагає підвищити навички концентрації,
-          наполегливості та самодисципліни, підвищує впевненість та самооцінку.
+          <em>Скелелазіння</em> - це гарний стимул побачити світ і приєднатися
+          до справжніх професіоналів.
         </ListItem>
 
         <ListItem data-aos="fade-up">
-          <em>Гра у футбол як ліки</em> - багато досліджень вказують на користь
-          цього виду фізичної активності для людей будь-якого віку.
+          <em>Скелелазіння</em> - це регулярні тренування цілий рік, які дають
+          гарне виховання витримки та сили волі.
         </ListItem>
 
         <ListItem data-aos="fade-up">
-          <em>Командні ігри, такі як футбол - це адреналін</em>. Ми напоготові
-          та серце калатає. Але фізична активність схожа на відволікання — поки
-          ви тренуєтеся, ви не думаєте ні про що, крім тренування та гри, і тим
-          самим заспокоюєтеся.
+          <em>Скелелазіння</em> - це спорт, яким можна займатися до глибокої
+          старості, тому що він дає гарну фізичну форму.
         </ListItem>
 
         <ListItem data-aos="fade-up">
-          Є докази, що футбол в різних форматах тривалості тренувань і
-          навантаження - корисний вид фізичної активності в разі хронічних
-          хвороб - діабету 1 та 2 типу, гіпертонії, ожиріння, багатьох
-          захворювань м&apos;язів, кісток і суглобів (остеоартрит, ревматоїдний
-          артрит, остеопороз), синдрому хронічної втоми та навіть депресії.
+          <em>Скелелазіння</em> - це унікальні навички альпінізму, та можливість
+          отримати в майбутньому професію своєї мрії.
         </ListItem>
       </Advantageslist>
     </AdvantagesContainer>
