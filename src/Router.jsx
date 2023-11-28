@@ -6,6 +6,7 @@ import { Home } from '@/pages/Home';
 const About = lazy(() => import('@/pages/About'));
 const Football = lazy(() => import('@/pages/Football'));
 const Volleyball = lazy(() => import('@/pages/Volleyball'));
+const Climbing = lazy(() => import('@/pages/Climbing'));
 
 export const Router = createBrowserRouter([
   {
@@ -29,6 +30,11 @@ export const Router = createBrowserRouter([
       {
         path: '/volleyball',
         element: <Volleyball />,
+      },
+
+      {
+        path: '/climbing',
+        element: <Climbing />,
       },
 
       {

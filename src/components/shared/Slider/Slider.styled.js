@@ -224,7 +224,7 @@ export const Motivation = styled.article`
 
   font-size: clamp(10px, 3.6vw, 36px);
   font-weight: 700;
-  line-height: 1.5;
+  line-height: 1.6;
 
   color: #fa7734;
 
@@ -233,7 +233,7 @@ export const Motivation = styled.article`
 
     font-size: clamp(8px, 2.4vw, 26px);
     font-weight: 400;
-    line-height: 1.15;
+    line-height: 1.2;
 
     color: #fff;
   }
@@ -243,8 +243,7 @@ export const Motivation = styled.article`
 
     padding-top: 10px;
 
-    font-size: clamp(7px, 2.2vw, 22px);
-    font-weight: 700;
+    font-size: clamp(7px, 2.1vw, 22px);
     line-height: 1.8;
 
     color: #bababa;
@@ -252,6 +251,10 @@ export const Motivation = styled.article`
 
   @media screen and (min-width: 1180px) {
     max-width: 40%;
+
+    & > em {
+      padding-top: 30px;
+    }
   }
 
   @media screen and (min-width: 1440px) {
