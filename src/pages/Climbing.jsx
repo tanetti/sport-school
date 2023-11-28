@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Slider } from '@/components/shared';
 import { CLIMBING_SLIDER_SETTINGS } from '@/constants';
-import { ClimbingAdvantages } from '@/components';
+import { ClimbingAdvantages, ClimbingTraining } from '@/components';
 
 const Climbing = () => {
   useEffect(() => {
@@ -15,6 +15,8 @@ const Climbing = () => {
       <Slider settings={CLIMBING_SLIDER_SETTINGS} />
 
       <ClimbingAdvantages />
+
+      <ClimbingTraining />
     </>
   );
 };

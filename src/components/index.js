@@ -22,3 +22,4 @@ export * from './VolleyballTraining/VolleyballTraining';
 export * from './VolleyballCoaches/VolleyballCoaches';
 
 export * from './ClimbingAdvantages/ClimbingAdvantages';
+export * from './ClimbingTraining/ClimbingTraining';
