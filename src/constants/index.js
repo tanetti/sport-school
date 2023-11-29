@@ -5,3 +5,4 @@ export * from './api';
 export * from './sliders/football';
 export * from './sliders/volleyball';
 export * from './sliders/climbing';
+export * from './sliders/tennis';
