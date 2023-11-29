@@ -24,3 +24,7 @@ export * from './VolleyballCoaches/VolleyballCoaches';
 export * from './ClimbingAdvantages/ClimbingAdvantages';
 export * from './ClimbingTraining/ClimbingTraining';
 export * from './ClimbingCoaches/ClimbingCoaches';
+
+export * from './TennisAdvantages/TennisAdvantages';
+export * from './TennisTraining/TennisTraining';
+export * from './TennisCoaches/TennisCoaches';
