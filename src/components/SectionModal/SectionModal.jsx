@@ -18,19 +18,24 @@ export const SectionModal = ({ isOpened, closeModal, idControls }) => (
   >
     <NavigationContainer>
       <SectionsList>
-        {SECTIONS.map(({ name, label, startAge, endAge, requestImages }) => (
-          <SectionItem key={name}>
-            <SectionLink
-              to={`/${name}`}
-              images={requestImages}
-              onClickCapture={closeModal}
-            >
-              {label}
+        {SECTIONS.map(
+          ({ name, label, startAge, endAge, requestImages, disabled }) => (
+            <SectionItem key={name}>
+              <SectionLink
+                to={`/${name}`}
+                images={requestImages}
+                disabled={disabled}
+                onClickCapture={closeModal}
+              >
+                {label}
 
-              <span>{`${startAge} - ${endAge} років`}</span>
-            </SectionLink>
-          </SectionItem>
-        ))}
+                <span>{`${startAge} - ${endAge} років`}</span>
+
+                {disabled ? <strong>Тимчасово недоступно</strong> : null}
+              </SectionLink>
+            </SectionItem>
+          )
+        )}
       </SectionsList>
     </NavigationContainer>
 

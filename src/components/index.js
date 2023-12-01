@@ -7,7 +7,6 @@ export * from './ContactModal/ContactModal';
 export * from './SectionModal/SectionModal';
 export * from './RequestModal/RequestModal';
 
-export * from './HomeSlider/HomeSlider';
 export * from './HomeSections/HomeSections';
 
 export * from './AboutTeam/AboutTeam';

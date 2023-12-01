@@ -90,6 +90,9 @@ export const SectionLink = styled(NavLink)`
 
   overflow: hidden;
 
+  pointer-events: ${({ disabled }) => (disabled ? 'none' : 'initial')};
+  opacity: ${({ disabled }) => (disabled ? 0.8 : 1)};
+
   transition: ${createTransition(['color', 'transform'], 'standart')};
 
   &.active {
@@ -136,6 +139,35 @@ export const SectionLink = styled(NavLink)`
     transition: ${createTransition(['opacity', 'visibility'], 'standart')};
   }
 
+  & > strong {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    color: #ff3b3b;
+    background-color: #00000090;
+
+    text-align: center;
+
+    user-select: none;
+
+    transition: ${({ active }) =>
+      active
+        ? createTransition(['opacity', 'visibility'], 'standart', 'short')
+        : createTransition(['opacity', 'visibility'], 'standart')};
+  }
+
   @media screen and (min-width: 380px) {
     padding: 6px;
 
@@ -147,6 +179,10 @@ export const SectionLink = styled(NavLink)`
 
     & > span {
       font-size: 11px;
+    }
+
+    & > strong {
+      font-size: 14px;
     }
   }
 
@@ -162,6 +198,10 @@ export const SectionLink = styled(NavLink)`
     & > span {
       font-size: 12px;
     }
+
+    & > strong {
+      font-size: 16px;
+    }
   }
 
   @media screen and (min-width: 480px) {
@@ -171,6 +211,10 @@ export const SectionLink = styled(NavLink)`
 
     & > span {
       font-size: 13px;
+    }
+
+    & > strong {
+      font-size: 18px;
     }
   }
 
@@ -185,6 +229,10 @@ export const SectionLink = styled(NavLink)`
 
     & > span {
       font-size: 11px;
+    }
+
+    & > strong {
+      font-size: 14px;
     }
   }
 `;

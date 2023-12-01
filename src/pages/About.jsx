@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
-import { HomeSlider, AboutTeam, AboutAdministration } from '@/components';
+import { Slider } from '@/components/shared';
+import { AboutTeam, AboutAdministration } from '@/components';
+import { HOME_SLIDER_SETTINGS } from '@/constants';
 
 const About = () => {
   useEffect(() => {
@@ -18,7 +20,7 @@ const About = () => {
 
   return (
     <>
-      <HomeSlider />
+      <Slider settings={HOME_SLIDER_SETTINGS} />
 
       <AboutTeam />
 

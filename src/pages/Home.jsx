@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
-import { HomeSlider, HomeSections } from '@/components';
+import { Slider } from '@/components/shared';
+import { HomeSections } from '@/components';
+import { HOME_SLIDER_SETTINGS } from '@/constants';
 
 const Home = () => {
   useEffect(() => {
@@ -15,7 +17,7 @@ const Home = () => {
         Дніпропетровська область, Слобожанське, вулиця Спортивна 4
       </h1>
 
-      <HomeSlider />
+      <Slider settings={HOME_SLIDER_SETTINGS} />
 
       <HomeSections />
     </>

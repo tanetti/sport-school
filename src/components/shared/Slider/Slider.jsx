@@ -19,7 +19,7 @@ export const Slider = ({ settings }) => {
     useContext(RequestModalContext);
 
   return (
-    <SliderSection>
+    <SliderSection id="hero">
       <ActionButton
         type="button"
         aria-expanded={isRequestModalOpened}
