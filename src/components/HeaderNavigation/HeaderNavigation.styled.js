@@ -322,48 +322,9 @@ export const LinkContainer = styled.div`
   }
 `;
 
-export const SocialsList = styled.ul`
-  display: flex;
-  justify-content: space-around;
-`;
-
-export const SocialLink = styled.a`
-  display: flex;
-
-  align-items: center;
-
-  padding: 10px 7px;
-
-  color: #fa7734;
-
-  transition: ${createTransition('color', 'standart')};
-
-  & > svg {
-    width: 20px;
-    height: 20px;
-
-    fill: currentColor;
-  }
-
-  &:is(:hover, :focus) {
-    color: #fff;
-  }
-`;
-
-export const SocialLinkYouTube = styled(SocialLink)`
-  padding: 7px 7px;
-
-  & > svg {
-    width: 26px;
-    height: 26px;
-  }
-`;
-
 export const ContactList = styled.ul`
   display: flex;
   justify-content: space-around;
-
-  margin-bottom: 10px;
 `;
 
 export const ContactLink = styled.a`
@@ -373,7 +334,7 @@ export const ContactLink = styled.a`
 
   padding: 10px 7px;
 
-  color: #fff;
+  color: #aeaeae;
 
   transition: ${createTransition('color', 'standart')};
 
@@ -384,19 +345,7 @@ export const ContactLink = styled.a`
     fill: currentColor;
   }
 
-  & > span {
-    display: none;
-
-    color: #aeaeae;
-
-    transition: ${createTransition('color', 'standart')};
-  }
-
   &:is(:hover, :focus) {
     color: #fa5502;
-
-    & > span {
-      color: #fa7734;
-    }
   }
 `;

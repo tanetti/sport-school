@@ -5,15 +5,7 @@ import { RequestModalContext } from '@/utilities';
 import { ContactModal, SectionModal } from '@/components';
 import { SpriteIcon } from '@/components/shared';
 import { MobileMenuButton } from './components';
-import {
-  SECTIONS,
-  FACEBOOK,
-  INSTAGRAM,
-  YOUTUBE,
-  PHONE,
-  MAIL,
-  LOCATION,
-} from '@/constants';
+import { SECTIONS, PHONE, MAIL, LOCATION } from '@/constants';
 import {
   ContactLink,
   ContactList,
@@ -23,9 +15,6 @@ import {
   NavigationContainer,
   NavigationLink,
   RequestButton,
-  SocialLink,
-  SocialLinkYouTube,
-  SocialsList,
 } from './HeaderNavigation.styled';
 
 const sectionLocations = SECTIONS.map(({ name }) => name);
@@ -100,41 +89,6 @@ export const HeaderNavigation = ({ isScrolled }) => {
               </address>
             </li>
           </ContactList>
-
-          <SocialsList>
-            <li>
-              <SocialLink
-                href={FACEBOOK.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={FACEBOOK.aria}
-              >
-                <SpriteIcon symbol="facebook" />
-              </SocialLink>
-            </li>
-
-            <li>
-              <SocialLink
-                href={INSTAGRAM.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={INSTAGRAM.aria}
-              >
-                <SpriteIcon symbol="instagram" />
-              </SocialLink>
-            </li>
-
-            <li>
-              <SocialLinkYouTube
-                href={YOUTUBE.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={YOUTUBE.aria}
-              >
-                <SpriteIcon symbol="youtube" />
-              </SocialLinkYouTube>
-            </li>
-          </SocialsList>
         </LinkContainer>
 
         <MainNavigationList>
