@@ -13,14 +13,14 @@ export const NavigationContainer = styled.nav`
     right: 0;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: space-between;
     gap: 50px;
 
     min-width: 200px;
     height: 100dvh;
 
-    padding: 70px 16px 20px 16px;
+    padding: 90px 16px 20px 16px;
 
     background-color: #000000f0;
 

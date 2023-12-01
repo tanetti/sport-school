@@ -73,66 +73,6 @@ export const HeaderNavigation = ({ isScrolled }) => {
         isMenuOpened={isMenuOpened}
         isScrolled={isScrolled}
       >
-        <MainNavigationList>
-          <li>
-            <NavigationLink to="/">
-              <SpriteIcon symbol="home" />
-
-              <span>Головна</span>
-            </NavigationLink>
-          </li>
-
-          <li>
-            <NavigationLink to="/about">
-              <SpriteIcon symbol="info" />
-
-              <span>Про нас</span>
-            </NavigationLink>
-          </li>
-
-          <li>
-            <NavigationButton
-              ref={sectionButtonRef}
-              role="menuitem"
-              type="button"
-              aria-expanded={isSectionMenuOpened}
-              aria-controls="section_menu_modal"
-              aria-haspopup="dialog"
-              onClick={() => setIsSectionMenuOpened(true)}
-            >
-              <SpriteIcon symbol="sections" />
-
-              <span>Відділення</span>
-            </NavigationButton>
-          </li>
-
-          <li>
-            <NavigationButton
-              role="menuitem"
-              type="button"
-              aria-expanded={isContactModalOpened}
-              aria-controls="contact_modal"
-              aria-haspopup="dialog"
-              onClick={() => setIsContactModalOpened(true)}
-            >
-              <SpriteIcon symbol="contact" />
-
-              <span>Контакти</span>
-            </NavigationButton>
-          </li>
-        </MainNavigationList>
-
-        <RequestButton
-          isScrolled={isScrolled}
-          type="button"
-          aria-expanded={isRequestModalOpened}
-          aria-controls="request_modal"
-          aria-haspopup="dialog"
-          onClick={() => setIsRequestModalOpened(true)}
-        >
-          Записатися
-        </RequestButton>
-
         <LinkContainer>
           <ContactList>
             <li>
@@ -196,6 +136,66 @@ export const HeaderNavigation = ({ isScrolled }) => {
             </li>
           </SocialsList>
         </LinkContainer>
+
+        <MainNavigationList>
+          <li>
+            <NavigationLink to="/">
+              <SpriteIcon symbol="home" />
+
+              <span>Головна</span>
+            </NavigationLink>
+          </li>
+
+          <li>
+            <NavigationLink to="/about">
+              <SpriteIcon symbol="info" />
+
+              <span>Про нас</span>
+            </NavigationLink>
+          </li>
+
+          <li>
+            <NavigationButton
+              ref={sectionButtonRef}
+              role="menuitem"
+              type="button"
+              aria-expanded={isSectionMenuOpened}
+              aria-controls="section_menu_modal"
+              aria-haspopup="dialog"
+              onClick={() => setIsSectionMenuOpened(true)}
+            >
+              <SpriteIcon symbol="sections" />
+
+              <span>Відділення</span>
+            </NavigationButton>
+          </li>
+
+          <li>
+            <NavigationButton
+              role="menuitem"
+              type="button"
+              aria-expanded={isContactModalOpened}
+              aria-controls="contact_modal"
+              aria-haspopup="dialog"
+              onClick={() => setIsContactModalOpened(true)}
+            >
+              <SpriteIcon symbol="contact" />
+
+              <span>Контакти</span>
+            </NavigationButton>
+          </li>
+        </MainNavigationList>
+
+        <RequestButton
+          isScrolled={isScrolled}
+          type="button"
+          aria-expanded={isRequestModalOpened}
+          aria-controls="request_modal"
+          aria-haspopup="dialog"
+          onClick={() => setIsRequestModalOpened(true)}
+        >
+          Записатися
+        </RequestButton>
       </NavigationContainer>
 
       <MobileMenuButton
