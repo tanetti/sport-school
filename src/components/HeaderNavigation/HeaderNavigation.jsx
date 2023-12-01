@@ -5,13 +5,27 @@ import { RequestModalContext } from '@/utilities';
 import { ContactModal, SectionModal } from '@/components';
 import { SpriteIcon } from '@/components/shared';
 import { MobileMenuButton } from './components';
-import { SECTIONS } from '@/constants';
 import {
+  SECTIONS,
+  FACEBOOK,
+  INSTAGRAM,
+  YOUTUBE,
+  PHONE,
+  MAIL,
+  LOCATION,
+} from '@/constants';
+import {
+  ContactLink,
+  ContactList,
+  LinkContainer,
   MainNavigationList,
   NavigationButton,
   NavigationContainer,
   NavigationLink,
   RequestButton,
+  SocialLink,
+  SocialLinkYouTube,
+  SocialsList,
 } from './HeaderNavigation.styled';
 
 const sectionLocations = SECTIONS.map(({ name }) => name);
@@ -118,6 +132,70 @@ export const HeaderNavigation = ({ isScrolled }) => {
         >
           Записатися
         </RequestButton>
+
+        <LinkContainer>
+          <ContactList>
+            <li>
+              <ContactLink href={PHONE.link} aria-label={PHONE.aria}>
+                <SpriteIcon symbol="phone" />
+              </ContactLink>
+            </li>
+
+            <li>
+              <ContactLink href={MAIL.link} aria-label={MAIL.aria}>
+                <SpriteIcon symbol="mail" />
+              </ContactLink>
+            </li>
+
+            <li>
+              <address>
+                <ContactLink
+                  href={LOCATION.link}
+                  aria-label={LOCATION.aria}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <SpriteIcon symbol="location" />
+                </ContactLink>
+              </address>
+            </li>
+          </ContactList>
+
+          <SocialsList>
+            <li>
+              <SocialLink
+                href={FACEBOOK.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={FACEBOOK.aria}
+              >
+                <SpriteIcon symbol="facebook" />
+              </SocialLink>
+            </li>
+
+            <li>
+              <SocialLink
+                href={INSTAGRAM.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={INSTAGRAM.aria}
+              >
+                <SpriteIcon symbol="instagram" />
+              </SocialLink>
+            </li>
+
+            <li>
+              <SocialLinkYouTube
+                href={YOUTUBE.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={YOUTUBE.aria}
+              >
+                <SpriteIcon symbol="youtube" />
+              </SocialLinkYouTube>
+            </li>
+          </SocialsList>
+        </LinkContainer>
       </NavigationContainer>
 
       <MobileMenuButton
