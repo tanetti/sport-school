@@ -1,11 +1,10 @@
 import { useEffect } from 'react';
 import { Slider } from '@/components/shared';
-import { AboutTeam, AboutAdministration } from '@/components';
 import { HOME_SLIDER_SETTINGS } from '@/constants';
 
 const About = () => {
   useEffect(() => {
-    document.title = 'ДЮСШ Слобожанське - Про нас';
+    document.title = 'ДЮСШ Слобожанське - Новини';
 
     const heroRef = document.getElementById('hero');
 
@@ -21,10 +20,6 @@ const About = () => {
   return (
     <>
       <Slider settings={HOME_SLIDER_SETTINGS} />
-
-      <AboutTeam />
-
-      <AboutAdministration />
     </>
   );
 };

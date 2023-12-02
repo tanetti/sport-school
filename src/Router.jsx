@@ -3,12 +3,13 @@ import { createBrowserRouter, Navigate } from 'react-router-dom';
 import MainLayout from '@/components/MainLayout';
 import Home from '@/pages/Home';
 
-const About = lazy(() => import('@/pages/About'));
 const Football = lazy(() => import('@/pages/Football'));
 const Volleyball = lazy(() => import('@/pages/Volleyball'));
 const Climbing = lazy(() => import('@/pages/Climbing'));
 const Tennis = lazy(() => import('@/pages/Tennis'));
 const Box = lazy(() => import('@/pages/Box'));
+const News = lazy(() => import('@/pages/News'));
+const About = lazy(() => import('@/pages/About'));
 
 const Router = createBrowserRouter([
   {
@@ -17,11 +18,6 @@ const Router = createBrowserRouter([
       {
         path: '/',
         element: <Home />,
-      },
-
-      {
-        path: '/about',
-        element: <About />,
       },
 
       {
@@ -47,6 +43,16 @@ const Router = createBrowserRouter([
       {
         path: '/box',
         element: <Box />,
+      },
+
+      {
+        path: '/news',
+        element: <News />,
+      },
+
+      {
+        path: '/about',
+        element: <About />,
       },
 
       {
