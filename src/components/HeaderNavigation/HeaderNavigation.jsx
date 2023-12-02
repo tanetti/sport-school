@@ -26,6 +26,7 @@ export const HeaderNavigation = ({ isScrolled }) => {
   const { isRequestModalOpened, setIsRequestModalOpened } =
     useContext(RequestModalContext);
   const sectionButtonRef = useRef(null);
+  const containerRef = useRef(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -48,6 +49,8 @@ export const HeaderNavigation = ({ isScrolled }) => {
 
     if (isMenuOpened) {
       addEventListener('click', onClick);
+
+      containerRef?.current?.scroll({ top: -1000, behavior: 'instant' });
     } else {
       removeEventListener('click', onClick);
     }
@@ -59,6 +62,7 @@ export const HeaderNavigation = ({ isScrolled }) => {
     <>
       <NavigationContainer
         id="nav-container"
+        ref={containerRef}
         isMenuOpened={isMenuOpened}
         isScrolled={isScrolled}
       >
@@ -101,14 +105,6 @@ export const HeaderNavigation = ({ isScrolled }) => {
           </li>
 
           <li>
-            <NavigationLink to="/about">
-              <SpriteIcon symbol="info" />
-
-              <span>Про нас</span>
-            </NavigationLink>
-          </li>
-
-          <li>
             <NavigationButton
               ref={sectionButtonRef}
               role="menuitem"
@@ -122,6 +118,22 @@ export const HeaderNavigation = ({ isScrolled }) => {
 
               <span>Відділення</span>
             </NavigationButton>
+          </li>
+
+          <li>
+            <NavigationLink to="/news">
+              <SpriteIcon symbol="news" />
+
+              <span>Новини</span>
+            </NavigationLink>
+          </li>
+
+          <li>
+            <NavigationLink to="/about">
+              <SpriteIcon symbol="info" />
+
+              <span>Про нас</span>
+            </NavigationLink>
           </li>
 
           <li>

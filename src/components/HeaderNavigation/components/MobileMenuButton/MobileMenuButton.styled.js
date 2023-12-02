@@ -19,7 +19,7 @@ export const ButtonContainer = styled.div`
     background-color: #fa5502;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 960px) {
     display: none;
   }
 `;

@@ -7,7 +7,7 @@ export const NavigationContainer = styled.nav`
 
   transition: ${createTransition('transform', 'standart')};
 
-  @media screen and (max-width: 767.98px) {
+  @media screen and (max-width: 959.98px) {
     position: fixed;
     top: 0;
     right: 0;
@@ -24,11 +24,13 @@ export const NavigationContainer = styled.nav`
 
     background-color: #000000f0;
 
+    overflow: auto;
+
     transform: ${({ isMenuOpened }) =>
       isMenuOpened ? 'translateX(0)' : 'translateX(102%)'};
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 960px) {
     display: flex;
     align-items: center;
     gap: 24px;
@@ -39,7 +41,7 @@ export const NavigationContainer = styled.nav`
       isScrolled ? 'translateX(0)' : 'translateX(140px)'};
   }
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1280px) {
     gap: 50px;
 
     padding-right: 20px;
@@ -48,7 +50,7 @@ export const NavigationContainer = styled.nav`
       isScrolled ? 'translateX(0)' : 'translateX(190px)'};
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1440px) {
     gap: 90px;
 
     transform: ${({ isScrolled }) =>
@@ -57,17 +59,17 @@ export const NavigationContainer = styled.nav`
 `;
 
 export const MainNavigationList = styled.ul`
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 960px) {
     display: flex;
     align-items: center;
     gap: 24px;
   }
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1280px) {
     gap: 30px;
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1440px) {
     gap: 50px;
   }
 `;
@@ -107,7 +109,7 @@ export const NavigationLink = styled(NavLink)`
     color: #fa5502;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 960px) {
     gap: 7px;
 
     padding: 20px 0;
@@ -120,7 +122,7 @@ export const NavigationLink = styled(NavLink)`
     }
   }
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1280px) {
     gap: 8px;
 
     font-size: 16px;
@@ -131,7 +133,7 @@ export const NavigationLink = styled(NavLink)`
     }
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1440px) {
     gap: 10px;
 
     font-size: 17px;
@@ -187,7 +189,7 @@ export const NavigationButton = styled.button`
     fill: currentColor;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 960px) {
     gap: 7px;
 
     padding: 20px 0;
@@ -200,7 +202,7 @@ export const NavigationButton = styled.button`
     }
   }
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1280px) {
     gap: 8px;
 
     font-size: 16px;
@@ -211,7 +213,7 @@ export const NavigationButton = styled.button`
     }
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1440px) {
     gap: 10px;
 
     font-size: 17px;
@@ -257,11 +259,11 @@ export const RequestButton = styled.button`
     border-color: #fa5502;
   }
 
-  @media screen and (max-width: 767.98px) {
+  @media screen and (max-width: 959.98px) {
     width: 100%;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 960px) {
     width: 116px;
     padding: 11px 12px 8px 12px;
 
@@ -274,7 +276,7 @@ export const RequestButton = styled.button`
       isScrolled ? 'translateX(0)' : 'translateX(126px)'};
   }
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1280px) {
     width: 140px;
 
     font-size: 15px;
@@ -283,7 +285,7 @@ export const RequestButton = styled.button`
       isScrolled ? 'translateX(0)' : 'translateX(160px)'};
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1440px) {
     width: 146px;
 
     font-size: 16px;
@@ -317,7 +319,7 @@ export const RequestButton = styled.button`
 `;
 
 export const LinkContainer = styled.div`
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 960px) {
     display: none;
   }
 `;
