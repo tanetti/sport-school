@@ -1,11 +1,25 @@
 import { useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { Slider } from '@/components/shared';
-import { HOME_SLIDER_SETTINGS } from '@/constants';
+import { NewsSection } from '@/components';
+import { SECTIONS, HOME_SLIDER_SETTINGS } from '@/constants';
 
-const About = () => {
+const News = () => {
+  const [searchParams] = useSearchParams();
+
   useEffect(() => {
-    document.title = 'ДЮСШ Слобожанське - Новини';
+    const sectionFilter = searchParams.get('section');
 
+    const sectionLabel = SECTIONS.find(
+      ({ name }) => name === sectionFilter
+    )?.label;
+
+    document.title = `ДЮСШ Слобожанське - Новини${
+      sectionLabel ? ` - ${sectionLabel}` : ''
+    }`;
+  }, [searchParams]);
+
+  useEffect(() => {
     const heroRef = document.getElementById('hero');
 
     setTimeout(() => {
@@ -20,8 +34,10 @@ const About = () => {
   return (
     <>
       <Slider settings={HOME_SLIDER_SETTINGS} />
+
+      <NewsSection />
     </>
   );
 };
 
-export default About;
+export default News;

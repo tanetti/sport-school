@@ -9,9 +9,6 @@ export * from './RequestModal/RequestModal';
 
 export * from './HomeSections/HomeSections';
 
-export * from './AboutTeam/AboutTeam';
-export * from './AboutAdministration/AboutAdministration';
-
 export * from './FootballAdvantages/FootballAdvantages';
 export * from './FootballTraining/FootballTraining';
 export * from './FootballCoaches/FootballCoaches';
@@ -30,3 +27,9 @@ export * from './TennisCoaches/TennisCoaches';
 
 export * from './BoxAdvantages/BoxAdvantages';
 export * from './BoxTraining/BoxTraining';
+
+export * from './NewsSection/NewsSection';
+export * from './NewsControls/NewsControls';
+
+export * from './AboutTeam/AboutTeam';
+export * from './AboutAdministration/AboutAdministration';
