@@ -49,7 +49,9 @@ export const Slider = ({ settings }) => {
             <StyledSwiperSlide key={id} images={images} valign={vAlign}>
               <Motivation>
                 {accent}
+
                 <span>{parse(body)}</span>
+
                 <em>{author}</em>
               </Motivation>
             </StyledSwiperSlide>

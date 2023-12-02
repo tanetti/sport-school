@@ -30,6 +30,7 @@ export * from './BoxTraining/BoxTraining';
 
 export * from './NewsSection/NewsSection';
 export * from './NewsControls/NewsControls';
+export * from './NewsContainer/NewsContainer';
 
 export * from './AboutTeam/AboutTeam';
 export * from './AboutAdministration/AboutAdministration';

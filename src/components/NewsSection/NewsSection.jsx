@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { SectionsTitle } from '@/components/shared';
-import { NewsControls } from '@/components';
+import { NewsControls, NewsContainer } from '@/components';
 import { SECTIONS } from '@/constants';
 import { StyledNewsSection } from './NewsSection.styled';
 
@@ -23,6 +23,8 @@ export const NewsSection = () => {
       <SectionsTitle data-aos="fade-up">Новини</SectionsTitle>
 
       <NewsControls />
+
+      <NewsContainer />
     </StyledNewsSection>
   );
 };

@@ -8,11 +8,13 @@ export const ControlsContainer = styled.ul`
   gap: 8px;
 
   padding: 0 10px;
+  margin-bottom: 40px;
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     gap: 16px;
 
     padding: 0 16px;
+    margin-bottom: 50px;
   }
 `;
 
