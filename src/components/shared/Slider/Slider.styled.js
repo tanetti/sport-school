@@ -122,7 +122,8 @@ export const StyledSwiperSlide = styled(SwiperSlide)`
 
   width: 100%;
 
-  background-position: bottom center;
+  background-position: ${({ valign }) =>
+    valign ? `${valign} center` : 'bottom center'};
   background-repeat: no-repeat;
   background-size: cover;
   background-image: ${({ images: { Img480x1jpg } }) =>

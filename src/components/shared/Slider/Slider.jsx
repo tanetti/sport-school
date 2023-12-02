@@ -45,8 +45,8 @@ export const Slider = ({ settings }) => {
         modules={[EffectFade, Autoplay, Pagination]}
       >
         {settings.map(
-          ({ id, motivation: { accent, body, author }, images }) => (
-            <StyledSwiperSlide key={id} images={images}>
+          ({ id, motivation: { accent, body, author }, images, vAlign }) => (
+            <StyledSwiperSlide key={id} images={images} valign={vAlign}>
               <Motivation>
                 {accent}
                 <span>{parse(body)}</span>

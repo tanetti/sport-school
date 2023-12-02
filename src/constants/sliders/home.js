@@ -133,6 +133,8 @@ export const HOME_SLIDER_SETTINGS = [
       author: '"Артур Еш"',
     },
 
+    vAlign: 'top',
+
     images: {
       Img480x1jpg: Slide01jpg480x1,
       Img480x2jpg: Slide01jpg480x2,
