@@ -52,20 +52,15 @@ const Router = createBrowserRouter([
       },
 
       {
-        path: 'news/*',
-        element: <Navigate to="/news" />,
-      },
-
-      {
         path: 'about',
         element: <About />,
       },
-
-      {
-        path: '*',
-        element: <Navigate to="/" />,
-      },
     ],
+  },
+
+  {
+    path: '*',
+    element: <Navigate to="/" />,
   },
 ]);
 
