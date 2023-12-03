@@ -11,7 +11,7 @@ const SECTIONS_NAMES = SECTIONS.map(({ name }) => name);
 export const NewsSection = () => {
   const [isUpShown, setIsUpShown] = useState(false);
   const [verticalShift, setVerticalShift] = useState(0);
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams({});
   const titleRef = useRef(null);
 
   useEffect(() => {
