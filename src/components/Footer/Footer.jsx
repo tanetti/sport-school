@@ -22,7 +22,7 @@ import {
 } from './Footer.styled';
 
 export const Footer = () => (
-  <FooterContainer>
+  <FooterContainer id="footer">
     <ContactContainer>
       <ContactTitle>
         Залишились питання? <strong>Зв&apos;яжіться з нами!</strong>

@@ -10,10 +10,10 @@ export const StyledArticle = styled.article`
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 20px 16px 60px 16px;
+  padding: 30px 16px 60px 16px;
 
   @media screen and (min-width: 768px) {
-    padding: 30px 26px 80px 26px;
+    padding: 40px 26px 80px 26px;
   }
 `;
 
@@ -73,11 +73,11 @@ export const Date = styled.p`
 `;
 
 export const DataContainer = styled.div`
-  @media screen and (max-width: 959.98px) {
+  /* @media screen and (max-width: 959.98px) {
     display: flex;
     flex-direction: column-reverse;
     gap: 10px;
-  }
+  } */
 `;
 
 export const MainInfoContainer = styled.div`
@@ -128,6 +128,8 @@ export const MainInfoContainer = styled.div`
 `;
 
 export const ImagesContainer = styled.div`
+  margin: 20px 10px 16px 10px;
+
   border-radius: 12px;
 
   box-shadow: 3px 6px 10px 2px rgba(0, 0, 0, 0.4);
@@ -139,7 +141,7 @@ export const ImagesContainer = styled.div`
     float: right;
 
     width: 50%;
-    margin: 15px;
+    margin: 10px 10px 16px 10px;
   }
 
   @media screen and (min-width: 1280px) {

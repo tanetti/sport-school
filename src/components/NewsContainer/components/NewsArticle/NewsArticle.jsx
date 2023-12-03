@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import parse from 'html-react-parser';
 import { NewsPhotos } from './components';
+import { SECTIONS } from '@/constants';
 import {
   Container,
   DataContainer,
@@ -15,6 +16,8 @@ import {
 export const NewsArticle = ({ data }) => {
   const { name, date, filter, mainInfoMarkup, photoCount } = data;
 
+  const sectionLabel = SECTIONS.find(({ name }) => name === filter)?.label;
+
   return (
     <Container data-aos="fade-up">
       <StyledArticle>
@@ -22,7 +25,9 @@ export const NewsArticle = ({ data }) => {
           <Title>{name}</Title>
 
           <Date>
-            Дата: <span>{date}</span>
+            {sectionLabel ? `${sectionLabel} - ` : ''}
+
+            <span>{date}</span>
           </Date>
         </Head>
 

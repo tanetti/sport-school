@@ -1,7 +1,7 @@
 import { useSearchParams } from 'react-router-dom';
 import { NewsArticle } from './components';
 import { getNewsData } from './utilities';
-import { News, NoNews } from './NewsContainer.styled';
+import { NoNews } from './NewsContainer.styled';
 
 export const NewsContainer = () => {
   const [searchParams] = useSearchParams();
@@ -12,11 +12,11 @@ export const NewsContainer = () => {
     return <NoNews data-aos="fade-up">Новини відсутні</NoNews>;
   } else {
     return (
-      <News data-aos="fade-up">
+      <div data-aos="fade-up">
         {newsData.map((data, index) => (
           <NewsArticle key={index} data={data} />
         ))}
-      </News>
+      </div>
     );
   }
 };

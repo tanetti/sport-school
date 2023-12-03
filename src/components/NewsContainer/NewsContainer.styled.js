@@ -10,5 +10,3 @@ export const NoNews = styled.div`
 
   font-size: 22px;
 `;
-
-export const News = styled.div``;
