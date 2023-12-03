@@ -68,7 +68,8 @@ export const UpButton = styled.button`
 
     border-color: #fa7734;
 
-    transform: scale(1.2);
+    transform: ${({ verticalShift }) =>
+      `translateY(${verticalShift * -1}px) scale(1.2)`};
   }
 
   & > svg {
