@@ -1,17 +1,17 @@
 import { useEffect, useRef, useState } from 'react';
-// import { useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import { SectionsTitle } from '@/components/shared';
 import { NewsControls, NewsContainer } from '@/components';
-// import { SECTIONS } from '@/constants';
+import { SECTIONS } from '@/constants';
 import { StyledNewsSection, UpButton } from './NewsSection.styled';
 import { SpriteIcon } from '../shared';
 
-// const SECTIONS_NAMES = SECTIONS.map(({ name }) => name);
+const SECTIONS_NAMES = SECTIONS.map(({ name }) => name);
 
 export const NewsSection = () => {
   const [isUpShown, setIsUpShown] = useState(false);
   const [verticalShift, setVerticalShift] = useState(0);
-  // const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const titleRef = useRef(null);
 
   useEffect(() => {
@@ -39,13 +39,13 @@ export const NewsSection = () => {
     return () => removeEventListener('scroll', onScroll);
   }, []);
 
-  // useEffect(() => {
-  //   if (
-  //     searchParams.size !== 1 ||
-  //     ![...SECTIONS_NAMES, 'all'].includes(searchParams.get('section'))
-  //   )
-  //     setSearchParams({ section: 'all' });
-  // }, [searchParams, setSearchParams]);
+  useEffect(() => {
+    if (
+      searchParams.size !== 1 ||
+      ![...SECTIONS_NAMES, 'all'].includes(searchParams.get('section'))
+    )
+      setSearchParams({ section: 'all' });
+  }, [searchParams, setSearchParams]);
 
   const onUpClick = () => {
     const heroRef = document.getElementById('hero');
