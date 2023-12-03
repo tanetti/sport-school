@@ -121,7 +121,7 @@ export const HeaderNavigation = ({ isScrolled }) => {
           </li>
 
           <li>
-            <NavigationLink to="/news">
+            <NavigationLink to="/schoolnews">
               <SpriteIcon symbol="news" />
 
               <span>Новини</span>
