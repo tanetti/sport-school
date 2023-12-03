@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 import parse from 'html-react-parser';
 import { NewsPhotos } from './components';
 import { SECTIONS } from '@/constants';
 import {
   Container,
-  DataContainer,
   Date,
+  ExpandButton,
   Head,
   ImagesContainer,
   MainInfoContainer,
@@ -14,7 +15,10 @@ import {
 } from './NewsArticle.styled';
 
 export const NewsArticle = ({ data }) => {
-  const { name, date, filter, mainInfoMarkup, photoCount } = data;
+  const { name, date, filter, shortInfoMarkup, fullInfoMarkup, photoCount } =
+    data;
+
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const sectionLabel = SECTIONS.find(({ name }) => name === filter)?.label;
 
@@ -31,13 +35,36 @@ export const NewsArticle = ({ data }) => {
           </Date>
         </Head>
 
-        <DataContainer>
+        <MainInfoContainer>
           <ImagesContainer aria-hidden="true">
             <NewsPhotos photoCount={photoCount} date={date} filter={filter} />
           </ImagesContainer>
 
-          <MainInfoContainer>{parse(mainInfoMarkup)}</MainInfoContainer>
-        </DataContainer>
+          {shortInfoMarkup ? (
+            !isExpanded ? (
+              <>
+                {parse(shortInfoMarkup)}
+
+                <ExpandButton type="button" onClick={() => setIsExpanded(true)}>
+                  Читати далі...
+                </ExpandButton>
+              </>
+            ) : (
+              <>
+                {parse(fullInfoMarkup)}
+
+                <ExpandButton
+                  type="button"
+                  onClick={() => setIsExpanded(false)}
+                >
+                  Згорнути
+                </ExpandButton>
+              </>
+            )
+          ) : (
+            parse(fullInfoMarkup)
+          )}
+        </MainInfoContainer>
       </StyledArticle>
     </Container>
   );
@@ -48,7 +75,8 @@ NewsArticle.propTypes = {
     name: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     filter: PropTypes.string.isRequired,
-    mainInfoMarkup: PropTypes.string.isRequired,
+    shortInfoMarkup: PropTypes.string,
+    fullInfoMarkup: PropTypes.string.isRequired,
     photoCount: PropTypes.number.isRequired,
   }).isRequired,
 };

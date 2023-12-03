@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { createTransition } from '@/utilities';
 
 export const Container = styled.div`
   &:nth-of-type(even) {
@@ -72,19 +73,11 @@ export const Date = styled.p`
   }
 `;
 
-export const DataContainer = styled.div`
-  /* @media screen and (max-width: 959.98px) {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 10px;
-  } */
-`;
-
 export const MainInfoContainer = styled.div`
-  margin-bottom: 5px;
-
   font-size: 15px;
   line-height: 1.2;
+
+  overflow: hidden;
 
   & > p {
     padding: 10px;
@@ -121,14 +114,10 @@ export const MainInfoContainer = styled.div`
   & b {
     font-weight: 700;
   }
-
-  @media screen and (min-width: 480px) {
-    margin-bottom: 10px;
-  }
 `;
 
 export const ImagesContainer = styled.div`
-  margin: 20px 10px 16px 10px;
+  margin: 10px 10px 16px 10px;
 
   border-radius: 12px;
 
@@ -137,14 +126,42 @@ export const ImagesContainer = styled.div`
   overflow: hidden;
 
   @media screen and (min-width: 960px) {
-    display: inline-block;
     float: right;
 
     width: 50%;
-    margin: 10px 10px 16px 10px;
+    margin: 10px 10px 16px 16px;
   }
 
   @media screen and (min-width: 1280px) {
     width: 55%;
+  }
+`;
+
+export const ExpandButton = styled.button`
+  min-width: 160px;
+  margin: 20px 20px 0 10px;
+  padding: 9px 12px 7px 12px;
+
+  font-size: 15px;
+
+  color: #616161;
+  background-color: transparent;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: #fa7734;
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition: ${createTransition(['color', 'border-color'], 'standart')};
+
+  &:is(:focus, :hover) {
+    color: #fa5502;
+    border-color: #fa5502;
+  }
+
+  @media screen and (max-width: 959.98px) {
+    float: right;
   }
 `;
