@@ -121,7 +121,7 @@ export const ImagesContainer = styled.div`
 
   border-radius: 12px;
 
-  box-shadow: 3px 6px 10px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.4);
 
   overflow: hidden;
 
@@ -139,7 +139,7 @@ export const ImagesContainer = styled.div`
 
 export const ExpandButton = styled.button`
   min-width: 160px;
-  margin: 20px 20px 0 10px;
+  margin: 30px 20px 0 10px;
   padding: 9px 12px 7px 12px;
 
   font-size: 15px;
