@@ -10,3 +10,9 @@ export const NoNews = styled.div`
 
   font-size: 22px;
 `;
+
+export const Item = styled.div`
+  &:nth-of-type(even) {
+    background-color: #f8f8f8;
+  }
+`;

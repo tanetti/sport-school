@@ -1,14 +1,16 @@
+import PropTypes from 'prop-types';
 import { useSearchParams } from 'react-router-dom';
 import { SECTIONS } from '@/constants';
 import { AllNewsItem, ControlsContainer, Switch } from './NewsControls.styled';
 
-export const NewsControls = () => {
+export const NewsControls = ({ setPage }) => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const currentSection = searchParams.get('section');
 
   const onSectionClick = ({ target }) => {
     setSearchParams({ section: target.name });
+    setPage(1);
   };
 
   return (
@@ -38,4 +40,8 @@ export const NewsControls = () => {
       ))}
     </ControlsContainer>
   );
+};
+
+NewsControls.propTypes = {
+  setPage: PropTypes.func.isRequired,
 };

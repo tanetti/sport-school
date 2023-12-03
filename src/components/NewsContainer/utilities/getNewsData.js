@@ -1,9 +1,25 @@
 import { newsDB } from '@/db/news';
 
-export const getNewsData = sectionFilter => {
-  if (!sectionFilter || sectionFilter === 'all') return newsDB;
+const ITEMS_PER_PAGE = 4;
 
-  return newsDB.filter(
+export const getNewsData = (sectionFilter, page) => {
+  if ((!sectionFilter || sectionFilter === 'all') && !page) return newsDB;
+
+  const resultLength = ITEMS_PER_PAGE * page;
+
+  if (!sectionFilter || sectionFilter === 'all') {
+    const allNews = [...newsDB];
+
+    allNews.length = Math.min(resultLength, allNews.length);
+
+    return allNews;
+  }
+
+  const filteredNews = newsDB.filter(
     ({ filter }) => filter === sectionFilter || filter.includes(sectionFilter)
   );
+
+  filteredNews.length = Math.min(resultLength, filteredNews.length);
+
+  return filteredNews;
 };

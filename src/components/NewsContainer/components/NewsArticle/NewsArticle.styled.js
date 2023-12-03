@@ -1,12 +1,6 @@
 import styled from '@emotion/styled';
 import { createTransition } from '@/utilities';
 
-export const Container = styled.div`
-  &:nth-of-type(even) {
-    background-color: #f8f8f8;
-  }
-`;
-
 export const StyledArticle = styled.article`
   width: 100%;
   max-width: 1280px;
@@ -117,7 +111,7 @@ export const MainInfoContainer = styled.div`
 `;
 
 export const ImagesContainer = styled.div`
-  margin: 10px 10px 16px 10px;
+  margin: 16px 10px 16px 10px;
 
   border-radius: 12px;
 

@@ -10,6 +10,7 @@ const SECTIONS_NAMES = SECTIONS.map(({ name }) => name);
 
 export const NewsSection = () => {
   const [isUpShown, setIsUpShown] = useState(false);
+  const [page, setPage] = useState(1);
   const [verticalShift, setVerticalShift] = useState(0);
   const [searchParams, setSearchParams] = useSearchParams();
   const titleRef = useRef(null);
@@ -59,9 +60,9 @@ export const NewsSection = () => {
         Новини
       </SectionsTitle>
 
-      <NewsControls />
+      <NewsControls setPage={setPage} />
 
-      <NewsContainer />
+      <NewsContainer page={page} setPage={setPage} />
 
       <UpButton
         type="button"

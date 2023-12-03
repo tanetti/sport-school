@@ -4,7 +4,6 @@ import parse from 'html-react-parser';
 import { NewsPhotos } from './components';
 import { SECTIONS } from '@/constants';
 import {
-  Container,
   Date,
   ExpandButton,
   Head,
@@ -23,50 +22,35 @@ export const NewsArticle = ({ data }) => {
   const sectionLabel = SECTIONS.find(({ name }) => name === filter)?.label;
 
   return (
-    <Container data-aos="fade-up">
-      <StyledArticle>
-        <Head>
-          <Title>{name}</Title>
+    <StyledArticle data-aos="fade-up">
+      <Head>
+        <Title>{name}</Title>
 
-          <Date>
-            {sectionLabel ? `${sectionLabel} - ` : ''}
+        <Date>
+          {sectionLabel ? `${sectionLabel} - ` : ''}
 
-            <span>{date}</span>
-          </Date>
-        </Head>
+          <span>{date}</span>
+        </Date>
+      </Head>
 
-        <MainInfoContainer>
-          <ImagesContainer aria-hidden="true">
-            <NewsPhotos photoCount={photoCount} date={date} filter={filter} />
-          </ImagesContainer>
+      <MainInfoContainer>
+        <ImagesContainer aria-hidden="true">
+          <NewsPhotos photoCount={photoCount} date={date} filter={filter} />
+        </ImagesContainer>
 
-          {shortInfoMarkup ? (
-            !isExpanded ? (
-              <>
-                {parse(shortInfoMarkup)}
+        {shortInfoMarkup && !isExpanded ? (
+          <>
+            {parse(shortInfoMarkup)}
 
-                <ExpandButton type="button" onClick={() => setIsExpanded(true)}>
-                  Читати далі...
-                </ExpandButton>
-              </>
-            ) : (
-              <>
-                {parse(fullInfoMarkup)}
-
-                <ExpandButton
-                  type="button"
-                  onClick={() => setIsExpanded(false)}
-                >
-                  Згорнути
-                </ExpandButton>
-              </>
-            )
-          ) : (
-            parse(fullInfoMarkup)
-          )}
-        </MainInfoContainer>
-      </StyledArticle>
-    </Container>
+            <ExpandButton type="button" onClick={() => setIsExpanded(true)}>
+              Читати далі...
+            </ExpandButton>
+          </>
+        ) : (
+          parse(fullInfoMarkup)
+        )}
+      </MainInfoContainer>
+    </StyledArticle>
   );
 };
 
