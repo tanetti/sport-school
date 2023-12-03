@@ -1,7 +1,9 @@
-import { HeaderContainer, HeaderSizer, LogoLink } from './Header.styled';
 import { useEffect, useState } from 'react';
+import throttle from 'lodash.throttle';
 import { SpriteIcon } from '@/components/shared';
 import { HeaderNavigation } from '@/components';
+import { SCROLL_THROTTLE_DELAY } from '@/constants';
+import { HeaderContainer, HeaderSizer, LogoLink } from './Header.styled';
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -13,9 +15,11 @@ export const Header = () => {
       setIsScrolled(true);
     };
 
-    addEventListener('scroll', onScroll);
+    const throttledOnScroll = throttle(onScroll, SCROLL_THROTTLE_DELAY);
 
-    return () => removeEventListener('scroll', onScroll);
+    addEventListener('scroll', throttledOnScroll);
+
+    return () => removeEventListener('scroll', throttledOnScroll);
   }, []);
 
   return (

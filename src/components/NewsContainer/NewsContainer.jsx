@@ -1,35 +1,38 @@
 import PropTypes from 'prop-types';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { NewsArticle } from './components';
 import { getNewsData } from './utilities';
 import { Item, NoNews } from './NewsContainer.styled';
 
 export const NewsContainer = ({ page, setPage }) => {
-  const lastElementRef = useRef(null);
+  const [lastElement, setLastElement] = useState(null);
   const [searchParams] = useSearchParams();
 
-  useEffect(() => {
-    const lastElement = lastElementRef.current;
-
-    const onLastItemIntersect = (entries, observer) => {
+  const observerRef = useRef(
+    new IntersectionObserver((entries, observer) => {
       const [entry] = entries;
 
       if (!entry.isIntersecting) return;
 
       setPage(prevState => prevState + 1);
       observer.unobserve(entry.target);
-    };
+    })
+  );
 
-    const observer = new IntersectionObserver(onLastItemIntersect);
+  useEffect(() => {
+    const currentObserver = observerRef.current;
 
-    if (lastElement) observer.observe(lastElement);
+    if (lastElement) {
+      currentObserver.observe(lastElement);
+    }
 
     return () => {
-      if (lastElement) observer.unobserve(lastElement);
+      if (lastElement) {
+        currentObserver.unobserve(lastElement);
+      }
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lastElementRef.current]);
+  }, [lastElement]);
 
   const newsData = getNewsData(searchParams.get('section'), page);
 
@@ -41,7 +44,7 @@ export const NewsContainer = ({ page, setPage }) => {
         {newsData.map((data, index, array) => (
           <Item
             key={`${data?.name}-${data?.date}`}
-            ref={index + 1 === array.length ? lastElementRef : null}
+            ref={index + 1 === array.length ? setLastElement : null}
           >
             <NewsArticle data={data} />
           </Item>
