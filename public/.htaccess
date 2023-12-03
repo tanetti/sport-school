@@ -5,8 +5,5 @@
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-l
-  RewriteCond %{HTTP_USER_AGENT} libwww [NC,OR]
-  RewriteCond %{QUERY_STRING} ^(.*)=https [NC]
   RewriteRule (.*) /index.html [QSA,L]
-  RewriteRule ^(.*)$ - [F,L]
 </IfModule>
