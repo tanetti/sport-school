@@ -1,6 +1,6 @@
 import { useSearchParams } from 'react-router-dom';
 import { SECTIONS } from '@/constants';
-import { ControlsContainer, Switch } from './NewsControls.styled';
+import { AllNewsItem, ControlsContainer, Switch } from './NewsControls.styled';
 
 export const NewsControls = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -13,16 +13,16 @@ export const NewsControls = () => {
 
   return (
     <ControlsContainer data-aos="fade-up">
-      <li>
+      <AllNewsItem>
         <Switch
           type="button"
           isActive={currentSection === 'all'}
           name="all"
           onClick={onSectionClick}
         >
-          Всі
+          Всі новини
         </Switch>
-      </li>
+      </AllNewsItem>
 
       {SECTIONS.map(({ name, label }) => (
         <li key={name}>

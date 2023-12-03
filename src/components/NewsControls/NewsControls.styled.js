@@ -18,6 +18,16 @@ export const ControlsContainer = styled.ul`
   }
 `;
 
+export const AllNewsItem = styled.ul`
+  @media screen and (max-width: 479.98px) {
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+
+    margin-bottom: 20px;
+  }
+`;
+
 export const Switch = styled.button`
   min-width: 80px;
   padding: 8px 12px 7px 12px;
@@ -47,6 +57,12 @@ export const Switch = styled.button`
 
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  @media screen and (max-width: 479.98px) {
+    &:first-of-type {
+      min-width: 60%;
+    }
   }
 
   @media screen and (min-width: 1280px) {
