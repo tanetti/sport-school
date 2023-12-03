@@ -1,15 +1,14 @@
-import { lazy } from 'react';
 import { createBrowserRouter, Navigate } from 'react-router-dom';
 import MainLayout from '@/components/MainLayout';
 import Home from '@/pages/Home';
 
-const Football = lazy(() => import('@/pages/Football'));
-const Volleyball = lazy(() => import('@/pages/Volleyball'));
-const Climbing = lazy(() => import('@/pages/Climbing'));
-const Tennis = lazy(() => import('@/pages/Tennis'));
-const Box = lazy(() => import('@/pages/Box'));
-const News = lazy(() => import('@/pages/News'));
-const About = lazy(() => import('@/pages/About'));
+import Football from '@/pages/Football';
+import Volleyball from '@/pages/Volleyball';
+import Climbing from '@/pages/Climbing';
+import Tennis from '@/pages/Tennis';
+import Box from '@/pages/Box';
+import News from '@/pages/News';
+import About from '@/pages/About';
 
 const Router = createBrowserRouter([
   {
