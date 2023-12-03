@@ -46,7 +46,7 @@ export const UpButton = styled.button`
   opacity: ${({ isShown }) => (isShown ? 1 : 0)};
   visibility: ${({ isShown }) => (isShown ? 'visible' : 'hidden')};
 
-  transform: ${({ verticalShift }) => `translateY(${verticalShift * -1}px)`};
+  transform: ${({ verticalShift }) => `translateY(${verticalShift}px)`};
 
   cursor: pointer;
 
@@ -69,7 +69,7 @@ export const UpButton = styled.button`
     border-color: #fa7734;
 
     transform: ${({ verticalShift }) =>
-      `translateY(${verticalShift * -1}px) scale(1.2)`};
+      `translateY(${verticalShift}px) scale(1.2)`};
   }
 
   & > svg {

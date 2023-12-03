@@ -22,7 +22,7 @@ export const NewsSection = () => {
       const vPos = innerHeight - footerRect?.top - 25;
 
       if (vPos > 0) {
-        setVerticalShift(vPos);
+        setVerticalShift(vPos * -1);
       } else {
         setVerticalShift(0);
       }
