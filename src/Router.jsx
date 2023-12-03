@@ -13,45 +13,51 @@ const About = lazy(() => import('@/pages/About'));
 
 const Router = createBrowserRouter([
   {
+    path: '/',
     element: <MainLayout />,
     children: [
       {
-        path: '/',
+        index: true,
         element: <Home />,
       },
 
       {
-        path: '/football',
+        path: 'football',
         element: <Football />,
       },
 
       {
-        path: '/volleyball',
+        path: 'volleyball',
         element: <Volleyball />,
       },
 
       {
-        path: '/climbing',
+        path: 'climbing',
         element: <Climbing />,
       },
 
       {
-        path: '/tennis',
+        path: 'tennis',
         element: <Tennis />,
       },
 
       {
-        path: '/box',
+        path: 'box',
         element: <Box />,
       },
 
       {
-        path: '/news',
+        path: 'news',
         element: <News />,
       },
 
       {
-        path: '/about',
+        path: 'news/*',
+        element: <Navigate to="/news" />,
+      },
+
+      {
+        path: 'about',
         element: <About />,
       },
 
