@@ -39,4 +39,10 @@ export const StyledSwiperSlide = styled(SwiperSlide)`
   background-repeat: no-repeat;
   background-size: cover;
   background-image: ${({ image }) => `url(${image})`};
+
+  -webkit-tap-highlight-color: transparent;
+
+  @media screen and (min-width: 960px) {
+    cursor: pointer;
+  }
 `;

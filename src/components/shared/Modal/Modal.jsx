@@ -211,6 +211,7 @@ export const Modal = ({
           ) : null}
         </Window>
       </Backdrop>,
+
       portalElement
     );
 };

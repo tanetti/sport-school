@@ -31,6 +31,7 @@ export * from './BoxTraining/BoxTraining';
 export * from './NewsSection/NewsSection';
 export * from './NewsControls/NewsControls';
 export * from './NewsContainer/NewsContainer';
+export * from './NewsPhotoModal/NewsPhotoModal';
 
 export * from './AboutTeam/AboutTeam';
 export * from './AboutAdministration/AboutAdministration';
