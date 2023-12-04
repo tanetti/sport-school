@@ -38,23 +38,25 @@ export const NavigationContainer = styled.nav`
     padding-right: 10px;
 
     transform: ${({ isScrolled }) =>
-      isScrolled ? 'translateX(0)' : 'translateX(140px)'};
+      isScrolled ? 'translateX(0)' : 'translateX(170px)'};
   }
 
   @media screen and (min-width: 1280px) {
     gap: 50px;
 
-    padding-right: 20px;
+    padding-right: 40px;
 
     transform: ${({ isScrolled }) =>
-      isScrolled ? 'translateX(0)' : 'translateX(190px)'};
+      isScrolled ? 'translateX(0)' : 'translateX(230px)'};
   }
 
   @media screen and (min-width: 1440px) {
     gap: 90px;
 
+    padding-right: 60px;
+
     transform: ${({ isScrolled }) =>
-      isScrolled ? 'translateX(0)' : 'translateX(230px)'};
+      isScrolled ? 'translateX(0)' : 'translateX(290px)'};
   }
 `;
 
@@ -233,20 +235,21 @@ export const RequestButton = styled.button`
   padding: 10px 12px 8px 12px;
 
   font-size: 16px;
+  font-weight: 700;
 
-  color: inherit;
-  background-color: transparent;
+  color: #fff;
+  background-color: #fa550250;
 
   border-width: 1px;
   border-style: solid;
   border-radius: 10px;
-  border-color: #fa7734;
+  border-color: #fa5502;
 
   cursor: pointer;
 
   text-transform: uppercase;
 
-  animation: puls 10s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+  animation: puls 6s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
 
   transition: ${createTransition(
     ['color', 'border-color', 'opacity', 'visibility', 'transform'],
@@ -264,55 +267,47 @@ export const RequestButton = styled.button`
   }
 
   @media screen and (min-width: 960px) {
-    width: 116px;
+    width: 146px;
     padding: 11px 12px 8px 12px;
 
-    font-size: 12px;
+    font-size: 15px;
 
     opacity: ${({ isScrolled }) => (isScrolled ? 1 : 0)};
     visibility: ${({ isScrolled }) => (isScrolled ? 'visible' : 'hidden')};
 
     transform: ${({ isScrolled }) =>
-      isScrolled ? 'translateX(0)' : 'translateX(126px)'};
+      isScrolled ? 'translateX(0)' : 'translateX(156px)'};
   }
 
   @media screen and (min-width: 1280px) {
-    width: 140px;
+    width: 170px;
 
-    font-size: 15px;
+    font-size: 17px;
 
     transform: ${({ isScrolled }) =>
-      isScrolled ? 'translateX(0)' : 'translateX(160px)'};
+      isScrolled ? 'translateX(0)' : 'translateX(210px)'};
   }
 
   @media screen and (min-width: 1440px) {
-    width: 146px;
+    width: 186px;
 
-    font-size: 16px;
+    font-size: 19px;
 
     transform: ${({ isScrolled }) =>
-      isScrolled ? 'translateX(0)' : 'translateX(166px)'};
+      isScrolled ? 'translateX(0)' : 'translateX(246px)'};
   }
 
   @keyframes puls {
     0% {
-      background-color: transparent;
-
       transform: scale(1);
     }
-    5% {
-      background-color: #fa773420;
-
+    10% {
       transform: scale(1.1);
     }
-    10% {
-      background-color: transparent;
-
+    20% {
       transform: scale(1);
     }
     100% {
-      background-color: transparent;
-
       transform: scale(1);
     }
   }
