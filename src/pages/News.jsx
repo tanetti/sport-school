@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import { Slider } from '@/components/shared';
 import { NewsSection } from '@/components';
 import { SECTIONS, HOME_SLIDER_SETTINGS } from '@/constants';
+import { setPageTags } from '@/utilities';
 
 const News = () => {
   const [searchParams] = useSearchParams();
@@ -14,9 +15,7 @@ const News = () => {
       ({ name }) => name === sectionFilter
     )?.label;
 
-    document.title = `ДЮСШ Слобожанське - Новини${
-      sectionLabel ? ` - ${sectionLabel}` : ''
-    }`;
+    setPageTags(sectionLabel);
   }, [searchParams]);
 
   useEffect(() => {

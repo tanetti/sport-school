@@ -6,10 +6,11 @@ import {
   FootballTraining,
   FootballCoaches,
 } from '@/components';
+import { setPageTags } from '@/utilities';
 
 const Football = () => {
   useEffect(() => {
-    document.title = 'ДЮСШ Слобожанське - Футбол';
+    setPageTags();
 
     scroll({ top: 0, behavior: 'smooth' });
   }, []);

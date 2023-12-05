@@ -6,10 +6,11 @@ import {
   VolleyballTraining,
   VolleyballCoaches,
 } from '@/components';
+import { setPageTags } from '@/utilities';
 
 const Volleyball = () => {
   useEffect(() => {
-    document.title = 'ДЮСШ Слобожанське - Волейбол';
+    setPageTags();
 
     scroll({ top: 0, behavior: 'smooth' });
   }, []);

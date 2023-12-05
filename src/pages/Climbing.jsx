@@ -6,10 +6,11 @@ import {
   ClimbingTraining,
   ClimbingCoaches,
 } from '@/components';
+import { setPageTags } from '@/utilities';
 
 const Climbing = () => {
   useEffect(() => {
-    document.title = 'ДЮСШ Слобожанське - Скелелазіння';
+    setPageTags();
 
     scroll({ top: 0, behavior: 'smooth' });
   }, []);

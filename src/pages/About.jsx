@@ -2,10 +2,11 @@ import { useEffect } from 'react';
 import { Slider } from '@/components/shared';
 import { AboutTeam, AboutAdministration } from '@/components';
 import { HOME_SLIDER_SETTINGS } from '@/constants';
+import { setPageTags } from '@/utilities';
 
 const About = () => {
   useEffect(() => {
-    document.title = 'ДЮСШ Слобожанське - Про нас';
+    setPageTags();
 
     const heroRef = document.getElementById('hero');
 
