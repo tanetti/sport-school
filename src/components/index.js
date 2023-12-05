@@ -28,6 +28,9 @@ export * from './TennisCoaches/TennisCoaches';
 export * from './BoxAdvantages/BoxAdvantages';
 export * from './BoxTraining/BoxTraining';
 
+export * from './SwimmingAdvantages/SwimmingAdvantages';
+export * from './SwimmingTraining/SwimmingTraining';
+
 export * from './NewsSection/NewsSection';
 export * from './NewsControls/NewsControls';
 export * from './NewsContainer/NewsContainer';

@@ -8,6 +8,7 @@ const Volleyball = lazy(() => import('@/pages/Volleyball'));
 const Climbing = lazy(() => import('@/pages/Climbing'));
 const Tennis = lazy(() => import('@/pages/Tennis'));
 const Box = lazy(() => import('@/pages/Box'));
+const Swimming = lazy(() => import('@/pages/Swimming'));
 const News = lazy(() => import('@/pages/News'));
 const About = lazy(() => import('@/pages/About'));
 
@@ -45,6 +46,11 @@ const Router = createBrowserRouter([
       {
         path: 'box',
         element: <Box />,
+      },
+
+      {
+        path: 'swimming',
+        element: <Swimming />,
       },
 
       {

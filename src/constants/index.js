@@ -10,3 +10,4 @@ export * from './sliders/volleyball';
 export * from './sliders/climbing';
 export * from './sliders/tennis';
 export * from './sliders/box';
+export * from './sliders/swimming';
