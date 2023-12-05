@@ -1,7 +1,7 @@
 export const PHONE = {
   link: 'tel:+380689079646',
   label: '+38 (068) 907-96-46',
-  aria: 'Подзвонити на номер +380689079646',
+  aria: 'Подзвонити на номер +38 (068) 907-96-46',
 };
 
 export const MAIL = {
@@ -13,7 +13,7 @@ export const MAIL = {
 export const LOCATION = {
   link: 'https://maps.app.goo.gl/nejgGh2bNBQMHvvBA',
   label: 'Слобожанське, вулиця Спортивна 4',
-  aria: 'Відкрити навігацію на Google Maps',
+  aria: 'Слобожанське, вулиця Спортивна 4, Google Maps',
 };
 
 export const FACEBOOK = {

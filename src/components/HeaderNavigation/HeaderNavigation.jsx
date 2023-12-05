@@ -107,7 +107,6 @@ export const HeaderNavigation = ({ isScrolled }) => {
           <li>
             <NavigationButton
               ref={sectionButtonRef}
-              role="menuitem"
               type="button"
               aria-expanded={isSectionMenuOpened}
               aria-controls="section_menu_modal"
@@ -138,7 +137,6 @@ export const HeaderNavigation = ({ isScrolled }) => {
 
           <li>
             <NavigationButton
-              role="menuitem"
               type="button"
               aria-expanded={isContactModalOpened}
               aria-controls="contact_modal"
