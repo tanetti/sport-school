@@ -7,6 +7,13 @@ const Home = () => {
   useEffect(() => {
     document.title = 'ДЮСШ Слобожанське - Головна';
 
+    // const ogTitleMeta = document.querySelector('meta[property="og:title"]');
+    // if (ogTitleMeta) {
+    //   ogTitleMeta.setAttribute('content', 'ДЮСШ Слобожанське - Головна22');
+    // }
+
+    // console.log(location);
+
     scroll({ top: 0, behavior: 'smooth' });
   }, []);
 
