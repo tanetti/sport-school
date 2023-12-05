@@ -252,14 +252,14 @@ export const RequestButton = styled.button`
   animation: puls 6s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
 
   transition: ${createTransition(
-    ['color', 'border-color', 'opacity', 'visibility', 'transform'],
+    ['background-color', 'border-color', 'opacity', 'visibility', 'transform'],
     'standart'
   )};
 
   &:is(:hover, :focus) {
-    color: #fa5502;
+    background-color: #fa550280;
 
-    border-color: #fa5502;
+    border-color: #fa7734;
   }
 
   @media screen and (max-width: 959.98px) {

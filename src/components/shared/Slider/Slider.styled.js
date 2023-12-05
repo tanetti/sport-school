@@ -219,20 +219,20 @@ export const StyledSwiperSlide = styled(SwiperSlide)`
 export const Motivation = styled.article`
   position: absolute;
   top: 45%;
-  left: 3%;
+  left: 4%;
 
   max-width: 50%;
 
-  font-size: clamp(10px, 3.6vw, 36px);
+  font-size: clamp(10px, 3.2vw, 30px);
   font-weight: 700;
-  line-height: 1.6;
+  line-height: 1.2;
 
   color: #fa7734;
 
   & > span {
     display: block;
 
-    font-size: clamp(8px, 2.4vw, 26px);
+    font-size: clamp(8px, 2.2vw, 20px);
     font-weight: 400;
     line-height: 1.2;
 
@@ -244,8 +244,8 @@ export const Motivation = styled.article`
 
     padding-top: 10px;
 
-    font-size: clamp(7px, 2.1vw, 22px);
-    line-height: 1.8;
+    font-size: clamp(7px, 2vw, 18px);
+    line-height: 2;
 
     color: #bababa;
   }
@@ -254,11 +254,35 @@ export const Motivation = styled.article`
     max-width: 40%;
 
     & > em {
-      padding-top: 30px;
+      padding-top: 20px;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 36px;
+
+    & > span {
+      font-size: 24px;
+    }
+
+    & > em {
+      font-size: clamp(20px);
     }
   }
 
   @media screen and (min-width: 1440px) {
     max-width: 30%;
+  }
+
+  @media screen and (min-width: 2560px) {
+    font-size: 40px;
+
+    & > span {
+      font-size: 28px;
+    }
+
+    & > em {
+      font-size: clamp(22px);
+    }
   }
 `;
