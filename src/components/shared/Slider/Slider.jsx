@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
-import { useContext } from 'react';
+import { useContext, useRef } from 'react';
 import parse from 'html-react-parser';
+import { useSliderAutoplayControl } from '@/hooks';
 import { RequestModalContext } from '@/utilities';
 import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -15,6 +16,8 @@ import {
 } from './Slider.styled';
 
 export const Slider = ({ settings }) => {
+  const sliderRef = useRef(null);
+  useSliderAutoplayControl(sliderRef);
   const { isRequestModalOpened, setIsRequestModalOpened } =
     useContext(RequestModalContext);
 
@@ -31,6 +34,7 @@ export const Slider = ({ settings }) => {
       </ActionButton>
 
       <StyledSwiper
+        ref={sliderRef}
         autoplay={{
           delay: 7000,
           disableOnInteraction: false,
