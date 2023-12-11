@@ -36,16 +36,24 @@ export const NewsPhotos = ({ photoCount, date, filter }) => {
       <>
         <StyledSwiper
           ref={swiperRef}
-          autoplay={{
-            delay: 4000,
-            disableOnInteraction: false,
-          }}
-          pagination={{
-            clickable: true,
-            renderBullet: (_, className) => {
-              return '<span class="' + className + '"></span>';
-            },
-          }}
+          autoplay={
+            photoCount > 1
+              ? {
+                  delay: 4000,
+                  disableOnInteraction: false,
+                }
+              : false
+          }
+          pagination={
+            photoCount > 1
+              ? {
+                  clickable: true,
+                  renderBullet: (_, className) => {
+                    return '<span class="' + className + '"></span>';
+                  },
+                }
+              : false
+          }
           effect={'fade'}
           modules={[EffectFade, Autoplay, Pagination]}
         >

@@ -90,28 +90,38 @@ export const NewsPhotoModal = ({ isOpened, closeModal, imagesUrl }) => {
     };
   }, [closeModal, isRendered]);
 
-  if (isRendered)
+  const photoCount = imagesUrl?.length;
+
+  if (photoCount && isRendered)
     return createPortal(
       <Backdrop isVisible={isVisible}>
         <StyledSwiper
           slidesPerView={'auto'}
           centeredSlides={true}
           spaceBetween={100}
-          loop={true}
+          loop={photoCount > 1}
           keyboard={{
-            enabled: true,
+            enabled: photoCount > 1,
           }}
-          navigation={true}
-          autoplay={{
-            delay: 10000,
-            disableOnInteraction: true,
-          }}
-          pagination={{
-            clickable: true,
-            renderBullet: (_, className) => {
-              return '<span class="' + className + '"></span>';
-            },
-          }}
+          navigation={photoCount > 1}
+          autoplay={
+            photoCount > 1
+              ? {
+                  delay: 10000,
+                  disableOnInteraction: false,
+                }
+              : false
+          }
+          pagination={
+            photoCount > 1
+              ? {
+                  clickable: true,
+                  renderBullet: (_, className) => {
+                    return '<span class="' + className + '"></span>';
+                  },
+                }
+              : false
+          }
           modules={[Autoplay, Keyboard, Pagination, Navigation]}
         >
           {imagesUrl.map(url => (
