@@ -290,7 +290,7 @@ export const SECTIONS = [
   {
     name: 'tennis',
     label: 'Теніс настільний',
-    disabled: true,
+    disabled: false,
     startAge: 7,
     endAge: 18,
 
