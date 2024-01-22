@@ -5,7 +5,7 @@ import { NewsPhotoModal } from '@/components';
 import { getImagesUrl } from './utilities';
 import { StyledSwiper, StyledSwiperSlide } from './NewsPhotos.styled';
 
-export const NewsPhotos = ({ photoCount, date, filter }) => {
+export const NewsPhotos = ({ photoCount, date, filter, index }) => {
   const swiperRef = useRef(null);
   const [isPhotoModalOpened, setIsPhotoModalOpened] = useState(false);
 
@@ -29,7 +29,7 @@ export const NewsPhotos = ({ photoCount, date, filter }) => {
     setIsPhotoModalOpened(true);
   };
 
-  const imagesUrl = getImagesUrl(photoCount, date, filter);
+  const imagesUrl = getImagesUrl(photoCount, date, filter, index);
 
   if (imagesUrl?.length)
     return (
@@ -80,4 +80,5 @@ NewsPhotos.propTypes = {
   photoCount: PropTypes.number.isRequired,
   date: PropTypes.string.isRequired,
   filter: PropTypes.string.isRequired,
+  index: PropTypes.number,
 };

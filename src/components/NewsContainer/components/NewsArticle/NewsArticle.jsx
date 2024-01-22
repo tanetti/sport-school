@@ -14,8 +14,15 @@ import {
 } from './NewsArticle.styled';
 
 export const NewsArticle = ({ data }) => {
-  const { name, date, filter, shortInfoMarkup, fullInfoMarkup, photoCount } =
-    data;
+  const {
+    name,
+    date,
+    filter,
+    index = 0,
+    shortInfoMarkup,
+    fullInfoMarkup,
+    photoCount,
+  } = data;
 
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -35,7 +42,12 @@ export const NewsArticle = ({ data }) => {
 
       <MainInfoContainer>
         <ImagesContainer aria-hidden="true">
-          <NewsPhotos photoCount={photoCount} date={date} filter={filter} />
+          <NewsPhotos
+            photoCount={photoCount}
+            date={date}
+            filter={filter}
+            index={index}
+          />
         </ImagesContainer>
 
         {shortInfoMarkup && !isExpanded ? (
@@ -59,6 +71,7 @@ NewsArticle.propTypes = {
     name: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     filter: PropTypes.string.isRequired,
+    index: PropTypes.number,
     shortInfoMarkup: PropTypes.string,
     fullInfoMarkup: PropTypes.string.isRequired,
     photoCount: PropTypes.number.isRequired,
