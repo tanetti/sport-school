@@ -1,5 +1,16 @@
 export const newsDB = [
   {
+    date: '08.02.2024',
+    index: 0,
+    filter: 'climbing',
+    photoCount: 3,
+    name: 'Тренування',
+    shortInfoMarkup: '',
+    fullInfoMarkup:
+      '<p>Тренування вихованців відділення скелелазіння ДЮСШ Слобожанської селищної ради.</p>',
+  },
+
+  {
     date: '06.02.2024',
     index: 0,
     filter: 'tennis',
