@@ -4,7 +4,7 @@ export const newsDB = [
     index: 0,
     filter: 'climbing',
     photoCount: 3,
-    name: 'Тренування',
+    name: 'Тренування зі скелелазіння',
     shortInfoMarkup: '',
     fullInfoMarkup:
       '<p>Тренування вихованців відділення скелелазіння ДЮСШ Слобожанської селищної ради.</p>',
