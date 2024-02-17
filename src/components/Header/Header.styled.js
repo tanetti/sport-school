@@ -30,7 +30,6 @@ export const HeaderSizer = styled.div`
   display: flex;
   justify-content: space-between;
 
-  margin: 0 auto;
   padding: 10px 8px;
 
   @media screen and (min-width: 768px) {
@@ -54,7 +53,7 @@ export const LogoLink = styled(NavLink)`
     display: block;
 
     width: 100%;
-    aspect-ratio: 1/1.07;
+    aspect-ratio: 1;
 
     fill: currentColor;
   }
