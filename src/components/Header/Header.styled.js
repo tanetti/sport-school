@@ -8,8 +8,7 @@ export const HeaderContainer = styled.header`
   left: 0;
   z-index: 1000;
 
-  width: 100vw;
-  margin-right: calc((100vw - 100%) * -1);
+  width: 100svw;
 
   background-color: ${({ scrolled }) =>
     scrolled ? '#000000e0' : 'transparent'};
@@ -44,10 +43,8 @@ export const HeaderSizer = styled.div`
 `;
 
 export const LogoLink = styled(NavLink)`
-  display: flex;
+  display: block;
   flex-basis: ${({ scrolled }) => (scrolled === 'true' ? '44px' : '60px')};
-
-  aspect-ratio: 1/1.07;
 
   color: #fff;
 
@@ -57,7 +54,7 @@ export const LogoLink = styled(NavLink)`
     display: block;
 
     width: 100%;
-    max-height: 100%;
+    aspect-ratio: 1/1.07;
 
     fill: currentColor;
   }
