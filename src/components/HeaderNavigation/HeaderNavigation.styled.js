@@ -22,7 +22,7 @@ export const NavigationContainer = styled.nav`
 
     padding: 90px 16px 20px 16px;
 
-    background-color: #000000f0;
+    background-color: #111111f0;
 
     overflow: auto;
 

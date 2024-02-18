@@ -8,6 +8,8 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
 
+  background-color: #111;
+
   scroll-behavior: smooth;
 }
 
@@ -34,6 +36,8 @@ body.modal {
   flex-direction: column;
 
   min-height: 100svh;
+
+  background-color: #fff;
 }
 
 main {

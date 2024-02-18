@@ -11,14 +11,14 @@ export const HeaderContainer = styled.header`
   width: 100svw;
 
   background-color: ${({ scrolled }) =>
-    scrolled ? '#000000e0' : 'transparent'};
+    scrolled ? '#111111e0' : 'transparent'};
 
   box-shadow: ${({ scrolled }) =>
     scrolled ? '0px -9px 8px 13px rgba(36, 36, 36, 0.82)' : 'none'};
 
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-color: ${({ scrolled }) => (scrolled ? '#000000da' : 'transparent')};
+  border-color: ${({ scrolled }) => (scrolled ? '#111111da' : 'transparent')};
 
   transition: ${createTransition(
     ['background-color', 'border-color', 'box-shadow'],
