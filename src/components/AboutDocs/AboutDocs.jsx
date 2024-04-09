@@ -1,8 +1,5 @@
 import { SectionsTitle, SpriteIcon, StyledSection } from '@/components/shared';
 import { DocItem, DocsList, DocLink } from './AboutDocs.styled';
-import Statute from '@/assets/docs/dyussh_schools_statute.pdf';
-import Rules from '@/assets/docs/dyussh_rules_for_visiting.pdf';
-import Services from '@/assets/docs/dyussh_provision_of_paid_services.pdf';
 
 export const AboutDocs = () => (
   <StyledSection>
@@ -10,7 +7,7 @@ export const AboutDocs = () => (
 
     <DocsList>
       <DocItem data-aos="fade-up-right">
-        <DocLink href={Statute} download>
+        <DocLink href="/docs/dyussh_schools_statute.pdf" download>
           <SpriteIcon symbol="pdf" />
 
           <span>Статут закладу</span>
@@ -18,7 +15,7 @@ export const AboutDocs = () => (
       </DocItem>
 
       <DocItem data-aos="fade-up">
-        <DocLink href={Rules} download>
+        <DocLink href="/docs/dyussh_rules_for_visiting.pdf" download>
           <SpriteIcon symbol="pdf" />
 
           <span>Правила відвідування закладу</span>
@@ -26,7 +23,7 @@ export const AboutDocs = () => (
       </DocItem>
 
       <DocItem data-aos="fade-up-left">
-        <DocLink href={Services} download>
+        <DocLink href="/docs/dyussh_provision_of_paid_services.pdf" download>
           <SpriteIcon symbol="pdf" />
 
           <span>Положення про надання платних послуг</span>
