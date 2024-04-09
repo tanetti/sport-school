@@ -38,3 +38,4 @@ export * from './NewsPhotoModal/NewsPhotoModal';
 
 export * from './AboutTeam/AboutTeam';
 export * from './AboutAdministration/AboutAdministration';
+export * from './AboutDocs/AboutDocs';

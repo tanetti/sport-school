@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Slider } from '@/components/shared';
-import { AboutTeam, AboutAdministration } from '@/components';
+import { AboutTeam, AboutAdministration, AboutDocs } from '@/components';
 import { HOME_SLIDER_SETTINGS } from '@/constants';
 import { setPageTags } from '@/utilities';
 
@@ -26,6 +26,8 @@ const About = () => {
       <AboutTeam />
 
       <AboutAdministration />
+
+      <AboutDocs />
     </>
   );
 };
