@@ -41,6 +41,8 @@ export const SectionsTitle = styled.h2`
 
   text-transform: uppercase;
 
+  text-wrap: balance;
+
   @media screen and (min-width: 410px) {
     margin-bottom: 30px;
 

@@ -175,7 +175,7 @@ import Swimming_WEBP_768x3 from '@/assets/sections/swimming/768x3.webp';
 export const SECTIONS = [
   {
     name: 'football',
-    label: 'Футбол',
+    label: 'Футбол / Футзал',
     disabled: false,
     startAge: 6,
     endAge: 18,

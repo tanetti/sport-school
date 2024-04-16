@@ -5,7 +5,7 @@
       {
         "name": "@styled/typescript-styled-plugin",
         "lint": {
-          "validProperties": ["container-type", "container-name"],
+          "validProperties": ["container-type", "container-name", "text-wrap"],
           "unknownAtRules": "ignore"
         }
       }

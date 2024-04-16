@@ -58,7 +58,7 @@ export const SectionLabel = styled.label`
   height: 100%;
   padding: 5px;
 
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
 
   border-width: 1px;
@@ -154,7 +154,7 @@ export const SectionLabel = styled.label`
   @media screen and (min-width: 380px) {
     padding: 6px;
 
-    font-size: 14px;
+    font-size: 12px;
 
     transform: ${({ active }) => (active ? 'scale(1.2)' : 'scale(1)')};
 
@@ -170,7 +170,7 @@ export const SectionLabel = styled.label`
   @media screen and (min-width: 420px) {
     padding: 8px;
 
-    font-size: 15px;
+    font-size: 13px;
 
     transform: ${({ active }) => (active ? 'scale(1.15)' : 'scale(1)')};
 
@@ -184,8 +184,6 @@ export const SectionLabel = styled.label`
   }
 
   @media screen and (min-width: 480px) {
-    padding: 10px;
-
     font-size: 16px;
 
     & > span {
@@ -198,9 +196,9 @@ export const SectionLabel = styled.label`
   }
 
   @media screen and (min-width: 768px) {
-    padding: 8px;
+    padding: 6px;
 
-    font-size: 13px;
+    font-size: 12px;
 
     transform: ${({ active }) => (active ? 'scale(1.2)' : 'scale(1)')};
 

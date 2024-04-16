@@ -86,7 +86,7 @@ export const FootballTraining = () => (
       </AdvancedBlock>
 
       <AdvancedBlock data-aos="fade-up">
-        <BlockTitle>Вимоги до футболіста</BlockTitle>
+        <BlockTitle>Вимоги до вихованця</BlockTitle>
 
         <BlockList>
           <ListItem>Дисципліна! Фактор росту та досягнення цілей.</ListItem>
