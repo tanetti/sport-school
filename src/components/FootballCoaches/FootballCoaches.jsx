@@ -88,13 +88,13 @@ export const FootballCoaches = () => (
 
         <ItemInfo>
           Тренер-викладач з футзалу
-          <Name>Ільченко Вадим</Name>
+          <Name>Вадим Ільченко</Name>
         </ItemInfo>
 
         <Drscription>
           <DescriptionParagraph>
             Тренерську діяльність розпочав у 2016 році, зробивши вагомий внесок
-            у розвиток дитячо-юнацького футболу у селище Слобожанське.
+            у розвиток дитячо-юнацького футболу у селищі Слобожанське.
           </DescriptionParagraph>
 
           <DescriptionParagraph>
