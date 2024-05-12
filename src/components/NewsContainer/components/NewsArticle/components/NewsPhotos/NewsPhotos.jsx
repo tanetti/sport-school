@@ -24,7 +24,7 @@ export const NewsPhotos = ({ photoCount, date, filter, index }) => {
   const onSlideClick = event => {
     event.stopPropagation();
 
-    if (innerWidth < 960) return;
+    // if (innerWidth < 960) return;
 
     setIsPhotoModalOpened(true);
   };
