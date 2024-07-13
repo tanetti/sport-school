@@ -1,20 +1,20 @@
-import DirWebp from '@/assets/dir/dir.webp';
-import DirJpg from '@/assets/dir/dir.jpg';
+import DirWebp from "@/assets/dir/dir.webp";
+import DirJpg from "@/assets/dir/dir.jpg";
 
-import BuhWebp from '@/assets/buh/buh.webp';
-import BuhJpg from '@/assets/buh/buh.jpg';
+import BuhWebp from "@/assets/buh/buh.webp";
+import BuhJpg from "@/assets/buh/buh.jpg";
 
-import ZamWebp from '@/assets/zam/zam.webp';
-import ZamJpg from '@/assets/zam/zam.jpg';
+import ZamWebp from "@/assets/zam/zam.webp";
+import ZamJpg from "@/assets/zam/zam.jpg";
 
-import { SectionsTitle, StyledSection } from '@/components/shared';
+import { SectionsTitle, StyledSection } from "@/components/shared";
 import {
   AdminItem,
   AdminList,
   ItemImage,
   ItemInfo,
   Name,
-} from './AboutAdministration.styled';
+} from "./AboutAdministration.styled";
 
 export const AboutAdministration = () => (
   <StyledSection>
@@ -22,7 +22,7 @@ export const AboutAdministration = () => (
 
     <AdminList>
       <AdminItem data-aos="fade-up-right">
-        <div style={{ overflow: 'hidden' }}>
+        <div style={{ overflow: "hidden" }}>
           <picture>
             <source
               type="image/webp"
@@ -43,7 +43,7 @@ export const AboutAdministration = () => (
       </AdminItem>
 
       <AdminItem data-aos="fade-up">
-        <div style={{ overflow: 'hidden' }}>
+        <div style={{ overflow: "hidden" }}>
           <picture>
             <source
               type="image/webp"
@@ -62,13 +62,13 @@ export const AboutAdministration = () => (
         </div>
 
         <ItemInfo>
-          Головний бухгалтер
+          Заступник директора з адміністративно-господарської роботи
           <Name>Людмила Вульферт</Name>
         </ItemInfo>
       </AdminItem>
 
       <AdminItem data-aos="fade-up-left">
-        <div style={{ overflow: 'hidden' }}>
+        <div style={{ overflow: "hidden" }}>
           <picture>
             <source
               type="image/webp"
