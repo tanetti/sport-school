@@ -38,6 +38,8 @@ export const AboutAdministration = () => (
 
         <ItemInfo>
           Директор
+          <br />
+          &nbsp;
           <Name>Володимир Дейнеко</Name>
         </ItemInfo>
       </AdminItem>
@@ -62,7 +64,8 @@ export const AboutAdministration = () => (
         </div>
 
         <ItemInfo>
-          Заступник директора з адміністративно-господарської роботи
+          Заступник директора
+          <br />з адміністративно-господарської роботи
           <Name>Людмила Вульферт</Name>
         </ItemInfo>
       </AdminItem>
@@ -88,6 +91,7 @@ export const AboutAdministration = () => (
 
         <ItemInfo>
           Заступник директора
+          <br />з навчально-тренувальної роботи
           <Name>Вадим Ільченко</Name>
         </ItemInfo>
       </AdminItem>
