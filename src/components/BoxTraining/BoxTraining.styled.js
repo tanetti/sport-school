@@ -113,20 +113,13 @@ export const AdvancedBlock = styled.div`
 
   @media screen and (min-width: 960px) {
     flex-basis: 33%;
-
-    &[data-wide='true'] {
-      flex-basis: 66%;
-    }
   }
 `;
 
 export const BlockTitle = styled.p`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
 
   padding: 17px 10px 14px 10px;
-  min-height: 80px;
 
   font-size: 17px;
   font-weight: 700;

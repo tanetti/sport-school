@@ -77,38 +77,6 @@ export const BoxTraining = () => (
           складають індивідуальні плани для кожного спортсмена з урахуванням
           їхнього рівня підготовки та особистих потреб.
         </TrainingParagraph>
-
-        <br />
-        <br />
-
-        <TrainingParagraph data-aos="fade-up">
-          <em>Основні принципи тренувань з боксу:</em>
-        </TrainingParagraph>
-
-        <TrainingParagraph data-aos="fade-up">
-          <em>Техніка</em> - постійне вдосконалення ударів, захисту, руху ніг та
-          балансування.
-        </TrainingParagraph>
-
-        <TrainingParagraph data-aos="fade-up">
-          <em>Сила та витривалість</em> - робота з вагою, кардіотренування,
-          робота на мішках, грушах та з партнером.
-        </TrainingParagraph>
-
-        <TrainingParagraph data-aos="fade-up">
-          <em>Швидкість та рефлекси</em> - використання швидкісних груш,
-          спаринги, вправи на покращення реакції.
-        </TrainingParagraph>
-
-        <TrainingParagraph data-aos="fade-up">
-          <em>Тактика та стратегія</em> - вивчення та аналіз суперників,
-          розробка плану бою, адаптація до різних стилів.
-        </TrainingParagraph>
-
-        <TrainingParagraph data-aos="fade-up">
-          <em>Психологічна підготовка</em> - розвиток витримки, впевненості та
-          концентрації.
-        </TrainingParagraph>
       </InfoContainer>
 
       <GraphicContainer
@@ -123,15 +91,42 @@ export const BoxTraining = () => (
     </TrainingContainer>
 
     <AdvancedInfoContaier>
-      <AdvancedBlock data-wide="true" data-aos="fade-up-right">
+      <AdvancedBlock data-aos="fade-up-right">
+        <BlockTitle>Принципи тренувань</BlockTitle>
+
+        <BlockBody>
+          <Paragraph>
+            <em>Техніка</em> - постійне вдосконалення ударів, захисту, руху ніг
+            та балансування.
+          </Paragraph>
+
+          <Paragraph>
+            <em>Сила та витривалість</em> - робота з вагою, кардіотренування,
+            робота на мішках, грушах та з партнером.
+          </Paragraph>
+
+          <Paragraph>
+            <em>Швидкість та рефлекси</em> - використання швидкісних груш,
+            спаринги, вправи на покращення реакції.
+          </Paragraph>
+
+          <Paragraph>
+            <em>Тактика та стратегія</em> - вивчення та аналіз суперників,
+            розробка плану бою, адаптація до різних стилів.
+          </Paragraph>
+
+          <Paragraph>
+            <em>Психологічна підготовка</em> - розвиток витримки, впевненості та
+            концентрації.
+          </Paragraph>
+        </BlockBody>
+      </AdvancedBlock>
+
+      <AdvancedBlock data-aos="fade-up">
         <BlockTitle>Вимоги до батьків</BlockTitle>
 
         <BlockBody>
-          <Paragraph>Ви повністю довіряєте тренеру та клубу.</Paragraph>
-
-          <Paragraph>
-            Ви спостерігаєте за процесом, але не приймаєте участь у ньому.
-          </Paragraph>
+          <Paragraph>Ви повністю довіряєте тренеру.</Paragraph>
 
           <Paragraph>
             Ви не тренер, ви маєте давати лише одну установку - слухайся
@@ -141,14 +136,11 @@ export const BoxTraining = () => (
           <Paragraph>
             Ви на постійному контакті з тренером, приймаєте участь в усіх
             батьківських зборах, індивідуальних бесідах та в усьому допомагаєте
-            тренеру, адже у нас з вами спільна мета - виховати здорову,
-            соціально адаптовану людину і дати йому шанс стати професійним
-            боксером.
+            тренеру.
           </Paragraph>
 
           <Paragraph>
-            За необхідністю придбати екіпіровку для занять боксом (рукавички,
-            шолом, капа, бинти, спортивну форму та взуття).
+            За необхідністю придбати екіпіровку для занять боксом.
           </Paragraph>
 
           <Paragraph>
@@ -168,21 +160,6 @@ export const BoxTraining = () => (
           </Paragraph>
 
           <Paragraph>
-            Співпрацювати з тренером та адміністрацією для забезпечення
-            максимально ефективного тренувального процесу.
-          </Paragraph>
-
-          <Paragraph>
-            Своєчасно інформувати тренера про будь-які зміни у стані здоров’я
-            дитини або інші важливі обставини.
-          </Paragraph>
-
-          <Paragraph>
-            Забезпечити дотримання правил техніки безпеки дитиною під час
-            тренувань.
-          </Paragraph>
-
-          <Paragraph>
             Показувати особистий приклад здорового способу життя та підтримувати
             спортивні захоплення дитини.
           </Paragraph>
@@ -190,7 +167,7 @@ export const BoxTraining = () => (
       </AdvancedBlock>
 
       <AdvancedBlock data-aos="fade-up-left">
-        <BlockTitle>Вимоги до вихованців</BlockTitle>
+        <BlockTitle>Вимоги до вихованця</BlockTitle>
 
         <BlockBody>
           <Paragraph>Витривалість, сила, швидкість і гнучкість.</Paragraph>
