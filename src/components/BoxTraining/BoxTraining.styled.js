@@ -77,3 +77,95 @@ export const GraphicContainer = styled.div`
     flex-basis: 40%;
   }
 `;
+
+export const AdvancedInfoContaier = styled.div`
+  padding-top: 80px;
+
+  @media screen and (max-width: 959.98px) {
+    max-width: 460px;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 960px) {
+    display: flex;
+    align-items: stretch;
+    gap: 30px;
+
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+`;
+
+export const AdvancedBlock = styled.div`
+  border-radius: 12px;
+
+  box-shadow: 3px 6px 10px 2px rgba(0, 0, 0, 0.4);
+
+  background-color: #fff;
+
+  overflow: hidden;
+
+  @media screen and (max-width: 959.98px) {
+    &:not(:last-of-type) {
+      margin-bottom: 50px;
+    }
+  }
+
+  @media screen and (min-width: 960px) {
+    flex-basis: 33%;
+
+    &[data-wide='true'] {
+      flex-basis: 66%;
+    }
+  }
+`;
+
+export const BlockTitle = styled.p`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 17px 10px 14px 10px;
+  min-height: 80px;
+
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+
+  color: #fa7734;
+  background-color: #111;
+
+  text-align: center;
+  text-transform: uppercase;
+`;
+
+export const BlockBody = styled.div`
+  padding: 15px 10px;
+`;
+
+export const Paragraph = styled.p`
+  font-size: 15px;
+  line-height: 1.26;
+
+  & > em {
+    font-weight: 700;
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 16px;
+  }
+
+  &::before {
+    content: '';
+
+    display: inline-block;
+
+    width: 10px;
+    height: 10px;
+    margin: 0 10px 1px 10px;
+
+    border-radius: 50%;
+
+    background-color: #fa5502;
+  }
+`;
