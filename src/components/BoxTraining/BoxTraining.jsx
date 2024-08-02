@@ -190,7 +190,7 @@ export const BoxTraining = () => (
       </AdvancedBlock>
 
       <AdvancedBlock data-aos="fade-up-left">
-        <BlockTitle>Вимоги до вихованця</BlockTitle>
+        <BlockTitle>Вимоги до вихованців</BlockTitle>
 
         <BlockBody>
           <Paragraph>Витривалість, сила, швидкість і гнучкість.</Paragraph>
