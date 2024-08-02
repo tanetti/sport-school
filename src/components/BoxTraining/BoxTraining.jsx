@@ -77,6 +77,38 @@ export const BoxTraining = () => (
           складають індивідуальні плани для кожного спортсмена з урахуванням
           їхнього рівня підготовки та особистих потреб.
         </TrainingParagraph>
+
+        <br />
+        <br />
+
+        <TrainingParagraph data-aos="fade-up">
+          <em>Основні принципи тренувань з боксу:</em>
+        </TrainingParagraph>
+
+        <TrainingParagraph data-aos="fade-up">
+          <em>Техніка</em> - постійне вдосконалення ударів, захисту, руху ніг та
+          балансування.
+        </TrainingParagraph>
+
+        <TrainingParagraph data-aos="fade-up">
+          <em>Сила та витривалість</em> - робота з вагою, кардіотренування,
+          робота на мішках, грушах та з партнером.
+        </TrainingParagraph>
+
+        <TrainingParagraph data-aos="fade-up">
+          <em>Швидкість та рефлекси</em> - використання швидкісних груш,
+          спаринги, вправи на покращення реакції.
+        </TrainingParagraph>
+
+        <TrainingParagraph data-aos="fade-up">
+          <em>Тактика та стратегія</em> - вивчення та аналіз суперників,
+          розробка плану бою, адаптація до різних стилів.
+        </TrainingParagraph>
+
+        <TrainingParagraph data-aos="fade-up">
+          <em>Психологічна підготовка</em> - розвиток витримки, впевненості та
+          концентрації.
+        </TrainingParagraph>
       </InfoContainer>
 
       <GraphicContainer
@@ -158,36 +190,24 @@ export const BoxTraining = () => (
       </AdvancedBlock>
 
       <AdvancedBlock data-aos="fade-up-left">
-        <BlockTitle>
-          Основні принципи <br />
-          тренувань з боксу
-        </BlockTitle>
+        <BlockTitle>Вимоги до вихованця</BlockTitle>
 
         <BlockBody>
-          <Paragraph>
-            <em>Техніка</em> - постійне вдосконалення ударів, захисту, руху ніг
-            та балансування.
-          </Paragraph>
+          <Paragraph>Витривалість, сила, швидкість і гнучкість.</Paragraph>
 
-          <Paragraph>
-            <em>Сила та витривалість</em> - робота з вагою, кардіотренування,
-            робота на мішках, грушах та з партнером.
-          </Paragraph>
+          <Paragraph>Розвинені координація та реакція.</Paragraph>
 
-          <Paragraph>
-            <em>Швидкість та рефлекси</em> - використання швидкісних груш,
-            спаринги, вправи на покращення реакції.
-          </Paragraph>
+          <Paragraph>Вміння зберігати спокій під тиском.</Paragraph>
 
-          <Paragraph>
-            <em>Тактика та стратегія</em> - вивчення та аналіз суперників,
-            розробка плану бою, адаптація до різних стилів.
-          </Paragraph>
+          <Paragraph>Високий рівень мотивації та дисципліни.</Paragraph>
 
-          <Paragraph>
-            <em>Психологічна підготовка</em> - розвиток витримки, впевненості та
-            концентрації.
-          </Paragraph>
+          <Paragraph>Дотримання режиму харчування та відпочинку.</Paragraph>
+
+          <Paragraph>Уникання шкідливих звичок.</Paragraph>
+
+          <Paragraph>Повага до суперників, тренерів та суддів.</Paragraph>
+
+          <Paragraph>Вміння працювати в команді.</Paragraph>
         </BlockBody>
       </AdvancedBlock>
     </AdvancedInfoContaier>
