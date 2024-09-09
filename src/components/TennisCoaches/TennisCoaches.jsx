@@ -38,7 +38,7 @@ export const TennisCoaches = () => (
 
         <ItemInfo>
           Тренер-викладач з настільного тенісу
-          <Name>Горбаненко Олексій</Name>
+          <Name>Олексій Горбаненко</Name>
         </ItemInfo>
 
         <Drscription>
