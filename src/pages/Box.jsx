@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Slider } from '@/components/shared';
-import { BoxAdvantages, BoxTraining } from '@/components';
+import { BoxAdvantages, BoxCoaches, BoxTraining } from '@/components';
 import { BOX_SLIDER_SETTINGS } from '@/constants';
 import { setPageTags } from '@/utilities';
 
@@ -18,6 +18,8 @@ const Box = () => {
       <BoxAdvantages />
 
       <BoxTraining />
+
+      <BoxCoaches />
     </>
   );
 };
