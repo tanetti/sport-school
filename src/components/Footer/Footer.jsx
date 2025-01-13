@@ -21,91 +21,96 @@ import {
   SocialLinkYouTube,
 } from './Footer.styled';
 
-export const Footer = () => (
-  <FooterContainer id="footer">
-    <ContactContainer>
-      <ContactTitle>
-        Залишились питання? <strong>Зв&apos;яжіться з нами!</strong>
-      </ContactTitle>
+export const Footer = () => {
+  const year = new Date().getFullYear();
 
-      <LinkContainer>
-        <SocialsList>
-          <li>
-            <SocialLink
-              href={FACEBOOK.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={FACEBOOK.aria}
-            >
-              <SpriteIcon symbol="facebook" />
-            </SocialLink>
-          </li>
+  return (
+    <FooterContainer id="footer">
+      <ContactContainer>
+        <ContactTitle>
+          Залишились питання? <strong>Зв&apos;яжіться з нами!</strong>
+        </ContactTitle>
 
-          <li>
-            <SocialLink
-              href={INSTAGRAM.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={INSTAGRAM.aria}
-            >
-              <SpriteIcon symbol="instagram" />
-            </SocialLink>
-          </li>
-
-          <li>
-            <SocialLinkYouTube
-              href={YOUTUBE.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={YOUTUBE.aria}
-            >
-              <SpriteIcon symbol="youtube" />
-            </SocialLinkYouTube>
-          </li>
-        </SocialsList>
-
-        <ContactList>
-          <li>
-            <ContactLink href={PHONE.link} aria-label={PHONE.aria}>
-              <SpriteIcon symbol="phone" />
-
-              <span>{PHONE.label}</span>
-            </ContactLink>
-          </li>
-
-          <li>
-            <ContactLink href={MAIL.link} aria-label={MAIL.aria}>
-              <SpriteIcon symbol="mail" />
-
-              <span>{MAIL.label}</span>
-            </ContactLink>
-          </li>
-
-          <li>
-            <address>
-              <ContactLink
-                href={LOCATION.link}
-                aria-label={LOCATION.aria}
+        <LinkContainer>
+          <SocialsList>
+            <li>
+              <SocialLink
+                href={FACEBOOK.link}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={FACEBOOK.aria}
               >
-                <SpriteIcon symbol="location" />
+                <SpriteIcon symbol="facebook" />
+              </SocialLink>
+            </li>
 
-                <span>{LOCATION.label}</span>
+            <li>
+              <SocialLink
+                href={INSTAGRAM.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={INSTAGRAM.aria}
+              >
+                <SpriteIcon symbol="instagram" />
+              </SocialLink>
+            </li>
+
+            <li>
+              <SocialLinkYouTube
+                href={YOUTUBE.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={YOUTUBE.aria}
+              >
+                <SpriteIcon symbol="youtube" />
+              </SocialLinkYouTube>
+            </li>
+          </SocialsList>
+
+          <ContactList>
+            <li>
+              <ContactLink href={PHONE.link} aria-label={PHONE.aria}>
+                <SpriteIcon symbol="phone" />
+
+                <span>{PHONE.label}</span>
               </ContactLink>
-            </address>
-          </li>
-        </ContactList>
-      </LinkContainer>
-    </ContactContainer>
+            </li>
 
-    <CopyrightContainer>
-      <CopyrightText>
-        <span>
-          Дитячо-юнацька спортивна школа Слобожанської селищної ради.&nbsp;
-        </span>
-        Всі права захищено &#169; 2024
-      </CopyrightText>
-    </CopyrightContainer>
-  </FooterContainer>
-);
+            <li>
+              <ContactLink href={MAIL.link} aria-label={MAIL.aria}>
+                <SpriteIcon symbol="mail" />
+
+                <span>{MAIL.label}</span>
+              </ContactLink>
+            </li>
+
+            <li>
+              <address>
+                <ContactLink
+                  href={LOCATION.link}
+                  aria-label={LOCATION.aria}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <SpriteIcon symbol="location" />
+
+                  <span>{LOCATION.label}</span>
+                </ContactLink>
+              </address>
+            </li>
+          </ContactList>
+        </LinkContainer>
+      </ContactContainer>
+
+      <CopyrightContainer>
+        <CopyrightText>
+          <span>
+            Дитячо-юнацька спортивна школа Слобожанської селищної ради.&nbsp;
+          </span>
+
+          {`Всі права захищено \u00A9 ${year}`}
+        </CopyrightText>
+      </CopyrightContainer>
+    </FooterContainer>
+  );
+};
