@@ -1,14 +1,6 @@
-import JPG_560x1 from '@/assets/advantages/box/tr560x1.jpg';
-import WEBP_560x1 from '@/assets/advantages/box/tr560x1.webp';
-import JPG_560x2 from '@/assets/advantages/box/tr560x2.jpg';
-import WEBP_560x2 from '@/assets/advantages/box/tr560x2.webp';
-import JPG_560x3 from '@/assets/advantages/box/tr560x3.jpg';
-import WEBP_560x3 from '@/assets/advantages/box/tr560x3.webp';
-
 import { SectionsTitle, StyledSection } from '@/components/shared';
 import {
   InfoContainer,
-  GraphicContainer,
   TrainingContainer,
   TrainingParagraph,
   AdvancedInfoContaier,
@@ -16,6 +8,7 @@ import {
   BlockTitle,
   BlockBody,
   Paragraph,
+  PlayerFrame,
 } from './BoxTraining.styled';
 
 export const BoxTraining = () => (
@@ -79,14 +72,23 @@ export const BoxTraining = () => (
         </TrainingParagraph>
       </InfoContainer>
 
-      <GraphicContainer
+      <PlayerFrame
         data-aos="fade-up"
-        imageJPG_560x1={JPG_560x1}
-        imageWEBP_560x1={WEBP_560x1}
-        imageJPG_560x2={JPG_560x2}
-        imageWEBP_560x2={WEBP_560x2}
-        imageJPG_560x3={JPG_560x3}
-        imageWEBP_560x3={WEBP_560x3}
+        url="https://youtube.com/shorts/qBkgOK-1Tho?si=4CY6OFIC2tCldO9c"
+        width={288}
+        height={512}
+        muted={true}
+        loop={true}
+        config={{
+          youtube: {
+            playerVars: {
+              hl: 'uk',
+              rel: 0,
+              autoplay: 1,
+              origin,
+            },
+          },
+        }}
       />
     </TrainingContainer>
 

@@ -7,8 +7,7 @@ export const TrainingContainer = styled.div`
 
   @media screen and (min-width: 960px) {
     display: flex;
-    align-items: center;
-    gap: 20px;
+    gap: 30px;
 
     padding-top: 30px;
   }
@@ -20,7 +19,7 @@ export const InfoContainer = styled.div`
   }
 
   @media screen and (min-width: 960px) {
-    flex-basis: 60%;
+    flex-basis: 70%;
   }
 `;
 
@@ -41,7 +40,7 @@ export const TrainingParagraph = styled.p`
 `;
 
 export const PlayerFrame = styled(ReactPlayer)`
-  aspect-ratio: 16/9;
+  aspect-ratio: 9/16;
 
   border-radius: 12px;
 
@@ -53,10 +52,6 @@ export const PlayerFrame = styled(ReactPlayer)`
     width: 100%;
     max-width: 560px;
     margin: 0 auto;
-  }
-
-  @media screen and (min-width: 960px) {
-    flex-basis: 40%;
   }
 `;
 

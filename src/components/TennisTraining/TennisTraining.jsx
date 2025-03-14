@@ -43,9 +43,9 @@ export const TennisTraining = () => (
 
       <PlayerFrame
         data-aos="fade-up"
-        url="https://www.youtube.com/embed/tKlDS87SLvU"
-        width={null}
-        height={null}
+        url="https://youtube.com/shorts/Uvl0pCHyKPo?si=2r39JTNqeJIYQBIY"
+        width={216}
+        height={384}
         muted={true}
         loop={true}
         config={{
