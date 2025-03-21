@@ -27,16 +27,19 @@ export const VolleyballTraining = () => (
         <TrainingParagraph data-aos="fade-up">
           Для зручності планування, заняття умовно ділять на три частини:&nbsp;
           <em>підготовчу</em>, <em>основну</em> і <em>заключну</em>. Ці частини
-          органічно пов&apos;язані між собою, обумовлюють одна одну.{' '}
+          органічно пов&apos;язані між собою, обумовлюють одна одну.
+        </TrainingParagraph>
+
+        <TrainingParagraph data-aos="fade-up">
           <em>Тренувальні заняття з волейболу тривають 90 - 120 хвилин</em>.
         </TrainingParagraph>
       </InfoContainer>
 
       <PlayerFrame
         data-aos="fade-up"
-        url="https://www.youtube.com/embed/-vfmNOYJCGw"
-        width={null}
-        height={null}
+        url="https://youtube.com/shorts/qjzcNhJmrn4?si=J6deGggDE3tpvIZL"
+        width={216}
+        height={384}
         muted={true}
         loop={true}
         config={{
