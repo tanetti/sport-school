@@ -3,7 +3,7 @@ export const newsDB = [
     date: '19.04.2025',
     index: 0,
     filter: 'volleyball',
-    photoCount: 6,
+    photoCount: 10,
     name: 'Фінал чемпіонату ГО ДТО ВФСТ «Колос»',
     shortInfoMarkup: '',
     fullInfoMarkup:
