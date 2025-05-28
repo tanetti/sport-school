@@ -1,20 +1,23 @@
-import DirWebp from "@/assets/dir/dir.webp";
-import DirJpg from "@/assets/dir/dir.jpg";
+import DirWebp from '@/assets/dir/dir.webp';
+import DirJpg from '@/assets/dir/dir.jpg';
 
-import BuhWebp from "@/assets/buh/buh.webp";
-import BuhJpg from "@/assets/buh/buh.jpg";
+import ZamlWebp from '@/assets/zaml/zaml.webp';
+import ZamlJpg from '@/assets/zaml/zaml.jpg';
 
-import ZamWebp from "@/assets/zam/zam.webp";
-import ZamJpg from "@/assets/zam/zam.jpg";
+import ZamWebp from '@/assets/zam/zam.webp';
+import ZamJpg from '@/assets/zam/zam.jpg';
 
-import { SectionsTitle, StyledSection } from "@/components/shared";
+import BuhWebp from '@/assets/buh/buh.webp';
+import BuhJpg from '@/assets/buh/buh.jpg';
+
+import { SectionsTitle, StyledSection } from '@/components/shared';
 import {
   AdminItem,
   AdminList,
   ItemImage,
   ItemInfo,
   Name,
-} from "./AboutAdministration.styled";
+} from './AboutAdministration.styled';
 
 export const AboutAdministration = () => (
   <StyledSection>
@@ -22,7 +25,7 @@ export const AboutAdministration = () => (
 
     <AdminList>
       <AdminItem data-aos="fade-up-right">
-        <div style={{ overflow: "hidden" }}>
+        <div style={{ overflow: 'hidden' }}>
           <picture>
             <source
               type="image/webp"
@@ -45,20 +48,20 @@ export const AboutAdministration = () => (
       </AdminItem>
 
       <AdminItem data-aos="fade-up">
-        <div style={{ overflow: "hidden" }}>
+        <div style={{ overflow: 'hidden' }}>
           <picture>
             <source
               type="image/webp"
-              srcSet={`${BuhWebp} 622w`}
+              srcSet={`${ZamlWebp} 622w`}
               sizes="622px"
             />
 
-            <source type="image/jpg" srcSet={`${BuhJpg} 622w`} sizes="622px" />
+            <source type="image/jpg" srcSet={`${ZamlJpg} 622w`} sizes="622px" />
 
             <ItemImage
-              alt="Головний бухгалтер в кабінеті"
+              alt="Заступник директора в кабінеті"
               loading="lazy"
-              src={BuhJpg}
+              src={ZamlJpg}
             />
           </picture>
         </div>
@@ -71,7 +74,7 @@ export const AboutAdministration = () => (
       </AdminItem>
 
       <AdminItem data-aos="fade-up-left">
-        <div style={{ overflow: "hidden" }}>
+        <div style={{ overflow: 'hidden' }}>
           <picture>
             <source
               type="image/webp"
@@ -93,6 +96,33 @@ export const AboutAdministration = () => (
           Заступник директора
           <br />з навчально-тренувальної роботи
           <Name>Вадим Ільченко</Name>
+        </ItemInfo>
+      </AdminItem>
+
+      <AdminItem data-aos="fade-up-left">
+        <div style={{ overflow: 'hidden' }}>
+          <picture>
+            <source
+              type="image/webp"
+              srcSet={`${BuhWebp} 622w`}
+              sizes="622px"
+            />
+
+            <source type="image/jpg" srcSet={`${BuhJpg} 622w`} sizes="622px" />
+
+            <ItemImage
+              alt="Головний бухгалтер в кабінеті"
+              loading="lazy"
+              src={BuhJpg}
+            />
+          </picture>
+        </div>
+
+        <ItemInfo>
+          Головний бухгалтер
+          <br />
+          &nbsp;
+          <Name>Вікторія Артеменко</Name>
         </ItemInfo>
       </AdminItem>
     </AdminList>

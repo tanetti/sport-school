@@ -9,7 +9,8 @@ export const AdminList = styled.ul`
   }
 
   @media screen and (min-width: 768px) {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
     gap: 20px;
   }
 
@@ -18,7 +19,7 @@ export const AdminList = styled.ul`
   }
 
   @media screen and (min-width: 1280px) {
-    gap: 40px;
+    gap: 60px;
   }
 `;
 
