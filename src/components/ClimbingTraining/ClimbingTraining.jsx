@@ -1,4 +1,4 @@
-import { SectionsTitle, StyledSection } from '@/components/shared';
+import { SectionsTitle, StyledSection } from "@/components/shared";
 import {
   AdvancedBlock,
   AdvancedInfoContaier,
@@ -9,9 +9,9 @@ import {
   PlayerFrame,
   TrainingContainer,
   TrainingParagraph,
-} from './ClimbingTraining.styled';
+} from "./ClimbingTraining.styled";
 
-const origin = location?.origin || 'https://dyussh.dp.ua';
+const origin = location?.origin || "https://dyussh.dp.ua";
 
 export const ClimbingTraining = () => (
   <StyledSection>
@@ -56,7 +56,7 @@ export const ClimbingTraining = () => (
 
       <PlayerFrame
         data-aos="fade-up"
-        url="https://www.youtube.com/embed/2kb-W9Y69sU"
+        url="https://youtu.be/cSOsxrY-MYk?si=FDOJyfdW9WAaMb3L"
         width={null}
         height={null}
         muted={true}
@@ -64,7 +64,7 @@ export const ClimbingTraining = () => (
         config={{
           youtube: {
             playerVars: {
-              hl: 'uk',
+              hl: "uk",
               rel: 0,
               autoplay: 1,
               origin,
