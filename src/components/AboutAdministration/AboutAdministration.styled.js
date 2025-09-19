@@ -1,5 +1,5 @@
-import styled from '@emotion/styled';
-import { createTransition } from '@/utilities';
+import styled from "@emotion/styled";
+import { createTransition } from "@/utilities";
 
 export const AdminList = styled.ul`
   margin: 0 auto;
@@ -10,7 +10,7 @@ export const AdminList = styled.ul`
 
   @media screen and (min-width: 768px) {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
     gap: 20px;
   }
 
@@ -53,7 +53,7 @@ export const ItemImage = styled.img`
 
   transform-origin: top;
 
-  transition: ${createTransition('transform', 'standart')};
+  transition: ${createTransition("transform", "standart")};
 `;
 
 export const ItemInfo = styled.p`
