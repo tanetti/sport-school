@@ -1,4 +1,4 @@
-import { SectionsTitle, StyledSection } from '@/components/shared';
+import { SectionsTitle, StyledSection } from "@/components/shared";
 import {
   InfoContainer,
   TrainingContainer,
@@ -9,7 +9,7 @@ import {
   BlockBody,
   Paragraph,
   PlayerFrame,
-} from './BoxTraining.styled';
+} from "./BoxTraining.styled";
 
 export const BoxTraining = () => (
   <StyledSection>
@@ -74,7 +74,7 @@ export const BoxTraining = () => (
 
       <PlayerFrame
         data-aos="fade-up"
-        url="https://youtube.com/shorts/qBkgOK-1Tho?si=4CY6OFIC2tCldO9c"
+        url="https://www.youtube.com/shorts/lFJkca9CJWw"
         width={288}
         height={512}
         muted={true}
@@ -82,7 +82,7 @@ export const BoxTraining = () => (
         config={{
           youtube: {
             playerVars: {
-              hl: 'uk',
+              hl: "uk",
               rel: 0,
               autoplay: 1,
               origin,
