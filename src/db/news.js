@@ -3,7 +3,7 @@ export const newsDB = [
     date: "16.10.2025",
     index: 0,
     filter: "football",
-    photoCount: 10,
+    photoCount: 9,
     name: "Відкрита першість",
     shortInfoMarkup: "",
     fullInfoMarkup:
