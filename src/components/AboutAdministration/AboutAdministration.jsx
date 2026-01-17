@@ -4,9 +4,6 @@ import DirJpg from "@/assets/dir/dir.jpg";
 import ZamlWebp from "@/assets/zaml/zaml.webp";
 import ZamlJpg from "@/assets/zaml/zaml.jpg";
 
-import ZamWebp from "@/assets/zam/zam.webp";
-import ZamJpg from "@/assets/zam/zam.jpg";
-
 import BuhWebp from "@/assets/buh/buh.webp";
 import BuhJpg from "@/assets/buh/buh.jpg";
 
@@ -47,7 +44,7 @@ export const AboutAdministration = () => (
         </ItemInfo>
       </AdminItem>
 
-      <AdminItem data-aos="fade-up-left">
+      <AdminItem data-aos="fade-up">
         <div style={{ overflow: "hidden" }}>
           <picture>
             <source
@@ -70,32 +67,6 @@ export const AboutAdministration = () => (
           Заступник директора
           <br />з адміністративно-господарської роботи
           <Name>Людмила Вульферт</Name>
-        </ItemInfo>
-      </AdminItem>
-
-      <AdminItem data-aos="fade-up-right">
-        <div style={{ overflow: "hidden" }}>
-          <picture>
-            <source
-              type="image/webp"
-              srcSet={`${ZamWebp} 622w`}
-              sizes="622px"
-            />
-
-            <source type="image/jpg" srcSet={`${ZamJpg} 622w`} sizes="622px" />
-
-            <ItemImage
-              alt="Заступник директора в кабінеті"
-              loading="lazy"
-              src={ZamJpg}
-            />
-          </picture>
-        </div>
-
-        <ItemInfo>
-          Заступник директора
-          <br />з навчально-тренувальної роботи
-          <Name>Тетяна Колкотіна</Name>
         </ItemInfo>
       </AdminItem>
 

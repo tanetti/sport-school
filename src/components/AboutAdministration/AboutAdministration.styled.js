@@ -10,7 +10,7 @@ export const AdminList = styled.ul`
 
   @media screen and (min-width: 768px) {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
     gap: 20px;
   }
 
