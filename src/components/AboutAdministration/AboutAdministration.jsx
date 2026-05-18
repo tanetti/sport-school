@@ -69,7 +69,7 @@ export const AboutAdministration = () => (
         <ItemInfo>
           Заступник директора
           <br />з адміністративно-господарської роботи
-          <Name>Людмила Вульферт</Name>
+          <Name>Міла Вульферт</Name>
         </ItemInfo>
       </AdminItem>
 
