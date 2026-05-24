@@ -1,9 +1,10 @@
-import styled from '@emotion/styled';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { createTransition } from '@/utilities';
+import styled from "@emotion/styled";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { createTransition } from "@/utilities";
 
 export const StyledSwiper = styled(Swiper)`
-  aspect-ratio: 16/10;
+  aspect-ratio: ${({ photoportrait }) =>
+    photoportrait === "true" ? "3/4" : "16/10"};
 
   & span.swiper-pagination-bullet {
     width: 10px;
@@ -14,8 +15,8 @@ export const StyledSwiper = styled(Swiper)`
     opacity: 0.3;
 
     transition: ${createTransition(
-      ['background-color', 'opacity', 'transform'],
-      'standart'
+      ["background-color", "opacity", "transform"],
+      "standart",
     )};
 
     &.swiper-pagination-bullet-active {

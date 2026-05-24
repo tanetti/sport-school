@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-import { useState } from 'react';
-import parse from 'html-react-parser';
-import { NewsPhotos } from './components';
-import { SECTIONS } from '@/constants';
+import PropTypes from "prop-types";
+import { useState } from "react";
+import parse from "html-react-parser";
+import { NewsPhotos } from "./components";
+import { SECTIONS } from "@/constants";
 import {
   Date,
   ExpandButton,
@@ -11,7 +11,7 @@ import {
   MainInfoContainer,
   StyledArticle,
   Title,
-} from './NewsArticle.styled';
+} from "./NewsArticle.styled";
 
 export const NewsArticle = ({ data }) => {
   const {
@@ -22,6 +22,7 @@ export const NewsArticle = ({ data }) => {
     shortInfoMarkup,
     fullInfoMarkup,
     photoCount,
+    photoPortrait,
   } = data;
 
   const [isExpanded, setIsExpanded] = useState(false);
@@ -34,7 +35,7 @@ export const NewsArticle = ({ data }) => {
         <Title>{name}</Title>
 
         <Date>
-          {sectionLabel ? `${sectionLabel} - ` : ''}
+          {sectionLabel ? `${sectionLabel} - ` : ""}
 
           <span>{date}</span>
         </Date>
@@ -44,6 +45,7 @@ export const NewsArticle = ({ data }) => {
         <ImagesContainer aria-hidden="true">
           <NewsPhotos
             photoCount={photoCount}
+            photoPortrait={photoPortrait}
             date={date}
             filter={filter}
             index={index}
@@ -75,5 +77,6 @@ NewsArticle.propTypes = {
     shortInfoMarkup: PropTypes.string,
     fullInfoMarkup: PropTypes.string.isRequired,
     photoCount: PropTypes.number.isRequired,
+    photoPortrait: PropTypes.bool,
   }).isRequired,
 };

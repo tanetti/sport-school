@@ -1,11 +1,17 @@
-import PropTypes from 'prop-types';
-import { useEffect, useRef, useState } from 'react';
-import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
-import { NewsPhotoModal } from '@/components';
-import { getImagesUrl } from './utilities';
-import { StyledSwiper, StyledSwiperSlide } from './NewsPhotos.styled';
+import PropTypes from "prop-types";
+import { useEffect, useRef, useState } from "react";
+import { Autoplay, EffectFade, Pagination } from "swiper/modules";
+import { NewsPhotoModal } from "@/components";
+import { getImagesUrl } from "./utilities";
+import { StyledSwiper, StyledSwiperSlide } from "./NewsPhotos.styled";
 
-export const NewsPhotos = ({ photoCount, date, filter, index }) => {
+export const NewsPhotos = ({
+  photoCount,
+  photoPortrait,
+  date,
+  filter,
+  index,
+}) => {
   const swiperRef = useRef(null);
   const [isPhotoModalOpened, setIsPhotoModalOpened] = useState(false);
 
@@ -21,7 +27,7 @@ export const NewsPhotos = ({ photoCount, date, filter, index }) => {
     }
   }, [isPhotoModalOpened]);
 
-  const onSlideClick = event => {
+  const onSlideClick = (event) => {
     event.stopPropagation();
 
     // if (innerWidth < 960) return;
@@ -35,6 +41,7 @@ export const NewsPhotos = ({ photoCount, date, filter, index }) => {
     return (
       <>
         <StyledSwiper
+          photoportrait={photoPortrait ? "true" : "false"}
           ref={swiperRef}
           autoplay={
             photoCount > 1
@@ -54,10 +61,10 @@ export const NewsPhotos = ({ photoCount, date, filter, index }) => {
                 }
               : false
           }
-          effect={'fade'}
+          effect={"fade"}
           modules={[EffectFade, Autoplay, Pagination]}
         >
-          {imagesUrl.map(url => (
+          {imagesUrl.map((url) => (
             <StyledSwiperSlide
               key={url}
               image={url}
@@ -78,6 +85,7 @@ export const NewsPhotos = ({ photoCount, date, filter, index }) => {
 
 NewsPhotos.propTypes = {
   photoCount: PropTypes.number.isRequired,
+  photoPortrait: PropTypes.bool,
   date: PropTypes.string.isRequired,
   filter: PropTypes.string.isRequired,
   index: PropTypes.number,
