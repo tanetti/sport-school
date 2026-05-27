@@ -1,13 +1,10 @@
-import Coach01Webp480x1 from '@/assets/coaches/football/01/480x1.webp';
-import Coach01Jpg480x1 from '@/assets/coaches/football/01/480x1.jpg';
+import Coach01Webp480x1 from "@/assets/coaches/football/01/480x1.webp";
+import Coach01Jpg480x1 from "@/assets/coaches/football/01/480x1.jpg";
 
-import Coach02Webp480x1 from '@/assets/coaches/football/02/480x1.webp';
-import Coach02Jpg480x1 from '@/assets/coaches/football/02/480x1.jpg';
+import Coach02Webp480x1 from "@/assets/coaches/football/02/480x1.webp";
+import Coach02Jpg480x1 from "@/assets/coaches/football/02/480x1.jpg";
 
-import Coach03Webp480x1 from '@/assets/coaches/football/03/480x1.webp';
-import Coach03Jpg480x1 from '@/assets/coaches/football/03/480x1.jpg';
-
-import { SectionsTitle, StyledSection } from '@/components/shared';
+import { SectionsTitle, StyledSection } from "@/components/shared";
 import {
   CoachItem,
   CoachList,
@@ -16,7 +13,7 @@ import {
   Name,
   Drscription,
   DescriptionParagraph,
-} from '@/components/shared';
+} from "@/components/shared";
 
 export const FootballCoaches = () => (
   <StyledSection>
@@ -24,7 +21,7 @@ export const FootballCoaches = () => (
 
     <CoachList>
       <CoachItem data-aos="fade-up-right">
-        <div style={{ overflow: 'hidden' }}>
+        <div style={{ overflow: "hidden" }}>
           <picture>
             <source
               type="image/webp"
@@ -67,6 +64,13 @@ export const FootballCoaches = () => (
         </Drscription>
       </CoachItem>
 
+      {/*
+
+      Rest in peace, Vadim. You will always be remembered as a great coach and an even better person.
+      Your dedication to the sport and your players was unparalleled, and your legacy will live on through the countless lives you touched.
+      You will be deeply missed by all who knew you, but your spirit will continue to inspire us to strive for greatness both on and off the field.
+      Thank you for everything, Coach Ilchenko. Rest in peace.
+      
       <CoachItem data-aos="fade-up">
         <div style={{ overflow: 'hidden' }}>
           <picture>
@@ -107,24 +111,24 @@ export const FootballCoaches = () => (
             чемпіон Дніпропетровської області з футзалу серед дітей 2006/07 р.н.
           </DescriptionParagraph>
         </Drscription>
-      </CoachItem>
+      </CoachItem> */}
 
       <CoachItem data-aos="fade-up-left">
-        <div style={{ overflow: 'hidden' }}>
+        <div style={{ overflow: "hidden" }}>
           <picture>
             <source
               type="image/webp"
-              srcSet={`${Coach03Webp480x1} 480w`}
+              srcSet={`${Coach02Webp480x1} 480w`}
               sizes="480px"
             />
 
             <source
               type="image/jpg"
-              srcSet={`${Coach03Jpg480x1} 480w`}
+              srcSet={`${Coach02Jpg480x1} 480w`}
               sizes="480px"
             />
 
-            <ItemImage alt="Тренер" loading="lazy" src={Coach03Jpg480x1} />
+            <ItemImage alt="Тренер" loading="lazy" src={Coach02Jpg480x1} />
           </picture>
         </div>
 
