@@ -35,7 +35,7 @@ export const AboutAdministration = () => (
 
             <source type="image/jpg" srcSet={`${DirJpg} 622w`} sizes="622px" />
 
-            <ItemImage alt="Директор в кабінеті" loading="lazy" src={DirJpg} />
+            <ItemImage alt="Фото директора" loading="lazy" src={DirJpg} />
           </picture>
         </div>
 
@@ -59,7 +59,7 @@ export const AboutAdministration = () => (
             <source type="image/jpg" srcSet={`${ZamlJpg} 622w`} sizes="622px" />
 
             <ItemImage
-              alt="Заступник директора в кабінеті"
+              alt="Фото заступника директора"
               loading="lazy"
               src={ZamlJpg}
             />
@@ -84,7 +84,11 @@ export const AboutAdministration = () => (
 
             <source type="image/jpg" srcSet={`${ZamnJpg} 622w`} sizes="622px" />
 
-            <ItemImage alt="Заступник директора" loading="lazy" src={ZamnJpg} />
+            <ItemImage
+              alt="Фото заступника директора"
+              loading="lazy"
+              src={ZamnJpg}
+            />
           </picture>
         </div>
 
@@ -107,7 +111,7 @@ export const AboutAdministration = () => (
             <source type="image/jpg" srcSet={`${BuhJpg} 622w`} sizes="622px" />
 
             <ItemImage
-              alt="Головний бухгалтер в кабінеті"
+              alt="Фото головного бухгалтера"
               loading="lazy"
               src={BuhJpg}
             />

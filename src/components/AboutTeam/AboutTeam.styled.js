@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
 export const TeamDescriptionList = styled.ul`
   max-width: 1144px;
@@ -18,7 +18,7 @@ export const DescriptionItem = styled.li`
   line-height: 1.2;
 
   &::before {
-    content: '';
+    content: "";
 
     display: inline-block;
 
@@ -65,8 +65,8 @@ export const DescriptionItem = styled.li`
   }
 `;
 
-export const TeamImage = styled.img`
-  display: block;
+export const TeamImageArea = styled.div`
+  position: relative;
 
   width: 100%;
   max-width: 1280px;
@@ -76,4 +76,40 @@ export const TeamImage = styled.img`
   border-radius: 12px;
 
   box-shadow: 3px 6px 10px 2px rgba(0, 0, 0, 0.4);
+
+  overflow: hidden;
+`;
+
+export const TeamImage = styled.img`
+  display: block;
+
+  width: 100%;
+  height: auto;
+`;
+
+export const TeamImageAnimated = styled.img`
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: auto;
+
+  animation: fadeImage 7s infinite;
+
+  @keyframes fadeImage {
+    0%,
+    40% {
+      opacity: 1;
+    }
+
+    50%,
+    90% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
 `;
