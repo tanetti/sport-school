@@ -4,6 +4,9 @@ import Coach01Jpg480x1 from "@/assets/coaches/football/01/480x1.jpg";
 import Coach02Webp480x1 from "@/assets/coaches/football/02/480x1.webp";
 import Coach02Jpg480x1 from "@/assets/coaches/football/02/480x1.jpg";
 
+import Coach03Webp480x1 from "@/assets/coaches/football/03/480x1.webp";
+import Coach03Jpg480x1 from "@/assets/coaches/football/03/480x1.jpg";
+
 import { SectionsTitle, StyledSection } from "@/components/shared";
 import {
   CoachItem,
@@ -113,7 +116,7 @@ export const FootballCoaches = () => (
         </Drscription>
       </CoachItem> */}
 
-      <CoachItem data-aos="fade-up-left">
+      <CoachItem data-aos="fade-up">
         <div style={{ overflow: "hidden" }}>
           <picture>
             <source
@@ -151,6 +154,64 @@ export const FootballCoaches = () => (
 
           <DescriptionParagraph>
             Дитячим тренером став у віці 21 року.
+          </DescriptionParagraph>
+        </Drscription>
+      </CoachItem>
+
+      <CoachItem data-aos="fade-up-left">
+        <div style={{ overflow: "hidden" }}>
+          <picture>
+            <source
+              type="image/webp"
+              srcSet={`${Coach03Webp480x1} 480w`}
+              sizes="480px"
+            />
+
+            <source
+              type="image/jpg"
+              srcSet={`${Coach03Jpg480x1} 480w`}
+              sizes="480px"
+            />
+
+            <ItemImage alt="Тренер" loading="lazy" src={Coach03Jpg480x1} />
+          </picture>
+        </div>
+
+        <ItemInfo>
+          Тренер-викладач з футзалу
+          <Name>Олег Овдієнко</Name>
+        </ItemInfo>
+
+        <Drscription>
+          <DescriptionParagraph>
+            Олег розпочав свій професійний шлях у футболі ще з 7 класу,
+            вступивши до Харківського державного училища фізичної культури.
+            Згодом здобув освіту в Харківській державній академії фізичної
+            культури, здобувши кваліфікацію тренера (2009 рік).
+          </DescriptionParagraph>
+
+          <DescriptionParagraph>
+            З 2016 року працює дитячим тренером та має досвід підготовки юних
+            спортсменів.
+          </DescriptionParagraph>
+
+          <DescriptionParagraph>
+            З дитинства футбол для нього — це командна гра, емоції та командний
+            дух. Ці цінності він передає вихованцям, навчаючи взаємодії,
+            підтримці та роботі в команді.
+          </DescriptionParagraph>
+
+          <DescriptionParagraph>
+            Головний принцип у роботі — ніколи не здаватися!
+          </DescriptionParagraph>
+
+          <DescriptionParagraph>
+            Використовує індивідуальний підхід до кожного спортсмена,
+            допомагаючи розкрити потенціал кожної дитини.
+          </DescriptionParagraph>
+
+          <DescriptionParagraph>
+            Має досвід роботи з командами «Дніпро» та «Майстер м’яча».
           </DescriptionParagraph>
         </Drscription>
       </CoachItem>
