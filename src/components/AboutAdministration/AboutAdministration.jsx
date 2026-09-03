@@ -95,7 +95,7 @@ export const AboutAdministration = () => (
         <ItemInfo>
           Заступник директора
           <br />з навчально-тренувальної роботи
-          <Name>Анатолій Волошко</Name>
+          <Name>Святослав Дубовиченко</Name>
         </ItemInfo>
       </AdminItem>
 
